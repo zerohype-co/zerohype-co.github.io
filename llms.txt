@@ -16,6 +16,9 @@ ZeroHype publishes honest marketing resources for B2B marketers, SDRs, and found
 - [Campaign Autopsy](https://zerohypelab.com/campaign-autopsy/): Deep-dive post-mortem on a failed campaign — $500
 - [DACH Outreach Agent](https://zerohypelab.com/dach-outreach-agent/): Cold outreach system configured for German-speaking markets (Germany, Austria, Switzerland) — $49
 - [DACH Prospect Intelligence Report](https://zerohypelab.com/dach-prospect-intelligence/): Research report on a DACH target account — $299
+- [Outreach Overhaul](https://zerohypelab.com/outreach-overhaul/): Full sequence audit + rewrite (5-7 emails) + targeting framework — $897, 7 business days
+- [Monthly Autopsy](https://zerohypelab.com/monthly-autopsy/): One campaign reviewed per month, 3 priority rewrites, 48h turnaround — $300/month
+- [The Revenue Architecture](https://zerohypelab.com/revenue-architecture/): Full revenue system diagnosis and rebuild — $4,500, application only
 
 ## Guides
 

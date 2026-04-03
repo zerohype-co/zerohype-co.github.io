@@ -3,340 +3,742 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zero Hype — B2B Marketing Diagnostics. No Hype.</title>
-  <meta name="description" content="Diagnose what's breaking your B2B marketing. Free scoring tools, paid diagnostics, and no-fluff guides for founders and sales teams.">
+  <title>Zero Hype — No fluff. No hype. Just what works.</title>
+  <meta name="description" content="B2B marketing diagnostics. Find the specific failure point. No consultants. No retainers.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://zerohypelab.com/">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Zero Hype — B2B Marketing Diagnostics. No Hype.">
-  <meta property="og:description" content="Free tools and paid diagnostics that tell you exactly what's breaking your B2B marketing. No consultants. No retainers.">
+  <meta property="og:title" content="Zero Hype — No fluff. No hype. Just what works.">
+  <meta property="og:description" content="B2B marketing diagnostics. Find the specific failure point.">
   <meta property="og:url" content="https://zerohypelab.com/">
   <meta property="og:type" content="website">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --yellow:   #E8FD27;
+      --bg:       #F5F2EC;
+      --bg-dark:  #111111;
+      --text:     #111111;
+      --muted:    #666666;
+      --border:   rgba(17,17,17,0.12);
+      --card:     #FFFFFF;
+    }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
     body {
-      background: #eae7df;
+      background: var(--bg);
+      color: var(--text);
       font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 40px 16px 60px;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    .card {
-      background: #faf8f4;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 460px;
-      padding: 40px 36px 48px;
+    /* ── NAV + HERO share yellow background — full above-fold block ── */
+    .yellow-zone {
+      background: var(--yellow);
     }
 
-    /* Header */
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 36px;
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 600;
-      color: #C8920A;
-      line-height: 1;
-      flex-shrink: 0;
-      width: 60px;
-      height: 60px;
-      border: 2px solid #C8920A;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-    }
-
-    .header-text h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      line-height: 1.2;
-    }
-
-    .header-text p {
-      font-size: 0.875rem;
-      color: #666;
-      margin-top: 3px;
-      line-height: 1.4;
-    }
-
-    /* Divider */
-    .divider {
-      border: none;
-      border-top: 1px solid #ddd8ce;
-      margin: 28px 0;
-    }
-
-    /* Section title */
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 14px;
-    }
-
-    /* Manual buttons (cart style) */
-    .btn-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .btn-manual {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 16px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: transparent;
-      color: #1a1a1a;
-      font-size: 0.875rem;
-      font-family: 'Inter', sans-serif;
-      text-decoration: none;
-      transition: border-color 0.15s, background 0.15s;
-      cursor: pointer;
-    }
-
-    .btn-manual:hover {
-      border-color: #C8920A;
-      background: #fdf6ea;
-    }
-
-    .btn-manual .icon {
-      font-size: 0.8rem;
-      color: #888;
-      flex-shrink: 0;
-    }
-
-    /* Tool / service buttons (gold outline pill) */
-    .btn-tool {
+    nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 13px 18px;
-      border: 1.5px solid #C8920A;
-      border-radius: 50px;
-      background: transparent;
-      color: #C8920A;
-      font-size: 0.9rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
+      padding: 18px 48px;
+      border-bottom: 1px solid rgba(17,17,17,0.15);
+    }
+
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
       text-decoration: none;
-      transition: background 0.15s, color 0.15s;
-      cursor: pointer;
     }
 
-    .btn-tool:hover {
-      background: #C8920A;
-      color: #fff;
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
     }
 
-    .btn-tool .check {
-      font-size: 1rem;
-    }
-
-    /* Notify blurb */
-    .notify-blurb {
-      font-size: 0.8rem;
-      color: #888;
-      margin: 12px 0 10px;
-      line-height: 1.5;
-    }
-
-    /* Intro text */
-    .intro-text {
-      font-size: 0.875rem;
-      color: #555;
-      line-height: 1.6;
-      margin: -20px 0 28px;
-    }
-
-    /* Start here badge */
-    .start-badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #C8920A;
-      background: #fdf3e0;
-      border: 1px solid #e8c97a;
-      border-radius: 4px;
-      padding: 2px 8px;
-      margin-left: 8px;
-      vertical-align: middle;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.2s;
     }
 
-    /* Schema markup (hidden) */
+    .nav-links a:hover { opacity: 1; }
+
+    /* ── HERO — still inside yellow-zone ── */
+    .hero {
+      padding: 72px 48px 68px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.5);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(88px, 15vw, 180px);
+      line-height: 0.88;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    /* "hype." inverted: dark box, yellow text — pops on yellow bg */
+    .hero-title .word-invert {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      display: inline;
+      padding: 2px 14px 6px 6px;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 48px;
+      margin-top: 44px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(17,17,17,0.6);
+      max-width: 480px;
+      line-height: 1.65;
+    }
+
+    /* Dark button on yellow bg */
+    .btn-dark {
+      display: inline-block;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-dark:hover {
+      background: var(--text);
+      color: var(--yellow);
+    }
+
+    /* ── TICKER — dark bg, yellow text ── */
+    .ticker-wrap {
+      overflow: hidden;
+      background: var(--bg-dark);
+      padding: 13px 0;
+    }
+
+    .ticker {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 24s linear infinite;
+    }
+
+    .ticker-item {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.14em;
+      color: var(--yellow);
+      padding: 0 24px;
+    }
+
+    .ticker-item .sep {
+      color: rgba(232,253,39,0.3);
+      margin-left: 24px;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── SECTION ── */
+    .section {
+      padding: 72px 48px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section + .section { padding-top: 0; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 2px solid var(--yellow);  /* yellow divider */
+      padding-bottom: 16px;
+      margin-bottom: 36px;
+    }
+
+    /* Section numbers: yellow background box */
+    .section-num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 12px;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 3px 8px 4px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.9rem;
+      letter-spacing: 0.08em;
+      color: var(--text);
+    }
+
+    /* ── FREE TOOLS ── */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .tool-card {
+      background: var(--card);
+      padding: 36px 28px;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      transition: background 0.18s;
+    }
+
+    .tool-card:hover { background: var(--yellow); }
+
+    .tool-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .tool-card:hover .tool-tag { color: rgba(17,17,17,0.5); }
+
+    .tool-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .tool-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .tool-card:hover .tool-desc { color: rgba(17,17,17,0.65); }
+
+    .tool-arrow {
+      display: block;
+      margin-top: 24px;
+      font-size: 22px;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    /* ── DIAGNOSTICS ── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .product-card {
+      background: var(--card);
+      padding: 30px 26px;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      transition: background 0.18s;
+    }
+
+    .product-card:hover { background: var(--yellow); }
+
+    .product-price {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .product-card:hover .product-price { color: rgba(17,17,17,0.55); }
+
+    .tag-start {
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-size: 9px;
+      padding: 2px 7px 3px;
+      letter-spacing: 0.08em;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .product-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .product-card:hover .product-desc { color: rgba(17,17,17,0.65); }
+
+    .product-cta {
+      display: inline-block;
+      margin-top: 22px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--yellow);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 2px;
+    }
+
+    /* ── MANUALS ── */
+    .manual-list { list-style: none; }
+
+    .manual-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.15s, padding 0.15s;
+    }
+
+    .manual-item:hover {
+      background: var(--yellow);
+      padding-left: 14px;
+      padding-right: 14px;
+      margin-left: -14px;
+      margin-right: -14px;
+    }
+
+    .manual-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .manual-price {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .manual-item:hover .manual-price { color: var(--text); }
+
+    /* ── NEWSLETTER STRIP ── */
+    .newsletter-strip {
+      background: var(--bg-dark);
+      color: var(--bg);
+    }
+
+    .newsletter-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 80px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 56px;
+    }
+
+    .newsletter-headline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 6vw, 72px);
+      letter-spacing: 0.04em;
+      line-height: 0.92;
+    }
+
+    /* "no hype." in yellow box — same pattern as hero word-invert */
+    .newsletter-headline em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 0 10px 3px 4px;
+      display: inline;
+    }
+
+    .newsletter-body {
+      font-size: 15px;
+      color: rgba(245,242,236,0.45);
+      max-width: 340px;
+      line-height: 1.65;
+      margin-top: 18px;
+    }
+
+    .btn-yellow {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      border: 1.5px solid var(--yellow);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-yellow:hover {
+      background: transparent;
+      color: var(--yellow);
+    }
+
+    /* ── FOOTER — yellow wordmark box ── */
+    footer {
+      padding: 36px 48px;
+      border-top: 2px solid var(--yellow);
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 4px 12px 5px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      width: 100%;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 18px 24px; }
+      .nav-links { display: none; }
+
+      .hero { padding: 52px 24px 48px; }
+
+      .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        margin-top: 32px;
+      }
+
+      .section { padding: 56px 24px; }
+
+      .tools-grid { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: 1fr; }
+
+      .newsletter-inner {
+        padding: 56px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+      }
+
+      footer { padding: 28px 24px; }
+    }
   </style>
 
-  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zero Hype",
     "url": "https://zerohypelab.com",
-    "description": "Brutally honest B2B marketing and sales resources for founders and sales teams.",
-    "sameAs": [
-      "https://x.com/zerohype_co",
-      "https://zerohypelab.substack.com"
-    ]
+    "description": "B2B marketing diagnostics. No consultants. No retainers.",
+    "sameAs": ["https://x.com/zerohype_co", "https://zerohypelab.substack.com"]
   }
   </script>
 </head>
 <body>
 
-<div class="card">
+<!-- NAV + HERO — one continuous yellow zone -->
+<div class="yellow-zone">
 
-  <!-- Header -->
-  <div class="header">
-    <div class="logo">ZH</div>
-    <div class="header-text">
-      <h1>Zero Hype</h1>
-      <p>B2B marketing diagnostics. No consultants. No retainers.</p>
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <span class="hero-label">B2B marketing diagnostics</span>
+    <h1 class="hero-title">
+      ZERO<br>
+      <span class="word-invert">hype.</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-sub">Most B2B marketing problems have a specific failure point. The tools and services below help you find yours.</p>
+      <a href="https://zerohypelab.com/cold-email-roaster/" class="btn-dark">Try a free tool</a>
     </div>
   </div>
 
-  <p class="intro-text">Most B2B marketing problems have a specific failure point. The free tools below help you find yours.</p>
-
-  <!-- Free Tools -->
-  <h2 class="section-title">Free tools</h2>
-  <ul class="btn-list">
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/cold-email-roaster/" target="_blank" rel="noopener">
-        <span>Cold Email Roaster</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/campaign-failure-predictor/" target="_blank" rel="noopener">
-        <span>Campaign Failure Predictor</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-    <li>
-      <a class="btn-tool" href="/homepage-roaster/" target="_blank" rel="noopener">
-        <span>B2B Homepage Roaster</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-  </ul>
-
-  <hr class="divider">
-
-  <!-- Diagnostic Services -->
-  <h2 class="section-title">Paid diagnostics</h2>
-  <ul class="btn-list">
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/marketing-autopsy/" target="_blank" rel="noopener">
-        <span>Marketing Autopsy — $49 <span class="start-badge">Start here</span></span>
-        <span class="check">→</span>
-      </a>
-    </li>
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/outreach-autopsy/" target="_blank" rel="noopener">
-        <span>Outreach Autopsy — $99</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/dach-prospect-intelligence/" target="_blank" rel="noopener">
-        <span>DACH Prospect Intelligence — $299</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/campaign-autopsy/" target="_blank" rel="noopener">
-        <span>Campaign Autopsy — $500</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-  </ul>
-
-  <hr class="divider">
-
-  <!-- Done-With-You -->
-  <h2 class="section-title">Done-with-you</h2>
-  <ul class="btn-list">
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/monthly-autopsy/" target="_blank" rel="noopener">
-        <span>Monthly Autopsy — $300/mo</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/outreach-overhaul/" target="_blank" rel="noopener">
-        <span>Outreach Overhaul — $897</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-    <li>
-      <a class="btn-tool" href="https://zerohypelab.com/revenue-architecture/" target="_blank" rel="noopener">
-        <span>Revenue Architecture — $4,500</span>
-        <span class="check">→</span>
-      </a>
-    </li>
-  </ul>
-
-  <hr class="divider">
-
-  <!-- Guides & Templates -->
-  <h2 class="section-title">Guides &amp; templates</h2>
-  <ul class="btn-list">
-    <li>
-      <a class="btn-manual" href="https://payhip.com/b/nJc58" target="_blank" rel="noopener">
-        The Unfiltered First 90 Days — $49
-      </a>
-    </li>
-    <li>
-      <a class="btn-manual" href="https://payhip.com/b/XqmR6" target="_blank" rel="noopener">
-        DACH Cold Email Pack — $24
-      </a>
-    </li>
-    <li>
-      <a class="btn-manual" href="https://payhip.com/b/9lMQx" target="_blank" rel="noopener">
-        DACH Sales Call Pack — $29
-      </a>
-    </li>
-    <li>
-      <a class="btn-manual" href="https://payhip.com/b/sOxy5" target="_blank" rel="noopener">
-        Fix Your Outreach — $29
-      </a>
-    </li>
-  </ul>
-
-  <hr class="divider">
-
-  <p class="notify-blurb">One read per week. What's actually killing B2B marketing — before you repeat the mistake.</p>
-  <a class="btn-tool" href="https://zerohypelab.substack.com/" target="_blank" rel="noopener">
-    <span>Subscribe on Substack — free</span>
-    <span class="check">→</span>
-  </a>
-
 </div>
+
+<!-- TICKER — dark bg, yellow text -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">NO FLUFF<span class="sep">·</span></span>
+    <span class="ticker-item">NO HYPE<span class="sep">·</span></span>
+    <span class="ticker-item">JUST WHAT WORKS<span class="sep">·</span></span>
+    <span class="ticker-item">NO CONSULTANTS<span class="sep">·</span></span>
+    <span class="ticker-item">NO RETAINERS<span class="sep">·</span></span>
+    <span class="ticker-item">NO GUESSES<span class="sep">·</span></span>
+    <span class="ticker-item">NO FRAMEWORKS<span class="sep">·</span></span>
+    <span class="ticker-item">NO FLUFF<span class="sep">·</span></span>
+    <span class="ticker-item">NO HYPE<span class="sep">·</span></span>
+    <span class="ticker-item">JUST WHAT WORKS<span class="sep">·</span></span>
+    <span class="ticker-item">NO CONSULTANTS<span class="sep">·</span></span>
+    <span class="ticker-item">NO RETAINERS<span class="sep">·</span></span>
+    <span class="ticker-item">NO GUESSES<span class="sep">·</span></span>
+    <span class="ticker-item">NO FRAMEWORKS<span class="sep">·</span></span>
+  </div>
+</div>
+
+<!-- 01 FREE TOOLS -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">Free tools</span>
+  </div>
+  <div class="tools-grid">
+    <a class="tool-card" href="https://zerohypelab.com/cold-email-roaster/">
+      <span class="tool-tag">Free · Instant</span>
+      <div class="tool-name">Cold Email Roaster</div>
+      <p class="tool-desc">Paste your cold email. Get a Hype Score from 0 to 100. Find out exactly why Germans are not replying.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+    <a class="tool-card" href="https://zerohypelab.com/campaign-failure-predictor/">
+      <span class="tool-tag">Free · 10 questions</span>
+      <div class="tool-name">Campaign Failure Predictor</div>
+      <p class="tool-desc">Answer 10 questions before your campaign runs. We'll tell you what's already broken before you spend the budget.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+    <a class="tool-card" href="https://zerohypelab.com/homepage-roaster/">
+      <span class="tool-tag">Free · Instant</span>
+      <div class="tool-name">B2B Homepage Roaster</div>
+      <p class="tool-desc">Your homepage promises too much and explains too little. Here's the score and the specific fix.</p>
+      <span class="tool-arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<!-- 02 DIAGNOSTICS -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">Diagnostic services</span>
+  </div>
+  <div class="product-grid">
+    <a class="product-card" href="https://zerohypelab.com/marketing-autopsy/">
+      <p class="product-price">$49 <span class="tag-start">START HERE</span></p>
+      <div class="product-name">Marketing Autopsy</div>
+      <p class="product-desc">A full diagnostic of your B2B marketing function. What's actually broken and in what order to fix it.</p>
+      <span class="product-cta">Get the autopsy →</span>
+    </a>
+    <a class="product-card" href="https://zerohypelab.com/outreach-autopsy/">
+      <p class="product-price">$99</p>
+      <div class="product-name">Outreach Autopsy</div>
+      <p class="product-desc">Your outreach sequence is failing somewhere specific. We find it. You fix it. Delivered in 48 hours.</p>
+      <span class="product-cta">Get the autopsy →</span>
+    </a>
+    <a class="product-card" href="https://zerohypelab.com/campaign-autopsy/">
+      <p class="product-price">$500</p>
+      <div class="product-name">Campaign Autopsy</div>
+      <p class="product-desc">The campaign ran. The results were wrong. A three-part report on what broke and how to fix it.</p>
+      <span class="product-cta">Get the autopsy →</span>
+    </a>
+    <a class="product-card" href="https://zerohypelab.com/dach-outreach-agent/">
+      <p class="product-price">$49</p>
+      <div class="product-name">DACH Outreach Agent</div>
+      <p class="product-desc">Cold outreach built for Germany, Austria, Switzerland. The culture, the phrasing, the timing.</p>
+      <span class="product-cta">Get it →</span>
+    </a>
+    <a class="product-card" href="https://zerohypelab.com/dach-prospect-intelligence/">
+      <p class="product-price">$299</p>
+      <div class="product-name">DACH Prospect Intelligence</div>
+      <p class="product-desc">A handbuilt prospect report for one DACH target account. Decision-makers, buying signals, entry points.</p>
+      <span class="product-cta">Get the report →</span>
+    </a>
+    <a class="product-card" href="https://zerohypelab.com/monthly-autopsy/">
+      <p class="product-price">$300/mo</p>
+      <div class="product-name">Monthly Autopsy</div>
+      <p class="product-desc">One diagnostic per month, ongoing. Your B2B marketing reviewed and scored every 30 days.</p>
+      <span class="product-cta">See details →</span>
+    </a>
+    <a class="product-card" href="https://zerohypelab.com/outreach-overhaul/">
+      <p class="product-price">$897</p>
+      <div class="product-name">Outreach Overhaul</div>
+      <p class="product-desc">Done-with-you. Full outreach sequence rebuilt from the targeting logic down. 10-day engagement.</p>
+      <span class="product-cta">See details →</span>
+    </a>
+    <a class="product-card" href="https://zerohypelab.com/revenue-architecture/">
+      <p class="product-price">$4,500</p>
+      <div class="product-name">Revenue Architecture</div>
+      <p class="product-desc">Everything that connects marketing to revenue — rebuilt. For B2B companies stuck below $1M ARR.</p>
+      <span class="product-cta">See details →</span>
+    </a>
+  </div>
+</div>
+
+<!-- 03 MANUALS -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">The manuals</span>
+  </div>
+  <ul class="manual-list">
+    <li>
+      <a class="manual-item" href="https://payhip.com/b/nJc58" target="_blank" rel="noopener">
+        <span class="manual-name">The Unfiltered First 90 Days</span>
+        <span class="manual-price">$49</span>
+      </a>
+    </li>
+    <li>
+      <a class="manual-item" href="https://payhip.com/b/XqmR6" target="_blank" rel="noopener">
+        <span class="manual-name">The DACH Cold Email Pack</span>
+        <span class="manual-price">$24</span>
+      </a>
+    </li>
+    <li>
+      <a class="manual-item" href="https://payhip.com/b/9lMQx" target="_blank" rel="noopener">
+        <span class="manual-name">The DACH Sales Call Pack</span>
+        <span class="manual-price">$29</span>
+      </a>
+    </li>
+    <li>
+      <a class="manual-item" href="https://payhip.com/b/sOxy5" target="_blank" rel="noopener">
+        <span class="manual-name">Fix Your Outreach</span>
+        <span class="manual-price">$29</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- NEWSLETTER STRIP -->
+<div class="newsletter-strip">
+  <div class="newsletter-inner">
+    <div>
+      <div class="newsletter-headline">
+        No fluff.<br>
+        <em>No hype.</em>
+      </div>
+      <p class="newsletter-body">Weekly. Short. Specific. What's actually working in B2B marketing right now. No case studies from 2019.</p>
+    </div>
+    <a href="https://zerohypelab.substack.com" class="btn-yellow" target="_blank" rel="noopener">Subscribe — it's free</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-wordmark">Zero Hype</span>
+    <ul class="footer-links">
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X — @zerohype_co</a></li>
+      <li><a href="https://zerohypelab.com/monthly-autopsy/">Monthly Autopsy — $300/mo</a></li>
+    </ul>
+    <p class="footer-tagline">No fluff. No hype. Just what works.</p>
+  </div>
+</footer>
+
+<script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>

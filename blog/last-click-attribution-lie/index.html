@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Last-Click Attribution Is a Convenient Lie | Zero Hype</title>
+  <meta name="description" content="Your attribution model doesn't reflect reality. It reflects what's easy to measure. A B2B buyer reads 6 articles, attends a webinar, downloads a guide — last-click gives all the credit to a form.">
+  <link rel="canonical" href="https://zerohypelab.com/blog/last-click-attribution-lie/">
+  <link rel="icon" href="https://zerohypelab.com/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Why Last-Click Attribution Is a Convenient Lie">
+  <meta property="og:description" content="Your attribution model doesn't reflect reality. It reflects what's easy to measure. A B2B buyer reads 6 articles, attends a webinar, downloads a guide — last-click gives all the credit to a form.">
+  <meta property="og:url" content="https://zerohypelab.com/blog/last-click-attribution-lie/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Zero Hype">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow:  #E8FD27;
+      --bg:      #F5F2EC;
+      --bg-dark: #111111;
+      --text:    #111111;
+      --muted:   #666666;
+      --border:  rgba(17,17,17,0.12);
+      --card:    #FFFFFF;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: #e8e6e0;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Yellow zone / nav ── */
+    .yellow-zone {
+      background: var(--yellow);
+      padding: 0 32px;
+    }
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: #111111;
+      letter-spacing: 0.04em;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: #111111;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { opacity: 1; }
+
+    /* ── Article layout ── */
+    .article-wrap {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    /* breadcrumb */
+    .breadcrumb {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: rgba(232,230,224,0.5);
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .breadcrumb a { color: rgba(232,230,224,0.5); }
+    .breadcrumb a:hover { color: var(--yellow); }
+    .breadcrumb span { opacity: 0.4; }
+
+    /* meta */
+    .article-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: rgba(232,230,224,0.45);
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .article-tag {
+      background: rgba(232,253,39,0.12);
+      color: var(--yellow);
+      padding: 2px 10px;
+      border-radius: 2px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* headline */
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #f0ede6;
+      margin-bottom: 28px;
+    }
+
+    /* lead */
+    .article-lead {
+      font-size: 20px;
+      line-height: 1.65;
+      color: rgba(232,230,224,0.75);
+      border-left: 3px solid var(--yellow);
+      padding-left: 20px;
+      margin-bottom: 56px;
+    }
+
+    /* body */
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: #f0ede6;
+      margin: 56px 0 18px;
+      line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 36px 0 12px;
+    }
+    .article-body p {
+      margin-bottom: 22px;
+      color: rgba(232,230,224,0.85);
+    }
+    .article-body strong {
+      color: #f0ede6;
+      font-weight: 500;
+    }
+
+    /* stat callout */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 36px 0;
+    }
+    .stat-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(232,230,224,0.08);
+      border-radius: 4px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .stat-item .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: var(--yellow);
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .stat-item .stat-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: rgba(232,230,224,0.5);
+      line-height: 1.4;
+    }
+
+    /* divider */
+    .section-divider {
+      border: none;
+      border-top: 1px solid rgba(232,230,224,0.1);
+      margin: 48px 0;
+    }
+
+    /* highlight box */
+    .callout {
+      background: rgba(232,253,39,0.06);
+      border-left: 3px solid var(--yellow);
+      padding: 20px 24px;
+      margin: 32px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .callout p {
+      margin: 0;
+      color: rgba(232,230,224,0.9);
+      font-style: italic;
+    }
+
+    /* CTA block */
+    .article-cta {
+      background: rgba(232,253,39,0.05);
+      border: 1px solid rgba(232,253,39,0.2);
+      border-radius: 6px;
+      padding: 40px 36px;
+      margin: 64px 0 0;
+      text-align: center;
+    }
+    .article-cta .cta-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .article-cta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #f0ede6;
+      margin-bottom: 14px;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+    .article-cta p {
+      font-size: 15px;
+      color: rgba(232,230,224,0.65);
+      margin-bottom: 28px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: #111111;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 3px;
+      transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.88; }
+
+    /* Email section */
+    .email-section {
+      background: #0d0d0d;
+      border-top: 1px solid rgba(232,230,224,0.08);
+      padding: 72px 24px;
+      margin-top: 80px;
+    }
+    .email-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .email-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #f0ede6;
+      margin-bottom: 12px;
+    }
+    .email-inner p {
+      font-size: 14px;
+      color: rgba(232,230,224,0.55);
+      line-height: 1.6;
+    }
+    .email-form { display: flex; flex-direction: column; gap: 12px; }
+    .email-form input {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 3px;
+      padding: 13px 16px;
+      color: #e8e6e0;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      outline: none;
+    }
+    .email-form input:focus { border-color: var(--yellow); }
+    .email-form button {
+      background: var(--yellow);
+      color: #111111;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 13px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .email-form button:hover { opacity: 0.88; }
+
+    /* Footer */
+    footer {
+      background: #0a0a0a;
+      border-top: 1px solid rgba(232,230,224,0.06);
+      padding: 32px 24px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: rgba(232,230,224,0.4);
+      letter-spacing: 0.04em;
+    }
+    .footer-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: rgba(232,230,224,0.25);
+    }
+
+    @media (max-width: 640px) {
+      .email-inner { grid-template-columns: 1fr; gap: 28px; }
+      .nav-links { gap: 16px; }
+      .article-wrap { padding: 40px 20px 72px; }
+      .stat-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="yellow-zone">
+    <nav>
+      <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+      <ul class="nav-links">
+        <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+        <li><a href="https://zerohypelab.com/blog/" class="active">Blog</a></li>
+        <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+        <li><a href="https://x.com/zerohype_co">X</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="https://zerohypelab.com">Home</a>
+      <span>/</span>
+      <a href="https://zerohypelab.com/blog/">Blog</a>
+      <span>/</span>
+      Attribution
+    </div>
+
+    <div class="article-meta">
+      <span class="article-tag">Marketing Analytics</span>
+      <span>May 2026</span>
+      <span>8 min read</span>
+    </div>
+
+    <h1 class="article-title">Why Last-Click Attribution Is a Convenient Lie</h1>
+
+    <div class="article-lead">
+      Your attribution model doesn't reflect reality. It reflects what's easy to measure.
+    </div>
+
+    <div class="article-body">
+
+      <p>A B2B buyer reads 6 articles, attends a webinar, downloads a guide, talks to 3 colleagues, searches Google, finds a competitor, comes back through LinkedIn, and fills out a demo form. Last-click gives all the credit to that form. Everything else: nonexistent.</p>
+
+      <div class="stat-row">
+        <div class="stat-item">
+          <span class="stat-num">90%</span>
+          <span class="stat-label">of B2B teams use simple attribution or none at all</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">134</span>
+          <span class="stat-label">days: average B2B buying cycle length</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">133</span>
+          <span class="stat-label">of those days last-click doesn't see</span>
+        </div>
+      </div>
+
+      <p>The model isn't broken. It is working exactly as designed. The question is whether it was designed for the right purpose.</p>
+
+      <hr class="section-divider">
+
+      <h2>What Last-Click Is and Why It Survived This Long</h2>
+
+      <h3>Easy to implement, easy to report, easy to sell internally</h3>
+
+      <p>Last-click attribution survived because it solves a real problem: it gives a simple, defensible answer to the question "where did this lead come from?" That answer is almost always wrong in complex B2B cycles, but it is an answer. And in most organizations, a wrong answer that fits on a slide beats a correct answer that requires explanation.</p>
+
+      <p>It also survived because the channels that benefit most from it, primarily paid search and direct response, have the most influence over how marketing teams measure success. Google Analytics defaulted to last-click for a decade. Most teams never changed the setting.</p>
+
+      <p>The result: paid channels get credit. Content, events, social, and word of mouth get none. Budgets follow the credit. The model shapes the strategy, not the other way around.</p>
+
+      <hr class="section-divider">
+
+      <h2>What Last-Click Doesn't See</h2>
+
+      <h3>Dark funnel: cookieless touchpoints</h3>
+
+      <p>A significant portion of B2B influence happens in places no analytics tool can track. Podcast episodes. Slack communities. Private LinkedIn conversations. A colleague forwarding an article. A founder mentioning your product in a conference Q&A.</p>
+
+      <p>This is the dark funnel. It is not dark because it doesn't exist. It is dark because your attribution model doesn't have a flashlight that reaches it. Last-click especially can't see it, because these touchpoints almost never result in a direct click to your demo page.</p>
+
+      <p>79% of B2B buyers research with AI tools before their first human contact with a vendor. AI search doesn't leave cookies. It doesn't pass UTM parameters. Last-click attribution sees none of it.</p>
+
+      <h3>Buying committees: 5-7 people, each with a different journey</h3>
+
+      <p>The average B2B deal involves 5 to 7 decision-makers. Each of them found your company differently. The technical evaluator read a comparison blog post. The CFO saw a LinkedIn ad. The end user watched a demo on YouTube. The champion attended a webinar six months ago.</p>
+
+      <p>Last-click, measured at the individual session level, cannot capture this. It will attribute the conversion to whatever the person who filled out the form clicked last. The other six people and their entire research journeys are invisible.</p>
+
+      <p>You are not measuring marketing performance. You are measuring one person's last action before submitting a form.</p>
+
+      <h3>The AI research layer most teams ignore</h3>
+
+      <p>When a buyer asks an AI assistant which vendors to consider, and your name comes up, and three weeks later they fill out your demo form after a Google search, last-click gives Google the credit. The AI recommendation, which may have been the reason they searched for you specifically, doesn't exist in your data.</p>
+
+      <p>This is not a small edge case. It is happening in most B2B buying cycles right now, at scale, and getting worse every quarter as AI search adoption grows.</p>
+
+      <hr class="section-divider">
+
+      <h2>The Alternatives That Exist and Why None Are Perfect</h2>
+
+      <h3>Linear multi-touch: more correct, still arbitrary</h3>
+
+      <p>Linear attribution spreads credit evenly across all tracked touchpoints. It is more honest than last-click in that it acknowledges multiple interactions happened. But it is still arbitrary: why should a blog post read for 45 seconds receive the same credit as a product demo attended for an hour?</p>
+
+      <p>It also only captures what your tracking can see. Dark funnel touchpoints get no credit because they cannot be tracked, not because they didn't matter.</p>
+
+      <h3>Data-driven attribution: requires volume most teams don't have</h3>
+
+      <p>Data-driven attribution uses machine learning to assign credit based on which touchpoints actually correlate with conversion. It is theoretically the most accurate approach. In practice, it requires conversion volumes that most B2B companies don't generate. If you close 20 deals a month, you don't have enough data to train a meaningful model.</p>
+
+      <p>Google's data-driven attribution also only operates within Google's ecosystem. It cannot see your email, your LinkedIn, your organic content, or anything outside of Google's tracked surface area.</p>
+
+      <h3>Self-reported attribution: simpler and more honest than you think</h3>
+
+      <p>The most underrated attribution method in B2B is asking: "How did you hear about us?" in your discovery call or intake form. It costs nothing. It captures dark funnel sources. It surfaces channels that no analytics tool can reach.</p>
+
+      <p>The data is imperfect. People misremember. But when 30% of your closed-won customers say they heard about you from a podcast you recorded eight months ago, that is information your attribution dashboard will never show you.</p>
+
+      <p>Self-reported attribution doesn't replace tracking. It completes it.</p>
+
+      <hr class="section-divider">
+
+      <h2>What You Can Do Next Week Without Changing Tools</h2>
+
+      <h3>Add one question to the discovery call</h3>
+
+      <p>"How did you find us, and what made you reach out now?" Two questions in one. The first gives you attribution data. The second tells you what triggered the timing of the decision, which is often more valuable.</p>
+
+      <p>Log this in your CRM as a field. After 90 days, you will have a dataset that no analytics platform can generate. It won't be clean. It will be more useful than your current attribution report.</p>
+
+      <h3>Correlate content cohorts with pipeline at 90 days</h3>
+
+      <p>Take every account that engaged with a specific piece of content in a given month. Track whether any of those accounts entered your pipeline within 90 days. Don't try to prove causation. Look for correlation.</p>
+
+      <p>If accounts that attended your webinar series enter pipeline at 3x the rate of non-attendees, that is a signal worth acting on, even if your attribution model never captures it formally.</p>
+
+      <p>This analysis takes one afternoon. It requires your CRM and your content analytics in the same spreadsheet. Most teams have never done it.</p>
+
+      <hr class="section-divider">
+
+      <h2>Perfect Attribution Doesn't Exist. What You Track Instead</h2>
+
+      <p>Stop trying to build a perfect machine. It is a waste of time.</p>
+
+      <p>Instead, track Intent Density. How many accounts in your target market are showing active interest across any channel? If this number goes up, your marketing is working. If it stays flat while you spend more on last-click ads, you are just buying the same people over and over.</p>
+
+      <div class="callout">
+        <p>Focus on the aggregate health of your market presence. The dashboard will never show you the whole truth. Build multiple signals and triangulate. The teams that win are the ones that accept imperfect data and make decisions anyway.</p>
+      </div>
+
+    </div><!-- /.article-body -->
+
+    <div class="article-cta">
+      <div class="cta-label">Diagnostic Service</div>
+      <h3>Marketing Autopsy</h3>
+      <p>We audit your entire marketing function. Channels, content, spend allocation, team structure. You get a prioritized breakdown of what's working, what's wasted, and what to do first. Delivered in 48-72 hours.</p>
+      <a href="https://zerohypelab.com/marketing-autopsy" class="cta-btn">Get a Marketing Autopsy</a>
+    </div>
+
+  </div><!-- /.article-wrap -->
+
+  <!-- Email capture -->
+  <div class="email-section">
+    <div class="email-inner">
+      <div class="email-copy">
+        <h2>No Hype. No Filler.</h2>
+        <p>Get new posts directly. B2B marketing diagnostics, cold email, and outreach — what actually works. No pitch deck fluff.</p>
+      </div>
+      <form class="email-form" id="subscribe-form" onsubmit="handleSubscribe(event)">
+        <input type="email" id="email-input" placeholder="your@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="https://zerohypelab.com" class="footer-wordmark">Zero Hype</a>
+      <span class="footer-note">No fluff. No hype. Just what works.</span>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const email = document.getElementById('email-input').value;
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Subscribing...';
+      btn.disabled = true;
+      fetch('https://zerohypelab.substack.com/api/v1/free', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      }).then(() => {
+        btn.textContent = 'Done';
+      });
+    }
+  </script>
+
+  <!-- GoatCounter analytics -->
+  <script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

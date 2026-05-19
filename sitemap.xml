@@ -192,6 +192,26 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://zerohypelab.com/blog/abm-real-strategy-vs-buzzword/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zerohypelab.com/blog/short-form-video-b2b-roi-2025/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zerohypelab.com/blog/b2b-buyers-ai-research-dark-funnel/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zerohypelab.com/blog/move-fast-bad-advice-enterprise-b2b/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Sales Call Scripts by German Industry (16) -->
   <url><loc>https://zerohypelab.com/guides/sales-call-scripts-germany-saas/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

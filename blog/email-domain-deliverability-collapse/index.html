@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Know Your Email Domains Are Dead Before It's Too Late | Zero Hype</title>
+  <meta name="description" content="Your domain reputation collapses silently. Emails don't bounce. They disappear. Here is how to diagnose a dying domain, what the signals mean, and when to stop trying to fix it.">
+  <link rel="canonical" href="https://zerohypelab.com/blog/email-domain-deliverability-collapse/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #111111;
+      --text: #e8e6e0;
+      --yellow: #E8FD27;
+      --muted: #888;
+      --border: #2a2a2a;
+    }
+    html { font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    .yellow-zone {
+      background: var(--yellow);
+      padding: 0 32px;
+    }
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-wordmark {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 22px;
+      color: #111;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; }
+
+    /* HERO */
+    .article-hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 32px 40px;
+    }
+    .article-category {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+    }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 28px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* STAT ROW */
+    .stat-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 48px;
+      border: 1px solid var(--border);
+    }
+    .stat-item {
+      flex: 1;
+      padding: 24px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 42px;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* BODY */
+    .article-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+    .article-lead {
+      font-size: 19px;
+      line-height: 1.75;
+      color: #ccc;
+      border-left: 3px solid var(--yellow);
+      padding-left: 20px;
+      margin-bottom: 48px;
+    }
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 52px 0 20px;
+      line-height: 1.3;
+    }
+    .article-body h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 32px 0 12px;
+    }
+    .article-body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .article-body strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* AUDIT BOX */
+    .audit-box {
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--yellow);
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+    .audit-box-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .audit-box p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+    .audit-box p:last-child { margin-bottom: 0; }
+
+    /* CTA BLOCK */
+    .cta-block {
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      padding: 40px 40px;
+      margin: 60px 0;
+    }
+    .cta-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .cta-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .cta-body {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: #111;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.88; }
+
+    /* EMAIL SECTION */
+    .email-section {
+      border-top: 1px solid var(--border);
+      padding: 60px 0 0;
+      margin-top: 60px;
+    }
+    .email-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .email-section p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .email-form {
+      display: flex;
+      gap: 0;
+      max-width: 460px;
+    }
+    .email-form input {
+      flex: 1;
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      border-right: none;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      padding: 12px 16px;
+      outline: none;
+    }
+    .email-form input::placeholder { color: var(--muted); }
+    .email-form button {
+      background: var(--yellow);
+      color: #111;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 12px 20px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: opacity 0.15s;
+    }
+    .email-form button:hover { opacity: 0.88; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      text-align: center;
+    }
+    footer p {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .yellow-zone { padding: 0 20px; }
+      .nav-links { gap: 16px; }
+      .article-hero, .article-body { padding-left: 20px; padding-right: 20px; }
+      .stat-row { flex-direction: column; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-item:last-child { border-bottom: none; }
+      .cta-block { padding: 28px 24px; }
+      .email-form { flex-direction: column; }
+      .email-form input { border-right: 1px solid var(--border); border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="yellow-zone">
+    <nav>
+      <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+      <ul class="nav-links">
+        <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+        <li><a href="https://zerohypelab.com/blog/" class="active">Blog</a></li>
+        <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+        <li><a href="https://x.com/zerohype_co">X</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <article>
+    <div class="article-hero">
+      <div class="article-category">Deliverability</div>
+      <h1 class="article-title">How to Know Your Email Domains Are Dead Before It's Too Late</h1>
+      <div class="article-meta">
+        <span>May 2026</span>
+        <span>7 min read</span>
+        <span>zerohypelab.com</span>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-item">
+          <div class="stat-number">50%</div>
+          <div class="stat-label">of cold emails globally are delivered to spam or never reach the inbox at all</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50</div>
+          <div class="stat-label">emails per day per domain is the safe ceiling before reputation starts degrading</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">6-12mo</div>
+          <div class="stat-label">to repair a burned domain reputation. Most teams replace rather than wait</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <p class="article-lead">Your email domain is dying silently. Emails don't bounce. They land somewhere. Just not in the inbox. The CRM shows "Sent." The sequences keep running. And the reply rate drops week by week until someone notices the pipeline is dry. By that point, the damage has been accumulating for months. Domain reputation collapse is the most common technical reason cold outreach stops working, and it is the one most teams discover too late.</p>
+
+      <h2>How Email Deliverability Actually Works</h2>
+
+      <h3>Domain reputation vs IP reputation</h3>
+      <p>When you send cold email through a platform like HubSpot, Outreach, or Instantly, the sending IP belongs to them. They manage IP reputation. The domain, the thing that appears after the @ in your from address, belongs to you. And that is what Gmail and Outlook are increasingly using to decide where your email lands. The IP gets you in the building. The domain gets you into the meeting room or the basement. Most teams assume their tool handles deliverability. It handles the IP. The domain is entirely your responsibility.</p>
+
+      <h3>What inbox providers actually track</h3>
+      <p>Gmail and Outlook are not just checking whether your email passes SPF, DKIM, and DMARC. They are watching engagement signals. What percentage of recipients open your emails. How many move them from Promotions to Primary. How many reply. How many mark them as spam. These signals build a domain-level reputation score that follows your domain everywhere, permanently. If you send 500 cold emails a day to scraped lists with no warmup and a 0.1% reply rate, the providers notice. Your score drops. Your next campaign lands in spam for everyone, including people who know you.</p>
+
+      <h2>Symptoms of a Domain in Collapse</h2>
+
+      <h3>Open rates below 20% on warm lists</h3>
+      <p>A healthy domain sending to a warm list, people who have interacted with you before, should see open rates of 30-40% minimum. If you are below 20% on a list that used to perform, you are in the grey-list phase. Providers are letting your emails through but filing them below the fold or in Promotions. This is the warning sign most people miss because the emails are still technically delivering.</p>
+
+      <h3>Reply rates below 1% on previously tested sequences</h3>
+      <p>If a sequence worked at 3% reply rate six months ago and is now at 0.3% on a similar list with similar targeting, the sequence probably didn't get worse. The domain did. This is the death spiral. Low deliverability means fewer eyes on the email, which means lower engagement signals, which means lower deliverability. Once you are in it, improving the copy does nothing. You are optimizing an engine that isn't reaching the road.</p>
+
+      <h3>The silent death: CRM shows Sent, nothing else happens</h3>
+      <p>The most dangerous scenario is the one where nothing looks wrong. No bounces. No unsubscribes. No error messages. The sequence is running, the domain is live, and the pipeline is quietly empty. This is full spam placement. Your emails are arriving in spam folders that no one checks, and inbox providers have already decided your domain is not worth surfacing. This can continue for months before anyone connects the domain to the problem.</p>
+
+      <h2>How to Check Your Domain's Status</h2>
+
+      <h3>MXToolbox: blacklist check</h3>
+      <p>Go to mxtoolbox.com and run a blacklist check on your sending domain. This checks whether your domain appears on any of the major spam blacklists. Being on a blacklist is severe. It means providers have formally flagged your domain as a spam source. Not all blacklists carry equal weight, but appearing on the major ones (Spamhaus, Barracuda, SURBL) will cause immediate, total deliverability failure across most email clients. Run this check monthly as a minimum, and immediately if you notice a performance drop.</p>
+
+      <h3>Google Postmaster Tools: the only authoritative signal for Gmail</h3>
+      <p>Google Postmaster Tools gives you a direct read on how Gmail classifies your domain. The domain reputation metric has four states: High, Medium, Low, and Bad. High means you are in good standing. Medium means you are under watch. Low means you are being filtered. Bad means your emails are going to spam by default. This data is only available if you have verified the domain in Postmaster Tools and if you are sending enough volume to Gmail addresses for Google to report on it. Set this up now, before you have a problem. By the time you need it, you should already be reading it.</p>
+
+      <h3>Microsoft SNDS: for Outlook and Hotmail deliverability</h3>
+      <p>Microsoft's Smart Network Data Services gives you the equivalent read for Outlook.com, Hotmail, and Microsoft 365. The data is different from Google's because Microsoft uses a different reputation model, but the principle is the same. If you are sending to B2B contacts at companies running Microsoft 365, this matters as much as Google Postmaster. Check both. Most teams check neither.</p>
+
+      <h3>Seed testing: where are your emails actually landing?</h3>
+      <p>Tools like GlockApps and Mail-Tester let you send to a seed list of real inboxes across multiple providers and see exactly where your email lands: Primary, Promotions, Spam, or missing entirely. Run a seed test before launching any new domain or sequence. Run one quarterly on active domains. The results show you the current state, not what you hope is happening.</p>
+
+      <h2>What to Do If Your Domain Is Compromised</h2>
+
+      <h3>Don't try to repair. Replace.</h3>
+      <p>This is the part most people resist. They want to believe they can fix the domain they have spent months warming up. In most cases, you cannot. A domain that has reached Low or Bad status in Google Postmaster can take six to twelve months to recover, and that recovery requires sending almost nothing during that period. The math does not work for active outreach teams. Register a new domain, warm it properly, and move on. The old domain is a sunk cost.</p>
+
+      <h3>The multi-domain strategy</h3>
+      <p>The teams that never have a deliverability crisis are the ones who don't rely on a single domain. The standard setup is five to ten sending domains, each with one to two inboxes, each capped at 50 emails per day. Every domain goes through a four-week warmup minimum using an automated warming tool before a single cold email goes out. If one domain gets burned, you switch to the next one. You register new domains to replace it. The infrastructure becomes a renewable resource instead of a single point of failure.</p>
+
+      <div class="audit-box">
+        <div class="audit-box-label">Domain health checklist</div>
+        <p><strong>Run this before your next send:</strong></p>
+        <p>1. MXToolbox blacklist check on every active sending domain. If any flag appears, pause that domain immediately.</p>
+        <p>2. Google Postmaster domain reputation. Medium or below means something is wrong. Low or Bad means stop sending from that domain today.</p>
+        <p>3. Send volume per domain. If any single domain is sending more than 50 cold emails per day, you are degrading its reputation faster than you think.</p>
+        <p>4. SPF, DKIM, and DMARC records. Run a mail-tester.com check. A score below 9/10 means your authentication is broken and you are already at a disadvantage before reputation factors in.</p>
+      </div>
+
+      <h2>Prevention: the Infrastructure You Should Have Built Already</h2>
+
+      <h3>50 emails per day per domain, no exceptions</h3>
+      <p>This is not a guideline. It is the ceiling below which reputation damage is controllable. Above it, you are spending down reputation faster than warming can restore it. If you need to send more volume, you add more domains. You do not push existing domains harder. The teams that burn through domains in three months are the ones who ignored this number because their quota needed hitting. The quota still didn't get hit. And now they are rebuilding their infrastructure from scratch.</p>
+
+      <h3>SPF, DKIM, and DMARC are not optional</h3>
+      <p>These three authentication protocols tell inbox providers that your email is legitimately from your domain and not being spoofed. Without them, you fail the basic trust check before reputation even enters the calculation. SPF tells providers which IP addresses are allowed to send from your domain. DKIM adds a cryptographic signature to every email. DMARC tells providers what to do when emails fail SPF or DKIM checks. Set all three up correctly before warming a domain. Check them after any DNS changes. Broken authentication is invisible until it is catastrophic.</p>
+
+      <h3>Automated monitoring, not manual quarterly checks</h3>
+      <p>By the time you notice a deliverability problem in your reply rates, you are already weeks into the damage. Set up automated daily alerts on your blacklist status and Postmaster scores. Most outreach platforms have this built in. If yours doesn't, there are standalone monitoring tools that will email you the moment a domain appears on a blacklist or its Postmaster score drops. The cost of early detection is an alert. The cost of late detection is a pipeline.</p>
+
+      <div class="cta-block">
+        <div class="cta-label">Diagnostic</div>
+        <div class="cta-headline">Your sequences are running. Your inbox placement isn't what you think it is.</div>
+        <p class="cta-body">Outreach Autopsy reviews your full sending setup: domain health, authentication records, warmup status, volume limits, and sequence structure. You get a written diagnosis of what is broken and a prioritized fix list. Delivered in 48-72 hours.</p>
+        <a href="https://zerohypelab.com/outreach-autopsy" class="cta-btn">Get the Outreach Autopsy</a>
+      </div>
+
+      <div class="email-section">
+        <h3>No fluff. No hype. Just what works.</h3>
+        <p>Analysis on cold email, outreach, and B2B sales. When there is something worth saying.</p>
+        <div class="email-form" id="email-form">
+          <input type="email" id="email-input" placeholder="your@email.com" autocomplete="email">
+          <button type="button" onclick="subscribeEmail()">Subscribe</button>
+        </div>
+        <p id="email-msg" style="display:none; margin-top:12px; font-family:'DM Mono',monospace; font-size:13px; color:var(--yellow);"></p>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <p><a href="https://zerohypelab.com">zerohypelab.com</a> &nbsp;|&nbsp; <a href="https://zerohypelab.com/blog/">Blog</a> &nbsp;|&nbsp; <a href="https://zerohypelab.substack.com">Newsletter</a> &nbsp;|&nbsp; <a href="https://x.com/zerohype_co">@zerohype_co</a></p>
+  </footer>
+
+  <script>
+    async function subscribeEmail() {
+      const email = document.getElementById('email-input').value.trim();
+      const msg = document.getElementById('email-msg');
+      if (!email || !email.includes('@')) {
+        msg.textContent = 'Enter a valid email address.';
+        msg.style.color = '#e05252';
+        msg.style.display = 'block';
+        return;
+      }
+      try {
+        const res = await fetch('https://zerohypelab.substack.com/api/v1/free', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        if (res.ok) {
+          msg.textContent = 'Subscribed. Check your inbox to confirm.';
+          msg.style.color = 'var(--yellow)';
+          document.getElementById('email-form').style.display = 'none';
+        } else {
+          msg.textContent = 'Something went wrong. Try subscribing at zerohypelab.substack.com';
+          msg.style.color = '#e05252';
+        }
+      } catch {
+        msg.textContent = 'Something went wrong. Try subscribing at zerohypelab.substack.com';
+        msg.style.color = '#e05252';
+      }
+      msg.style.display = 'block';
+    }
+  </script>
+
+  <script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

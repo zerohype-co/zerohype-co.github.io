@@ -13,6 +13,13 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Editorial / praise pages -->
+  <url>
+    <loc>https://zerohypelab.com/german-b2b-experts/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Free tools -->
   <url>
     <loc>https://zerohypelab.com/campaign-failure-predictor/</loc>

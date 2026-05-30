@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Know You've Been Misattributing Success All Along | Zero Hype</title>
+  <meta name="description" content="Misattribution doesn't show up as an error in any dashboard. It shows up as 'LinkedIn doesn't work' or 'the blog drives nothing.' 90% of B2B teams struggle with attribution.">
+  <link rel="canonical" href="https://zerohypelab.com/blog/misattribution-b2b-diagnosis/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #111111;
+      --text: #e8e6e0;
+      --yellow: #E8FD27;
+      --muted: #888;
+      --border: #2a2a2a;
+    }
+    html { font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    .yellow-zone {
+      background: var(--yellow);
+      padding: 0 32px;
+    }
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-wordmark {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 22px;
+      color: #111;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; }
+
+    /* HERO */
+    .article-hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 32px 40px;
+    }
+    .article-category {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+    }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 28px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* STAT ROW */
+    .stat-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 48px;
+      border: 1px solid var(--border);
+    }
+    .stat-item {
+      flex: 1;
+      padding: 24px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 42px;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* BODY */
+    .article-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+    .article-lead {
+      font-size: 19px;
+      line-height: 1.75;
+      color: #ccc;
+      border-left: 3px solid var(--yellow);
+      padding-left: 20px;
+      margin-bottom: 48px;
+    }
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 52px 0 20px;
+      line-height: 1.3;
+    }
+    .article-body h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 32px 0 12px;
+    }
+    .article-body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .article-body strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* AUDIT BOX */
+    .audit-box {
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--yellow);
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+    .audit-box-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .audit-box p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+    .audit-box p:last-child { margin-bottom: 0; }
+
+    /* DARK FUNNEL CALLOUT */
+    .dark-funnel-box {
+      background: #0d0d0d;
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin: 36px 0;
+    }
+    .dark-funnel-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    .dark-funnel-stat {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 52px;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .dark-funnel-desc {
+      font-size: 15px;
+      color: #888;
+      line-height: 1.65;
+    }
+
+    /* CTA BLOCK */
+    .cta-block {
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      padding: 40px 40px;
+      margin: 60px 0;
+    }
+    .cta-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .cta-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .cta-body {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: #111;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.88; }
+
+    /* EMAIL SECTION */
+    .email-section {
+      border-top: 1px solid var(--border);
+      padding: 60px 0 0;
+      margin-top: 60px;
+    }
+    .email-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .email-section p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .email-form {
+      display: flex;
+      gap: 0;
+      max-width: 460px;
+    }
+    .email-form input {
+      flex: 1;
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      border-right: none;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      padding: 12px 16px;
+      outline: none;
+    }
+    .email-form input::placeholder { color: var(--muted); }
+    .email-form button {
+      background: var(--yellow);
+      color: #111;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 12px 20px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: opacity 0.15s;
+    }
+    .email-form button:hover { opacity: 0.88; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      text-align: center;
+    }
+    footer p {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .yellow-zone { padding: 0 20px; }
+      .nav-links { gap: 16px; }
+      .article-hero, .article-body { padding-left: 20px; padding-right: 20px; }
+      .stat-row { flex-direction: column; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-item:last-child { border-bottom: none; }
+      .cta-block { padding: 28px 24px; }
+      .email-form { flex-direction: column; }
+      .email-form input { border-right: 1px solid var(--border); border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="yellow-zone">
+    <nav>
+      <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+      <ul class="nav-links">
+        <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+        <li><a href="https://zerohypelab.com/blog/" class="active">Blog</a></li>
+        <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+        <li><a href="https://x.com/zerohype_co">X</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <article>
+    <div class="article-hero">
+      <div class="article-category">Attribution</div>
+      <h1 class="article-title">How to Know You've Been Misattributing Success All Along</h1>
+      <div class="article-meta">
+        <span>May 2026</span>
+        <span>7 min read</span>
+        <span>zerohypelab.com</span>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-item">
+          <div class="stat-number">90%</div>
+          <div class="stat-label">B2B teams struggling with attribution</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">79%</div>
+          <div class="stat-label">B2B buyers research anonymously before first contact</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">70%</div>
+          <div class="stat-label">Of buying cycle missed by CRM-based attribution</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <p class="article-lead">The most dangerous kind of mistake is one you don't know you're making. Misattribution doesn't show up as an error in any dashboard. It shows up as "LinkedIn doesn't work," "the blog drives nothing," or "webinars aren't worth the investment." Decisions made with data that doesn't reflect reality. 90% of B2B teams admit they struggle with attribution. But admitting the problem and fixing it are two different things. 79% of B2B buyers research anonymously with AI before the first human contact. Those touchpoints don't appear in any CRM. And yet they influence the decision.</p>
+
+      <h2>Symptoms of Misattribution (That You're Reading as Insight)</h2>
+
+      <h3>"Channel X doesn't convert" — how you verify whether that's true</h3>
+      <p>Look at your "Direct" and "Organic Search" traffic. If people are seeing your LinkedIn posts and then searching for your company name, LinkedIn is working. It is just not getting the credit. The conversion happened in your analytics. The influence happened on a platform that doesn't pass UTM parameters through a search query.</p>
+      <p>When someone says "LinkedIn doesn't convert," what they usually mean is "LinkedIn doesn't show up as the last click in our attribution model." That is a measurement failure, not a channel failure. The channel may be doing exactly what it is supposed to do: creating awareness and intent that other channels then capture.</p>
+
+      <h3>Budget decisions based on last click vs. the full journey</h3>
+      <p>If you only fund what shows up in your CRM, you are funding the "order takers." Last-click attribution rewards the final step in a buying journey that may have started months earlier with a piece of content, a podcast mention, or a recommendation in a Slack community. You cut the budget on the channels that create demand. You increase spend on the channels that capture it. Over time, you are paying more and more for the same small pool of active buyers, while your ability to create new demand atrophies.</p>
+
+      <div class="audit-box">
+        <div class="audit-box-label">The test</div>
+        <p>Pull your last 10 closed deals. Map every touchpoint you can identify. Then ask your sales team: what did the prospect mention when they explained why they reached out? Compare. The gap between what your CRM shows and what prospects report is the size of your attribution error.</p>
+      </div>
+
+      <h2>Dark Funnel: What You Can't Measure and Why It Matters</h2>
+
+      <h3>AI search, podcasts, word-of-mouth, Slack communities</h3>
+      <p>When a prospect asks an AI for a recommendation, there is no UTM tag. When they hear your brand mentioned in a Slack group, there is no tracking pixel. When they listen to a podcast episode where your CEO was interviewed six months ago, there is no cookie. These touchpoints are real. They influence decisions. They do not appear in any dashboard.</p>
+      <p>This is the dark funnel: the portion of the buying journey that happens outside any tracked surface. It is not a niche problem. It is the majority of the B2B buying journey for most companies selling to informed buyers.</p>
+
+      <div class="dark-funnel-box">
+        <div class="dark-funnel-label">The anonymous research problem</div>
+        <div class="dark-funnel-stat">79%</div>
+        <div class="dark-funnel-desc">of B2B buyers research anonymously before the first human contact. Your attribution model starts at the form submission. It misses the first 70% of the buying cycle. Every decision you make based on that model is made with a partial picture.</div>
+      </div>
+
+      <h3>79% of B2B buyers research anonymously — what that means in practice</h3>
+      <p>By the time a prospect fills out a demo form, they have already decided you are worth talking to. That decision was made through content, reviews, peer recommendations, and AI-generated summaries that you never saw. Your attribution model starts at the form. It misses the first 70% of the journey. Every channel that contributed to that decision is invisible in your data.</p>
+      <p>The practical implication: companies that appear in AI-generated recommendations, that are discussed in relevant communities, that produce content worth sharing privately between colleagues, have a pipeline advantage that never shows up in their attribution reports. Their competitors see low conversion rates from brand activity and cut it. The advantage compounds quietly.</p>
+
+      <h2>Quick Tests to Detect Misattribution</h2>
+
+      <h3>Compare self-reported attribution with what's in your CRM</h3>
+      <p>Add a mandatory field to your demo request form: "How did you first hear about us?" Keep it open text, not a dropdown. Then compare the answers to what your CRM shows as the source. You will find that 40-50% of the time, they don't match. The prospect says they heard about you from a LinkedIn post six months ago. Your CRM says "Organic Search" because that was the last click before the form. Neither is wrong. Both are incomplete.</p>
+      <p>Run this comparison for 30 days. Document the gap. That gap is the minimum size of your attribution error.</p>
+
+      <h3>Survey new customers in their first 3 months: "why did you reach out to us?"</h3>
+      <p>Ask every new customer, in a structured 15-minute call or a short survey, to walk you through how they became aware of you and what made them decide to reach out. This is qualitative data. It does not scale. It is also the most accurate attribution data you will ever collect. If 10 customers mention the same webinar, but the CRM shows no connection, your attribution is broken. The webinar created the intent. Something else got the credit.</p>
+
+      <div class="audit-box">
+        <div class="audit-box-label">What to track</div>
+        <p>Create a "Consolidated Source" report. For each closed deal, record: (1) CRM-attributed source, (2) self-reported first touchpoint, (3) qualitative reason for reaching out. Run it for a quarter. The patterns that emerge are more actionable than any dashboard you currently have.</p>
+      </div>
+
+      <h2>What You Do With the Information If Your Attribution Is Wrong</h2>
+
+      <h3>Don't throw everything out — recalibrate channel weighting</h3>
+      <p>The response to discovering attribution errors is not to abandon measurement. It is to acknowledge that some channels are "Demand Generation" and some are "Demand Capture." Demand generation channels create the intent that demand capture channels convert. They require different success metrics and different time horizons. LinkedIn might not show a direct ROI in 90 days. If it is mentioned by 30% of your best customers as a first touchpoint, it is generating demand that your other channels then capture. Fund accordingly.</p>
+
+      <h3>Add a qualitative layer on top of quantitative data</h3>
+      <p>Quantitative attribution is fast and scalable. It is also wrong in predictable ways. Qualitative attribution is slow and unscalable. It is also accurate in ways that quantitative data cannot be. The answer is not to choose one. It is to use quantitative data for monitoring and qualitative data for calibration. Run the customer survey process quarterly. Use the results to adjust how you weight channels in your quantitative model. The model becomes less wrong over time.</p>
+
+      <h2>Attribution Will Never Be Perfect. That's Not an Excuse to Ignore It.</h2>
+
+      <p>The goal is not 100% accuracy. It has never been possible and it never will be. The goal is to be "less wrong." A model that captures 60% of the buying journey accurately is better than a model that captures 20% with false precision. 90% of teams stay wrong because they cling to last-click simplicity. Last-click is easy to implement, easy to report, and easy to defend in a budget meeting. It is also deeply misleading for any company that relies on content, brand, or multi-touch relationships to generate demand.</p>
+      <p>Fix the model incrementally. Add self-reported attribution first. Run customer surveys next. Build the consolidated source report. You will not have perfect data. You will have better data. Better data produces better decisions. Better decisions compound.</p>
+
+      <div class="cta-block">
+        <div class="cta-label">Diagnostic</div>
+        <div class="cta-headline">Your attribution model is probably lying to you.</div>
+        <p class="cta-body">Marketing Autopsy audits your measurement setup, your attribution model, and your channel weighting. You get a written report that shows you what your data is hiding and what to do about it. Delivered in 48-72 hours.</p>
+        <a href="https://zerohypelab.com/marketing-autopsy" class="cta-btn">Get the Marketing Autopsy</a>
+      </div>
+
+      <div class="email-section">
+        <h3>No fluff. No hype. Just what works.</h3>
+        <p>One email per week. Unsubscribe any time.</p>
+        <form class="email-form" onsubmit="handleSubscribe(event)">
+          <input type="email" id="email-input" placeholder="your@email.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <p><a href="https://zerohypelab.com">zerohypelab.com</a> &nbsp;&mdash;&nbsp; No fluff. No hype. Just what works.</p>
+  </footer>
+
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      var email = document.getElementById('email-input').value;
+      var btn = e.target.querySelector('button');
+      btn.textContent = 'Subscribing...';
+      btn.disabled = true;
+      fetch('https://zerohypelab.substack.com/api/v1/free', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      }).then(function() {
+        btn.textContent = 'Done';
+      }).catch(function() {
+        btn.textContent = 'Done';
+      });
+    }
+  </script>
+
+  <script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

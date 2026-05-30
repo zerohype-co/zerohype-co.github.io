@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Zero Hype</title>
+  <meta name="description" content="No fluff. No hype. B2B marketing diagnostics, cold email, attribution, and outreach — what actually works.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zerohypelab.com/blog/">
+
+  <meta property="og:title" content="Blog — Zero Hype">
+  <meta property="og:description" content="B2B marketing diagnostics, cold email, attribution, and outreach — what actually works.">
+  <meta property="og:url" content="https://zerohypelab.com/blog/">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow:   #E8FD27;
+      --bg:       #F5F2EC;
+      --bg-dark:  #111111;
+      --text:     #111111;
+      --muted:    #666666;
+      --border:   rgba(17,17,17,0.12);
+      --card:     #FFFFFF;
+    }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+    body {
+      background: var(--bg-dark);
+      color: #e8e6e0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .yellow-zone { background: var(--yellow); }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 1px solid rgba(17,17,17,0.15);
+    }
+
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { opacity: 1; }
+
+    /* Page header */
+    .page-header {
+      padding: 64px 48px 48px;
+      max-width: 1280px;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .page-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(232,253,39,0.55);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: 0.9;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+
+    .page-title em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--yellow);
+    }
+
+    .page-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.45);
+      max-width: 520px;
+      margin-top: 20px;
+      line-height: 1.65;
+    }
+
+    /* Blog grid */
+    .blog-section {
+      padding: 64px 48px 96px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .blog-card {
+      background: #191917;
+      padding: 36px 28px 32px;
+      text-decoration: none;
+      color: #e8e6e0;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.18s;
+    }
+
+    .blog-card:hover { background: #222220; }
+
+    .card-cluster {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(232,253,39,0.5);
+      margin-bottom: 16px;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #fff;
+      margin-bottom: 12px;
+      flex-grow: 1;
+    }
+
+    .card-teaser {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.25);
+      text-transform: uppercase;
+    }
+
+    .card-cta {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--yellow);
+    }
+
+    /* Email capture */
+    .email-section {
+      background: #0d0d0b;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .email-inner {
+      padding: 72px 48px;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .email-copy h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.08em;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .email-copy p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.45);
+      max-width: 420px;
+      line-height: 1.6;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 0;
+      flex-shrink: 0;
+    }
+
+    .email-form input {
+      background: #1e1e1c;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-right: none;
+      color: #e8e6e0;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      padding: 14px 20px;
+      width: 280px;
+      outline: none;
+    }
+
+    .email-form input::placeholder { color: rgba(255,255,255,0.25); }
+
+    .email-form button {
+      background: var(--yellow);
+      color: var(--text);
+      border: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+
+    .email-form button:hover { opacity: 0.85; }
+
+    /* Footer */
+    footer {
+      background: #0a0a09;
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.2);
+      text-decoration: none;
+    }
+
+    .footer-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.15);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .page-header { padding: 48px 24px 36px; }
+      .blog-section { padding: 48px 24px 72px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .email-inner { flex-direction: column; gap: 32px; }
+      .email-form { width: 100%; }
+      .email-form input { flex: 1; width: auto; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="yellow-zone">
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.com/blog/" class="active">Blog</a></li>
+      <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="page-header">
+  <span class="page-label">Field Notes</span>
+  <h1 class="page-title">No <em>fluff.</em><br>No hype.</h1>
+  <p class="page-sub">B2B marketing, cold email, attribution, and outreach. What fails, why, and what to do instead.</p>
+</div>
+
+<div class="blog-section">
+  <div class="blog-grid">
+
+    <a href="https://zerohypelab.com/blog/content-roi-b2b-structural-problem/" class="blog-card">
+      <span class="card-cluster">Attribution</span>
+      <h2 class="card-title">56% of B2B Marketers Can't Prove Content ROI — And Keep Going</h2>
+      <p class="card-teaser">It's not a measurement problem. It's an accountability problem with comfortable cover.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/last-click-attribution-lie/" class="blog-card">
+      <span class="card-cluster">Attribution</span>
+      <h2 class="card-title">Why Last-Click Attribution Is a Convenient Lie</h2>
+      <p class="card-teaser">Last-click survived because it's easy. Not because it's true.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/b2b-content-no-business-objective/" class="blog-card">
+      <span class="card-cluster">Attribution</span>
+      <h2 class="card-title">44% of B2B Teams Can't Connect Content to Business Outcomes</h2>
+      <p class="card-teaser">Every piece of content should answer one question: what do we want the reader to do next?</p>
+      <div class="card-footer">
+        <span class="card-meta">4 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/misattribution-b2b-diagnosis/" class="blog-card">
+      <span class="card-cluster">Attribution</span>
+      <h2 class="card-title">How to Know You've Been Misattributing Success All Along</h2>
+      <p class="card-teaser">The most dangerous mistake is the one you don't know you're making.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/cold-email-not-dead-dying-badly/" class="blog-card">
+      <span class="card-cluster">Cold Email</span>
+      <h2 class="card-title">Cold Email Isn't Dead — It's Dying Badly</h2>
+      <p class="card-teaser">Average reply rate dropped from 6.8% to 5.8% in two years. Top quartile still hits 15-25%.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/cold-email-personalization-mistakes/" class="blog-card">
+      <span class="card-cluster">Cold Email</span>
+      <h2 class="card-title">Personalization Doesn't Mean Putting the First Name in the Subject Line</h2>
+      <p class="card-teaser">71% of B2B buyers ignore irrelevant emails. The other 29% got a different kind of email.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/top-5-percent-cold-email-anatomy/" class="blog-card">
+      <span class="card-cluster">Cold Email</span>
+      <h2 class="card-title">What Separates the Top 5% of Cold Emails From the Rest</h2>
+      <p class="card-teaser">The anatomy of a cold email that gets a reply. Every element has a job.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/email-domain-deliverability-collapse/" class="blog-card">
+      <span class="card-cluster">Cold Email</span>
+      <h2 class="card-title">How to Know Your Email Domains Are Dead Before It's Too Late</h2>
+      <p class="card-teaser">50% of emails globally reach spam. Most senders find out when replies stop.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/omnichannel-outbound-cold-email-not-enough/" class="blog-card">
+      <span class="card-cluster">Outreach</span>
+      <h2 class="card-title">Cold Email Alone Isn't Outbound Anymore</h2>
+      <p class="card-teaser">Omnichannel sequences produce 287% better results than email alone. The B2B inbox is broken.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/open-rate-not-a-kpi/" class="blog-card">
+      <span class="card-cluster">Cold Email</span>
+      <h2 class="card-title">Open Rate Is Not a KPI — It's Trivia</h2>
+      <p class="card-teaser">Apple MPP broke open rate data in 2021. Everyone kept tracking it anyway.</p>
+      <div class="card-footer">
+        <span class="card-meta">4 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/abm-real-strategy-vs-buzzword/" class="blog-card">
+      <span class="card-cluster">Strategy</span>
+      <h2 class="card-title">When ABM Is Real Strategy and When It's a Deck Buzzword</h2>
+      <p class="card-teaser">81% higher ROI when alignment is real. Most companies have the deck, not the alignment.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/short-form-video-b2b-roi-2025/" class="blog-card">
+      <span class="card-cluster">Strategy</span>
+      <h2 class="card-title">Short-Form Video Has the Highest B2B ROI in 2025</h2>
+      <p class="card-teaser">104% more B2B marketers naming short-form video as most valuable channel vs last year.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/b2b-buyers-ai-research-dark-funnel/" class="blog-card">
+      <span class="card-cluster">Strategy</span>
+      <h2 class="card-title">79% of B2B Buyers Research With AI Before You Reach Them</h2>
+      <p class="card-teaser">The dark funnel got darker. Your prospect has already formed an opinion before your first email.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+    <a href="https://zerohypelab.com/blog/move-fast-bad-advice-enterprise-b2b/" class="blog-card">
+      <span class="card-cluster">Strategy</span>
+      <h2 class="card-title">Why "Move Fast" Is Bad Advice in Enterprise B2B</h2>
+      <p class="card-teaser">Average B2B buying cycle: 134 days. Buying committee: 5-7 people. Move fast anyway.</p>
+      <div class="card-footer">
+        <span class="card-meta">5 min read</span>
+        <span class="card-cta">Read →</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<div class="email-section">
+  <div class="email-inner">
+    <div class="email-copy">
+      <h2>No Hype. No Filler.</h2>
+      <p>Get new posts directly. B2B marketing diagnostics, cold email, and outreach — what actually works. No pitch deck fluff.</p>
+    </div>
+    <form class="email-form" id="subscribe-form" onsubmit="handleSubscribe(event)">
+      <input type="email" id="email-input" placeholder="your@email.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <a href="https://zerohypelab.com" class="footer-wordmark">Zero Hype</a>
+  <span class="footer-note">No fluff. No hype. Just what works.</span>
+</footer>
+
+<script>
+  function handleSubscribe(e) {
+    e.preventDefault();
+    const email = document.getElementById('email-input').value;
+    const btn = e.target.querySelector('button');
+    btn.textContent = 'Subscribing...';
+    btn.disabled = true;
+    fetch('https://zerohypelab.substack.com/api/v1/free', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    }).then(() => {
+      btn.textContent = 'Done';
+    }).catch(() => {
+      window.open('https://zerohypelab.substack.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+      btn.textContent = 'Done';
+    });
+  }
+</script>
+<script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

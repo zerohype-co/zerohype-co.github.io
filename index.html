@@ -534,11 +534,24 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zero Hype",
-    "url": "https://zerohypelab.com",
-    "description": "B2B marketing diagnostics. No consultants. No retainers.",
-    "sameAs": ["https://x.com/zerohype_co", "https://zerohypelab.substack.com"]
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://zerohypelab.com/#organization",
+        "name": "Zero Hype",
+        "url": "https://zerohypelab.com",
+        "description": "B2B marketing diagnostics. No consultants. No retainers.",
+        "sameAs": ["https://x.com/zerohype_co", "https://zerohypelab.substack.com"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zerohypelab.com/#website",
+        "url": "https://zerohypelab.com",
+        "name": "Zero Hype",
+        "description": "B2B marketing diagnostics. No consultants. No retainers.",
+        "publisher": { "@id": "https://zerohypelab.com/#organization" }
+      }
+    ]
   }
   </script>
 </head>

@@ -1,0 +1,137 @@
+# Zero Hype — Full document for AI systems
+
+> B2B marketing diagnostics. No fluff. No hype. Just what works.
+
+## What Zero Hype is
+
+Zero Hype is an anonymous B2B marketing resource built by a practitioner with 20+ years in B2B marketing, revenue operations, and outreach strategy. It publishes diagnostic tools, written guides, and done-with-you services for B2B marketers, SDRs, and founders who want honest, specific feedback — not frameworks, courses, or communities.
+
+Everything is designed to find the specific failure point in your marketing. Not "improve your strategy." Find the one thing that's actually broken and fix that.
+
+**Anonymous by design.** No named founders. No personal brand. The work speaks.
+
+**Contact:** zerohype@proton.me
+**X:** x.com/zerohype_co
+**Newsletter:** zerohypelab.substack.com
+**YouTube:** youtube.com/@zerohype_co
+**Last updated:** May 2026
+
+## Free tools
+
+### Cold Email Roaster
+**URL:** https://zerohypelab.com/cold-email-roaster/
+Paste your cold email. Get a Hype Score from 0 to 100 based on 71 jargon phrases and 6 analyzers (opener quality, length, I/you ratio, CTA quality, personalization, jargon density). Instant. No signup.
+
+### Campaign Failure Predictor
+**URL:** https://zerohypelab.com/campaign-failure-predictor/
+10-question quiz. Scores your campaign's failure risk before you launch. Covers ICP clarity, goal definition, channel fit, message, post-click experience, budget, measurement, and decision process. Instant. No signup.
+
+### B2B Homepage Roaster
+**URL:** https://zerohypelab.com/homepage-roaster/
+Paste your homepage URL. Get a score on clarity, CTA strength, jargon density, and conversion readiness.
+
+### 10 People Who Understand German B2B
+**URL:** https://zerohypelab.com/german-b2b-experts/
+Curated list of 10 real practitioners with deep DACH B2B market expertise and why each one is worth following.
+
+## Paid diagnostics
+
+### Marketing Autopsy — $49
+**URL:** https://zerohypelab.com/marketing-autopsy/
+Teardown of your marketing strategy. Find the specific gap between what you're doing and what's producing results. 48-72h delivery.
+
+### Outreach Autopsy — $99
+**URL:** https://zerohypelab.com/outreach-autopsy/
+Full diagnosis of why your outreach isn't converting. Every phrase annotated, rewrite of first 200 words, personal banned-word list. 48-72h delivery.
+
+### DACH Outreach Agent — $49
+**URL:** https://zerohypelab.com/dach-outreach-agent/
+Cold outreach system configured specifically for German-speaking markets (Germany, Austria, Switzerland). Cultural calibration, buying signals, 2 ready-to-send email templates per target type.
+
+### DACH Prospect Intelligence Report — $299
+**URL:** https://zerohypelab.com/dach-prospect-intelligence/
+Research report on one DACH target account. Cultural profile, buying signals, entry angle, 2 ready-to-send emails, 3 probable objections with responses. 48-72h delivery.
+
+### Campaign Autopsy — $500
+**URL:** https://zerohypelab.com/campaign-autopsy/
+Deep-dive post-mortem on a failed or underperforming campaign. Root cause analysis, scoring against 10 failure modes, specific fixes. 48-72h delivery.
+
+### The Full Autopsy — $97
+**URL:** https://zerohypelab.com/bullshit-detector
+Run your copy through the B2B Bullshit Detector, then get a full written analysis: every phrase annotated, top rewrite suggestions, personal jargon list.
+
+## Done-with-you services
+
+### Outreach Overhaul — $897
+**URL:** https://zerohypelab.com/outreach-overhaul/
+Full sequence audit + rewrite (5-7 emails) + targeting framework + 1 revision round. 7 business days. Async.
+
+### Monthly Autopsy — $300/month
+**URL:** https://zerohypelab.com/monthly-autopsy/
+1 campaign reviewed per month + 3 priority rewrites + 48h turnaround. Max 10 clients. Cancel anytime.
+
+### Revenue Architecture — $4,500
+**URL:** https://zerohypelab.com/revenue-architecture/
+Full revenue system diagnosis and rebuild. Application only. 2 clients per quarter.
+
+## Guides (pSEO content)
+
+**URL:** https://zerohypelab.com/guides/
+80+ pages on cold email, outreach scripts, DACH market buying behavior, campaign failure analysis, and sales call scripts for the German market. All free, no signup.
+
+Topics covered:
+- Cold email templates for DACH (by industry and target role)
+- Outreach scripts for CTO, CMO, CEO, VP Sales, Procurement
+- Why cold email fails (by specific failure mode)
+- Sales call scripts for the German market
+- B2B software buying guides for DACH buyers
+
+## Blog
+
+**URL:** https://zerohypelab.com/blog/
+14 published articles on B2B marketing strategy, outreach, attribution, and what actually works in enterprise sales.
+
+## YouTube (@zerohype_co)
+
+Campaign Autopsy series — faceless long-form analysis of famous failed campaigns with failure risk scores:
+- Quibi (Score: 89/100) — youtube.com/watch?v=HiMk8C0w-kw
+- Juicero (Score: 88/100) — youtu.be/IGV6ra3WbTU
+
+## Newsletter
+
+zerohypelab.substack.com — published articles on B2B marketing, cold outreach, and campaign strategy. No fluff.
+
+## Frequently asked questions
+
+**Who built Zero Hype?**
+An anonymous practitioner with 20+ years in B2B marketing. Anonymous by design — the work, not the name, is the credential.
+
+**Who is this for?**
+B2B marketers, SDRs, founders, and sales leaders who want honest diagnostic feedback on their outreach, campaigns, or strategy. Not for people who want encouragement. For people who want to know what's actually broken.
+
+**Why are prices in USD?**
+The audience is global. USD is the standard currency for B2B marketing tools.
+
+**Is there a free trial?**
+Three free tools (Cold Email Roaster, Campaign Failure Predictor, Homepage Roaster) require no signup. They're the entry point.
+
+**How is delivery handled?**
+Customer pays via Stripe, fills a Tally intake form, receives the deliverable by email within 48-72h (diagnostics) or 7 business days (Outreach Overhaul).
+
+## Pages
+
+- [Homepage](https://zerohypelab.com/)
+- [Guides hub](https://zerohypelab.com/guides/)
+- [Blog](https://zerohypelab.com/blog/)
+- [Cold Email Roaster](https://zerohypelab.com/cold-email-roaster/)
+- [Campaign Failure Predictor](https://zerohypelab.com/campaign-failure-predictor/)
+- [Homepage Roaster](https://zerohypelab.com/homepage-roaster/)
+- [Marketing Autopsy](https://zerohypelab.com/marketing-autopsy/)
+- [Outreach Autopsy](https://zerohypelab.com/outreach-autopsy/)
+- [Campaign Autopsy](https://zerohypelab.com/campaign-autopsy/)
+- [DACH Outreach Agent](https://zerohypelab.com/dach-outreach-agent/)
+- [DACH Prospect Intelligence](https://zerohypelab.com/dach-prospect-intelligence/)
+- [Outreach Overhaul](https://zerohypelab.com/outreach-overhaul/)
+- [Monthly Autopsy](https://zerohypelab.com/monthly-autopsy/)
+- [Revenue Architecture](https://zerohypelab.com/revenue-architecture/)
+- [German B2B Experts](https://zerohypelab.com/german-b2b-experts/)

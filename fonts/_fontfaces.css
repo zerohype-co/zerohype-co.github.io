@@ -1,0 +1,56 @@
+  @font-face {
+    font-family: 'Bebas Neue'
+    font-style: normal
+    font-weight: 400
+    font-display: swap
+    src: url('/fonts/BebasNeue-400-normal.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'DM Mono'
+    font-style: normal
+    font-weight: 400
+    font-display: swap
+    src: url('/fonts/DMMono-400-normal.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'DM Mono'
+    font-style: normal
+    font-weight: 500
+    font-display: swap
+    src: url('/fonts/DMMono-500-normal.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 400
+    font-display: swap
+    src: url('/fonts/Inter-400-normal.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 500
+    font-display: swap
+    src: url('/fonts/Inter-500-normal.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'Playfair Display'
+    font-style: italic
+    font-weight: 400
+    font-display: swap
+    src: url('/fonts/PlayfairDisplay-400-italic.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'Playfair Display'
+    font-style: italic
+    font-weight: 700
+    font-display: swap
+    src: url('/fonts/PlayfairDisplay-700-italic.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'Playfair Display'
+    font-style: normal
+    font-weight: 700
+    font-display: swap
+    src: url('/fonts/PlayfairDisplay-700-normal.woff2') format('woff2')
+  }

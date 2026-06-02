@@ -1,0 +1,17 @@
+{
+  "name": "Zero Hype",
+  "short_name": "ZeroHype",
+  "description": "B2B marketing diagnostics. No fluff. No hype. Just what works.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F2EC",
+  "theme_color": "#E8FD27",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

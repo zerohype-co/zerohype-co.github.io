@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "name": "Zero Hype",
+  "description": "B2B marketing diagnostics. Honest audits of cold outreach, campaigns, and marketing strategy. No fluff. No hype. Just what works.",
+  "url": "https://zerohypelab.com/",
+  "contact": "zerohype@proton.me",
+  "capabilities": [
+    {
+      "name": "marketing_diagnostics",
+      "description": "B2B marketing audits, cold email analysis, campaign failure prediction, DACH market outreach",
+      "endpoint": "https://zerohypelab.com/llms.txt"
+    }
+  ],
+  "content_index": "https://zerohypelab.com/llms.txt",
+  "sitemap": "https://zerohypelab.com/sitemap.xml"
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B Bullshit Detector — zerohypelab.com</title>
+  <meta name="description" content="Paste your B2B copy. Get a Bullshit Score in 10 seconds. Free. No signup.">
+  <meta property="og:title" content="B2B Bullshit Detector">
+  <meta property="og:description" content="Your B2B copy is probably lying. Let's find out.">
+  <meta property="og:url" content="https://zerohypelab.com/bullshit-detector/">
+  <link rel="canonical" href="https://zerohypelab.com/bullshit-detector/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0a0a;
+      color: #f0f0f0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    .header { margin-bottom: 48px; }
+    .header h1 { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 32px; }
+    .header h2 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
+    .header p { font-size: 16px; color: #888; line-height: 1.6; }
+    textarea {
+      width: 100%; min-height: 180px; background: #111; border: 1px solid #222;
+      border-radius: 8px; color: #f0f0f0; font-size: 15px; font-family: inherit;
+      padding: 16px; resize: vertical; line-height: 1.6; margin-bottom: 8px;
+      transition: border-color .2s;
+    }
+    textarea:focus { outline: none; border-color: #444; }
+    textarea::placeholder { color: #444; }
+    .char-count { font-size: 12px; color: #444; text-align: right; margin-bottom: 16px; }
+    .btn-run {
+      width: 100%; padding: 16px; background: #f0f0f0; color: #0a0a0a;
+      border: none; border-radius: 8px; font-size: 16px; font-weight: 700;
+      cursor: pointer; transition: background .2s; margin-bottom: 48px;
+    }
+    .btn-run:hover { background: #fff; }
+    .btn-run:disabled { background: #222; color: #555; cursor: not-allowed; }
+
+    /* Score section */
+    .result { display: none; }
+    .result.visible { display: block; }
+    .score-box {
+      border: 1px solid #1a1a1a; border-radius: 12px; padding: 40px;
+      margin-bottom: 32px; text-align: center;
+    }
+    .score-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #555; margin-bottom: 24px; }
+    .score-number {
+      font-size: 96px; font-weight: 700; line-height: 1; margin-bottom: 16px;
+      transition: color .3s;
+    }
+    .score-verdict { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+    .score-sub { font-size: 14px; color: #666; }
+
+    .callouts-title { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #555; margin-bottom: 20px; }
+    .callout {
+      border-left: 2px solid #222; padding: 16px 20px; margin-bottom: 16px;
+    }
+    .callout-phrase { font-size: 15px; font-weight: 600; color: #f0f0f0; margin-bottom: 6px; font-style: italic; }
+    .callout-phrase::before { content: '"'; }
+    .callout-phrase::after { content: '"'; }
+    .callout-reason { font-size: 14px; color: #777; line-height: 1.5; }
+
+    .btn-share {
+      width: 100%; padding: 14px; background: transparent; border: 1px solid #222;
+      border-radius: 8px; color: #888; font-size: 14px; cursor: pointer;
+      margin: 32px 0; transition: border-color .2s, color .2s;
+    }
+    .btn-share:hover { border-color: #444; color: #ccc; }
+
+    /* CTA */
+    .cta { border-top: 1px solid #1a1a1a; padding-top: 48px; margin-top: 16px; }
+    .cta h3 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    .cta p { font-size: 15px; color: #888; line-height: 1.6; margin-bottom: 32px; }
+    .cta-features { margin-bottom: 32px; }
+    .cta-feature { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+    .cta-arrow { color: #00C896; font-family: monospace; margin-top: 2px; flex-shrink: 0; }
+    .cta-feature span { font-size: 15px; color: #ccc; }
+    .btn-cta {
+      display: block; width: 100%; padding: 16px; background: #f0f0f0;
+      color: #0a0a0a; border: none; border-radius: 8px; font-size: 16px;
+      font-weight: 700; text-align: center; text-decoration: none;
+      cursor: pointer; margin-bottom: 16px; transition: background .2s;
+    }
+    .btn-cta:hover { background: #fff; }
+    .cta-fine { font-size: 12px; color: #444; line-height: 1.6; }
+
+    /* Share card (hidden, used for html2canvas) */
+    #share-card {
+      position: fixed; left: -9999px; top: 0;
+      width: 600px; background: #0a0a0a; padding: 48px;
+      font-family: 'Inter', sans-serif; border: 1px solid #1a1a1a;
+    }
+    #share-card .sc-brand { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #555; margin-bottom: 32px; }
+    #share-card .sc-score { font-size: 80px; font-weight: 700; margin-bottom: 8px; }
+    #share-card .sc-verdict { font-size: 20px; font-weight: 600; color: #f0f0f0; margin-bottom: 32px; }
+    #share-card .sc-callout { font-size: 13px; color: #777; margin-bottom: 8px; padding-left: 12px; border-left: 2px solid #222; }
+    #share-card .sc-footer { margin-top: 40px; font-size: 11px; color: #333; letter-spacing: 0.08em; }
+
+    .error-msg { color: #e05252; font-size: 14px; text-align: center; padding: 20px; display: none; }
+    .error-msg.visible { display: block; }
+
+    .footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid #111; font-size: 12px; color: #333; }
+    .footer a { color: #444; text-decoration: none; }
+    .footer a:hover { color: #888; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner {
+      display: inline-block; width: 16px; height: 16px;
+      border: 2px solid #444; border-top-color: #f0f0f0;
+      border-radius: 50%; animation: spin .8s linear infinite;
+      vertical-align: middle; margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <h1>B2B Bullshit Detector</h1>
+    <h2>Your B2B copy is probably lying.<br>Let's find out.</h2>
+    <p>Paste your homepage, case study, or LinkedIn post. Get a Bullshit Score in 10 seconds.</p>
+  </div>
+
+  <textarea id="copy-input" placeholder="Paste your copy here..." maxlength="3000"></textarea>
+  <div class="char-count"><span id="char-count">0</span>/3000</div>
+  <button class="btn-run" id="btn-run">Run the Autopsy →</button>
+
+  <div class="error-msg" id="error-msg">Something went wrong. Try again in a moment.</div>
+
+  <div class="result" id="result">
+    <div class="score-box" id="score-box">
+      <div class="score-label">Bullshit Score</div>
+      <div class="score-number" id="score-number">0</div>
+      <div class="score-verdict" id="score-verdict"></div>
+      <div class="score-sub" id="score-sub"></div>
+    </div>
+
+    <div id="callouts-wrap">
+      <div class="callouts-title">Worst offenders</div>
+      <div id="callouts-list"></div>
+    </div>
+
+    <button class="btn-share" id="btn-share">Copy as image</button>
+
+    <div class="cta">
+      <h3>Want to fix what you just saw?</h3>
+      <p>The Full Autopsy — every phrase flagged, rewritten, with concrete examples.<br>You get exactly what to change to remove the bullshit from your copy.</p>
+      <div class="cta-features">
+        <div class="cta-feature"><span class="cta-arrow">→</span><span>Every sentence annotated — what's wrong, why, how to fix it</span></div>
+        <div class="cta-feature"><span class="cta-arrow">→</span><span>Full rewrite of your first 200 words</span></div>
+        <div class="cta-feature"><span class="cta-arrow">→</span><span>Your personal banned-word list</span></div>
+        <div class="cta-feature"><span class="cta-arrow">→</span><span>Instant delivery</span></div>
+      </div>
+      <a class="btn-cta" href="https://buy.stripe.com/8x214p2Ni33i4QRg5UaR208" target="_blank" rel="noopener">Get the Full Autopsy — $97</a>
+      <p class="cta-fine">One client who finds you through your site covers this 100 times over. If you don't like the report, I'll refund you. Email zerohype@proton.me and I'll sort it the same day.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="https://zerohypelab.com">zerohypelab.com</a> — no hype, no fluff, no bullshit.
+  </div>
+</div>
+
+<!-- Share card -->
+<div id="share-card">
+  <div class="sc-brand">B2B Bullshit Detector — zerohypelab.com</div>
+  <div class="sc-score" id="sc-score">0</div>
+  <div class="sc-verdict" id="sc-verdict"></div>
+  <div id="sc-callouts"></div>
+  <div class="sc-footer">zerohypelab.com/bullshit-detector</div>
+</div>
+
+<script>
+  const API_URL = 'https://api.zerohypelab.com/api/score';
+
+  const textarea = document.getElementById('copy-input');
+  const charCount = document.getElementById('char-count');
+  const btnRun = document.getElementById('btn-run');
+  const result = document.getElementById('result');
+  const errorMsg = document.getElementById('error-msg');
+  const scoreNumber = document.getElementById('score-number');
+  const scoreVerdict = document.getElementById('score-verdict');
+  const scoreSub = document.getElementById('score-sub');
+  const calloutsList = document.getElementById('callouts-list');
+  const btnShare = document.getElementById('btn-share');
+
+  textarea.addEventListener('input', () => {
+    charCount.textContent = textarea.value.length;
+  });
+
+  function getColor(score) {
+    if (score <= 30) return '#00C896';
+    if (score <= 60) return '#FFB800';
+    return '#FF3333';
+  }
+
+  function getSub(score, count) {
+    if (score <= 20) return 'Remarkably clean. Whoever wrote this, keep them.';
+    if (score <= 40) return `${count} phrase${count !== 1 ? 's' : ''} worth cleaning up.`;
+    if (score <= 60) return `Your copy has ${count} phrases that raise eyebrows.`;
+    if (score <= 80) return `Your copy has ${count} phrases that would make any buyer roll their eyes.`;
+    return `${count} phrases. Each one making buyers trust you less.`;
+  }
+
+  function animateScore(target, color) {
+    let frame = 0;
+    const frames = 40;
+    scoreNumber.style.color = color;
+    const tick = () => {
+      frame++;
+      const progress = frame / frames;
+      const eased = 1 - Math.pow(1 - progress, 3);
+      scoreNumber.textContent = Math.round(eased * target);
+      if (frame < frames) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  function renderResult(data) {
+    const color = getColor(data.score);
+    animateScore(data.score, color);
+    scoreVerdict.textContent = data.label;
+    scoreVerdict.style.color = color;
+    scoreSub.textContent = getSub(data.score, data.callouts.length);
+
+    calloutsList.innerHTML = '';
+    data.callouts.forEach(c => {
+      const div = document.createElement('div');
+      div.className = 'callout';
+      div.innerHTML = `<div class="callout-phrase">${c.phrase}</div><div class="callout-reason">${c.reason}</div>`;
+      calloutsList.appendChild(div);
+    });
+
+    // Populate share card
+    const sc = document.getElementById('sc-score');
+    sc.textContent = data.score;
+    sc.style.color = color;
+    document.getElementById('sc-verdict').textContent = data.label;
+    document.getElementById('sc-callouts').innerHTML = data.callouts.slice(0, 3)
+      .map(c => `<div class="sc-callout">"${c.phrase}" — ${c.reason}</div>`).join('');
+
+    result.classList.add('visible');
+    errorMsg.classList.remove('visible');
+  }
+
+  btnRun.addEventListener('click', async () => {
+    const text = textarea.value.trim();
+    if (!text || text.length < 10) return;
+
+    btnRun.disabled = true;
+    btnRun.innerHTML = '<span class="spinner"></span>Running...';
+    result.classList.remove('visible');
+    errorMsg.classList.remove('visible');
+
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text }),
+      });
+      if (!res.ok) throw new Error('API error');
+      const data = await res.json();
+      renderResult(data);
+    } catch (e) {
+      errorMsg.classList.add('visible');
+    } finally {
+      btnRun.disabled = false;
+      btnRun.innerHTML = 'Run the Autopsy →';
+    }
+  });
+
+  btnShare.addEventListener('click', async () => {
+    btnShare.textContent = 'Generating...';
+    try {
+      const canvas = await html2canvas(document.getElementById('share-card'), { backgroundColor: '#0a0a0a' });
+      canvas.toBlob(blob => {
+        try {
+          navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+          btnShare.textContent = 'Copied to clipboard ✓';
+        } catch {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url; a.download = 'bullshit-score.png'; a.click();
+          btnShare.textContent = 'Downloaded ✓';
+        }
+        setTimeout(() => { btnShare.textContent = 'Copy as image'; }, 3000);
+      });
+    } catch {
+      btnShare.textContent = 'Copy as image';
+    }
+  });
+</script>
+
+<!-- GoatCounter -->
+<script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

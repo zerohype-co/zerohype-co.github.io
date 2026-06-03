@@ -4,6 +4,10 @@
 
 ZeroHype publishes honest marketing resources for B2B marketers, SDRs, and founders. Products are diagnostic tools and written guides — no courses, no communities, no fluff.
 
+## Manifesto
+
+- [Manifesto](https://zerohypelab.com/manifesto/): What Zero Hype believes about B2B marketing — why strategy fails before execution, why AI made broken positioning faster not better, and why diagnosis comes before any campaign. Reviewed 200+ failing cold outreach sequences.
+
 ## Free Tools
 
 - [Cold Email Roaster](https://zerohypelab.com/cold-email-roaster/): Paste your cold email and get brutal, specific feedback on why it's not converting

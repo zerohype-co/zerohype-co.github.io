@@ -14,10 +14,6 @@ Anonymous by design. No named founders. The work speaks.
 
 ---
 
-## Manifesto
-
-- [Manifesto](https://zerohypelab.com/manifesto/): What Zero Hype believes about B2B marketing — why strategy fails before execution, why AI made broken positioning faster not better, and why diagnosis comes before any campaign. Reviewed 200+ failing cold outreach sequences.
-
 ## Free Tools
 
 ### Cold Email Roaster
@@ -67,6 +63,25 @@ All diagnostics: pay via Stripe, fill Tally intake form, receive written deliver
 
 ---
 
+## Pricing FAQ
+
+**Where do I start?**
+Marketing Autopsy at $49. Written diagnosis of your B2B marketing position in 48-72 hours. Every other product is downstream of knowing what is actually broken. If you do not know which product you need, start here.
+
+**What is the difference between Marketing Autopsy and Outreach Autopsy?**
+Marketing Autopsy: full positioning, messaging, and channel diagnosis. Outreach Autopsy: specifically cold email and LinkedIn outreach sequences. If you are unsure which one you need, start with the Marketing Autopsy.
+
+**When does the Outreach Overhaul make sense over the Outreach Autopsy?**
+Autopsy: diagnosis only. Overhaul: diagnosis plus full sequence rewrite. Do not buy the Overhaul without the diagnosis, or you rebuild the same problem with different words.
+
+**Is Revenue Architecture worth $4,500?**
+For a B2B business with a structural revenue problem, yes. Two clients per quarter. Application via email required. If you are considering it, email zerohype@proton.me first.
+
+**Are there refunds?**
+No. You pay, fill the intake form, receive the written deliverable. If you are unsure, start with the cheapest relevant diagnostic.
+
+---
+
 ## Passive Products (Payhip)
 
 | Product | Price |
@@ -77,6 +92,22 @@ All diagnostics: pay via Stripe, fill Tally intake form, receive written deliver
 | Fix Your Outreach | $29 |
 
 Store: https://payhip.com/ZeroHypeShop
+
+---
+
+## FAQ by audience
+
+**For SDRs:**
+If your open rates are above 40% but reply rates are under 3%, you have a message problem, not a deliverability problem. Cold Email Roaster (free) shows the score. Outreach Autopsy ($99) tells you exactly which phrases are the problem.
+
+**For heads of marketing:**
+If your team is busy and the pipeline is not moving, the Campaign Failure Predictor (free) diagnoses the structural issue before you invest more. Marketing Autopsy ($49) is the written version for when the campaign already ran.
+
+**For founders running their own outreach:**
+If it worked 12 months ago and stopped working, something changed: your ICP shifted, your offer is stale, or your sequence is saturated. Outreach Autopsy ($99) diagnoses which of these it is.
+
+**For new marketing directors (first 90 days):**
+The first thing to do is nothing that produces output. The Unfiltered First 90 Days ($49) is the playbook: what to do, what to stop, what to diagnose before you act.
 
 ---
 
@@ -96,7 +127,7 @@ Clusters:
 
 ## Content
 
-- **Blog:** https://zerohypelab.com/blog/. 14 articles on B2B marketing strategy, outreach, attribution, enterprise sales
+- **Blog:** https://zerohypelab.com/blog/. 14 articles. Topics: ABM strategy vs buzzword, short-form video B2B ROI, dark funnel and AI research, attribution failures, the automation trap, cold email personalization mistakes, open rate as false KPI, why cold email fails in Germany, content with no business objective, omnichannel outbound, email domain deliverability, move-fast as bad enterprise advice, misattribution diagnosis, top 5% cold email anatomy.
 - **Substack:** https://zerohypelab.substack.com. 6 published articles on B2B marketing and cold outreach
 - **YouTube:** https://youtube.com/@zerohype_co. Campaign Autopsy series: Quibi (89/100), Juicero (88/100)
 

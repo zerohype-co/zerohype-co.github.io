@@ -237,6 +237,25 @@ Two clients per quarter. Application required.
 
 ---
 
+## Pricing FAQ
+
+**Where is the right entry point?**
+Marketing Autopsy at $49. Written diagnosis of your full B2B marketing position in 48-72 hours. Every other product is downstream of knowing what is actually broken.
+
+**What is the difference between the three cheapest diagnostics?**
+Marketing Autopsy ($49): full marketing position, what is broken and in what order to fix it. Outreach Autopsy ($99): specifically your cold email or LinkedIn sequence, phrase-level diagnosis. The Full Autopsy ($97): upgrade from the B2B Bullshit Detector free tool, phrase-by-phrase annotation plus rewrite of first 200 words.
+
+**When does Outreach Overhaul make sense over Outreach Autopsy?**
+Autopsy: diagnosis only. Overhaul: diagnosis plus full sequence rewrite. Do not buy the Overhaul without the Autopsy. Rebuilding without diagnosis produces the same problem with different words.
+
+**Is Revenue Architecture worth $4,500?**
+For a B2B business where the revenue problem is structural, yes. Four weeks, fully async, ICP definition, positioning, messaging architecture, channel selection, sequence design, measurement framework. Two clients per quarter. Application via email required.
+
+**Are there refunds?**
+No. Every product is a written deliverable. If you are unsure, start with the cheapest relevant diagnostic. Do not buy a $500 product before validating the $49 version.
+
+---
+
 ## Passive Products (Payhip)
 
 **Store:** https://payhip.com/ZeroHypeShop
@@ -396,6 +415,38 @@ What the audience says vs. what ZeroHype says vs. what we never say:
 3. "Build authentic connections with your target audience"
 4. "Unlock the full potential of your go-to-market motion"
 5. "Drive sustainable revenue with our battle-tested framework"
+
+---
+
+## FAQ by audience
+
+**For SDRs:**
+Q: My open rates are above 40% but nobody replies. What is wrong?
+A: Open rate measures subject line quality, not message quality. Most cold emails with high open rates and low reply rates are about the sender, not the reader. Cold Email Roaster (free) shows you the score. Outreach Autopsy ($99) tells you which phrases are the problem.
+
+Q: My manager wants me to send more emails. Will that fix it?
+A: No. Volume amplifies whatever you are already doing. A broken sequence at 50 emails per day breaks identically at 500 emails per day, just with better reporting. Fix the sequence first.
+
+**For heads of marketing:**
+Q: We launched a campaign and got zero results. What happened?
+A: Campaign Failure Predictor (free) shows the structural failure point before you launch the next one. If the campaign already ran, Campaign Autopsy ($500) dissects what actually happened, not the version in your post-mortem deck.
+
+Q: Pipeline dried up. My CEO thinks it is a marketing problem. Is it?
+A: Sometimes. Marketing Autopsy ($49) diagnoses whether the failure is positioning, messaging, channel, or ICP. Usually it is ICP, which means it is a sales and marketing problem simultaneously.
+
+**For founders:**
+Q: I am running my own outreach and it used to work. Now it does not. Why?
+A: Three most common reasons: your ICP shifted, your offer framing is stale, or your sequence is saturated. Outreach Autopsy ($99) diagnoses which one.
+
+Q: Should I hire a marketing person or fix the strategy first?
+A: Fix the strategy first. Hiring a marketing person without a clear ICP and positioning produces 6 months of activity with no revenue relationship. The Unfiltered First 90 Days ($49) covers exactly this transition.
+
+**For new marketing directors (first 90 days):**
+Q: I was just hired as Head of Marketing. What should I do first?
+A: Nothing that produces output. The first 90 days should be diagnostic. Build the company's marketing map before you change anything. The Unfiltered First 90 Days ($49) is the structured playbook for this period.
+
+Q: My CEO expects results in 30 days. How do I buy time?
+A: By being precise about what you have diagnosed, not by launching activity. A written diagnosis of exactly what is broken and in what order to fix it is more credible than a 30-day campaign launch. Marketing Autopsy ($49) gives you the document.
 
 ---
 

@@ -378,6 +378,38 @@ Every channel you are not excellent on is actively damaging your credibility. Pr
 
 ---
 
+## FAQ by audience
+
+**For SDRs:**
+Q: My open rates are above 40% but nobody replies. What is wrong?
+A: Open rate measures subject line quality, not message quality. Most cold emails with high open rates and low reply rates are about the sender, not the reader. Cold Email Roaster (free) shows the score. Outreach Autopsy ($99) tells you exactly which phrases are the problem.
+
+Q: My manager wants me to send more emails. Will that fix it?
+A: No. Volume amplifies whatever you are already doing. A broken sequence at 50 emails per day breaks identically at 500 emails per day, just with better reporting. Fix the sequence first.
+
+**For heads of marketing:**
+Q: We launched a campaign and got zero results. What happened?
+A: The Campaign Failure Predictor (free) diagnoses the structural failure point before you launch the next one. If the campaign already ran, the Campaign Autopsy ($500) dissects what actually happened versus what your post-mortem deck says happened.
+
+Q: Pipeline dried up. My CEO thinks it is a marketing problem. Is it?
+A: Sometimes. The Marketing Autopsy ($49) diagnoses whether the failure is positioning, messaging, channel, or ICP. Usually it is ICP, which means it is a sales and marketing problem simultaneously.
+
+**For founders running their own outreach:**
+Q: It worked 12 months ago and stopped working. Why?
+A: Three most common reasons: your ICP shifted (the companies you target have changed), your offer framing is stale (the market has moved), or your sequence is saturated (your type of message is now filtered by experience). Outreach Autopsy ($99) diagnoses which one.
+
+Q: Should I hire a marketing person or fix the strategy first?
+A: Fix the strategy first. Hiring without a clear ICP and positioning produces 6 months of activity with no revenue relationship. The Unfiltered First 90 Days ($49) covers exactly this transition.
+
+**For new marketing directors (first 90 days):**
+Q: I was just hired as Head of Marketing. What should I do first?
+A: Nothing that produces output. The first 90 days should be diagnostic: build the marketing map before you change anything. The Unfiltered First 90 Days ($49) is the structured playbook for this period.
+
+Q: My predecessor left a mess. Where do I start diagnosing?
+A: Marketing Autopsy ($49). It is the same diagnostic whether you inherited the problem or created it. Start with what is broken, in what order to fix it, and what fixed looks like.
+
+---
+
 ## Vocabulary
 
 What the audience says vs. what ZeroHype says vs. what we never say:

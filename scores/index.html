@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall of Scores — B2B Homepage Diagnostic Leaderboard | Zero Hype</title>
+  <meta name="description" content="Every B2B homepage we've scored with our 100-point diagnostic. Rubric: Headline + ICP + Proof + CTA + Value Prop. Real scores, real copy, run live.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Zero Hype">
+  <link rel="canonical" href="https://zerohypelab.com/scores/">
+  <meta property="og:title" content="Wall of Scores — Zero Hype B2B Diagnostic Leaderboard">
+  <meta property="og:description" content="Every homepage we've scored. Notion. Apollo. Bootstrapped startups. Same rubric for all.">
+  <meta property="og:url" content="https://zerohypelab.com/scores/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://zerohypelab.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wall of Scores — Zero Hype">
+  <meta name="twitter:image" content="https://zerohypelab.com/og-image.png">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#E8FD27">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="font" href="/fonts/BebasNeue-400-normal.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Inter-400-normal.woff2" type="font/woff2" crossorigin>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --yellow:  #E8FD27;
+      --bg:      #F5F2EC;
+      --bg-dark: #111111;
+      --text:    #111111;
+      --muted:   #666666;
+      --border:  rgba(17,17,17,0.12);
+      --card:    #FFFFFF;
+    }
+    @font-face { font-family: 'Bebas Neue'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/BebasNeue-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/Inter-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/DMMono-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/DMMono-500-normal.woff2') format('woff2'); }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+
+    .yellow-zone { background: var(--yellow); }
+
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 48px; border-bottom: 1px solid rgba(17,17,17,0.15);
+    }
+    .nav-wordmark { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.04em; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--text); text-decoration: none; opacity: 0.65; transition: opacity 0.15s; letter-spacing: 0.03em; }
+    .nav-links a:hover { opacity: 1; }
+
+    /* HERO */
+    .hero { padding: 64px 48px 56px; border-bottom: 2px solid var(--text); }
+    .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; margin-bottom: 16px; }
+    .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 8rem); line-height: 0.92; letter-spacing: 0.02em; margin-bottom: 24px; }
+    .hero-sub { font-size: 1.0625rem; color: var(--muted); max-width: 640px; line-height: 1.6; }
+
+    /* RUBRIC STRIP */
+    .rubric-strip { background: var(--bg-dark); color: var(--yellow); padding: 18px 48px; display: flex; gap: 32px; overflow-x: auto; }
+    .rubric-item { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.06em; white-space: nowrap; }
+    .rubric-item span { opacity: 0.5; margin-right: 6px; }
+
+    /* LEADERBOARD */
+    .leaderboard { padding: 64px 48px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+    .board { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--card); }
+    .board-row { display: grid; grid-template-columns: 48px 1fr auto; align-items: center; gap: 0; padding: 20px 24px; border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    .board-row:last-child { border-bottom: none; }
+    .board-row:hover { background: var(--yellow); }
+    .board-row.goliath { background: rgba(17,17,17,0.03); }
+
+    .board-rank { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--muted); text-align: center; opacity: 0.4; }
+    .board-info { display: flex; flex-direction: column; gap: 4px; padding: 0 16px; }
+    .board-domain { font-family: 'DM Mono', monospace; font-size: 0.875rem; font-weight: 500; color: var(--text); }
+    .board-verdict { font-size: 0.8125rem; color: var(--muted); font-style: italic; }
+    .board-tag { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; background: var(--yellow); color: var(--text); padding: 2px 6px; border-radius: 3px; margin-left: 8px; }
+    .board-score { font-family: 'Bebas Neue', sans-serif; font-size: 2.25rem; letter-spacing: 0.02em; min-width: 80px; text-align: right; }
+    .board-score.high  { color: #1a7a2a; }
+    .board-score.mid   { color: #b35c00; }
+    .board-score.low   { color: #c0392b; }
+    .board-date { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); opacity: 0.6; }
+
+    /* SCORECARD GRID */
+    .scorecards { padding: 0 48px 64px; }
+    .scorecards-title { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.04em; margin-bottom: 24px; }
+    .scorecard-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+    .scorecard-img { width: 100%; border-radius: 8px; display: block; border: 1px solid var(--border); transition: transform 0.15s, box-shadow 0.15s; }
+    .scorecard-img:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+    .scorecard-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); margin-top: 8px; }
+
+    /* CTA */
+    .cta-block { background: var(--bg-dark); padding: 64px 48px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+    .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; line-height: 1; }
+    .cta-sub { font-size: 0.9375rem; color: rgba(255,255,255,0.55); max-width: 480px; }
+    .cta-btn { display: inline-block; background: var(--yellow); color: var(--text); font-family: 'DM Mono', monospace; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.04em; padding: 14px 28px; border-radius: 4px; text-decoration: none; transition: opacity 0.15s; }
+    .cta-btn:hover { opacity: 0.85; }
+
+    footer { padding: 40px 48px; border-top: 2px solid var(--yellow); }
+    .footer-inner { display: flex; flex-direction: column; gap: 16px; }
+    .footer-wordmark { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; background: var(--yellow); color: var(--text); display: inline-block; padding: 2px 10px; letter-spacing: 0.06em; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 20px; list-style: none; }
+    .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-tagline { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+
+    @media (max-width: 640px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 40px 24px 36px; }
+      .rubric-strip { padding: 14px 24px; gap: 20px; }
+      .leaderboard { padding: 40px 24px; }
+      .board-row { grid-template-columns: 36px 1fr auto; padding: 16px; }
+      .scorecards { padding: 0 24px 48px; }
+      .cta-block { padding: 48px 24px; }
+      footer { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="yellow-zone">
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack</a></li>
+      <li><a href="https://x.com/zerohype_co">X</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <p class="hero-eyebrow">B2B Homepage Diagnostic · Rubric 100 pts · Updated Jun 2026</p>
+    <h1 class="hero-title">Wall of<br>Scores</h1>
+    <p class="hero-sub">Every homepage we've run through the 100-point diagnostic. Bootstrapped alphas to $10B companies. Same rubric. Same five categories. No exceptions.</p>
+  </header>
+</div>
+
+<div class="rubric-strip" role="list">
+  <div class="rubric-item"><span>01</span>Headline /20</div>
+  <div class="rubric-item"><span>02</span>ICP /20</div>
+  <div class="rubric-item"><span>03</span>Proof /20</div>
+  <div class="rubric-item"><span>04</span>CTA /20</div>
+  <div class="rubric-item"><span>05</span>Value Prop /20</div>
+  <div class="rubric-item"><span>—</span>Total /100</div>
+</div>
+
+<main id="main">
+  <section class="leaderboard">
+    <p class="section-label">Leaderboard — all scores, ranked high to low</p>
+    <div class="board" role="list">
+
+      <div class="board-row goliath" role="listitem">
+        <span class="board-rank">1</span>
+        <div class="board-info">
+          <span class="board-domain">notion.com <span class="board-tag">GOLIATH</span></span>
+          <span class="board-verdict">"the proof carries the page. the words don't."</span>
+          <span class="board-date">scored jun 2026</span>
+        </div>
+        <span class="board-score high">62</span>
+      </div>
+
+      <div class="board-row goliath" role="listitem">
+        <span class="board-rank">2</span>
+        <div class="board-info">
+          <span class="board-domain">apollo.io <span class="board-tag">GOLIATH</span></span>
+          <span class="board-verdict">"the words could be swapped onto any sales tool and nobody would notice."</span>
+          <span class="board-date">scored jun 2026</span>
+        </div>
+        <span class="board-score mid">56</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">3</span>
+        <div class="board-info">
+          <span class="board-domain">deploycrate.com</span>
+          <span class="board-verdict">"positioning is there, evidence isn't."</span>
+          <span class="board-date">scored jun 2026</span>
+        </div>
+        <span class="board-score mid">49</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">3</span>
+        <div class="board-info">
+          <span class="board-domain">taliivue.com</span>
+          <span class="board-verdict">"sovereignty slogans don't sell software."</span>
+          <span class="board-date">scored jun 2026</span>
+        </div>
+        <span class="board-score mid">49</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">3</span>
+        <div class="board-info">
+          <span class="board-domain">littlebird.ai</span>
+          <span class="board-verdict">"features without a buyer in mind."</span>
+          <span class="board-date">scored mar 2026</span>
+        </div>
+        <span class="board-score mid">49</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">6</span>
+        <div class="board-info">
+          <span class="board-domain">frhog.com</span>
+          <span class="board-verdict">"a real value prop hiding under a mascot."</span>
+          <span class="board-date">scored jun 2026</span>
+        </div>
+        <span class="board-score mid">45</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">7</span>
+        <div class="board-info">
+          <span class="board-domain">agentation.com</span>
+          <span class="board-verdict">"the product is buried in the positioning."</span>
+          <span class="board-date">scored mar 2026</span>
+        </div>
+        <span class="board-score low">42</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">8</span>
+        <div class="board-info">
+          <span class="board-domain">agentplace.io</span>
+          <span class="board-verdict">"everything is a feature, nothing is a promise."</span>
+          <span class="board-date">scored mar 2026</span>
+        </div>
+        <span class="board-score low">41</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">9</span>
+        <div class="board-info">
+          <span class="board-domain">mulerun.com</span>
+          <span class="board-verdict">"the ICP is anyone who runs code."</span>
+          <span class="board-date">scored mar 2026</span>
+        </div>
+        <span class="board-score low">39</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">10</span>
+        <div class="board-info">
+          <span class="board-domain">nodea.ai</span>
+          <span class="board-verdict">"clever beats clear, and clever loses."</span>
+          <span class="board-date">scored jun 2026</span>
+        </div>
+        <span class="board-score low">37</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">10</span>
+        <div class="board-info">
+          <span class="board-domain">capakit.com</span>
+          <span class="board-verdict">"one differentiator doing all the work."</span>
+          <span class="board-date">scored jun 2026</span>
+        </div>
+        <span class="board-score low">37</span>
+      </div>
+
+      <div class="board-row" role="listitem">
+        <span class="board-rank">12</span>
+        <div class="board-info">
+          <span class="board-domain">insideorg.com</span>
+          <span class="board-verdict">"the product needs a sentence before the headline works."</span>
+          <span class="board-date">scored mar 2026</span>
+        </div>
+        <span class="board-score low">35</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="scorecards">
+    <h2 class="scorecards-title">Scorecards</h2>
+    <div class="scorecard-grid">
+      <div>
+        <img src="/scores/scorecard_notion.png" alt="Notion homepage scored 62/100" class="scorecard-img" loading="lazy">
+        <p class="scorecard-label">notion.com — 62/100</p>
+      </div>
+      <div>
+        <img src="/scores/scorecard_apollo.png" alt="Apollo.io homepage scored 56/100" class="scorecard-img" loading="lazy">
+        <p class="scorecard-label">apollo.io — 56/100</p>
+      </div>
+      <div>
+        <img src="/scores/scorecard_deploycrate.png" alt="DeployCrate homepage scored 49/100" class="scorecard-img" loading="lazy">
+        <p class="scorecard-label">deploycrate.com — 49/100</p>
+      </div>
+      <div>
+        <img src="/scores/scorecard_taliivue.png" alt="TaliiVue homepage scored 49/100" class="scorecard-img" loading="lazy">
+        <p class="scorecard-label">taliivue.com — 49/100</p>
+      </div>
+      <div>
+        <img src="/scores/scorecard_frhog.png" alt="Frhog homepage scored 45/100" class="scorecard-img" loading="lazy">
+        <p class="scorecard-label">frhog.com — 45/100</p>
+      </div>
+      <div>
+        <img src="/scores/scorecard_nodea.png" alt="Nodea.ai homepage scored 37/100" class="scorecard-img" loading="lazy">
+        <p class="scorecard-label">nodea.ai — 37/100</p>
+      </div>
+      <div>
+        <img src="/scores/scorecard_capakit.png" alt="CapaKit homepage scored 37/100" class="scorecard-img" loading="lazy">
+        <p class="scorecard-label">capakit.com — 37/100</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-block">
+    <h2 class="cta-title">Want to see where<br>your homepage lands?</h2>
+    <p class="cta-sub">Same rubric. Free. No login. You'll know your score in 60 seconds.</p>
+    <a href="https://zerohypelab.com/homepage-roaster/" class="cta-btn">Run your homepage — free</a>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-wordmark">Zero Hype</span>
+    <ul class="footer-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X — @zerohype_co</a></li>
+      <li><a href="https://www.youtube.com/@zerohype_co">YouTube</a></li>
+      <li><a href="https://zerohypelab.com/monthly-autopsy/">Monthly Autopsy — $300/mo</a></li>
+      <li>Contact: zerohype@proton.me</li>
+    </ul>
+    <p class="footer-tagline">No fluff. No hype. Just what works. · Updated Jun 2026</p>
+    <p class="footer-tagline">Published by <a href="/about/" style="color:var(--muted);">Zero Hype</a> — Contact: zerohype@proton.me</p>
+  </div>
+</footer>
+
+</body>
+</html>

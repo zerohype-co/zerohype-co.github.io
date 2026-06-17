@@ -169,6 +169,12 @@
 
   <!-- Blog articles -->
   <url>
+    <loc>https://zerohypelab.com/blog/ai-search-aeo-13-words/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://zerohypelab.com/blog/content-roi-b2b-structural-problem/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

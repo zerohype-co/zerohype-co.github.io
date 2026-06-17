@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 13 Words That Broke AI Search | Zero Hype</title>
+  <meta name="description" content="Cornell researchers found 13 words in a Reddit comment can change what ChatGPT tells your prospect. Here's what that means for your B2B marketing.">
+  <link rel="canonical" href="https://zerohypelab.com/blog/ai-search-aeo-13-words/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #111111;
+      --text: #e8e6e0;
+      --yellow: #E8FD27;
+      --muted: #888;
+      --border: #2a2a2a;
+    }
+    html { font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    .yellow-zone {
+      background: var(--yellow);
+      padding: 0 32px;
+    }
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-wordmark {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 22px;
+      color: #111;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.7;
+      transition: opacity 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; }
+
+    /* HERO */
+    .article-hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 32px 40px;
+    }
+    .article-category {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+    }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 28px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* STAT ROW */
+    .stat-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 48px;
+      border: 1px solid var(--border);
+    }
+    .stat-item {
+      flex: 1;
+      padding: 24px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 42px;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* BODY */
+    .article-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+    .article-lead {
+      font-size: 19px;
+      line-height: 1.75;
+      color: #ccc;
+      border-left: 3px solid var(--yellow);
+      padding-left: 20px;
+      margin-bottom: 48px;
+    }
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 52px 0 20px;
+      line-height: 1.3;
+    }
+    .article-body h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 32px 0 12px;
+    }
+    .article-body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .article-body strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* AUDIT BOX */
+    .audit-box {
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--yellow);
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+    .audit-box-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .audit-box p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+    .audit-box p:last-child { margin-bottom: 0; }
+
+    /* CTA BLOCK */
+    .cta-block {
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      padding: 40px 40px;
+      margin: 60px 0;
+    }
+    .cta-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .cta-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .cta-body {
+      font-size: 15px;
+      color: #aaa;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: #111;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.88; }
+
+    /* SOURCE NOTE */
+    .source-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      margin-top: 60px;
+      line-height: 1.6;
+    }
+
+    /* EMAIL SECTION */
+    .email-section {
+      border-top: 1px solid var(--border);
+      padding: 60px 0 0;
+      margin-top: 60px;
+    }
+    .email-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .email-section p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .email-form {
+      display: flex;
+      gap: 0;
+      max-width: 460px;
+    }
+    .email-form input {
+      flex: 1;
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      border-right: none;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      padding: 12px 16px;
+      outline: none;
+    }
+    .email-form input::placeholder { color: var(--muted); }
+    .email-form button {
+      background: var(--yellow);
+      color: #111;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 12px 20px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: opacity 0.15s;
+    }
+    .email-form button:hover { opacity: 0.88; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      text-align: center;
+    }
+    footer p {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .yellow-zone { padding: 0 20px; }
+      .nav-links { gap: 16px; }
+      .article-hero, .article-body { padding-left: 20px; padding-right: 20px; }
+      .stat-row { flex-direction: column; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-item:last-child { border-bottom: none; }
+      .cta-block { padding: 28px 24px; }
+      .email-form { flex-direction: column; }
+      .email-form input { border-right: 1px solid var(--border); border-bottom: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://zerohypelab.com/blog/ai-search-aeo-13-words/",
+        "url": "https://zerohypelab.com/blog/ai-search-aeo-13-words/",
+        "headline": "The 13 Words That Broke AI Search",
+        "description": "Cornell researchers found 13 words in a Reddit comment can change what ChatGPT tells your prospect. Here's what that means for your B2B marketing.",
+        "inLanguage": "en",
+        "datePublished": "2026-06-17",
+        "dateModified": "2026-06-17",
+        "author": {
+          "@type": "Organization",
+          "@id": "https://zerohypelab.com/#organization",
+          "name": "Zero Hype"
+        },
+        "publisher": { "@id": "https://zerohypelab.com/#organization" },
+        "isPartOf": { "@id": "https://zerohypelab.com/#website" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://zerohypelab.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://zerohypelab.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "The 13 Words That Broke AI Search", "item": "https://zerohypelab.com/blog/ai-search-aeo-13-words/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="yellow-zone">
+    <nav>
+      <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+      <ul class="nav-links">
+        <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+        <li><a href="https://zerohypelab.com/blog/" class="active">Blog</a></li>
+        <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+        <li><a href="https://x.com/zerohype_co">X</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <article>
+    <div class="article-hero">
+      <div class="article-category">AEO / Strategy</div>
+      <h1 class="article-title">The 13 Words That Broke AI Search</h1>
+      <div class="article-meta">
+        <span>June 2026</span>
+        <span>4 min read</span>
+        <span>zerohypelab.com</span>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-item">
+          <div class="stat-number">13</div>
+          <div class="stat-label">Words in a Reddit snippet, enough to change AI search output (Cornell, 2026)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">~25%</div>
+          <div class="stat-label">Reddit's share of all citations in AI deep-research agent outputs</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Free</div>
+          <div class="stat-label">Cost to check whether your copy survives AI evaluation right now</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <p class="article-lead">The research is from Cornell. Thirteen words. One Reddit comment. That is all it takes to change what ChatGPT tells your prospect when they ask who to trust in your category. This is not speculation. Researchers tested it across hundreds of queries and found that a snippet as short as 13 words, appended to a Reddit post in a relevant subreddit, consistently changed the output of AI search tools.</p>
+
+      <p>The mechanism is simple. AI research agents scan user-generated content. Reddit accounts for roughly a quarter of all citations these agents produce. The way they decide what to cite is lexical similarity: they surface content that reads like what the user is searching for. Brands who figured this out first started writing Reddit comments that mirror the exact queries their customers type into AI tools.</p>
+
+      <p>Companies like RedRover exist specifically to do this. They charge to place branded content on Reddit with the stated goal of manipulating AI search results. This is not underground. They advertise it openly.</p>
+
+      <h2>What this means if you run a B2B marketing function</h2>
+
+      <p>If your company is absent from Reddit, Quora, and the other user-generated content platforms that AI tools scrape, you are absent from AI search. Not buried. Absent.</p>
+
+      <p>Your competitor does not need a sophisticated content operation to beat you here. They need 13 words and a relevant subreddit.</p>
+
+      <p>The field is not level. It never was. AI search made the imbalance cheaper to exploit.</p>
+
+      <h2>What this means if you run your own outreach</h2>
+
+      <p>You have probably noticed that ChatGPT and Perplexity now shape your prospects' research before they talk to you. When a prospect asks "best B2B email outreach tool for DACH market" or "why is my cold email failing," the answer they get is not neutral.</p>
+
+      <p>Someone is already trying to be in that answer. Either you are, or you are not.</p>
+
+      <div class="audit-box">
+        <div class="audit-box-label">Two moves</div>
+        <p><strong>The defensive move:</strong> Find out what AI tools say about you right now. Open ChatGPT. Search for the exact problems your product solves, the category you compete in, and your company name. Read the answers. Note who gets mentioned and why. This is your baseline. You probably do not know it yet.</p>
+        <p><strong>The offensive move:</strong> Authentic presence on the platforms AI tools cite. This does not mean spam. Moderation on Reddit is getting stricter specifically because AEO spam is overrunning subreddits. What it means: answer real questions in the communities where your buyers already are. Mention your tools when directly relevant, not every time. Write in the register of the community. Do not announce your product. Be useful. The comment that helps someone is also the comment that AI search cites.</p>
+      </div>
+
+      <h2>The harder part</h2>
+
+      <p>The Cornell researchers did not find a clean fix. Reddit and Wikipedia moderators are trying to keep up, but the volume of AEO content is increasing faster than human moderation can handle. AI companies are aware. Nothing has shipped yet.</p>
+
+      <p>In the meantime, the brands that show up in AI search answers are the ones that have a presence in the places AI search scrapes. This is not a moral position. It is a mechanical one.</p>
+
+      <div class="cta-block">
+        <div class="cta-label">Free tool</div>
+        <div class="cta-headline">Find out if your copy would survive being scraped and evaluated.</div>
+        <p class="cta-body">The Bullshit Detector scores your copy on the same signals that make content credible or dismissable, whether the reader is human or a language model. Free. No signup.</p>
+        <a href="https://zerohypelab.com/bullshit-detector/" class="cta-btn">Run the Bullshit Detector</a>
+      </div>
+
+      <p class="source-note">Source: "Deep-research agents can be poisoned via user-generated content," Triedman, Zhang, Shmatikov. Cornell University, June 2026. Reported by 404 Media.</p>
+
+      <div class="email-section">
+        <h3>No fluff. No hype. Just what works.</h3>
+        <p>One email per week. Unsubscribe any time.</p>
+        <form class="email-form" onsubmit="handleSubscribe(event)">
+          <input type="email" id="email-input" placeholder="your@email.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <p><a href="https://zerohypelab.com">zerohypelab.com</a> &nbsp;&mdash;&nbsp; No fluff. No hype. Just what works.</p>
+  </footer>
+
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      var email = document.getElementById('email-input').value;
+      var btn = e.target.querySelector('button');
+      btn.textContent = 'Subscribing...';
+      btn.disabled = true;
+      fetch('https://zerohypelab.substack.com/api/v1/free', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      }).then(function() {
+        btn.textContent = 'Done';
+      }).catch(function() {
+        window.open('https://zerohypelab.substack.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+        btn.textContent = 'Done';
+      });
+    }
+  </script>
+
+  <script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

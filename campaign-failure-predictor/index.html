@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign Failure Predictor — Zero Hype | Free B2B Campaign Risk Scorer</title>
+  <meta name="description" content="10 questions. 60 seconds. Find out how likely your B2B campaign is to fail before you spend the budget. Free diagnostic tool by Zero Hype.">
+
+  <link rel="canonical" href="https://zerohypelab.com/campaign-failure-predictor/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zerohypelab.com/campaign-failure-predictor/">
+  <meta property="og:title" content="Campaign Failure Predictor — Will Your Campaign Work?">
+  <meta property="og:description" content="10 questions. 60 seconds. Find out how likely your B2B campaign is to fail before you spend the budget. Free. Brutal. Honest.">
+  <meta property="og:site_name" content="Zero Hype">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@zerohype_co">
+  <meta name="twitter:title" content="Campaign Failure Predictor — Will Your Campaign Work?">
+  <meta name="twitter:description" content="10 questions. 60 seconds. Find out how likely your B2B campaign is to fail before you spend the budget.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Campaign Failure Predictor",
+    "description": "Free B2B campaign risk assessment tool. 10 questions covering ICP clarity, channel selection, messaging, budget, metrics, and funnel completeness.",
+    "url": "https://zerohypelab.com/campaign-failure-predictor/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "provider": {
+      "@type": "Organization",
+      "name": "Zero Hype",
+      "url": "https://zerohypelab.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+    async function handleSubscribe(e) {
+  e.preventDefault();
+  const email = document.getElementById('ecEmail').value.trim();
+  const btn   = document.getElementById('ecBtn');
+  const note  = document.getElementById('ecNote');
+  btn.textContent = '...'; btn.disabled = true;
+  try {
+    const res = await fetch('https://zerohypelab.substack.com/api/v1/free', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    if (res.ok) {
+      document.getElementById('ecForm').style.display = 'none';
+      note.innerHTML = '<span class="ec-success">✓ Check your inbox to confirm. Welcome.</span>';
+    } else { throw new Error(); }
+  } catch {
+    window.open('https://zerohypelab.substack.com/subscribe','_blank');
+    btn.textContent = 'Subscribe free'; btn.disabled = false;
+    note.textContent = 'Redirected to subscribe page ↑';
+  }
+}
+
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Light theme */
+      --bg:           #F7F6F3;
+      --bg-card:      #FFFFFF;
+      --bg-hover:     #F2F1ED;
+      --bg-selected:  #FEF6F6;
+
+      /* Borders */
+      --border:       #E5E3DC;
+      --border-mid:   #D4D0C6;
+      --border-focus: #C0BAB0;
+
+      /* Brand red */
+      --red:          #D94F4F;
+      --red-dim:      #BE3F3F;
+      --red-bg:       #FEF2F2;
+      --red-border:   #FBCECE;
+
+      /* Text */
+      --text:         #1A1A1A;
+      --text-dim:     #555555;
+      --text-muted:   #999999;
+      --text-ghost:   #BBBBBB;
+
+      /* Status colors (on light bg) */
+      --green:        #2A9D5C;
+      --green-bg:     #F0FBF5;
+      --green-border: #C3EDD6;
+
+      --yellow:       #B06E00;
+      --yellow-bg:    #FFFBEB;
+      --yellow-border:#F5D97A;
+
+      --orange:       #C44B00;
+      --orange-bg:    #FFF7F0;
+
+      /* Shadows */
+      --shadow-sm:    0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md:    0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-lg:    0 8px 24px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      background: #FFFFFF;
+      padding: 0 40px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-logo {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ─── LAYOUT ─── */
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--red);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--red);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5.5vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .hero h1 em { font-style: normal; color: var(--red); }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-dim);
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+    .start-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      padding: 16px 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+      box-shadow: 0 2px 8px rgba(217, 79, 79, 0.30);
+    }
+    .start-btn:hover {
+      background: var(--red-dim);
+      box-shadow: 0 4px 14px rgba(217, 79, 79, 0.38);
+      transform: translateY(-1px);
+    }
+    .start-btn:active { transform: scale(0.98) translateY(0); box-shadow: none; }
+    .start-btn svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 2.5; }
+
+    .hero-meta {
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--text-ghost);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-meta::before {
+      content: '🔒';
+      font-size: 12px;
+    }
+
+    /* ─── QUIZ SECTION ─── */
+    #quizSection { display: none; padding-bottom: 80px; }
+    #quizSection.visible { display: block; }
+
+    /* Progress */
+    .progress-wrap {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .progress-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .progress-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--text-dim);
+      font-weight: 500;
+    }
+    .progress-track {
+      height: 6px;
+      background: var(--bg);
+      border-radius: 100px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--red) 0%, #E87070 100%);
+      border-radius: 100px;
+      transition: width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      width: 0%;
+    }
+
+    /* Question Card */
+    .question-card {
+      display: none;
+      animation: fadeSlideIn 0.32s ease both;
+    }
+    .question-card.active { display: block; }
+
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .q-number {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--red);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+    .q-text {
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .q-sub {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Answer Options */
+    .answers { display: flex; flex-direction: column; gap: 10px; }
+
+    .answer-btn {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 0.14s, background 0.14s, transform 0.1s, box-shadow 0.14s;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      box-shadow: var(--shadow-sm);
+    }
+    .answer-btn:hover {
+      border-color: var(--border-focus);
+      background: var(--bg-hover);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+    .answer-btn:active { transform: scale(0.99) translateY(0); box-shadow: var(--shadow-sm); }
+    .answer-btn.selected {
+      border-color: var(--red);
+      background: var(--red-bg);
+      box-shadow: 0 0 0 3px rgba(217, 79, 79, 0.10);
+    }
+    .answer-btn.correct-ish {
+      border-color: var(--green);
+      background: var(--green-bg);
+      box-shadow: 0 0 0 3px rgba(42, 157, 92, 0.10);
+    }
+
+    .answer-key {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      margin-top: 3px;
+      width: 18px;
+      font-weight: 500;
+    }
+    .answer-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-dim);
+      font-weight: 400;
+    }
+
+    /* ─── RESULTS ─── */
+    #resultsSection { display: none; padding-bottom: 80px; }
+    #resultsSection.visible { display: block; }
+
+    .result-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 44px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .result-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+
+    .result-score-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .result-score-big {
+      font-family: 'DM Mono', monospace;
+      font-size: 88px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      transition: color 0.5s;
+    }
+    .result-score-out {
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      color: var(--text-ghost);
+      margin-top: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .s-green  { color: #2A9D5C; }
+    .s-lime   { color: #6BAB3A; }
+    .s-yellow { color: #B06E00; }
+    .s-orange { color: #C44B00; }
+    .s-red    { color: #D94F4F; }
+    .s-dark   { color: #B32A2A; }
+
+    .result-brand {
+      text-align: right;
+    }
+    .result-brand-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    .result-brand-url {
+      font-size: 11px;
+      color: var(--text-ghost);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .result-brand-url:hover { color: var(--red); }
+
+    .result-bar-track {
+      height: 8px;
+      background: var(--bg);
+      border-radius: 100px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      border: 1px solid var(--border);
+    }
+    .result-bar-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 100px;
+      transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.5s;
+    }
+
+    .result-verdict {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .result-body {
+      font-size: 15px;
+      color: var(--text-dim);
+      line-height: 1.75;
+      max-width: 520px;
+    }
+
+    /* Red Flags */
+    .flags-section {
+      margin-bottom: 24px;
+    }
+    .section-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .flag-list { display: flex; flex-direction: column; gap: 8px; }
+    .flag-item {
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      border-left: 3px solid var(--red);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--text-dim);
+      animation: fadeSlideIn 0.3s ease both;
+    }
+    .flag-item.green {
+      background: var(--green-bg);
+      border-color: var(--green-border);
+      border-left-color: var(--green);
+    }
+
+    /* Actions */
+    .actions-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 44px;
+    }
+    .btn-action {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      color: var(--text-dim);
+      padding: 12px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: border-color 0.15s, color 0.15s, background 0.15s, box-shadow 0.15s;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-action:hover {
+      border-color: var(--border-focus);
+      color: var(--text);
+      background: var(--bg-hover);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* CTA Block */
+    .cta-block {
+      background: #FFFCFC;
+      border: 1.5px solid var(--red-border);
+      border-left: 5px solid var(--red);
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 48px;
+      box-shadow: var(--shadow-md);
+    }
+    .cta-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--red);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+    .cta-heading {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      letter-spacing: -0.015em;
+      color: var(--text);
+    }
+    .cta-body {
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      max-width: 480px;
+    }
+    .cta-price {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .cta-price span { color: var(--red); font-weight: 500; }
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      padding: 13px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: 8px;
+      transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+      box-shadow: 0 2px 8px rgba(217, 79, 79, 0.28);
+    }
+    .cta-link:hover {
+      background: var(--red-dim);
+      box-shadow: 0 4px 14px rgba(217, 79, 79, 0.38);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 44px 0;
+      background: #FFFFFF;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 20px;
+    }
+    .footer-links a {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--red); }
+    .footer-copy {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--text-ghost);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 600px) {
+      nav { padding: 0 16px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 0 36px; }
+      .result-card { padding: 28px 20px; }
+      .result-score-big { font-size: 64px; }
+      .result-verdict { font-size: 18px; }
+      .actions-row { flex-direction: column; }
+      .cta-block { padding: 28px 20px; }
+      .progress-wrap { padding: 16px 18px; }
+    }
+    /* ── Email Capture ───────────────────────── */
+.email-capture{border:1.5px solid #E0DED9;border-radius:12px;padding:28px 32px;margin-top:24px;background:#FAFAF8}
+.ec-tag{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.ec-heading{font-size:16px;font-weight:600;color:var(--text);line-height:1.4;margin:0 0 16px}
+.ec-form{display:flex;gap:8px}
+.ec-input{flex:1;padding:11px 14px;border:1.5px solid #D5D3CE;border-radius:8px;font-family:inherit;font-size:14px;background:#fff;color:var(--text);outline:none;transition:border-color .18s}
+.ec-input:focus{border-color:var(--red)}
+.ec-btn{padding:11px 22px;background:var(--red);color:#fff;border:none;border-radius:8px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:background .18s,transform .12s;white-space:nowrap}
+.ec-btn:hover{background:var(--red-dim);transform:translateY(-1px)}
+.ec-note{font-size:12px;color:var(--text-muted);margin:10px 0 0}
+.ec-success{font-family:'DM Mono',monospace;font-size:13px;color:var(--green)}
+@media(max-width:520px){.ec-form{flex-direction:column}.email-capture{padding:20px 18px}}
+
+  </style>
+</head>
+  <script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<body><a href="https://zerohypelab.com/cdn-cgi/content?id=vpeqqz4t8WGvHq4Pykrw_RLCz37Xm0CEDkhyYrYctjo-1782226837.9288454-1.2.1.1-E.8GmgULJzzAonbT3a0yN0hmc9Zv3Q8LS3A.cocBsaM" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-logo">Zero<span>Hype</span></a>
+    <div class="nav-links">
+      <a href="https://zerohypelab.com/campaign-autopsy/">Campaign Autopsy</a>
+      <a href="https://zerohypelab.com/outreach-autopsy/">Outreach Autopsy</a>
+      <a href="https://zerohypelab.com/cold-email-roaster/">Cold Email Roaster</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section id="heroSection" class="hero">
+      <div class="hero-badge">Free Tool · 10 Questions · 60 Seconds</div>
+      <h1>Will Your Campaign <em>Actually Work?</em></h1>
+      <p class="hero-sub">Answer 10 questions about your B2B campaign. Get a Failure Risk Score out of 100. Find out which decisions are going to cost you before you spend the budget.</p>
+      <button class="start-btn" onclick="startQuiz()">
+        Start the Test
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      <p class="hero-meta">No sign-up. No email. Just the uncomfortable truth.</p>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quizSection">
+      <div class="progress-wrap">
+        <div class="progress-header">
+          <span class="progress-label">Progress</span>
+          <span class="progress-count" id="progressCount">1 of 10</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+      <div id="questionsContainer"></div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="resultsSection">
+
+      <div class="result-card">
+        <div class="result-top">
+          <div>
+            <div class="result-score-label">Failure Risk Score</div>
+            <div class="result-score-big" id="scoreBig">0</div>
+            <div class="result-score-out">/ 100</div>
+          </div>
+          <div class="result-brand">
+            <div class="result-brand-name">Zero Hype</div>
+            <a class="result-brand-url" href="https://zerohypelab.com/campaign-failure-predictor/" target="_blank">campaign-failure-predictor</a>
+          </div>
+        </div>
+        <div class="result-bar-track">
+          <div class="result-bar-fill" id="resultBarFill"></div>
+        </div>
+        <div class="result-verdict" id="resultVerdict"></div>
+        <div class="result-body" id="resultBody"></div>
+      </div>
+
+      <div class="flags-section">
+        <div class="section-label">Where it breaks</div>
+        <div class="flag-list" id="flagList"></div>
+      </div>
+
+      <div class="actions-row">
+        <button class="btn-action" onclick="copyResult()">📋 Copy Result Card</button>
+        <button class="btn-action" onclick="retakeQuiz()">← Retake the Test</button>
+      </div>
+
+      <div class="cta-block" id="ctaBlock" style="display:none;">
+        <div class="cta-tag">// The score flags symptoms. The cause is deeper.</div>
+        <h2 class="cta-heading">High failure risk is a positioning problem first. An execution problem second.</h2>
+        <p class="cta-body">The quiz tells you where the risk is. Marketing Autopsy tells you why — ICP mismatch, broken value prop, wrong message for the buyer. Specific findings. Rewrite roadmap. 48 hours. $49.</p>
+        <a href="https://zerohypelab.com/marketing-autopsy/" class="cta-link">Get the Marketing Autopsy — $49 →</a>
+      </div>
+<!-- Email Capture -->
+<div class="email-capture" id="emailCapture">
+  <div class="ec-tag">// don't lose the diagnosis</div>
+  <h3 class="ec-heading">One read per week. What actually kills B2B campaigns — before the money is gone.</h3>
+  <form class="ec-form" id="ecForm" onsubmit="handleSubscribe(event)">
+    <input type="email" class="ec-input" id="ecEmail" placeholder="your@email.com" required autocomplete="email">
+    <button type="submit" class="ec-btn" id="ecBtn">Subscribe free</button>
+  </form>
+  <p class="ec-note" id="ecNote">ZeroHype newsletter. No pitch. No cadence. Unsubscribe any time.</p>
+</div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="https://zerohypelab.com">All Services</a>
+          <a href="https://zerohypelab.com/marketing-autopsy/">Marketing Autopsy — $49</a>
+          <a href="https://zerohypelab.com/outreach-autopsy/">Outreach Autopsy — $99</a>
+          <a href="https://zerohypelab.com/campaign-autopsy/">Campaign Autopsy — $500</a>
+          <a href="https://zerohypelab.com/dach-outreach-agent/">DACH Outreach Agent — $49</a>
+          <a href="https://zerohypelab.com/dach-prospect-intelligence/">DACH Intelligence — $299</a>
+          <a href="https://zerohypelab.com/cold-email-roaster/">Cold Email Roaster — Free</a>
+          <a href="https://zerohypelab.substack.com">Substack</a>
+        </div>
+        <div class="footer-copy">Zero Hype · Anonymous B2B Diagnostics · No hype. Just truth.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // ═══════════════════════════════════════════════════
+  //  ZERO HYPE CAMPAIGN FAILURE PREDICTOR
+  //  Quiz Engine v2.0
+  //  Higher score = higher failure risk
+  // ═══════════════════════════════════════════════════
+
+  const QUESTIONS = [
+    {
+      id: 1,
+      text: "How clearly had you defined your ICP before building this campaign?",
+      sub: "ICP = the specific person at the specific company with the specific problem you solve.",
+      flag: "ICP clarity",
+      answers: [
+        { key: "A", text: "Name, title, company size, specific pain, specific trigger event. We know exactly who we're targeting.", pts: 0 },
+        { key: "B", text: "Marketing director at a mid-sized B2B company. Directional, not precise.", pts: 6 },
+        { key: "C", text: "Anyone who might benefit from our product. We have a broad audience.", pts: 13 },
+        { key: "D", text: "The product is for everyone. We didn't want to narrow it down.", pts: 18 },
+      ]
+    },
+    {
+      id: 2,
+      text: "What is the campaign's primary goal?",
+      sub: "One goal. One number. One deadline.",
+      flag: "Goal definition",
+      answers: [
+        { key: "A", text: "One specific metric with a number and a date. 20 qualified leads by March 31.", pts: 0 },
+        { key: "B", text: "More leads and more brand awareness. We're tracking a few things.", pts: 6 },
+        { key: "C", text: "We need to show something for the quarter. The board is watching.", pts: 13 },
+        { key: "D", text: "Multiple goals. We want awareness, leads, and some thought leadership.", pts: 18 },
+      ]
+    },
+    {
+      id: 3,
+      text: "How did you choose the campaign channel?",
+      sub: "LinkedIn, email, paid search, events, content. How did you decide?",
+      flag: "Channel selection",
+      answers: [
+        { key: "A", text: "Based on data. We know where our ICP spends time and we have evidence it works for this segment.", pts: 0 },
+        { key: "B", text: "It worked for a competitor. We're running the same play.", pts: 6 },
+        { key: "C", text: "It came up in the strategy meeting. The team felt good about it.", pts: 13 },
+        { key: "D", text: "LinkedIn. We always use LinkedIn.", pts: 18 },
+      ]
+    },
+    {
+      id: 4,
+      text: "How is the campaign message framed?",
+      sub: "What does the prospect read, hear, or see first?",
+      flag: "Message framing",
+      answers: [
+        { key: "A", text: "A specific problem our ICP has, with a specific outcome we deliver. No company story.", pts: 0 },
+        { key: "B", text: "Our product's features and why they're strong. What we built and how it works.", pts: 6 },
+        { key: "C", text: "Our company values and who we are. Brand-building with a soft offer.", pts: 13 },
+        { key: "D", text: "Innovation, transformation, thought leadership. The category, not the problem.", pts: 18 },
+      ]
+    },
+    {
+      id: 5,
+      text: "What happens after someone engages with the campaign?",
+      sub: "Click, form fill, reply, download — what's the next step?",
+      flag: "Post-click experience",
+      answers: [
+        { key: "A", text: "A dedicated landing page. One CTA. Matched exactly to what the ad promised.", pts: 0 },
+        { key: "B", text: "Our homepage. It explains the product and has a contact form.", pts: 6 },
+        { key: "C", text: "A generic lead capture form. They fill it in, someone follows up.", pts: 13 },
+        { key: "D", text: "We haven't built the landing page yet. It's in progress.", pts: 18 },
+      ]
+    },
+    {
+      id: 6,
+      text: "How was the campaign budget set?",
+      sub: "Where did the number come from?",
+      flag: "Budget logic",
+      answers: [
+        { key: "A", text: "Target CPA, estimated conversion rates, and channel benchmarks. The math works out.", pts: 0 },
+        { key: "B", text: "Based on what we spent on the last campaign.", pts: 5 },
+        { key: "C", text: "Based on what leadership was comfortable approving this quarter.", pts: 12 },
+        { key: "D", text: "We have what we have. We'll see how far it takes us.", pts: 18 },
+      ]
+    },
+    {
+      id: 7,
+      text: "How are you measuring campaign success?",
+      sub: "What are you tracking and when will you know if it worked?",
+      flag: "Success measurement",
+      answers: [
+        { key: "A", text: "Pre-defined metrics, baseline established before launch, weekly review cadence.", pts: 0 },
+        { key: "B", text: "Leads generated and cost per lead. We'll look at it when the campaign ends.", pts: 5 },
+        { key: "C", text: "Impressions, clicks, engagement rate. The standard dashboard metrics.", pts: 12 },
+        { key: "D", text: "We'll know when we see it. Good results look good.", pts: 18 },
+      ]
+    },
+    {
+      id: 8,
+      text: "What's the campaign timeline?",
+      sub: "How long does the campaign run?",
+      flag: "Timeline realism",
+      answers: [
+        { key: "A", text: "6+ weeks with planned optimization windows. Enough time to test and adjust.", pts: 0 },
+        { key: "B", text: "3-4 weeks. Enough to gather meaningful data.", pts: 5 },
+        { key: "C", text: "2 weeks. We need results before the next board update.", pts: 12 },
+        { key: "D", text: "Already live. We launched before this conversation happened.", pts: 18 },
+      ]
+    },
+    {
+      id: 9,
+      text: "What did you learn from your last campaign that's directly informing this one?",
+      sub: "Specifically. Not generally.",
+      flag: "Learning from history",
+      answers: [
+        { key: "A", text: "Specific data: what stage converted, what didn't, which message outperformed, what CPA looked like.", pts: 0 },
+        { key: "B", text: "General impression. The last one wasn't great. This one is different.", pts: 5 },
+        { key: "C", text: "Not much. We treat each campaign as a fresh start.", pts: 12 },
+        { key: "D", text: "This is our first campaign. Or we didn't analyze the previous one.", pts: 18 },
+      ]
+    },
+    {
+      id: 10,
+      text: "Who approved the campaign strategy?",
+      sub: "Who had final sign-off and what was their basis for approval?",
+      flag: "Decision-making quality",
+      answers: [
+        { key: "A", text: "The person responsible for revenue, with full context on the data behind each decision.", pts: 0 },
+        { key: "B", text: "The marketing team. They built it, they approved it. Ownership was clear.", pts: 5 },
+        { key: "C", text: "The CEO liked the creative. That was the last conversation about it.", pts: 12 },
+        { key: "D", text: "Everyone had input. It was built by committee across three meetings.", pts: 18 },
+      ]
+    }
+  ];
+
+  // ─── STATE ───
+  let currentQ = 0;
+  let answers  = [];
+
+  // ─── INIT ───
+  function startQuiz() {
+    document.getElementById('heroSection').style.display = 'none';
+    const quizEl = document.getElementById('quizSection');
+    quizEl.classList.add('visible');
+    buildQuestions();
+    showQuestion(0);
+  }
+
+  function buildQuestions() {
+    const container = document.getElementById('questionsContainer');
+    container.innerHTML = '';
+    QUESTIONS.forEach((q, i) => {
+      const card = document.createElement('div');
+      card.className = 'question-card';
+      card.id = 'q-' + i;
+
+      const answersHTML = q.answers.map(a =>
+        `<button class="answer-btn" onclick="selectAnswer(${i}, ${a.pts}, '${a.key}', this)">
+          <span class="answer-key">${a.key}</span>
+          <span class="answer-text">${a.text}</span>
+        </button>`
+      ).join('');
+
+      card.innerHTML = `
+        <div class="q-number">Question ${q.id} of ${QUESTIONS.length}</div>
+        <div class="q-text">${q.text}</div>
+        <div class="q-sub">${q.sub}</div>
+        <div class="answers">${answersHTML}</div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  function showQuestion(index) {
+    document.querySelectorAll('.question-card').forEach(c => c.classList.remove('active'));
+    const card = document.getElementById('q-' + index);
+    if (card) {
+      card.classList.add('active');
+      card.style.animation = 'none';
+      void card.offsetWidth;
+      card.style.animation = '';
+    }
+    const pct = (index / QUESTIONS.length) * 100;
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressCount').textContent = (index + 1) + ' of ' + QUESTIONS.length;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function selectAnswer(qIndex, pts, key, btn) {
+    // Prevent double-click
+    const card = document.getElementById('q-' + qIndex);
+    card.querySelectorAll('.answer-btn').forEach(b => b.onclick = null);
+
+    // Visual feedback
+    btn.classList.add(pts === 0 ? 'correct-ish' : 'selected');
+
+    answers[qIndex] = { pts, key, flag: QUESTIONS[qIndex].flag, flagText: btn.querySelector('.answer-text').textContent };
+
+    // Advance after brief pause
+    setTimeout(() => {
+      currentQ = qIndex + 1;
+      if (currentQ < QUESTIONS.length) {
+        showQuestion(currentQ);
+      } else {
+        showResults();
+      }
+    }, 260);
+  }
+
+  // ─── RESULTS ───
+  function showResults() {
+    document.getElementById('quizSection').classList.remove('visible');
+
+    const totalPts  = answers.reduce((sum, a) => sum + a.pts, 0);
+    const maxPts    = QUESTIONS.length * 18;
+    const score     = Math.round((totalPts / maxPts) * 100);
+    const v         = verdict(score);
+    const redFlags  = answers.filter(a => a.pts >= 12);
+    const greenOnes = answers.filter(a => a.pts === 0);
+
+    // Score
+    const scoreEl = document.getElementById('scoreBig');
+    scoreEl.textContent = score;
+    const cls = score <= 15 ? 's-green' : score <= 30 ? 's-lime' : score <= 50 ? 's-yellow' : score <= 65 ? 's-orange' : score <= 80 ? 's-red' : 's-dark';
+    scoreEl.className = 'result-score-big ' + cls;
+
+    // Bar
+    setTimeout(() => {
+      const bar = document.getElementById('resultBarFill');
+      bar.style.width = score + '%';
+      bar.style.backgroundColor = v.barColor;
+    }, 120);
+
+    // Verdict
+    document.getElementById('resultVerdict').textContent = v.head;
+    document.getElementById('resultBody').textContent = v.body;
+
+    // Flags
+    const flagList = document.getElementById('flagList');
+    flagList.innerHTML = '';
+
+    if (redFlags.length === 0 && greenOnes.length > 0) {
+      const div = document.createElement('div');
+      div.className = 'flag-item green';
+      div.textContent = '✅ No critical gaps detected. This campaign has a solid foundation.';
+      flagList.appendChild(div);
+    }
+
+    redFlags.forEach((a, i) => {
+      const div = document.createElement('div');
+      div.className = 'flag-item';
+      div.style.animationDelay = (i * 0.06) + 's';
+      div.textContent = getFlagMessage(a.flag, a.pts, a.flagText);
+      flagList.appendChild(div);
+    });
+
+    const partials = answers.filter(a => a.pts > 0 && a.pts < 12);
+    if (partials.length > 0 && redFlags.length < 4) {
+      partials.slice(0, 2).forEach((a, i) => {
+        const div = document.createElement('div');
+        div.className = 'flag-item';
+        div.style.animationDelay = ((redFlags.length + i) * 0.06) + 's';
+        div.textContent = getMinorFlagMessage(a.flag);
+        flagList.appendChild(div);
+      });
+    }
+
+    if (greenOnes.length >= 6) {
+      const div = document.createElement('div');
+      div.className = 'flag-item green';
+      div.textContent = `✅ ${greenOnes.length} of 10 decisions were solid. The gaps above are specific, not systemic.`;
+      flagList.appendChild(div);
+    }
+
+    // CTA
+    document.getElementById('ctaBlock').style.display = score > 25 ? 'block' : 'none';
+
+    const resultsEl = document.getElementById('resultsSection');
+    resultsEl.classList.add('visible');
+    setTimeout(() => resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 180);
+
+    // Store for copy
+    window._lastScore = score;
+    window._lastVerdict = v.head;
+    window._lastFlags = redFlags;
+  }
+
+  // ─── FLAG MESSAGES ───
+  function getFlagMessage(flag, pts, answerText) {
+    const critical = pts >= 18;
+    const messages = {
+      "ICP clarity": critical
+        ? "🔴 ICP undefined. You're spending budget on the wrong people. You won't know until it's too late."
+        : "🟡 ICP is directional, not precise. You'll reach people. Not necessarily the right ones.",
+      "Goal definition": critical
+        ? "🔴 No single goal. Multiple objectives = diluted budget = unreadable results. You can't optimize what you can't measure."
+        : "🟡 Goal is vague. 'More leads' is a direction, not a target. You'll finish the campaign not knowing if it worked.",
+      "Channel selection": critical
+        ? "🔴 Channel chosen by habit, not data. 'We always use LinkedIn' is a strategy tax you pay every quarter."
+        : "🟡 Channel chosen by analogy, not evidence. What works for competitors doesn't automatically work for you.",
+      "Message framing": critical
+        ? "🔴 Message is about you, not them. Features, values, thought leadership. None of it answers their question: 'why should I care?'"
+        : "🟡 Message leads with the product, not the problem. They need to feel understood before they listen.",
+      "Post-click experience": critical
+        ? "🔴 No dedicated landing page. You're sending people to your homepage and hoping they find what you promised them. They won't."
+        : "🟡 The landing page exists but isn't purpose-built. Every disconnected step between click and conversion costs you leads.",
+      "Budget logic": critical
+        ? "🔴 Budget set by availability, not math. You have no idea if this budget is enough to hit your goal. You're guessing."
+        : "🟡 Budget based on precedent, not calculation. Last campaign's budget is not a benchmark unless last campaign worked.",
+      "Success measurement": critical
+        ? "🔴 No pre-defined success metrics. You'll know the campaign 'felt good' or 'felt bad.' That's not measurement."
+        : "🟡 Measuring vanity metrics. Impressions and clicks don't tell you if the campaign generated revenue.",
+      "Timeline realism": critical
+        ? "🔴 Two weeks is not a campaign timeline. It's a panic sprint. You won't have enough data to optimize anything."
+        : "🟡 Short timeline limits your ability to iterate. You'll finish before you understand what was working.",
+      "Learning from history": critical
+        ? "🔴 No learning from previous campaigns. You're running the same playbook without knowing if it ever worked."
+        : "🟡 Vague learning. 'Last one wasn't great' is not an insight. Without specific data, you'll repeat the same mistakes.",
+      "Decision-making quality": critical
+        ? "🔴 Built by committee. When everyone approves, nobody owns it. Campaigns without a single accountable decision-maker drift."
+        : "🟡 CEO liked the creative. Creative approval is not strategy approval. These are different questions.",
+    };
+    return messages[flag] || `⚠️ ${flag}: answer suggests a gap worth investigating.`;
+  }
+
+  function getMinorFlagMessage(flag) {
+    const minor = {
+      "ICP clarity": "🟡 ICP could be sharper. Directional targeting increases waste at scale.",
+      "Goal definition": "🟡 Multiple goals will fragment your optimization decisions.",
+      "Channel selection": "🟡 Channel hypothesis, not channel proof. Monitor closely.",
+      "Message framing": "🟡 Message prioritizes features over problems. Reframe for the prospect.",
+      "Post-click experience": "🟡 Post-click experience has friction. Each extra step costs you conversions.",
+      "Budget logic": "🟡 Budget not math-backed. Run the CPA calculation before you scale.",
+      "Success measurement": "🟡 Success metrics need sharper definition before launch.",
+      "Timeline realism": "🟡 Timeline is tight. Build in at least one optimization window.",
+      "Learning from history": "🟡 Partial learning from history. Dig deeper into the previous campaign data.",
+      "Decision-making quality": "🟡 Approval process had gaps. Ensure one person owns the outcome.",
+    };
+    return minor[flag] || `🟡 ${flag}: minor gap, worth a second look.`;
+  }
+
+  // ─── VERDICT ───
+  function verdict(score) {
+    if (score <= 12) return {
+      head: "🟢  Low Risk. You've done the work.",
+      body: "The fundamentals are solid. This campaign has a real chance. The specific gaps above are fixable before launch — don't ignore them, but don't panic either.",
+      barColor: "#2A9D5C"
+    };
+    if (score <= 28) return {
+      head: "🟡  Moderate Risk. A few gaps worth fixing.",
+      body: "The campaign has bones. But there are 2-3 decisions that will create real problems at the optimization stage. Fix them now. It's cheaper than fixing them after launch.",
+      barColor: "#6BAB3A"
+    };
+    if (score <= 48) return {
+      head: "🟠  High Risk. Classic setup for underperformance.",
+      body: "This campaign will run. It will produce results. They won't be the results you expected. And when the debrief happens, there will be four possible explanations and zero conviction about which one is right.",
+      barColor: "#B06E00"
+    };
+    if (score <= 65) return {
+      head: "🔴  Very High Risk. The campaign is already in trouble.",
+      body: "The decisions that cause campaign failure were made before the first piece of creative was approved. The red flags below aren't predictions — they're descriptions of what's already built into this campaign.",
+      barColor: "#C44B00"
+    };
+    if (score <= 82) return {
+      head: "💀  Almost Certain Failure. Don't spend this budget yet.",
+      body: "Launching this campaign is writing a post-mortem in advance. You already know it won't work. The question is whether you're willing to do the diagnostic before or after you spend the money.",
+      barColor: "#D94F4F"
+    };
+    return {
+      head: "☠️   Do Not Launch This Campaign.",
+      body: "Every major failure category is present. ICP, message, channel, measurement, post-click — none of it is ready. Launching at this stage doesn't generate data. It generates an expensive invoice and a meeting where nobody knows what went wrong.",
+      barColor: "#B32A2A"
+    };
+  }
+
+  // ─── HELPERS ───
+  function copyResult() {
+    const flags = (window._lastFlags || []).slice(0, 5).map(f => '· ' + f.flag + ': ' + f.flagText.substring(0, 60) + '...').join('\n');
+    const text =
+      `CAMPAIGN FAILURE PREDICTOR — Zero Hype\n` +
+      `────────────────────────────────────\n` +
+      `FAILURE RISK SCORE: ${window._lastScore}/100\n` +
+      `VERDICT: ${(window._lastVerdict || '').replace(/^[^\s]+\s+/, '')}\n\n` +
+      (flags ? `RED FLAGS:\n${flags}\n\n` : '') +
+      `Tested at: zerohypelab.com/campaign-failure-predictor/\n` +
+      `────────────────────────────────────`;
+
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelectorAll('.btn-action')[0];
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copied to clipboard';
+      setTimeout(() => btn.textContent = orig, 2200);
+    }).catch(() => alert(text));
+  }
+
+  function retakeQuiz() {
+    document.getElementById('ecForm').style.display = 'flex';
+document.getElementById('ecEmail').value = '';
+document.getElementById('ecBtn').textContent = 'Subscribe free';
+document.getElementById('ecBtn').disabled = false;
+document.getElementById('ecNote').textContent = 'ZeroHype newsletter. No pitch. No cadence. Unsubscribe any time.';
+
+    currentQ = 0;
+    answers  = [];
+    document.getElementById('resultsSection').classList.remove('visible');
+    document.getElementById('resultBarFill').style.width = '0%';
+    const quizEl = document.getElementById('quizSection');
+    quizEl.classList.add('visible');
+    buildQuestions();
+    showQuestion(0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  </script>
+
+</body>
+</html>

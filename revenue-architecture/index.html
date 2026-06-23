@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Revenue Architecture | Zero Hype</title>
+<meta name="description" content="Complete B2B revenue system built from scratch. ICP, full outreach stack, sales playbook, 90-day calendar, 3 months of ongoing review. $4,500. Async. 3-week delivery.">
+<meta property="og:title" content="The Revenue Architecture | Zero Hype">
+<meta property="og:description" content="Not a diagnosis. Not a rewrite. The complete B2B revenue system — ICP to close. 2 clients per quarter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+:root {
+  --parchment: #F0EAE0;
+  --parchment-dark: #E4DDD1;
+  --ink: #1C1510;
+  --ink-mid: #4A3F35;
+  --ink-light: #8B7D6E;
+  --ink-faint: #C4B8A8;
+  --gold: #A8750A;
+  --gold-light: #C8920A;
+  --gold-pale: rgba(168,117,10,0.1);
+  --white: #FAF7F3;
+  --rule: #D4CABB;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TEXTURE OVERLAY */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container { max-width: 800px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
+
+/* ─── HEADER ─── */
+header {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-inner { display: flex; align-items: center; justify-content: space-between; }
+
+.brand {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--ink-light);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.brand span { color: var(--gold); }
+
+.header-tier {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  border: 1px solid var(--rule);
+  padding: 5px 12px;
+}
+
+/* ─── MASTHEAD ─── */
+.masthead {
+  padding: 80px 0 72px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.masthead-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.masthead-label::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 60px;
+  background: var(--gold);
+}
+
+.masthead h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 8vw, 80px);
+  font-weight: 700;
+  line-height: 1.0;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+}
+
+.masthead h1 .line-italic {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+  font-size: clamp(44px, 7.5vw, 74px);
+}
+
+.masthead-meta {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+
+.meta-cell {
+  padding: 20px 24px;
+  border-right: 1px solid var(--rule);
+}
+
+.meta-cell:last-child { border-right: none; }
+
+.meta-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 6px;
+}
+
+.meta-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.meta-value.gold { color: var(--gold); }
+
+/* ─── PULL QUOTE ─── */
+.pull-quote {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.pull-quote blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--ink-mid);
+  max-width: 640px;
+  position: relative;
+  padding-left: 32px;
+}
+
+.pull-quote blockquote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: var(--gold);
+}
+
+/* ─── SECTIONS ─── */
+.section { padding: 72px 0; border-bottom: 1px solid var(--rule); }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.section-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+.section h2 em { font-style: italic; font-weight: 400; color: var(--gold); }
+
+/* ─── DELIVERABLES ─── */
+.deliverable-list { display: flex; flex-direction: column; }
+
+.deliverable {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 24px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+
+.deliverable:last-child { border-bottom: none; }
+
+.d-index {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.d-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.d-body p {
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+.d-tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 10px;
+  border-bottom: 1px solid var(--gold-light);
+  padding-bottom: 1px;
+}
+
+/* ─── VALUE TABLE ─── */
+.value-rows { display: flex; flex-direction: column; }
+
+.value-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.value-item { font-size: 15px; color: var(--ink-mid); }
+.value-price { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--ink-light); white-space: nowrap; }
+
+.value-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 28px 0 16px;
+}
+
+.value-total-label { font-size: 14px; color: var(--ink-light); font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.08em; }
+.value-total-price { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600; color: var(--ink-mid); text-decoration: line-through; }
+
+.value-offer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 4px;
+}
+
+.value-offer-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; }
+.value-offer-price { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; }
+
+/* ─── PROCESS ─── */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 32px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.timeline-item:last-child { border-bottom: none; }
+
+.timeline-week {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-top: 4px;
+}
+
+.timeline-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.timeline-body p { font-size: 15px; color: var(--ink-mid); line-height: 1.7; }
+
+/* ─── FOR WHO ─── */
+.criteria-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+
+.criteria-list li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  font-size: 16px;
+  color: var(--ink-mid);
+  line-height: 1.65;
+}
+
+.criteria-arrow {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: -2px;
+}
+
+.not-for-block {
+  margin-top: 48px;
+  padding: 28px 32px;
+  border: 1px solid var(--rule);
+  background: var(--parchment-dark);
+}
+
+.not-for-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 16px;
+}
+
+.not-for-items { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.not-for-items li { font-size: 15px; color: var(--ink-mid); display: flex; gap: 14px; }
+.not-for-items li::before { content: "—"; color: var(--ink-faint); flex-shrink: 0; font-family: 'DM Mono', monospace; }
+
+/* ─── FAQ ─── */
+.faq-list { display: flex; flex-direction: column; gap: 0; }
+
+.faq-item {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq-item:first-child { border-top: 1px solid var(--rule); }
+
+.faq-q {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.faq-a { font-size: 15px; color: var(--ink-mid); line-height: 1.7; }
+
+/* ─── APPLICATION ─── */
+.application {
+  padding: 96px 0;
+  border-top: 2px solid var(--ink);
+}
+
+.application-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.application-copy h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.application-copy h2 em { font-style: italic; color: var(--gold); font-weight: 400; }
+
+.application-copy p {
+  font-size: 15px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.cta-primary {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--parchment);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cta-primary:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.cta-note {
+  margin-top: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-light);
+}
+
+.application-details { padding-top: 8px; }
+
+.detail-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.detail-item:first-child { border-top: 1px solid var(--rule); }
+
+.detail-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0;
+}
+
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); }
+.footer-nav { display: flex; gap: 24px; }
+.footer-nav a { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); text-decoration: none; }
+.footer-nav a:hover { color: var(--ink); }
+
+@media (max-width: 640px) {
+  .masthead { padding: 56px 0 48px; }
+  .masthead-meta { grid-template-columns: 1fr; }
+  .meta-cell { border-right: none; border-bottom: 1px solid var(--rule); }
+  .meta-cell:last-child { border-bottom: none; }
+  .deliverable { grid-template-columns: 40px 1fr; gap: 16px; }
+  .d-index { font-size: 28px; }
+  .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+  .application-inner { grid-template-columns: 1fr; gap: 48px; }
+  .section { padding: 56px 0; }
+  .application { padding: 64px 0; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "The Revenue Architecture",
+  "description": "Full B2B revenue strategy audit and rebuild. Covers positioning, messaging, channel, targeting, and outreach sequencing. Application required. Async, 4-week delivery.",
+  "url": "https://zerohypelab.com/revenue-architecture/",
+  "provider": { "@type": "Organization", "name": "Zero Hype", "url": "https://zerohypelab.com" },
+  "offers": { "@type": "Offer", "price": "4500", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+}
+</script>
+</head>
+<body><a href="https://zerohypelab.com/cdn-cgi/content?id=VmR593YBg9y4O7AaiM4QkJ23WnGOuVWsuuBFGHOq4Uc-1782226838.179186-1.2.1.1-uVXKlS6PDxK0vBinO_22t9OiFhXrncvEbzvHGwmssCg" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="https://zerohypelab.com" class="brand">ZERO<span>HYPE</span></a>
+      <span class="header-tier">Premium Engagement</span>
+    </div>
+  </div>
+</header>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="container">
+    <p class="masthead-label">The Revenue Architecture</p>
+    <h1>
+      Build the system once.
+      <span class="line-italic">Run it for years.</span>
+    </h1>
+
+    <div class="masthead-meta">
+      <div class="meta-cell">
+        <p class="meta-label">Investment</p>
+        <p class="meta-value gold">$4,500</p>
+      </div>
+      <div class="meta-cell">
+        <p class="meta-label">Delivery</p>
+        <p class="meta-value">3 weeks</p>
+      </div>
+      <div class="meta-cell">
+        <p class="meta-label">Availability</p>
+        <p class="meta-value">2 / quarter</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <div class="container">
+    <blockquote>
+      Not a diagnosis. Not a single sequence rewrite. The complete revenue system — ICP to close — built for your market, your buyers, your team. Delivered in three weeks. No calls, ever.
+    </blockquote>
+  </div>
+</div>
+
+<!-- DELIVERABLES -->
+<div class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">I.</span>
+      <h2>Eight deliverables.<br><em>One complete system.</em></h2>
+    </div>
+
+    <div class="deliverable-list">
+      <div class="deliverable">
+        <span class="d-index">01</span>
+        <div class="d-body">
+          <h3>ICP Definition + Buyer Scoring Framework</h3>
+          <p>Not a demographic profile. A ranked scoring system — which signals indicate a ready buyer, which indicate a waste of time. Criteria your SDRs can use on any list, any day, without asking a manager.</p>
+          <span class="d-tag">Foundation</span>
+        </div>
+      </div>
+      <div class="deliverable">
+        <span class="d-index">02</span>
+        <div class="d-body">
+          <h3>Market Segmentation Map</h3>
+          <p>Your target market broken into 3-5 segments by buying behavior, not company size. Each segment gets its own angle, its own message, its own entry point. One sequence for everyone is the most common failure mode we see.</p>
+          <span class="d-tag">Strategy</span>
+        </div>
+      </div>
+      <div class="deliverable">
+        <span class="d-index">03</span>
+        <div class="d-body">
+          <h3>Full Cold Email System</h3>
+          <p>7-email sequence per primary segment. Subject line variants. Follow-up logic with timing and condition triggers. Written for your specific buyers. If you are targeting DACH, written in the register that doesn't get you immediately deleted.</p>
+          <span class="d-tag">Outreach</span>
+        </div>
+      </div>
+      <div class="deliverable">
+        <span class="d-index">04</span>
+        <div class="d-body">
+          <h3>LinkedIn Outreach Sequence</h3>
+          <p>5-touch LinkedIn sequence coordinated with the email flow so both channels reinforce instead of repeat. Connection request through direct ask, timed to complement the email cadence. Includes profile optimization notes.</p>
+          <span class="d-tag">Outreach</span>
+        </div>
+      </div>
+      <div class="deliverable">
+        <span class="d-index">05</span>
+        <div class="d-body">
+          <h3>Cold Call Script + Objection Guide</h3>
+          <p>Opener, qualification questions, pitch, and objection handling for the 8 most common deflections in your market. Written for the way your buyers actually talk — not for the way B2B sales scripts are usually written.</p>
+          <span class="d-tag">Sales</span>
+        </div>
+      </div>
+      <div class="deliverable">
+        <span class="d-index">06</span>
+        <div class="d-body">
+          <h3>Sales Playbook</h3>
+          <p>How to run the full process from first touch to signed contract. Pipeline stages, qualification criteria, handoff protocols, deal review checklist. Written for your team size, not for a Fortune 500.</p>
+          <span class="d-tag">Process</span>
+        </div>
+      </div>
+      <div class="deliverable">
+        <span class="d-index">07</span>
+        <div class="d-body">
+          <h3>90-Day Execution Calendar</h3>
+          <p>Week-by-week rollout plan. What to activate first, what to test, what to measure, when to adjust. A decision tree — what success looks like at each checkpoint and what to do when you are not hitting it.</p>
+          <span class="d-tag">Execution</span>
+        </div>
+      </div>
+      <div class="deliverable">
+        <span class="d-index">08</span>
+        <div class="d-body">
+          <h3>3 Months of Monthly Autopsy</h3>
+          <p>After delivery, your first three months of ongoing campaign review are included. One campaign per month, 3 rewrites delivered within 48 hours. The system gets built in week 3. Months 1 through 3 make sure it runs correctly.</p>
+          <span class="d-tag">Included — $900 value</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUE -->
+<div class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">II.</span>
+      <h2>What this costs<br><em>to build otherwise.</em></h2>
+    </div>
+
+    <div class="value-rows">
+      <div class="value-row">
+        <span class="value-item">Freelance copywriter — 7-email sequence + variants</span>
+        <span class="value-price">$800–1,200</span>
+      </div>
+      <div class="value-row">
+        <span class="value-item">Sales consultant — ICP definition + playbook</span>
+        <span class="value-price">$1,500–2,500</span>
+      </div>
+      <div class="value-row">
+        <span class="value-item">LinkedIn ghostwriter — outreach sequence</span>
+        <span class="value-price">$400–700</span>
+      </div>
+      <div class="value-row">
+        <span class="value-item">Sales trainer — objection handling guide</span>
+        <span class="value-price">$600–1,000</span>
+      </div>
+      <div class="value-row">
+        <span class="value-item">Go-to-market strategist — segmentation + 90-day plan</span>
+        <span class="value-price">$1,000–2,000</span>
+      </div>
+      <div class="value-row">
+        <span class="value-item">3 months of Monthly Autopsy ($300 × 3)</span>
+        <span class="value-price">$900</span>
+      </div>
+    </div>
+
+    <div class="value-total-row">
+      <span class="value-total-label">If bought separately</span>
+      <span class="value-total-price">$5,200–8,300</span>
+    </div>
+    <div class="value-offer-row">
+      <span class="value-offer-label">Revenue Architecture</span>
+      <span class="value-offer-price">$4,500</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">III.</span>
+      <h2>Three weeks.<br><em>How it runs.</em></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-week">Week Zero</span>
+        <div class="timeline-body">
+          <h3>Application and briefing.</h3>
+          <p>We review your application within 48 hours. If the fit is right, you pay and receive the briefing form. One 45-minute form — the only time you spend during the entire engagement. Every question directly shapes a deliverable.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-week">Week One</span>
+        <div class="timeline-body">
+          <h3>ICP, segmentation, foundation.</h3>
+          <p>Everything is built on top of this. If the foundation is wrong, the sequences are wrong. We get it right before writing a single line of copy. You receive the ICP and segmentation for one round of review before we proceed.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-week">Week Two</span>
+        <div class="timeline-body">
+          <h3>The full outreach stack.</h3>
+          <p>Cold email system, LinkedIn sequence, cold call script, and objection guide. Built segment by segment, channel by channel. No status updates — you will hear from us when the work is done.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-week">Week Three</span>
+        <div class="timeline-body">
+          <h3>Playbook, calendar, delivery.</h3>
+          <p>Sales playbook and 90-day execution calendar finalized. Full delivery package: PDFs, editable documents, all copy in plain text and formatted. One revision cycle included on anything that needs adjustment.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-week">Months 1–3</span>
+        <div class="timeline-body">
+          <h3>Monthly Autopsy reviews.</h3>
+          <p>Three months included. Submit one live campaign per month. Written autopsy and 3 rewrites within 48 hours. This is where the system gets tuned against real-world results, not theoretical assumptions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOR WHO -->
+<div class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">IV.</span>
+      <h2>This is for you<br><em>if.</em></h2>
+    </div>
+
+    <ul class="criteria-list">
+      <li><span class="criteria-arrow">→</span>You have a sales team of 2 to 10 people running on sequences that nobody built intentionally — they just accumulated over time.</li>
+      <li><span class="criteria-arrow">→</span>You are entering a new market, especially DACH, and you know your existing playbook will not translate.</li>
+      <li><span class="criteria-arrow">→</span>You have tried fixing it piecemeal — new copywriter, new tool, new SDR — and the number does not move.</li>
+      <li><span class="criteria-arrow">→</span>You need something a new hire can pick up and run without tribal knowledge.</li>
+      <li><span class="criteria-arrow">→</span>You want it built once, correctly, by someone who will tell you what is wrong with your current approach before taking your money.</li>
+    </ul>
+
+    <div class="not-for-block">
+      <p class="not-for-title">Not for you if</p>
+      <ul class="not-for-items">
+        <li>You need calls. This is async throughout. No exceptions at any price.</li>
+        <li>You want someone to run the system after we build it. We build, you run.</li>
+        <li>You are pre-revenue or pre-product. Come back when you have something to sell.</li>
+        <li>You want guaranteed results. We build the best system we know how to build. Results depend on your execution.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section" style="border-bottom:none;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">V.</span>
+      <h2>Questions worth<br><em>answering.</em></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Why an application instead of a payment link?</p>
+        <p class="faq-a">Two clients per quarter. A third client means the work takes longer and the quality drops. An application takes 5 minutes and immediately tells us whether the fit is right — which saves time on both sides.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What does async mean at $4,500?</p>
+        <p class="faq-a">No Zoom calls. No check-ins. No status meetings. You fill out the briefing form. We build the system. We send you the ICP and segmentation for one round of input. We deliver the full package. That is the entire interaction. The quality comes from deep work, not from meetings about the work.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">We sell in German. Can you build in German?</p>
+        <p class="faq-a">Yes. DACH-market sequences, scripts, and playbooks are a core part of what this engagement covers. German-language deliverables are standard, not an add-on. The briefing form will ask for language, market, and buyer profile.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What if I only need the email sequences?</p>
+        <p class="faq-a">That is the Outreach Overhaul at $897. The Revenue Architecture is for companies that need the full stack — ICP to close — not just better copy on an existing sequence.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- APPLICATION -->
+<div class="application">
+  <div class="container">
+    <div class="application-inner">
+      <div class="application-copy">
+        <h2>Apply for<br><em>this engagement.</em></h2>
+        <p>Send an email. Describe your company, your current outreach situation, and what market you are targeting. We respond within 48 hours with either an acceptance or a reason it is not the right fit.</p>
+        <p>If the current quarter is full, accepted applications go to the next available slot. We do not take three clients to fill a calendar.</p>
+        <a href="/cdn-cgi/l/email-protection#f199949d9d9eb18b94839e998881949d9093df929e9cce8284939b949285cca39487949f8494d1b08392999885949285848394d1137165d1b081819d98929085989e9f" class="cta-primary">Apply via Email</a>
+        <p class="cta-note"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d65686161624d77687f6265747d68616c6f236e6260">[email&#160;protected]</a> &nbsp;·&nbsp; Response within 48 hours</p>
+      </div>
+
+      <div class="application-details">
+        <div class="detail-item">
+          <p class="detail-label">Investment</p>
+          <p class="detail-value">$4,500 — paid on acceptance</p>
+        </div>
+        <div class="detail-item">
+          <p class="detail-label">Delivery</p>
+          <p class="detail-value">3 weeks from briefing</p>
+        </div>
+        <div class="detail-item">
+          <p class="detail-label">Availability</p>
+          <p class="detail-value">2 clients per quarter</p>
+        </div>
+        <div class="detail-item">
+          <p class="detail-label">Format</p>
+          <p class="detail-value">Async throughout — no calls</p>
+        </div>
+        <div class="detail-item">
+          <p class="detail-label">Included</p>
+          <p class="detail-value">3 months Monthly Autopsy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Zero Hype. No fluff. No hype. Just what works.</span>
+      <nav class="footer-nav">
+        <a href="https://zerohypelab.com">Home</a>
+        <a href="https://zerohypelab.com/outreach-overhaul">Outreach Overhaul — $897</a>
+        <a href="https://zerohypelab.com/monthly-autopsy">Monthly Autopsy — $300/mo</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

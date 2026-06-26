@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign Autopsy — Zero Hype</title>
+  <meta name="description" content="Your campaign underperformed. Find out exactly why. A full diagnostic on your B2B marketing campaign. No guesses. No frameworks. Just the specific breakdown of what went wrong and how to fix it.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://zerohypelab.com/campaign-autopsy/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zerohypelab.com/campaign-autopsy/">
+  <meta property="og:title" content="Campaign Autopsy — Zero Hype">
+  <meta property="og:description" content="Your campaign underperformed. Find out exactly why. A 3-page diagnostic report on your failed B2B campaign. $500. 48–72 hour delivery.">
+  <meta property="og:site_name" content="Zero Hype">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@zerohype_co">
+  <meta name="twitter:title" content="Campaign Autopsy — Zero Hype">
+  <meta name="twitter:description" content="Your campaign underperformed. Find out exactly why. A 3-page diagnostic report on your failed B2B campaign. $500. 48–72 hour delivery.">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Campaign Autopsy",
+    "description": "A full diagnostic on a failed or underperforming B2B marketing campaign. 3-page report delivered in 48–72 hours.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Zero Hype",
+      "url": "https://zerohypelab.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "500",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface: #141414;
+      --border: rgba(255, 255, 255, 0.08);
+      --text-primary: #f2f2f2;
+      --text-secondary: #888;
+      --text-muted: #555;
+      --accent: #e05252;
+      --red: #e05252;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 40px;
+      border-bottom: 1px solid var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 80px 0 64px;
+      border-bottom: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding-left: 28px;
+      margin-left: -28px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.65;
+      margin-bottom: 48px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+    }
+
+    .price-note {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      padding: 14px 28px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.85;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      padding: 14px 28px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: var(--text-primary);
+    }
+
+    .cta-note {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ── SECTION ── */
+    section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .body-text {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .body-text p + p {
+      margin-top: 16px;
+    }
+
+    /* ── PROBLEM LIST ── */
+    .problem-list {
+      list-style: none;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .problem-list li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      line-height: 1.5;
+      background: var(--surface);
+    }
+
+    .problem-list li::before {
+      content: "→ ";
+      color: var(--accent);
+    }
+
+    /* ── DELIVERABLE GRID ── */
+    .deliverable-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      margin-top: 32px;
+      border: 1px solid var(--border);
+    }
+
+    .deliverable-item {
+      background: var(--bg);
+      padding: 28px 24px;
+    }
+
+    .deliverable-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .deliverable-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .deliverable-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .steps {
+      list-style: none;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      padding-top: 3px;
+    }
+
+    .step-content strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .step-content p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── NOT FOR SECTION ── */
+    .not-for-list {
+      list-style: none;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .not-for-list li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+    }
+
+    .not-for-list li::before {
+      content: "✕  ";
+      color: var(--accent);
+      font-size: 11px;
+    }
+
+    .is-for-list {
+      list-style: none;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .is-for-list li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+    }
+
+    .is-for-list li::before {
+      content: "✓  ";
+      color: var(--text-secondary);
+      font-size: 11px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 24px;
+    }
+
+    .two-col h3 {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* ── BOTTOM CTA ── */
+    .bottom-cta {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .bottom-cta h2 {
+      max-width: 500px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    .bottom-cta .body-text {
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .bottom-cta .price-row {
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .bottom-cta .cta-group {
+      justify-content: center;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      color: var(--text-muted);
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav {
+        padding: 20px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .container {
+        padding: 0 24px;
+      }
+
+      .hero {
+        padding: 56px 0 48px;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .deliverable-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price {
+        font-size: 30px;
+      }
+
+      .cta-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+  <script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<body><a href="https://zerohypelab.com/cdn-cgi/content?id=UovGnOKS9eJ2eGOooyCdVsQvcd70cBQe8O1_AACUC2I-1782226839.2247696-1.2.1.1-a0getsugJ1oERQX5mcyaFGS.6xidH_fkcdE7xLNTL7c" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+
+  <!-- NAV -->
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-logo">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/outreach-autopsy/">Outreach Autopsy</a></li>
+      <li><a href="https://zerohypelab.com/marketing-autopsy/">Marketing Autopsy</a></li>
+      <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="container">
+    <div class="hero">
+      <span class="tag">Campaign Autopsy</span>
+      <h1>Your campaign underperformed. Find out exactly why.</h1>
+      <p class="hero-sub">A full diagnostic on a failed or underperforming B2B marketing campaign. You tell me what you ran. I tell you specifically what broke and how to fix it. No guesses. No frameworks. No vague recommendations.</p>
+      <div class="price-row">
+        <span class="price">$500</span>
+        <span class="price-note">Early access price. Delivered in 48–72 hours.</span>
+      </div>
+      <div class="cta-group">
+        <a href="https://tally.so/r/b5kq22" class="btn-primary">Start your autopsy</a>
+        <a href="https://buy.stripe.com/7sY9AV87C0VafvvcTIaR202" class="btn-secondary">Pay now — $500</a>
+      </div>
+      <p style="margin-top: 14px; font-size: 13px; color: var(--text-muted);">Fill the intake form first. Payment is the last step.</p>
+    </div>
+
+    <!-- PROBLEM -->
+    <section>
+      <p class="section-label">The problem</p>
+      <h2>Most campaign post-mortems miss the point.</h2>
+      <div class="body-text">
+        <p>The usual debrief goes like this: impressions were fine, CTR was low, probably the creative. Or maybe the audience was off. Or the timing. You get a list of possible reasons and no way to know which one actually killed the campaign.</p>
+        <p>That's not a diagnosis. That's a list of suspects with no conviction.</p>
+        <p>Campaign Autopsy works backwards from the result. What happened at each stage, what the numbers actually say, and which specific decision upstream caused the downstream failure. One clear answer you can act on.</p>
+      </div>
+      <ul class="problem-list">
+        <li>You ran a LinkedIn campaign. Leads came in. None of them converted. You don't know if that's a targeting problem, a message problem, or a sales handoff problem.</li>
+        <li>You invested in content marketing for six months. Traffic grew. Pipeline didn't move. The correlation you expected didn't materialize and nobody can explain why.</li>
+        <li>You ran a paid campaign with an agency. They said results were solid. Your revenue didn't reflect it. You need to know who's right.</li>
+        <li>Your outbound sequence ran for three months. Open rates were decent. Replies were near zero. You've already changed the subject line three times and nothing shifted.</li>
+      </ul>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section>
+      <p class="section-label">What you get</p>
+      <h2>A three-part diagnostic report. No padding.</h2>
+      <div class="body-text">
+        <p>Delivered as a PDF within 48–72 hours of receiving your intake form. Clear sections. Short sentences. Specific findings only.</p>
+      </div>
+      <div class="deliverable-grid">
+        <div class="deliverable-item">
+          <p class="deliverable-number">Part 01</p>
+          <p class="deliverable-title">The failure chain</p>
+          <p class="deliverable-desc">A step-by-step breakdown of where the campaign lost momentum. Each stage scored: message, targeting, offer, channel fit, timing. The specific point where it broke.</p>
+        </div>
+        <div class="deliverable-item">
+          <p class="deliverable-number">Part 02</p>
+          <p class="deliverable-title">The actual diagnosis</p>
+          <p class="deliverable-desc">One primary cause. The thing that, if you'd gotten it right, would have changed the outcome. Not a list. One finding with the evidence that supports it.</p>
+        </div>
+        <div class="deliverable-item">
+          <p class="deliverable-number">Part 03</p>
+          <p class="deliverable-title">Three specific fixes</p>
+          <p class="deliverable-desc">What to change before you run the next version of this campaign. Each fix is specific to your situation. Nothing generic. Nothing that requires a six-month strategy overhaul.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section>
+      <p class="section-label">How it works</p>
+      <h2>Three steps. 72 hours.</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">01</span>
+          <div class="step-content">
+            <strong>Submit your intake form</strong>
+            <p>Fill in the Campaign Autopsy form. You'll be asked about the campaign objective, the channels used, the targeting approach, the creative and copy, the results you got, and what you expected. This takes 20–30 minutes. The quality of your diagnosis depends on the quality of what you submit. Be specific. Don't edit yourself.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <div class="step-content">
+            <strong>Pay</strong>
+            <p>After submitting the intake form, you'll be redirected to payment. $500, flat fee. Work begins after payment clears. No partial reviews, no sliding scale. The price is the price.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <div class="step-content">
+            <strong>Receive your report</strong>
+            <p>The Campaign Autopsy report arrives as a PDF within 48–72 hours. If I need clarification on anything in your intake form, I'll email you at the address you provided. Most reports are delivered closer to 48 hours than 72.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- RIGHT FOR YOU -->
+    <section>
+      <p class="section-label">Fit check</p>
+      <h2>This is for you if.</h2>
+      <div class="two-col">
+        <div>
+          <h3>This works for</h3>
+          <ul class="is-for-list">
+            <li>B2B campaigns that ran and underdelivered on the primary metric</li>
+            <li>Founders who ran the campaign themselves and can't see where it broke</li>
+            <li>Marketing leads who need an outside read before presenting internally</li>
+            <li>Teams where the campaign ran but the sales team says the leads were wrong</li>
+            <li>Anyone about to rerun a campaign that failed and wants to know what to change</li>
+          </ul>
+        </div>
+        <div>
+          <h3>This doesn't work for</h3>
+          <ul class="not-for-list">
+            <li>B2C campaigns. The diagnostic framework is built for B2B.</li>
+            <li>Campaigns that haven't run yet. This is a post-mortem, not a planning tool.</li>
+            <li>Campaigns with no data. If you don't have results, there's nothing to autopsy.</li>
+            <li>Anyone who wants a consultant relationship. This is a one-time diagnostic.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <div class="bottom-cta">
+      <h2>One campaign. One diagnosis. One path forward.</h2>
+      <p class="body-text">If you ran a campaign and it didn't work, you have two options. Run it again and hope something changes. Or find out what broke and fix it before you spend the budget again.</p>
+      <div class="price-row">
+        <span class="price">$500</span>
+        <span class="price-note">Flat fee. 48–72 hour delivery.</span>
+      </div>
+      <div class="cta-group">
+        <a href="https://tally.so/r/b5kq22" class="btn-primary">Start your autopsy</a>
+        <a href="https://buy.stripe.com/7sY9AV87C0VafvvcTIaR202" class="btn-secondary">Pay now — $500</a>
+      </div>
+      <p style="margin-top: 14px; font-size: 13px; color: var(--text-muted); text-align: center;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="413b24332e293831240131332e352e2f6f2c24">[email&#160;protected]</a> if you have questions first.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-brand">Zero Hype</span>
+        <ul class="footer-links">
+          <li><a href="https://zerohypelab.com/outreach-autopsy/">Outreach Autopsy — $99</a></li>
+          <li><a href="https://zerohypelab.com/marketing-autopsy/">Marketing Autopsy — $49</a></li>
+          <li><a href="https://zerohypelab.substack.com">Newsletter</a></li>
+          <li><a href="https://zerohypelab.com/dach-outreach-agent/">DACH Outreach Agent — $49</a></li>
+          <li><a href="https://zerohypelab.com/dach-prospect-intelligence/">DACH Intelligence — $299</a></li>
+          <li><a href="https://zerohypelab.com/cold-email-roaster/">Cold Email Roaster — Free</a></li>
+          <li><a href="https://zerohypelab.com/campaign-failure-predictor/">Campaign Failure Predictor — Free</a></li>
+          <li><a href="https://zerohypelab.com">All services</a></li>
+        </ul>
+        <p class="footer-copy">No fluff. No hype. Just what works.</p>
+      </div>
+    </div>
+  </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

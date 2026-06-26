@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DACH Prospect Intelligence Report | Zero Hype</title>
+<meta name="description" content="One company. One contact. 48 hours. A full intelligence brief on how to get into any DACH account without getting ignored. $299.">
+<meta property="og:title" content="DACH Prospect Intelligence Report | Zero Hype">
+<meta property="og:description" content="Know exactly who you're pitching before you pitch. Cultural profile, buying signals, entry angle, 2 ready-to-send emails, 3 objections with responses. $299.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+:root {
+  --bg: #F7F6F3;
+  --bg-card: #FFFFFF;
+  --border: #E0DED9;
+  --border-light: #D0CEC9;
+  --blue: #2563EB;
+  --blue-dim: #1D4ED8;
+  --blue-muted: rgba(37,99,235,0.08);
+  --text: #1A1A1A;
+  --text-dim: #555555;
+  --text-muted: #999999;
+  --white: #1A1A1A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.brand span { color: var(--blue); }
+
+.header-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 0 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue-muted);
+  border: 1px solid rgba(75,142,247,0.2);
+  color: var(--blue);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 28px;
+}
+
+.product-tag .dot {
+  width: 5px;
+  height: 5px;
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--text-dim);
+  line-height: 1.65;
+  max-width: 580px;
+  margin-bottom: 40px;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.price-main {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.price-detail {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blue);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.18s, transform 0.12s;
+}
+
+.cta-primary:hover { background: var(--blue-dim); transform: translateY(-1px); }
+
+.cta-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+/* SECTIONS */
+section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.body-text {
+  font-size: 17px;
+  color: var(--text-dim);
+  line-height: 1.75;
+  margin-bottom: 18px;
+  max-width: 640px;
+}
+
+/* DELIVERABLES */
+.deliverables {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 36px;
+}
+
+.deliverable {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 28px;
+  transition: border-color 0.18s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.deliverable:hover { border-color: rgba(37,99,235,0.25); }
+
+.d-number {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 500;
+  flex-shrink: 0;
+  padding-top: 3px;
+  min-width: 24px;
+}
+
+.d-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.d-desc {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+/* PROCESS */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+  position: relative;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.process-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.process-step:last-child { padding-bottom: 0; }
+
+.step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--blue);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.step-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+  padding-top: 9px;
+}
+
+.step-desc {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+/* FOR WHO */
+.for-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.for-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.for-icon {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--blue);
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.for-text {
+  font-size: 16px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+.not-for {
+  margin-top: 32px;
+  padding: 22px 26px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.not-for-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.not-item {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.not-item:last-child { margin-bottom: 0; }
+
+.not-item::before {
+  content: '×';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+/* PRICE BLOCK */
+.price-block {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  margin-top: 36px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+.price-block .price-main {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.price-block .price-detail {
+  display: block;
+  margin-bottom: 28px;
+  font-size: 13px;
+}
+
+.price-block .cta-primary {
+  margin: 0 auto;
+}
+
+.guarantee-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 22px;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+  padding: 48px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover { color: var(--text-dim); }
+
+@media (max-width: 600px) {
+  .hero { padding: 56px 0 48px; }
+  .hero-meta { gap: 12px; }
+  .price-block { padding: 32px 24px; }
+  .price-block .price-main { font-size: 48px; }
+  .deliverable { flex-direction: column; gap: 10px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .footer-links { gap: 14px; }
+}
+</style>
+</head>
+<body><a href="https://zerohypelab.com/cdn-cgi/content?id=XRcAMmGnRf9yYcbnWQmH.hEarOLxrmFXnvgxcPg1CbE-1782226839.6375892-1.2.1.1-ZiM3MqB7ehG_WGRSndoy5rf.2kvpIWDQvcJwna.jQWU" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="https://zerohypelab.com" class="brand">Zero<span>Hype</span></a>
+      <span class="header-tag">// DACH Intelligence</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <div class="product-tag"><span class="dot"></span> Prospect Intelligence Report</div>
+      <h1>Know exactly who you're pitching.<br>Before you pitch.</h1>
+      <p class="hero-sub">One company. One contact. A complete intelligence brief on how to get in without getting ignored. Built for B2B sales into German, Austrian, and Swiss accounts.</p>
+      <div class="hero-meta">
+        <span class="price-main">$299</span>
+        <span class="price-detail">// per report. flat fee. 48-hour delivery.</span>
+      </div>
+      <a href="https://buy.stripe.com/4gM4gBgE87jygzzbPEaR204" class="cta-primary">
+        Order a Report
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="cta-note">// 3 reports per week. Manual research, no shortcuts. 2 slots remaining this week.</p>
+      <p class="cta-note">// One payment. You will be redirected to a short intake form. Report delivered by email in 48h.</p>
+    </div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <section>
+    <div class="container">
+      <div class="section-tag">// the problem</div>
+      <h2>DACH prospects don't ignore bad outreach. They remember it.</h2>
+      <p class="body-text">German, Austrian, and Swiss buyers evaluate vendors before they respond. They look for signals of competence. They make decisions faster than you think, and usually against you.</p>
+      <p class="body-text">Generic cold emails. Tone that reads as aggressive in Frankfurt. No understanding of how the target company actually makes purchasing decisions. That is how most international B2B outreach fails in DACH. Not because the product is wrong. Because the approach signals that you didn't do the work.</p>
+      <p class="body-text">This report is the work.</p>
+    </div>
+  </section>
+
+  <!-- WHAT'S IN THE REPORT -->
+  <section>
+    <div class="container">
+      <div class="section-tag">// what you get</div>
+      <h2>Five deliverables. One 48-hour turnaround.</h2>
+      <div class="deliverables">
+        <div class="deliverable">
+          <span class="d-number">01</span>
+          <div>
+            <div class="d-title">Company Cultural Profile</div>
+            <div class="d-desc">How this company makes buying decisions. Who holds veto power. What signals they look for in a vendor. What they find suspicious. Based on public data, industry context, and DACH buying behavior patterns.</div>
+          </div>
+        </div>
+        <div class="deliverable">
+          <span class="d-number">02</span>
+          <div>
+            <div class="d-title">Buying Signals Analysis</div>
+            <div class="d-desc">What their LinkedIn activity, job postings, recent news, and public statements reveal about current priorities. Where your timing is an advantage. Where it is not.</div>
+          </div>
+        </div>
+        <div class="deliverable">
+          <span class="d-number">03</span>
+          <div>
+            <div class="d-title">Entry Angle Recommendation</div>
+            <div class="d-desc">The specific hook most likely to work for this company and this contact. Not a generic pain point. A concrete positioning statement based on who they are, what they need right now, and how they prefer to be approached.</div>
+          </div>
+        </div>
+        <div class="deliverable">
+          <span class="d-number">04</span>
+          <div>
+            <div class="d-title">2 Ready-to-Send Emails</div>
+            <div class="d-desc">One opening email. One follow-up. Written for this specific contact, calibrated to DACH register, with the entry angle embedded. Not templates with blanks. Complete, sent-ready messages.</div>
+          </div>
+        </div>
+        <div class="deliverable">
+          <span class="d-number">05</span>
+          <div>
+            <div class="d-title">3 Probable Objections + Responses</div>
+            <div class="d-desc">The most likely pushback from this contact, calibrated to DACH business culture and this company's specific situation. With a prepared response for each one. So when the objection lands, you are not improvising.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <div class="container">
+      <div class="section-tag">// how it works</div>
+      <h2>Four steps. No complexity.</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Pay ($299)</div>
+            <div class="step-desc">One flat fee. No retainer. No subscription. Processed securely via Stripe.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Fill the intake form (5 minutes)</div>
+            <div class="step-desc">Target company name, website, and contact details. Your product or service. What you have already tried. What you know about them. The more context, the sharper the report.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">We research</div>
+            <div class="step-desc">Deep dive into the company, the contact, the industry, and DACH-specific buying dynamics. This takes time. It is done properly, not from a template.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">Your report arrives in 48 hours</div>
+            <div class="step-desc">PDF report with all five sections. Two emails in plain text, ready to copy and send. Delivered to the email you provide in the intake form.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section>
+    <div class="container">
+      <div class="section-tag">// who this is for</div>
+      <h2>You have one shot at a specific account.</h2>
+      <div class="for-list">
+        <div class="for-item">
+          <span class="for-icon">→</span>
+          <span class="for-text">You sell B2B software or services into German, Austrian, or Swiss companies.</span>
+        </div>
+        <div class="for-item">
+          <span class="for-icon">→</span>
+          <span class="for-text">You have a specific target. A company you want to get into. A contact you have already identified.</span>
+        </div>
+        <div class="for-item">
+          <span class="for-icon">→</span>
+          <span class="for-text">Your DACH outreach is getting 0% replies. Or you have never tried DACH and don't want to start badly.</span>
+        </div>
+        <div class="for-item">
+          <span class="for-icon">→</span>
+          <span class="for-text">The deal, if you land it, is worth more than $299. You are not trying to save money. You are trying to not waste the opportunity.</span>
+        </div>
+      </div>
+      <div class="not-for">
+        <div class="not-for-label">// not for</div>
+        <div class="not-item">Mass outreach campaigns. This report covers one target, not fifty.</div>
+        <div class="not-item">Consumer or B2C. DACH enterprise and mid-market B2B only.</div>
+        <div class="not-item">People looking for a generic DACH playbook. That is the DACH Cold Email Pack ($24).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section style="border-bottom: none; padding-bottom: 80px;">
+    <div class="container">
+      <div class="price-block">
+        <div class="section-tag" style="text-align:center; margin-bottom: 24px;">// order a report</div>
+        <span class="price-main">$299</span>
+        <span class="price-detail">// per report. flat fee. 48-hour delivery. no subscription.</span>
+        <p style="font-family: 'DM Mono', monospace; font-size: 0.8rem; color: #e05252; margin: 8px 0 20px; text-align: center;">→ 2 slots remaining this week. 3 reports per week max.</p>
+        <a href="https://buy.stripe.com/4gM4gBgE87jygzzbPEaR204" class="cta-primary">
+          Order Now
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="guarantee-text">
+          After payment you will be redirected to a short intake form.<br>
+          Your report arrives by email within 48 hours.<br>
+          Questions: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96ecf3e4f9feefe6f3d6e6e4f9e2f9f8b8fbf3">[email&#160;protected]</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-brand">Zero Hype. No fluff. No hype. Just what works.</span>
+      <nav class="footer-links">
+        <a href="https://zerohypelab.com/outreach-autopsy/">Outreach Autopsy $99</a>
+        <a href="https://zerohypelab.com/campaign-autopsy/">Campaign Autopsy $500</a>
+        <a href="https://zerohypelab.com/dach-outreach-agent/">DACH Outreach Agent $49</a>
+        <a href="https://zerohypelab.com/campaign-failure-predictor/">Free Tools</a>
+        <a href="https://zerohypelab.substack.com">Newsletter</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

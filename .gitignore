@@ -1,0 +1,6 @@
+
+# Deploy guard scripts/logs — NEVER public (ZeroHype isolation)
+verify_deploy.sh
+verify_deploy.log
+*.sh
+*.log

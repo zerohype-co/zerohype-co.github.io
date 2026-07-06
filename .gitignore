@@ -4,3 +4,7 @@ verify_deploy.sh
 verify_deploy.log
 *.sh
 *.log
+
+# Agent config — local only, never deployed (GitHub Pages serves everything committed)
+AGENTS.md
+.opencode/

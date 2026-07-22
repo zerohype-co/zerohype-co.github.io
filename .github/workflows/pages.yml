@@ -23,6 +23,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # `path: .` urca tot ce e in checkout, deci README.md si .gitignore ajungeau
+      # servite 200 pe domeniu. .gitignore enumera numele uneltelor locale — recon
+      # gratuit. Le scoatem din artefact, nu din repo: in repo raman necesare.
+      - name: Scoate fisierele care nu sunt active web din artefact
+        run: rm -f README.md .gitignore
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

@@ -510,30 +510,2850 @@ The difference: a consultant is a relationship. ZeroHype is a diagnostic. If you
 
 ## Pages
 
-- [Homepage](https://zerohypelab.com/)
-- [Manifesto](https://zerohypelab.com/manifesto/)
-- [About](https://zerohypelab.com/about/)
-- [Cold Email Roaster](https://zerohypelab.com/cold-email-roaster/)
-- [Campaign Failure Predictor](https://zerohypelab.com/campaign-failure-predictor/)
-- [B2B Bullshit Detector](https://zerohypelab.com/bullshit-detector/)
-- [B2B Homepage Roaster](https://zerohypelab.com/homepage-roaster/)
-- [German B2B Experts](https://zerohypelab.com/german-b2b-experts/)
-- [Marketing Autopsy](https://zerohypelab.com/marketing-autopsy/)
-- [Outreach Autopsy](https://zerohypelab.com/outreach-autopsy/)
-- [Campaign Autopsy](https://zerohypelab.com/campaign-autopsy/)
-- [DACH Outreach Agent](https://zerohypelab.com/dach-outreach-agent/)
-- [DACH Prospect Intelligence](https://zerohypelab.com/dach-prospect-intelligence/)
-- [Outreach Overhaul](https://zerohypelab.com/outreach-overhaul/)
-- [Monthly Autopsy](https://zerohypelab.com/monthly-autopsy/)
-- [Revenue Architecture](https://zerohypelab.com/revenue-architecture/)
-- [Guides Hub](https://zerohypelab.com/guides/)
-- [Blog](https://zerohypelab.com/blog/)
-- [vs Lavender](https://zerohypelab.com/vs-lavender/)
-- [vs Reply.io](https://zerohypelab.com/vs-replyio/)
-- [vs Hiring a Consultant](https://zerohypelab.com/vs-hiring-consultant/)
+Full content of every page on the apex and of the eleven product pages, generated from the pages themselves. The 141 guides and the 15 blog posts are not inlined here: each is served as markdown at its own path, and the full list is in https://zerohypelab.com/guides/sitemap.xml
+
+### Homepage (https://zerohypelab.com/)
+
+You sent the emails. You ran the campaign. You hired the agency. Something isn't working and you can't tell if it's the message, the targeting, the sequence, or all three. Most B2B marketing failures have one specific break point. The tools and diagnostics here find it — without the consultant retainer, without the three-month engagement, without the mood board.
+
+by [an anonymous B2B marketing practitioner](https://zerohypelab.com/about.html) · Updated June 2026
+
+[Try a free tool](https://zerohypelab.com/cold-email-roaster/)
+
+Why this exists
+
+Published by Zero Hype · Updated June 2026 · Contact: zerohype@proton.me · [About Zero Hype](https://zerohypelab.com/about/)
+
+200+ cold outreach sequences reviewed. The failure is almost never the product. It is the diagnosis.
+
+Mailshake benchmark (2024): median cold email reply rates fell from 6.8% to 5.8% in two years. Top-quartile teams held 15-25% reply rates. The difference is not budget or effort. It is one identifiable break point in message, targeting, or sequence.
+
+Forrester (2023): 74% of B2B buyers complete more than half their research before speaking to a vendor. Fewer than 20% of B2B marketing teams can trace pipeline to a specific activity. These tools find the break point before the budget is spent.
+
+| Problem                   | Tool                       | Price |
+|---------------------------|----------------------------|-------|
+| Cold email not converting | B2B Bullshit Detector      | Free  |
+| Campaign likely to fail   | Campaign Failure Predictor | Free  |
+| Full marketing broken     | Marketing Autopsy          | \$49  |
+| Outreach sequence failing | Outreach Autopsy           | \$99  |
+| Full overhaul needed      | Outreach Overhaul          | \$897 |
+
+NO FLUFF· NO HYPE· JUST WHAT WORKS· NO CONSULTANTS· NO RETAINERS· NO GUESSES· NO FRAMEWORKS· NO FLUFF· NO HYPE· JUST WHAT WORKS· NO CONSULTANTS· NO RETAINERS· NO GUESSES· NO FRAMEWORKS·
+
+01
+
+#### Free tools
+
+[Free · Paste copy](https://zerohypelab.com/bullshit-detector/)
+
+B2B Bullshit Detector
+
+Paste any B2B claim. Get flagged on vague words and missing proof.
+
+→ [Free · Instant](https://zerohypelab.com/cold-email-roaster/)
+
+Cold Email Roaster
+
+Paste your cold email. Get a Hype Score 0–100 and the line that's killing replies.
+
+→ [Free · 10 questions](https://zerohypelab.com/campaign-failure-predictor/)
+
+Campaign Failure Predictor
+
+10 questions before you launch. Tells you what's already broken.
+
+→ [Free · Paste or URL](https://zerohypelab.com/homepage-roaster/)
+
+B2B Homepage Roaster
+
+Paste your homepage or drop the URL. Score plus the specific copy fix.
+
+→ [Free · Read](https://zerohypelab.com/german-b2b-experts/)
+
+10 People Who Understand the German B2B Market
+
+Not consultants. Not market entry guides. Practitioners who have made decisions with consequences in the DACH market.
+
+→
+
+02
+
+#### Diagnostic services
+
+[](https://zerohypelab.com/marketing-autopsy/)
+
+\$49 · By a human START HERE
+
+Marketing Autopsy
+
+Full diagnostic of your B2B marketing function. What's broken and in what order to fix it.
+
+Get the autopsy → [](https://zerohypelab.com/outreach-autopsy/)
+
+\$99 · By a human
+
+Outreach Autopsy
+
+Your outreach sequence fails somewhere specific. We find it. You fix it.
+
+Get the autopsy → [](https://zerohypelab.com/campaign-autopsy/)
+
+\$500 · By a human
+
+Campaign Autopsy
+
+The campaign ran. Results were wrong. Three-part report on what broke and how to fix it.
+
+Get the autopsy → [](https://zerohypelab.com/dach-outreach-agent/)
+
+\$49 · By a human
+
+DACH Outreach Agent
+
+Cold outreach written for Germany, Austria, Switzerland. Culture, phrasing, timing.
+
+Get it → [](https://zerohypelab.com/dach-prospect-intelligence/)
+
+\$299 · By a human
+
+DACH Prospect Intelligence
+
+One DACH target account. Decision-makers, buying signals, entry points.
+
+Get the report → [](https://zerohypelab.com/monthly-autopsy/)
+
+\$300/mo · By a human
+
+Monthly Autopsy
+
+One diagnostic per month, ongoing. Reviewed and scored every 30 days.
+
+See details → [](https://zerohypelab.com/outreach-overhaul/)
+
+\$897 · By a human
+
+Outreach Overhaul
+
+Done-with-you. Full outreach sequence rebuilt from targeting up.
+
+See details → [](https://zerohypelab.com/revenue-architecture/)
+
+\$4,500 · By a human
+
+Revenue Architecture
+
+Marketing-to-revenue rebuilt. For B2B companies stuck below \$1M ARR.
+
+See details →
+
+03
+
+#### The manuals
+
+- [The Unfiltered First 90 Days \$49](https://payhip.com/b/nJc58)
+- [The DACH Cold Email Pack \$24](https://payhip.com/b/XqmR6)
+- [The DACH Sales Call Pack \$29](https://payhip.com/b/9lMQx)
+- [Fix Your Outreach \$29](https://payhip.com/b/sOxy5)
+
+how pricing works
+
+most of what we\
+make is free.
+----------------
+
+The tools, the guides, the autopsies of dead companies. You pay us for exactly one thing: a human tearing your actual copy apart and handing it back fixed. Flat price. No call. No "starting at." No annual lock-in. You see the number before you click.
+
+And you probably don't need to pay us yet. Run the free Roaster first. If it scores you under 30, fix what it flags and send the email. Come back when you've plateaued and the replies still aren't coming.
+
+[see exactly how we score →](https://zerohypelab.com/method/)
+
+FREQUENTLY ASKED
+
+##### Who built Zero Hype?
+
+An anonymous practitioner with 20+ years in B2B marketing, outreach strategy, and revenue operations. Anonymous by design — the work, not the name, is the credential. Contact: zerohype@proton.me
+
+##### Who is this for?
+
+B2B marketers, SDRs, founders, and sales leaders who want honest diagnostic feedback on their outreach, campaigns, or strategy. Not for people who want encouragement. For people who want to know what's actually broken.
+
+##### How does delivery work?
+
+Pay via Stripe, fill a brief Tally intake form, receive the written deliverable by email within 48-72 hours (diagnostics) or 7 business days (Outreach Overhaul). No calls. No check-ins. Just the work.
+
+##### Is there a free option before paying?
+
+Three free tools — Cold Email Roaster, Campaign Failure Predictor, and Homepage Roaster — require no signup and give you an immediate, specific score. They're the right starting point.
+
+##### Why prices in USD?
+
+The audience is global. USD is the standard for B2B marketing tools. All prices are listed clearly on each product page.
+
+what we believe
+
+strategy fails\
+before execution does.
+----------------------
+
+most b2b campaigns fail for the same reasons. read why — and what we think actually works.
+
+[read the manifesto →](https://zerohypelab.com/manifesto/)
+
+No fluff.\
+*No hype.*
+
+Weekly. Short. Specific. What's actually working in B2B marketing right now. No case studies from 2019.
+
+[Subscribe — it's free](https://zerohypelab.substack.com)
+
+### Manifesto (https://zerohypelab.com/manifesto/)
+
+someone has a pipeline problem. they hire an agency, a consultant, or a head of growth. six weeks later there's a strategy document. twelve weeks later there's a content calendar and an automation sequence. six months later the pipeline problem is still there but now it has a narrative and a color palette.
+
+this is not a cynicism exercise. this is just what happens when activity gets mistaken for diagnosis.
+
+"activity is not the same thing as diagnosis."
+
+what we believe
+
+#### strategy fails before execution does.
+
+most b2b marketing fails at the strategy layer, not the execution layer. the campaigns don't underperform because of bad copy or wrong send times. they underperform because the assumptions underneath them were never tested.
+
+wrong icp. vague goal. channel picked for comfort, not fit. message that sounds like every other message in the inbox.
+
+ai didn't create this problem. ai made it faster and cheaper to produce more of it. we've reviewed over 200 cold outreach sequences that weren't working. the failure reasons repeat. they almost always do.
+
+"personalization at scale" is not a solution to broken positioning. it's broken positioning, delivered personally, at volume, with a first name in the subject line.
+
+what we do
+
+forensic diagnosis.\
+no padding.
+--------------------
+
+we audit b2b marketing that isn't working and tell you exactly why it isn't working. not a report with 47 recommendations. not a retainer to implement the strategy we just told you was wrong.
+
+a specific, honest answer to the question: what is actually broken here and what would it take to fix it.
+
+cold outreach that fails, fails for reasons. campaigns that underperform, underperform for reasons. most companies never find out what those reasons are because they're already running the next campaign.
+
+"we find the reasons."
+
+what we don't do
+
+#### we're not an agency.
+
+we don't build you a content machine. we don't manage your linkedin. we don't run your ads. we don't optimize your automation sequences.
+
+we don't compete with agencies that sell volume. we don't compete with consultants who need a 6-month retainer to tell you something you could have figured out in week two.
+
+one thing: diagnosis. the name is the constraint. if we can't say it plainly, we don't say it.
+
+start with\
+a free tool.
+------------
+
+paste your cold email. run your campaign through the predictor. see what's actually broken before you pay anything.
+
+[cold email roaster — free →](https://zerohypelab.com/cold-email-roaster/)
+
+### About (https://zerohypelab.com/about/)
+
+The origin
+
+Zero Hype was built by a B2B marketing practitioner with **20+ years of hands-on experience** in outreach strategy, campaign management, and revenue operations. The work spans cold email, DACH market penetration, pipeline diagnostics, and marketing audit work for B2B companies of all sizes.
+
+The reason it's anonymous is simple: the name doesn't matter. The diagnosis does. Most marketing "experts" build a personal brand first and then try to justify it with results. Zero Hype works the other way.
+
+------------------------------------------------------------------------
+
+**20+** — Years in B2B marketing
+
+**100+** — B2B campaigns analyzed
+
+**\$0** — Spent on self-promotion
+
+------------------------------------------------------------------------
+
+What this is
+
+#### HONEST DIAGNOSTICS. NOTHING ELSE.
+
+In my direct experience working with B2B sales and marketing teams across DACH, North America, and the UK, the failure is almost never the product. I personally reviewed over 200 cold outreach sequences and found the same diagnosable break points — showing up in the data weeks before it shows up in revenue. Published by Zero Hype. Contact: zerohype@proton.me
+
+Zero Hype publishes diagnostic tools and written analysis for B2B marketers, SDRs, and founders who want to know **specifically what's broken** — not a framework, not a course, not a community.
+
+The free tools (Cold Email Roaster, Campaign Failure Predictor, Homepage Roaster) give you an immediate score with no signup. The paid services go deeper: full written diagnosis, sequence rewrites, campaign autopsies, DACH market intelligence.
+
+Based on direct experience with B2B outreach across software, SaaS, and professional services markets — primarily German-speaking (DACH) and English-speaking enterprise buyers.
+
+**What Zero Hype believes:**
+
+Most B2B marketing problems have a specific failure point. Not "your messaging is weak" — that's a symptom. The failure point is usually one of: wrong ICP, vague goal, mismatched channel, weak post-click, or a measurement system that tracks the wrong things.
+
+AI will automate your mediocrity faster. Broken strategy at scale, with better formatting. The answer is not a better prompt. It's a clearer diagnosis.
+
+The best outreach anyone has ever seen was two sentences. No one has ever said that about a 200-word email. That's not a philosophy. That's a pattern from 20+ years of data.
+
+------------------------------------------------------------------------
+
+Contact
+
+Questions about a product or service: Contact: zerohype@proton.me
+
+Response time: 48 hours. No calls.
+
+##### START WITH A FREE TOOL.
+
+No signup. No email. Immediate, specific score on your cold email, campaign, or homepage.
+
+[Cold Email Roaster →](https://zerohypelab.com/cold-email-roaster/)
+
+### Method (https://zerohypelab.com/method/)
+
+every free tool here gives you a number. a Hype Score on a cold email. a failure risk on a campaign. a number is easy to dismiss if you don't know how it was reached, so here is how it's reached. the whole thing. no login required to read it, no login required to run it.
+
+"if we can't show you the math, we haven't earned the score."
+
+inside the cold email roaster
+
+six checks.\
+that's the engine.
+------------------
+
+paste a cold email and it runs through six checks. none of them are secret. none of them need AI to explain. each one maps to a reason real B2B emails get ignored.
+
+##### 1. Jargon density
+
+how much of the email is filler language that means nothing to the reader. the more recognized B2B jargon it finds, the higher the Hype Score climbs. a sample of what gets flagged is below.
+
+##### 2. The opener
+
+the first line. whether it's about them or about you. "I hope this email finds you well" and "I'm reaching out because" are openers that announce a template.
+
+##### 3. Length
+
+how long it is versus how long a cold email should be before a stranger stops reading. most failing emails are too long, not too short.
+
+##### 4. The I / you ratio
+
+how many times the email talks about your company versus the reader's problem. emails that lead with "we" and "our platform" score worse than emails that lead with the reader.
+
+##### 5. CTA quality
+
+what you actually ask for. "a quick 15-minute call to explore synergies" is a worse ask than a specific, low-friction next step. vague asks get ignored.
+
+##### 6. Personalization
+
+whether there's a real, specific reason this email was sent to this person, or whether their first name was dropped into a template and called personalization.
+
+the language that costs you
+
+the whole list.\
+all 71.
+----------------
+
+not a sample. this is every phrase the roaster flags, in full. if your cold email leans on these, the reader has seen them a hundred times this week. nothing here is a secret, so here's all of it.
+
+hope this email finds you well hope this finds you well hope this finds you i hope you're doing well i hope you are doing well reaching out touch base circle back synergy leverage value proposition game changer game-changer disruptive innovative solution best practices thought leader going forward move the needle low-hanging fruit paradigm shift pain point pain points just wanted to i just wanted quick call quick chat excited to passionate about world-class cutting-edge state-of-the-art revolutionize scale your drive growth unlock empower holistic results-driven proven track record unique opportunity feel free to don't hesitate should you have any questions i wanted to reach out i came across i noticed that as per i would love to would love to connect hope to hear from you let me know if let me know what you think please find attached mutually beneficial win-win strategic partnership take this to the next level at scale robust seamless end-to-end bandwidth ecosystem north star deep dive unpack double down needle-moving i trust this email i would like to schedule
+
+reading the score
+
+#### lower is better.
+
+the Hype Score runs 0 to 100. zero means a stranger could read it and not flinch. one hundred means it reads like it was generated to hit a quota. these are the exact six verdicts the roaster hands back.
+
+0–10 Suspiciously human. Someone wrote this on purpose. Don't ruin it.
+
+11–22 Mild jargon. The bones are solid, shower off the residue.
+
+23–38 Classic SDR energy. Familiar, forgettable, lost in 47 identical inboxes.
+
+39–58 LinkedIn DM cosplay. High cringe, low conversion.
+
+59–78 Corporate word soup. A buzzword buffet with no main course.
+
+79–100 Peak B2B BS. A collector's item. Don't send it to a living human.
+
+the part most people hide
+
+what we won't\
+sell you.
+--------------
+
+the offer is one thing: a written diagnosis of what's broken, and the fix. that's it. here's what is not on the menu, on purpose.
+
+##### No retainer that bills for activity instead of outcomes.
+
+we don't get paid more for sending you more. one diagnosis, one price.
+
+##### No twelve-month contract.
+
+nothing to lock into. you buy a thing, you get the thing.
+
+##### No "book a call to discuss your needs."
+
+the price is on the page. the deliverable is described on the page. async by default.
+
+##### No deliverable you can't measure.
+
+no "brand awareness" line items. if you can't tell whether it worked, we didn't sell it.
+
+before you pay anything
+
+you probably don't\
+need us yet.
+-------------------
+
+run the free roaster first. if it scores you under 30, your email is fine. fix whatever it flagged and send it. come back when you've plateaued and the replies still aren't coming, because that's a positioning problem, and positioning is what we're actually for.
+
+see the score\
+for yourself.
+--------------
+
+paste your cold email. no login, no email required. you'll get the number and the six checks behind it in about ten seconds.
+
+[run the free roaster →](https://zerohypelab.com/cold-email-roaster/)
+
+### B2B Bullshit Detector (https://zerohypelab.com/bullshit-detector/)
+
+#### B2B Bullshit Detector
+
+Your B2B copy is probably lying.\
+Let's find out.
+---------------------------------
+
+Paste your homepage, case study, or LinkedIn post. Get a Bullshit Score in 10 seconds.
+
+0/3000
+
+Run the Autopsy →
+
+Something went wrong. Try again in a moment.
+
+Bullshit Score
+
+0
+
+Worst offenders
+
+Copy as image
+
+##### Want to fix what you just saw?
+
+The Full Autopsy — every phrase flagged, rewritten, with concrete examples.\
+You get exactly what to change to remove the bullshit from your copy.
+
+→ Every sentence annotated — what's wrong, why, how to fix it
+
+→ Full rewrite of your first 200 words
+
+→ Your personal banned-word list
+
+→ Instant delivery
+
+[Get the Full Autopsy — \$97](https://buy.stripe.com/8x214p2Ni33i4QRg5UaR208)
+
+One client who finds you through your site covers this 100 times over. If you don't like the report, I'll refund you. Email zerohype@proton.me and I'll sort it the same day.
+
+[zerohypelab.com](https://zerohypelab.com) — no hype, no fluff, no bullshit.
+
+B2B Bullshit Detector — zerohypelab.com
+
+0
+
+zerohypelab.com/bullshit-detector
+
+### Wall of Scores (https://zerohypelab.com/scores/)
+
+notion.com — 62/100
+
+apollo.io — 56/100
+
+deploycrate.com — 49/100
+
+taliivue.com — 49/100
+
+frhog.com — 45/100
+
+nodea.ai — 37/100
+
+capakit.com — 37/100
+
+Want to see where\
+your homepage lands?
+--------------------
+
+Same rubric. Free. No login. You'll know your score in 60 seconds.
+
+[Run your homepage — free](https://zerohypelab.com/homepage-roaster/)
+
+### German B2B Experts (https://zerohypelab.com/german-b2b-experts/)
+
+Most content about the DACH market is written by people who have **read about** the DACH market. This is not that list.
+
+You can tell the difference. The generic content has the same three paragraphs. Long sales cycles. Relationship-based culture. Trust takes time. The writer nods gravely and moves on. They have never lost a deal to a procurement committee that added four stakeholders in month nine. They are describing a country the way a travel blogger describes a country. Technically correct. Operationally useless.
+
+01 Jan Benedikt Mundorf
+
+AE at Deel — formerly Pleo, Albacross [linkedin.com/in/jan-b-mundorf/](https://linkedin.com/in/jan-b-mundorf/)
+
+Knows what outbound looks like from the inside of a fast-scaling SaaS company trying to close German CFOs. He maps DACH territory into tiers from day one. **Posts about the friction, not the theory.** Not a market entry consultant. An individual contributor who talks about the daily mechanics of building pipeline in a market that does not reward volume.
+
+02 Verena Pausder
+
+Chairwoman, German Startup Association — edtech founder, exited [linkedin.com/in/verenapausder/](https://linkedin.com/in/verenapausder/)
+
+Posts in German about the structural conditions for building and selling in Germany: regulation, capital gaps, talent access. **Knows why Germany's startup-to-enterprise pipeline breaks down** and what the political and economic machinery looks like from inside it. She is not optimistic. She is precise. That is worth more.
+
+03 Philipp Westermeyer
+
+Founder, OMR (Hamburg) [linkedin.com/in/philipp-westermeyer-omr](https://linkedin.com/in/philipp-westermeyer-omr)
+
+Built Germany's largest marketing and digital business media platform. Has spent fifteen years watching **how German companies evaluate marketing software.** His annual "State of the German Internet" analysis is one of the few honest inventories of what actually works in the German digital economy vs. what gets sold at conferences.
+
+04 Dr. Gero Decker
+
+Co-founder Signavio (sold to SAP, 1B+) — Executive Sponsor SAP Labs Germany [linkedin.com/in/gerodecker](https://linkedin.com/in/gerodecker)
+
+Co-founded Signavio and sold it to SAP for over a billion euros. He knows what it takes to get a German enterprise from proof-of-concept to committed contract. **The answer involves more patience than most investors are willing to fund.** Posts about organizational paralysis in German companies and the mechanics of selling process software to large enterprises.
+
+05 Henrik Ihlo
+
+Director, LinkedIn Marketing Solutions DACH [linkedin.com/in/henrikihlo/](https://linkedin.com/in/henrikihlo/)
+
+Has the platform-level data. Sees what content German B2B decision-makers actually engage with, **as opposed to what content marketers think they engage with.** There is a gap. Posts in German about B2B marketing effectiveness, Mittelstand digital behavior, and what actually drives pipeline in DACH. Insider view without the vendor spin.
+
+06 William Gilchrist
+
+Founder, Konsyg [linkedin.com/in/williamgilchrist/](https://linkedin.com/in/williamgilchrist/)
+
+Has documented, in operational detail, why mass outreach fails in Germany. GDPR is part of it. **The bigger issue is that German buyers read the email and know immediately whether the sender understands their market.** They almost never do. Specific knowledge: the operational reality of running outbound in Germany as an outsider.
+
+07 Stefan Krötz
+
+Author, "How to enter the DACH markets as a digital B2B business" [linkedin.com/in/stefankrotz](https://linkedin.com/in/stefankrotz)
+
+Has mapped the actual decision tree for digital B2B companies entering DACH. Direct vs. distributor. How deep to localize. At what point you need a German entity vs. a German phone number. **These are real decisions with real cost consequences.** He has written about them plainly. Not as a framework. As a checklist with price tags attached.
+
+08 Jonathan Kurfess
+
+Founder, Appinio — Forbes 30u30 [linkedin.com/in/jonathankurfess](https://linkedin.com/in/jonathankurfess)
+
+Built Appinio inside Germany. Not "for Germany." Inside it. He knows the difference between a German enterprise pilot and a German enterprise contract, **which is about twelve months and four legal reviews.** Posts about building and scaling B2B SaaS in Germany, including the specific investor and customer dynamics of the Hamburg market.
+
+09 Markus Gehlken
+
+Founder, 1a-Social-Media [linkedin.com/in/markusgehlken/](https://linkedin.com/in/markusgehlken/)
+
+Understands the XING and LinkedIn split as it actually functions for the Mittelstand. **XING is not dead.** It is where a certain kind of German buyer networks and will continue to do so. Dismissing it because it is not LinkedIn is a choice that costs pipeline. Posts specifically about decision-maker access in the German Mittelstand B2B context.
+
+10 Richard Buettner
+
+Fractional CMO — DACH market entry specialist [linkedin.com/in/richardbuettner](https://linkedin.com/in/richardbuettner)
+
+20+ years as a fractional CMO specifically for companies entering the German B2B market. His documentation of German content expectations is precise: technical depth, formal register, implementation detail. **The American benefit-first structure does not work here.** German buyers want to know how the thing works before they want to know what it does for them.
+
+None of these people are selling a course. All of them have made decisions with consequences.
+
+If you are building or selling in the German B2B market, their LinkedIn pages are more useful than most paid market intelligence reports. Read them. Then read them again before your next outreach campaign.
+
+If you are entering the DACH market
+
+DACH Outreach Agent
+
+Cold outreach built for Germany, Austria, Switzerland. The culture, the phrasing, the timing. What the people on this list already know. Applied to your specific campaign.
+
+\$49 [Get it](https://zerohypelab.com/dach-outreach-agent/)
+
+### vs Lavender (https://zerohypelab.com/vs-lavender/)
+
+Lavender fixes how your email reads. Zero Hype diagnoses why your outreach is failing. One of these helps when the email is the problem. The other helps when the strategy is the problem.
+
+Direct answer
+
+If your cold emails have low open rates or generic replies, Lavender can help you write better sentences. If your pipeline is dry despite good writing, the problem is upstream — wrong ICP, bad positioning, wrong channel. That's what Zero Hype audits. Use both if needed. Use neither if your real issue is that you don't have a clear offer.
+
+#### What each actually does
+
+|  | Zero Hype | Lavender |
+|----|----|----|
+| Diagnoses ICP clarity | ✓ Core audit item | ✗ Doesn't touch this |
+| Analyzes email writing quality | ~ Part of Outreach Autopsy | ✓ Real-time scoring |
+| Evaluates offer strength | ✓ Yes | ✗ No |
+| Checks channel fit | ✓ Is cold email even right for you? | ✗ Assumes cold email is correct |
+| Personalization coaching | ✗ Not the focus | ✓ Real-time suggestions |
+| Works inside Gmail / Outreach | ✗ Async audit, not inline | ✓ Chrome extension, inline |
+| Identifies systemic failure patterns | ✓ Across 100+ B2B campaigns | ✗ Per-email, not systemic |
+| Rewrites your first 200 words | ✓ Full Autopsy includes this | ✗ Suggestions only |
+| Price | \$49–\$99 one-time audit | \$27–\$45/month subscription |
+
+#### The problem Lavender can't fix
+
+Lavender is genuinely useful for one thing: writing cold emails that don't sound like cold emails. It catches passive voice, flags overly long sentences, suggests more natural personalization. If your email reads like a template, Lavender helps.
+
+But here's what we see consistently: B2B teams invest in better email writing while the real problem is that they're emailing the wrong people about the wrong thing. A beautifully written email to someone who has zero reason to care still gets ignored. Lavender can't fix your ICP. It can't fix your positioning. It can't tell you that cold email might not even be the right channel for your deal size.
+
+**Zero Hype works upstream.** The Campaign Failure Predictor, the Outreach Autopsy, the Full Autopsy — they all start with the question Lavender never asks: should you even be doing this?
+
+YOUR EMAIL ISN'T\
+THE PROBLEM
+-----------------
+
+Before you optimize the writing, audit the strategy. Free tool, 60 seconds, honest score.
+
+- [Run the Free Predictor](https://zerohypelab.com/campaign-failure-predictor/)
+- [Get an Outreach Audit →](https://zerohypelab.com/outreach-autopsy/)
+
+#### Questions
+
+##### Should I use both Lavender and Zero Hype?
+
+If your strategy is solid but your writing is weak, start with Lavender. If your strategy is broken, fix it first — otherwise you're optimizing something that's already pointing the wrong direction. Zero Hype first, then Lavender.
+
+##### Zero Hype doesn't integrate with my email tool. Is that a problem?
+
+Intentionally not. Zero Hype is an async diagnostic, not an inline assistant. The audit happens once, delivers a framework you apply across all your emails. The value is in the diagnosis, not the real-time suggestion.
+
+##### My open rates are fine but reply rates are terrible. Which helps?
+
+Reply rate is a strategy problem, not a writing problem. Good subject line, bad offer or wrong ICP. This is exactly what the Outreach Autopsy diagnoses: what's breaking between open and reply.
+
+##### Is there a free way to test Zero Hype first?
+
+Yes. The Campaign Failure Predictor is free — 10 questions, 60 seconds, tells you your failure risk score and the specific weak points in your outreach setup. No login, no email required.
+
+Also compare
+
+- [vs. Reply.io](https://zerohypelab.com/vs-replyio/)
+- [vs. Hiring a Consultant](https://zerohypelab.com/vs-hiring-consultant/)
+
+### vs Reply.io (https://zerohypelab.com/vs-replyio/)
+
+Reply.io automates sequences at scale. Zero Hype diagnoses why your sequences aren't working. Automating a broken strategy just means more people ignore you faster.
+
+Direct answer
+
+Reply.io is infrastructure for outreach execution. If your sequences, targeting, and messaging are solid, it makes you faster. If they're broken, Reply.io scales the failure. Zero Hype audits what Reply.io assumes is already correct — your ICP, your positioning, your offer, your channel fit. Fix the strategy first. Then automate it.
+
+#### What each solves
+
+|  | Zero Hype | Reply.io |
+|----|----|----|
+| Automates email sequences | ✗ Not the job | ✓ Core feature |
+| Diagnoses why sequences fail | ✓ Core job | ✗ Doesn't do this |
+| Multi-channel (email, LinkedIn, calls) | ✗ Audit only | ✓ Email + LinkedIn + calls |
+| Evaluates ICP quality | ✓ First question in every audit | ✗ Assumes ICP is correct |
+| Scores campaign failure risk before launch | ✓ Free predictor tool | ✗ Measures after the fact |
+| Rewrites broken sequences | ✓ Outreach Overhaul (\$897) | ✗ Runs sequences, doesn't write them |
+| A/B testing | ✗ Not the focus | ✓ Built-in |
+| Analytics and reporting | ✗ One-time diagnostic | ✓ Full dashboard |
+| Price | \$49–\$897 one-time | \$60–\$300+/month |
+
+#### Why automation makes bad strategy worse
+
+The most common pattern we see: a team invests in Reply.io or Lemlist, builds a 7-step sequence, and sends 500 emails. 2% reply. They A/B test subject lines for 3 weeks. Still 2%. They upgrade the plan. Still 2%.
+
+The problem isn't the tool. It's that the ICP is too broad, the email talks about the product instead of the prospect's problem, and the offer is unclear. Reply.io can't fix any of that. It just runs the sequence you gave it.
+
+**Zero Hype looks at what Reply.io assumes is already right.** The Campaign Failure Predictor asks 10 questions that most teams skip before building a sequence. The Outreach Autopsy goes deeper: reviews your actual emails, scoring the opener, the ICP specificity, the CTA strength, the I/you ratio. Not to write better sentences. To find the strategic failure point.
+
+BEFORE YOU SEND\
+500 MORE EMAILS
+----------------
+
+Score your campaign failure risk. Free, 60 seconds. Based on analysis of 100+ B2B campaigns.
+
+- [Free Failure Predictor](https://zerohypelab.com/campaign-failure-predictor/)
+- [Get Outreach Audited →](https://zerohypelab.com/outreach-autopsy/)
+
+#### Questions
+
+##### Can I use Reply.io and Zero Hype together?
+
+Yes, and that's the right order. Get the audit first, fix the strategy and copy, then automate with Reply.io. Running audited sequences through automation is a much better bet than automating something broken.
+
+##### My Reply.io sequences have good open rates but no replies. What's wrong?
+
+Open rate is a subject line metric. Reply rate is a strategy metric. High opens, low replies means your targeting is decent but your email body, offer, or ICP is off. That's exactly what the Outreach Autopsy diagnoses.
+
+##### Zero Hype is one-time. Reply.io is recurring. Which is more valuable?
+
+Depends where the problem is. A one-time audit that fixes your positioning pays for itself in 1 good deal. Paying \$200/month for automation on a broken strategy is a recurring loss. Start with diagnosis.
+
+##### How long does a Zero Hype audit take?
+
+The Campaign Failure Predictor takes 60 seconds. The Outreach Autopsy (\$99) delivers in 48-72 hours — you send your emails and targeting context, we return a scored breakdown with specific rewrites for the weakest parts.
+
+Also compare
+
+- [vs. Lavender](https://zerohypelab.com/vs-lavender/)
+- [vs. Hiring a Consultant](https://zerohypelab.com/vs-hiring-consultant/)
+
+### vs Hiring a Consultant (https://zerohypelab.com/vs-hiring-consultant/)
+
+A B2B marketing consultant costs \$5k-15k/month. The first thing they do is diagnose your current state. Zero Hype does the diagnosis for \$49-\$99. The question is whether you need the execution that follows.
+
+Direct answer
+
+If you know what's broken but need someone to fix it for you, hire a consultant. If you're not sure what's broken — or you suspect you know but want an outside read before committing to \$60k/year of retainer — start with Zero Hype. The audit pays for itself if it saves you from hiring the wrong person to fix the wrong problem.
+
+#### Honest comparison
+
+|  | Zero Hype | Marketing Consultant |
+|----|----|----|
+| Diagnoses current state | ✓ This is the product | ✓ First 30-60 days |
+| Executes changes | ✗ You implement | ✓ They implement |
+| Ongoing support | ~ Monthly Autopsy retainer (\$300/mo) | ✓ Full retainer |
+| Time to first insight | ✓ 48-72 hours | ✗ 4-6 weeks onboarding |
+| Bias risk | ✓ No incentive to extend engagement | ~ Retainer model rewards staying longer |
+| Covers DACH market specifically | ✓ Built from 20+ years DACH B2B experience | ~ Depends on consultant |
+| Price | ✓ \$49–\$897 total | ✗ \$5k–\$15k/month |
+| Right when you need execution capacity | ✗ Not the right fit | ✓ Yes |
+
+#### The expensive part of hiring a consultant is onboarding them
+
+Every consultant starts the same way: discovery calls, stakeholder interviews, reviewing your current assets, mapping your funnel. This takes 4-8 weeks. At \$8k/month, you've spent \$16k before a single recommendation lands.
+
+Most of what they find in those first 8 weeks is what the Zero Hype audits surface in 48-72 hours. Wrong ICP assumptions. Messaging that talks about features instead of problems. A pipeline that looks active but is full of bad-fit prospects. Channel strategy that made sense in 2021 but doesn't now.
+
+The difference is what happens next. A consultant stays and executes. Zero Hype gives you the diagnosis and you implement — or you hire someone specifically for execution once you know what to execute.
+
+**The best use of Zero Hype before a consultant hire:** get the audit first, validate your diagnosis, then hire a consultant to solve a specific, confirmed problem. Not a vague "we need to fix our pipeline."
+
+GET THE DIAGNOSIS\
+BEFORE THE RETAINER
+-------------------
+
+\$99 audit. 48-72 hour turnaround. Based on direct analysis of 100+ B2B campaigns in DACH and English-speaking markets.
+
+- [Outreach Autopsy \$99 →](https://zerohypelab.com/outreach-autopsy/)
+- [Marketing Autopsy \$49](https://zerohypelab.com/marketing-autopsy/)
+
+#### Questions
+
+##### Can Zero Hype replace a full-time marketing hire?
+
+No. A full-time hire executes daily. Zero Hype diagnoses and advises. The Revenue Architecture (\$4,500) goes further — 12 weeks of strategic work — but it's still async advisory, not embedded execution. If you need someone in the team building campaigns daily, hire for that specifically.
+
+##### I've already hired a consultant but results are slow. Does Zero Hype help?
+
+Possibly. The Marketing Autopsy (\$49) can give you an independent read on whether the strategy your consultant is executing is sound. Sometimes the problem is execution. Sometimes it's the strategy. An outside diagnosis clarifies which.
+
+##### Zero Hype is one person, right? Is that a problem?
+
+The audits and diagnostics are based on direct B2B marketing experience across DACH and English-speaking markets. There's no team of junior analysts generalizing from a framework. The disadvantage is capacity — Zero Hype can't run your campaigns. The advantage is you get the honest read, not the polished deck.
+
+##### What's the Monthly Autopsy compared to a consultant retainer?
+
+The Monthly Autopsy (\$300/month) reviews one campaign per month, rewrites the three weakest elements, and turns around in 48 hours. It's not a full retainer — no calls, no project management, no execution. It's the ongoing diagnostic layer for teams that execute themselves but want an outside eye on whether the strategy is drifting.
+
+Also compare
+
+- [vs. Lavender](https://zerohypelab.com/vs-lavender/)
+- [vs. Reply.io](https://zerohypelab.com/vs-replyio/)
+
+### Blog index (https://zerohypelab.com/blog/)
+
+B2B marketing, cold email, attribution, and outreach. What fails, why, and what to do instead.
+
+[AEO / Strategy](https://zerohypelab.com/blog/ai-search-aeo-13-words/)
+
+#### The 13 Words That Broke AI Search
+
+Cornell researchers found 13 words in a Reddit comment can change what ChatGPT tells your prospect. The field is not level.
+
+4 min read Read →
+
+[Attribution](https://zerohypelab.com/blog/content-roi-b2b-structural-problem/)
+
+#### 56% of B2B Marketers Can't Prove Content ROI — And Keep Going
+
+It's not a measurement problem. It's an accountability problem with comfortable cover.
+
+5 min read Read →
+
+[Attribution](https://zerohypelab.com/blog/last-click-attribution-lie/)
+
+#### Why Last-Click Attribution Is a Convenient Lie
+
+Last-click survived because it's easy. Not because it's true.
+
+5 min read Read →
+
+[Attribution](https://zerohypelab.com/blog/b2b-content-no-business-objective/)
+
+#### 44% of B2B Teams Can't Connect Content to Business Outcomes
+
+Every piece of content should answer one question: what do we want the reader to do next?
+
+4 min read Read →
+
+[Attribution](https://zerohypelab.com/blog/misattribution-b2b-diagnosis/)
+
+#### How to Know You've Been Misattributing Success All Along
+
+The most dangerous mistake is the one you don't know you're making.
+
+5 min read Read →
+
+[Cold Email](https://zerohypelab.com/blog/cold-email-not-dead-dying-badly/)
+
+#### Cold Email Isn't Dead — It's Dying Badly
+
+Average reply rate dropped from 6.8% to 5.8% in two years. Top quartile still hits 15-25%.
+
+5 min read Read →
+
+[Cold Email](https://zerohypelab.com/blog/cold-email-personalization-mistakes/)
+
+#### Personalization Doesn't Mean Putting the First Name in the Subject Line
+
+71% of B2B buyers ignore irrelevant emails. The other 29% got a different kind of email.
+
+5 min read Read →
+
+[Cold Email](https://zerohypelab.com/blog/top-5-percent-cold-email-anatomy/)
+
+#### What Separates the Top 5% of Cold Emails From the Rest
+
+The anatomy of a cold email that gets a reply. Every element has a job.
+
+5 min read Read →
+
+[Cold Email](https://zerohypelab.com/blog/email-domain-deliverability-collapse/)
+
+#### How to Know Your Email Domains Are Dead Before It's Too Late
+
+50% of emails globally reach spam. Most senders find out when replies stop.
+
+5 min read Read →
+
+[Outreach](https://zerohypelab.com/blog/omnichannel-outbound-cold-email-not-enough/)
+
+#### Cold Email Alone Isn't Outbound Anymore
+
+Omnichannel sequences produce 287% better results than email alone. The B2B inbox is broken.
+
+5 min read Read →
+
+[Cold Email](https://zerohypelab.com/blog/open-rate-not-a-kpi/)
+
+#### Open Rate Is Not a KPI — It's Trivia
+
+Apple MPP broke open rate data in 2021. Everyone kept tracking it anyway.
+
+4 min read Read →
+
+[Strategy](https://zerohypelab.com/blog/abm-real-strategy-vs-buzzword/)
+
+#### When ABM Is Real Strategy and When It's a Deck Buzzword
+
+81% higher ROI when alignment is real. Most companies have the deck, not the alignment.
+
+5 min read Read →
+
+[Strategy](https://zerohypelab.com/blog/short-form-video-b2b-roi-2025/)
+
+#### Short-Form Video Has the Highest B2B ROI in 2025
+
+104% more B2B marketers naming short-form video as most valuable channel vs last year.
+
+5 min read Read →
+
+[Strategy](https://zerohypelab.com/blog/b2b-buyers-ai-research-dark-funnel/)
+
+#### 79% of B2B Buyers Research With AI Before You Reach Them
+
+The dark funnel got darker. Your prospect has already formed an opinion before your first email.
+
+5 min read Read →
+
+[Strategy](https://zerohypelab.com/blog/move-fast-bad-advice-enterprise-b2b/)
+
+#### Why "Move Fast" Is Bad Advice in Enterprise B2B
+
+Average B2B buying cycle: 134 days. Buying committee: 5-7 people. Move fast anyway.
+
+5 min read Read →
+
+#### No Hype. No Filler.
+
+Get new posts directly. B2B marketing diagnostics, cold email, and outreach — what actually works. No pitch deck fluff.
+
+Subscribe
+
+### Cold Email Roaster (https://zerohypelab.com/cold-email-roaster/)
+
+Paste your cold email. Get a Hype Score. Find out exactly why it's not working. No upsells. No sugarcoating. Just the uncomfortable truth.
+
+01\.
+
+Paste your cold email into the box
+
+02\.
+
+Click Roast It and wait two seconds
+
+03\.
+
+Get your Hype Score out of 100
+
+04\.
+
+Read the callouts. Fix the email. Send.
+
+Paste cold email here
+
+0 words
+
+Roast It →
+
+—
+
+Words
+
+—
+
+I:You Ratio
+
+—
+
+BS Phrases
+
+Hype Score
+
+0
+
+/ 100
+
+Zero Hype
+
+[cold-email-roaster](https://zerohypelab.com/cold-email-roaster/)
+
+// What the roaster found
+
+📋 Copy Scorecard Text
+
+← Roast Another Email
+
+// Your copy is just the surface
+
+#### A bad Hype Score means the email is broken. Usually the positioning broke first.
+
+Jargon and weak openers are symptoms. The actual diagnosis requires looking at your ICP, your value prop, and what you're really selling — and to whom. Marketing Autopsy gives you specific findings and a rewrite roadmap. Not a course. Not a template. A verdict. \$49.
+
+[Get the Marketing Autopsy — \$49 →](https://zerohypelab.com/marketing-autopsy/)
+
+// keep the analysis
+
+##### One read per week. What actually kills B2B outreach — before you send it.
+
+Subscribe free
+
+ZeroHype newsletter. No pitch. No cadence. Unsubscribe any time.
+
+### Campaign Failure Predictor (https://zerohypelab.com/campaign-failure-predictor/)
+
+Answer 10 questions about your B2B campaign. Get a Failure Risk Score out of 100. Find out which decisions are going to cost you before you spend the budget.
+
+Start the Test
+
+No sign-up. No email. Just the uncomfortable truth.
+
+Progress 1 of 10
+
+Failure Risk Score
+
+0
+
+/ 100
+
+Zero Hype
+
+[campaign-failure-predictor](https://zerohypelab.com/campaign-failure-predictor/)
+
+Where it breaks
+
+📋 Copy Result Card
+
+← Retake the Test
+
+// The score flags symptoms. The cause is deeper.
+
+#### High failure risk is a positioning problem first. An execution problem second.
+
+The quiz tells you where the risk is. Marketing Autopsy tells you why — ICP mismatch, broken value prop, wrong message for the buyer. Specific findings. Rewrite roadmap. 48 hours. \$49.
+
+[Get the Marketing Autopsy — \$49 →](https://zerohypelab.com/marketing-autopsy/)
+
+// don't lose the diagnosis
+
+##### One read per week. What actually kills B2B campaigns — before the money is gone.
+
+Subscribe free
+
+ZeroHype newsletter. No pitch. No cadence. Unsubscribe any time.
+
+### B2B Homepage Roaster (https://zerohypelab.com/homepage-roaster/)
+
+Paste your above-the-fold copy. Get a score out of 100. Find out exactly why visitors leave without buying. No upsells. No sugarcoating. Just the uncomfortable truth.
+
+01\.
+
+Paste your homepage copy into the box
+
+02\.
+
+Click Roast It
+
+03\.
+
+Get your score out of 100 across 5 categories
+
+04\.
+
+Read the breakdown. Fix what is broken.
+
+Paste Copy
+
+Enter URL
+
+Paste above-the-fold copy here
+
+0 words
+
+Roast It
+
+Enter homepage URL
+
+We fetch and extract your homepage copy, then run the same 5-category analysis.
+
+Fetch & Roast
+
+Homepage Score
+
+0
+
+/ 100
+
+Zero Hype
+
+[homepage-roaster](https://zerohypelab.com/homepage-roaster/)
+
+// 5 analyzer breakdown
+
+// What the roaster found
+
+Copy Scorecard Text
+
+Roast Another Page
+
+// Your messaging is making you invisible
+
+#### Your homepage copy is losing buyers before they scroll.
+
+A bad score is a symptom. The root cause is usually positioning: wrong message, wrong audience, wrong frame. Get a Marketing Autopsy. A full diagnosis of what is breaking your marketing and a rewrite roadmap. \$49.
+
+[Get the Marketing Autopsy - \$49](https://zerohypelab.com/marketing-autopsy/)
+
+### Marketing Autopsy (https://zerohypelab.com/marketing-autopsy/)
+
+Answer 19 questions about your outreach and marketing. Get a scored diagnosis of exactly what's broken and a prioritized plan for the next 90 days.\
+\
+**Not advice. Not a framework. A verdict.**
+
+// 8 diagnostics per week. Manual.
+
+\$49
+
+→ 4 spots remaining this week. Resets Monday.
+
+[Get My Marketing Autopsy →](https://buy.stripe.com/28EeVf73ygU8abbcTIaR201)
+
+✓ 19-question diagnostic ✓ Scored across 6 dimensions ✓ 90-day action plan ✓ Delivered in 48 hours ✓ No calls, no fluff
+
+// What Gets Scored
+
+Six dimensions.\
+*One honest picture.*
+---------------------
+
+Most founders know something is broken. They don't know what, in what order, and how badly. This tells you.
+
+Outreach Quality
+
+Are your messages landing or ignored?
+
+Lead Generation
+
+Where are leads actually coming from?
+
+ICP Clarity
+
+Do you know exactly who you're selling to?
+
+Channel Mix
+
+Are you spreading too thin or too narrow?
+
+Follow-up Discipline
+
+How much pipeline dies from no follow-up?
+
+90-Day Readiness
+
+Are your goals realistic given your resources?
+
+// The Problem
+
+#### Most founders are solving the wrong problem.
+
+01
+
+##### They add channels instead of fixing the core
+
+LinkedIn isn't working so they try cold email. Cold email doesn't work so they try paid ads. The channel isn't the problem. The message and the targeting are.
+
+02
+
+##### They hire before they have a system
+
+A marketing hire without a clear ICP, a working channel, and a defined process is just expensive experimentation. With someone else's time.
+
+03
+
+##### They mistake activity for progress
+
+Posting content, sending sequences, running ads. All of it can feel like momentum while the pipeline stays flat. Busy is not the same as effective.
+
+04
+
+##### They don't know what to fix first
+
+There are five things broken. They're all connected. Without knowing the order of priority, every fix creates a new problem somewhere else.
+
+// What You Get
+
+#### A report that tells you what to *actually* do next.
+
+- Scored Diagnosis
+
+  Your marketing scored across six dimensions. Not a vanity scorecard. A ranked list of what's hurting you most, in order of impact.
+
+- Root Cause Analysis
+
+  The 2-3 core issues driving most of your problems. Not symptoms. The actual reasons your outreach or pipeline isn't converting.
+
+- 90-Day Action Plan
+
+  Prioritized steps adapted to your situation. What to do in week one, what to defer, and what to stop doing entirely.
+
+- Outreach Assessment
+
+  A specific evaluation of your current outreach approach. What's working, what's killing reply rates, and what to change immediately.
+
+// How It Works
+
+#### Four minutes in. 48 hours out.
+
+01
+
+##### Answer 19 questions
+
+About your company, your outreach, your channels, your blockers. Multiple choice mostly. Takes about 4 minutes. No trick questions.
+
+02
+
+##### We read everything
+
+A human with B2B marketing experience reviews your answers, scores each dimension, and identifies the root causes behind your numbers.
+
+03
+
+##### You get the report in 48 hours
+
+Diagnosis, scores, root causes, and a prioritized 90-day plan land in your inbox. Read it, apply it. No call needed to understand it.
+
+#### This is for you if—
+
+- → You're a founder doing your own marketing
+- → You've just hired your first marketing person
+- → Your outreach isn't converting and you don't know why
+- → You're about to change your marketing strategy
+- → You sell B2B and your pipeline is unpredictable
+
+#### This is not for you if—
+
+- ✕ You want someone to run your marketing for you
+- ✕ You have no marketing activity yet to evaluate
+- ✕ You're looking for a magic growth hack
+- ✕ You sell B2C or e-commerce
+
+Stop guessing what's broken.\
+*Find out.*
+-----------------------------
+
+\$49 for the first 20 clients. Then \$99. One payment, one report, no subscriptions.
+
+[Get My Marketing Autopsy — \$49 →](https://buy.stripe.com/28EeVf73ygU8abbcTIaR201) 48 hour turnaround · Written report · Human analysis
+
+### Outreach Autopsy (https://zerohypelab.com/outreach-autopsy/)
+
+Send us your last 20 outreach emails. We'll tell you exactly what's broken, why it's broken, and rewrite the ones worth saving.\
+\
+**Not a template. Not a checklist. A diagnosis.**
+
+// 5 audits per week. Manual.
+
+\$99
+
+→ 3 spots remaining this week. Resets Monday.
+
+[Submit My Emails →](https://buy.stripe.com/3cI5kF87C6fu3MNbPEaR200)
+
+✓ Turnaround: 48 hours ✓ Full written report ✓ 5 emails rewritten ✓ No calls, no fluff
+
+// The Problem
+
+#### You're not getting ignored because your product is bad.
+
+01
+
+##### The Same Pattern, Repeated
+
+Most founders make the same mistake 30 times in a row. Same structure, same opener, same failure. The pattern is invisible until someone shows you.
+
+02
+
+##### Too Generic to Land
+
+Your email could have been sent by anyone, to anyone. That's why it reads like noise. Specificity is the only thing that breaks through in 2026.
+
+03
+
+##### Automation Trained Them
+
+Buyers developed a superpower: instant template detection. Your sequence fires. Their finger moves to delete. Before they've read the subject line.
+
+04
+
+##### More Volume Isn't the Answer
+
+Sending 500 broken emails instead of 50 doesn't fix the problem. It scales it. The issue isn't the number. It's what's in the email.
+
+// What You Get
+
+#### A report that tells you the *truth* about your outreach.
+
+- Pattern Diagnosis
+
+  We read every email and map the recurring mistakes. Not grammar. Psychology. What's triggering the ignore reflex and why.
+
+- 5 Emails Rewritten
+
+  We take your best 5 attempts and rewrite them from the ground up. You see exactly what changes and why it works better.
+
+- Root Cause Analysis
+
+  A plain-language breakdown of the 2-3 core issues in your approach. Not a list of 40 tips. The actual problems, in order of impact.
+
+- What to Do Monday
+
+  Concrete changes you can make immediately. No theory. No framework with an acronym. Just what to do differently starting tomorrow.
+
+// How It Works
+
+#### Simple. No calls. No back and forth.
+
+01
+
+##### Submit your emails
+
+Send us 15-30 outreach emails you've actually sent. Real ones. The ones that didn't get replies. Copy-paste into the form, include any context you have.
+
+02
+
+##### We read everything
+
+Not AI. A human with years of B2B outreach experience reads every email, maps the patterns, and identifies what's breaking the conversion.
+
+03
+
+##### You get the report in 48 hours
+
+A written report lands in your inbox. Diagnosis, rewrites, root cause, action plan. You read it, you apply it. No call needed.
+
+#### This is for you if—
+
+- → You're a founder doing your own sales and outreach
+- → You've sent emails and heard nothing back
+- → You've tried different templates and nothing sticks
+- → You want to know the real reason, not another framework
+- → You sell B2B and your buyers are hard to reach
+
+#### This is not for you if—
+
+- ✕ You want someone to write your emails for you indefinitely
+- ✕ You haven't sent any cold emails yet
+- ✕ You're looking for a magic template that scales
+- ✕ You sell B2C or e-commerce
+
+Stop guessing why they're not replying.\
+*Find out.*
+----------------------------------------
+
+\$99 for the first 10 clients. Then \$149. No recurring fees, no upsells, no community you'll never use.
+
+[Get My Outreach Autopsy — \$99 →](https://buy.stripe.com/3cI5kF87C6fu3MNbPEaR200)
+
+48 hour turnaround · Written report · Human analysis
+
+### Campaign Autopsy (https://zerohypelab.com/campaign-autopsy/)
+
+A full diagnostic on a failed or underperforming B2B marketing campaign. You tell me what you ran. I tell you specifically what broke and how to fix it. No guesses. No frameworks. No vague recommendations.
+
+\$500 Early access price. Delivered in 48–72 hours.
+
+- [Start your autopsy](https://tally.so/r/b5kq22)
+- [Pay now — \$500](https://buy.stripe.com/7sY9AV87C0VafvvcTIaR202)
+
+Fill the intake form first. Payment is the last step.
+
+The problem
+
+#### Most campaign post-mortems miss the point.
+
+The usual debrief goes like this: impressions were fine, CTR was low, probably the creative. Or maybe the audience was off. Or the timing. You get a list of possible reasons and no way to know which one actually killed the campaign.
+
+That's not a diagnosis. That's a list of suspects with no conviction.
+
+Campaign Autopsy works backwards from the result. What happened at each stage, what the numbers actually say, and which specific decision upstream caused the downstream failure. One clear answer you can act on.
+
+- You ran a LinkedIn campaign. Leads came in. None of them converted. You don't know if that's a targeting problem, a message problem, or a sales handoff problem.
+- You invested in content marketing for six months. Traffic grew. Pipeline didn't move. The correlation you expected didn't materialize and nobody can explain why.
+- You ran a paid campaign with an agency. They said results were solid. Your revenue didn't reflect it. You need to know who's right.
+- Your outbound sequence ran for three months. Open rates were decent. Replies were near zero. You've already changed the subject line three times and nothing shifted.
+
+What you get
+
+#### A three-part diagnostic report. No padding.
+
+Delivered as a PDF within 48–72 hours of receiving your intake form. Clear sections. Short sentences. Specific findings only.
+
+Part 01
+
+The failure chain
+
+A step-by-step breakdown of where the campaign lost momentum. Each stage scored: message, targeting, offer, channel fit, timing. The specific point where it broke.
+
+Part 02
+
+The actual diagnosis
+
+One primary cause. The thing that, if you'd gotten it right, would have changed the outcome. Not a list. One finding with the evidence that supports it.
+
+Part 03
+
+Three specific fixes
+
+What to change before you run the next version of this campaign. Each fix is specific to your situation. Nothing generic. Nothing that requires a six-month strategy overhaul.
+
+How it works
+
+#### Three steps. 72 hours.
+
+1.  01
+    **Submit your intake form**
+    Fill in the Campaign Autopsy form. You'll be asked about the campaign objective, the channels used, the targeting approach, the creative and copy, the results you got, and what you expected. This takes 20–30 minutes. The quality of your diagnosis depends on the quality of what you submit. Be specific. Don't edit yourself.
+2.  02
+    **Pay**
+    After submitting the intake form, you'll be redirected to payment. \$500, flat fee. Work begins after payment clears. No partial reviews, no sliding scale. The price is the price.
+3.  03
+    **Receive your report**
+    The Campaign Autopsy report arrives as a PDF within 48–72 hours. If I need clarification on anything in your intake form, I'll email you at the address you provided. Most reports are delivered closer to 48 hours than 72.
+
+Fit check
+
+#### This is for you if.
+
+##### This works for
+
+- B2B campaigns that ran and underdelivered on the primary metric
+- Founders who ran the campaign themselves and can't see where it broke
+- Marketing leads who need an outside read before presenting internally
+- Teams where the campaign ran but the sales team says the leads were wrong
+- Anyone about to rerun a campaign that failed and wants to know what to change
+
+##### This doesn't work for
+
+- B2C campaigns. The diagnostic framework is built for B2B.
+- Campaigns that haven't run yet. This is a post-mortem, not a planning tool.
+- Campaigns with no data. If you don't have results, there's nothing to autopsy.
+- Anyone who wants a consultant relationship. This is a one-time diagnostic.
+
+#### One campaign. One diagnosis. One path forward.
+
+If you ran a campaign and it didn't work, you have two options. Run it again and hope something changes. Or find out what broke and fix it before you spend the budget again.
+
+\$500 Flat fee. 48–72 hour delivery.
+
+- [Start your autopsy](https://tally.so/r/b5kq22)
+- [Pay now — \$500](https://buy.stripe.com/7sY9AV87C0VafvvcTIaR202)
+
+zerohype@proton.me if you have questions first.
+
+### DACH Outreach Agent (https://zerohypelab.com/dach-outreach-agent/)
+
+------------------------------------------------------------------------
+
+The silence after a German prospect reads your email isn't indifference. It's a verdict. They read it, evaluated it, and concluded: this person doesn't understand how things work here.
+
+------------------------------------------------------------------------
+
+01 — Email
+
+First contact, calibrated to your target country. Formal register, specific research hook, substance-first structure.
+
+02 — Follow-up
+
+Sent at 10-15 business days, not 3. With a real new angle, not a bump.
+
+03 — Pre-call
+
+A document that survives their internal review process without you in the room.
+
+04 — Rules
+
+What to never write to a German buyer. What silence actually means. How to read a non-response.
+
+DACH Outreach Agent
+
+#### Cold email that doesn't announce *itself* as cold email.
+
+A complete 3-email outreach sequence for Germany, Austria, or Switzerland. Built on how DACH buyers actually read, evaluate, and decide — not on a translated US template.
+
+\$49
+
+\$79 after early access
+
+One-time. No subscription. No calls required.
+
+[Get Your DACH Sequence →](https://buy.stripe.com/6oUeVfgE80VacjjcTIaR203) You'll receive a Tally form immediately after purchase. Return your answers. Get your sequence in 48 hours.
+
+"The silence is not passive. It is a verdict. Most people respond by doubling down on the same approach. That is not persistence. That is confirmation that you didn't understand the first signal."
+
+What makes DACH outreach different
+
+RULE 01
+
+German buyers evaluate competence, not warmth. "Hey Thomas" signals poor judgment before you've said a word.
+
+RULE 02
+
+Specificity is the only substitute for referral trust. Generic claims about what you can do are noise.
+
+RULE 03
+
+Artificial urgency doesn't create urgency in DACH. It creates suspicion. Remove every "limited spots available."
+
+RULE 04
+
+Follow-up minimum: 10 business days. Following up sooner signals you're managing your pipeline, not their process.
+
+RULE 05
+
+Every follow-up must contain new information. "Just checking in" is a confession, not a follow-up.
+
+RULE 06
+
+German buyers need materials that survive internal scrutiny without you in the room. Your deck wasn't built for that.
+
+Three countries. Three different sequences.
+
+🇩🇪
+
+Germany
+
+Direct, formal, deeply skeptical of anything that sounds like selling. Substance in the first three sentences or the email is gone. Decision timeline: slower than you want.
+
+🇦🇹
+
+Austria
+
+Formal on paper, warmer underneath. More relationship-oriented than Germany. Small talk is acceptable. The substance requirements don't change.
+
+🇨🇭
+
+Switzerland
+
+Meticulous, consensus-driven, longest decision timelines of the three. The strongest radar for overselling. Understate everything. Let the materials carry the weight.
+
+DACH is not one market. Treating Munich, Vienna, and Zurich identically is the same category of mistake as treating New York, London, and Sydney as one English-speaking market.
+
+How it works
+
+Step 01 — Purchase
+
+Click below. Stripe handles the payment. You receive a link to a short Tally form immediately after.
+
+Step 02 — Brief us
+
+Tell us: your target country (DE/AT/CH), your industry, the type of contact you're reaching, and what you're offering. 10 minutes.
+
+Step 03 — Receive your sequence
+
+Within 48 hours you get: a complete first-contact email, a calibrated follow-up, a pre-call preparation document, and the specific rules that apply to your country and industry.
+
+Step 04 — Send it
+
+Everything is ready to send. Not a template to adapt — a sequence built for your specific situation, your target country, your buyer profile.
+
+Before you ask
+
+"Can't I just translate my existing emails?"
+
+Translation fixes the language. The problem is the assumptions baked in before a single word was written. American cold email runs on enthusiasm, urgency, and familiarity. German buyers read all three as disqualifying signals. The register, the structure, the pacing — all of it needs rebuilding, not translating.
+
+"What if I don't get any replies?"
+
+A sequence built on accurate cultural assumptions performs better than one that isn't. But DACH outreach is about qualified silence as much as replies. If you get a considered "not now" instead of nothing, that is a better outcome than most sequences achieve. Reply rates under 3% on well-researched DACH outreach indicate a targeting problem, not a copy problem.
+
+"Is this a template or custom work?"
+
+Custom. The Tally form collects your specific situation — country, industry, company type, contact seniority, offer. The sequence is built from your answers. If we can't build something specific from what you provide, we'll ask for more before we deliver.
+
+"What about Austria and Switzerland — are they really that different?"
+
+Yes. Austria is similar to Germany in structure but warmer in register. Switzerland has the deepest consensus process and the longest decision timelines of the three, plus a multilingual complexity that affects who you're reaching and how. The same email sent to Munich, Vienna, and Zurich will land differently — not slightly differently. Significantly differently.
+
+------------------------------------------------------------------------
+
+Get the sequence
+
+#### \$49. 48 hours. No calls.
+
+Early access pricing for the first 20 clients. After that, \$79.
+
+[Get Your DACH Sequence →](https://buy.stripe.com/6oUeVfgE80VacjjcTIaR203) [\[email protected\]](https://zerohypelab.com/dach-outreach-agent/cdn-cgi/l/email-protection) — questions before purchasing
+
+// Update CTA links when Stripe link is available // Replace PLACEHOLDER_DACH with actual Stripe link before deploying // Soft entrance animation for sections const observer = new IntersectionObserver((entries) =\> { entries.forEach(entry =\> { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 }); doc
+
+### DACH Prospect Intelligence (https://zerohypelab.com/dach-prospect-intelligence/)
+
+One company. One contact. A complete intelligence brief on how to get in without getting ignored. Built for B2B sales into German, Austrian, and Swiss accounts.
+
+\$299 // per report. flat fee. 48-hour delivery.
+
+[Order a Report](https://buy.stripe.com/4gM4gBgE87jygzzbPEaR204)
+
+// 3 reports per week. Manual research, no shortcuts. 2 slots remaining this week.
+
+// One payment. You will be redirected to a short intake form. Report delivered by email in 48h.
+
+// the problem
+
+#### DACH prospects don't ignore bad outreach. They remember it.
+
+German, Austrian, and Swiss buyers evaluate vendors before they respond. They look for signals of competence. They make decisions faster than you think, and usually against you.
+
+Generic cold emails. Tone that reads as aggressive in Frankfurt. No understanding of how the target company actually makes purchasing decisions. That is how most international B2B outreach fails in DACH. Not because the product is wrong. Because the approach signals that you didn't do the work.
+
+This report is the work.
+
+// what you get
+
+#### Five deliverables. One 48-hour turnaround.
+
+01
+
+Company Cultural Profile
+
+How this company makes buying decisions. Who holds veto power. What signals they look for in a vendor. What they find suspicious. Based on public data, industry context, and DACH buying behavior patterns.
+
+02
+
+Buying Signals Analysis
+
+What their LinkedIn activity, job postings, recent news, and public statements reveal about current priorities. Where your timing is an advantage. Where it is not.
+
+03
+
+Entry Angle Recommendation
+
+The specific hook most likely to work for this company and this contact. Not a generic pain point. A concrete positioning statement based on who they are, what they need right now, and how they prefer to be approached.
+
+04
+
+2 Ready-to-Send Emails
+
+One opening email. One follow-up. Written for this specific contact, calibrated to DACH register, with the entry angle embedded. Not templates with blanks. Complete, sent-ready messages.
+
+05
+
+3 Probable Objections + Responses
+
+The most likely pushback from this contact, calibrated to DACH business culture and this company's specific situation. With a prepared response for each one. So when the objection lands, you are not improvising.
+
+// how it works
+
+#### Four steps. No complexity.
+
+1
+
+Pay (\$299)
+
+One flat fee. No retainer. No subscription. Processed securely via Stripe.
+
+2
+
+Fill the intake form (5 minutes)
+
+Target company name, website, and contact details. Your product or service. What you have already tried. What you know about them. The more context, the sharper the report.
+
+3
+
+We research
+
+Deep dive into the company, the contact, the industry, and DACH-specific buying dynamics. This takes time. It is done properly, not from a template.
+
+4
+
+Your report arrives in 48 hours
+
+PDF report with all five sections. Two emails in plain text, ready to copy and send. Delivered to the email you provide in the intake form.
+
+// who this is for
+
+#### You have one shot at a specific account.
+
+→ You sell B2B software or services into German, Austrian, or Swiss companies.
+
+→ You have a specific target. A company you want to get into. A contact you have already identified.
+
+→ Your DACH outreach is getting 0% replies. Or you have never tried DACH and don't want to start badly.
+
+→ The deal, if you land it, is worth more than \$299. You are not trying to save money. You are trying to not waste the opportunity.
+
+// not for
+
+Mass outreach campaigns. This report covers one target, not fifty.
+
+Consumer or B2C. DACH enterprise and mid-market B2B only.
+
+People looking for a generic DACH playbook. That is the DACH Cold Email Pack (\$24).
+
+// order a report
+
+\$299 // per report. flat fee. 48-hour delivery. no subscription.
+
+→ 2 slots remaining this week. 3 reports per week max.
+
+[Order Now](https://buy.stripe.com/4gM4gBgE87jygzzbPEaR204)
+
+After payment you will be redirected to a short intake form.\
+Your report arrives by email within 48 hours.\
+Questions: zerohype@proton.me
+
+### Outreach Overhaul (https://zerohypelab.com/outreach-overhaul/)
+
+We find the reason. We rewrite the sequence. You get a full audit, a rebuilt email flow, and a targeting framework — delivered in 7 business days. Async. No calls.
+
+\$897 One-time.\
+No retainer required.
+
+[Start the Overhaul](https://buy.stripe.com/aFa8wR4Vq33igzz3j8aR205)
+
+Pay → receive briefing form → delivery in 7 business days
+
+#### Why the *Autopsy isn't enough*
+
+- FAIL **You know what's broken.** The Outreach Autopsy told you. But you still have to fix it yourself — with the same team, the same assumptions, the same blind spots that created the problem.
+- FAIL **Rewrites don't happen.** The audit sits in Notion. Somebody adds it to this quarter's backlog. It gets deprioritized. You send the same emails for another 90 days.
+- FAIL **The targeting was never right.** Most outreach fails before the email gets opened — the wrong list, the wrong segment, the wrong angle. An audit of the copy doesn't fix that.
+
+#### What you *receive*
+
+01
+
+##### The Full Sequence Audit
+
+Every email in your current sequence, scored and annotated. ICP match, message clarity, channel fit, timing logic, call-to-action quality. Written report. Not a slide deck.
+
+02
+
+##### The Rebuilt Sequence
+
+5 to 7 emails, rewritten from scratch. Subject lines, openers, body copy, CTAs, follow-up logic. Ready to drop into your outreach tool. Variants for A/B testing where it matters.
+
+03
+
+##### The Targeting Framework
+
+ICP definition with specificity. Who you're targeting, how to segment them, what signals indicate a ready buyer. Criteria your SDRs can use to build lists without guessing.
+
+04
+
+##### One Round of Revisions
+
+After delivery, you have 5 business days to review and send back changes. One revision cycle included. Not because we expect it — because your context may require adjustments we can't anticipate.
+
+#### How it *works*
+
+DAY 0
+
+##### You pay. You get a briefing form.
+
+30 minutes of your time. Current sequence, ICP hypothesis, reply rate data, what you've already tried. The better you fill it out, the better the output.
+
+ASYNC — NO CALL REQUIRED
+
+DAY 1-5
+
+##### We audit and rebuild.
+
+Full sequence audit first. Then targeting framework. Then the rewrite. This is not templated — each sequence is built from the briefing, the ICP, and what your specific buyers respond to.
+
+NO STATUS UPDATES. FOCUSED WORK.
+
+DAY 7
+
+##### You receive the full deliverable package.
+
+Audit doc, rebuilt sequence, targeting framework — delivered by email. PDF + editable formats. Ready to deploy.
+
+48H AHEAD OF DEADLINE MOST OF THE TIME
+
+DAY 12
+
+##### Revision window closes.
+
+5 business days to review and send back change requests. One revision cycle. After that, the engagement is complete.
+
+CLEAN END. NO SCOPE CREEP.
+
+#### This is for you *if*
+
+- Your outreach has a sub-5% reply rate and you've been telling yourself it's a volume problem.
+- You have SDRs or AEs sending sequences you wrote 18 months ago and never touched.
+- You're entering a new market (especially DACH) and your existing sequence wasn't built for it.
+- You got the Outreach Autopsy report and want the rewrite done, not just diagnosed.
+- You have budget for one thing this quarter and you want it to actually move the number.
+
+Not for you if
+
+- You want a call. This is async. No exceptions.
+- You don't have an existing outreach program. Start with the [Outreach Autopsy](https://zerohypelab.com/outreach-autopsy) first.
+- You're looking for someone to run your outreach permanently. That's a retainer, not a project.
+
+#### Questions worth *answering*
+
+Do I need to have had the Outreach Autopsy first?
+
+No. The Overhaul includes its own audit phase. If you've already had the Autopsy, we start with the briefing form and skip what we already know.
+
+What if my sequence is in German?
+
+We handle DACH sequences. The briefing form will ask for language, market, and buyer profile. The rebuilt sequence will be in the language and register appropriate for the buyer.
+
+What outreach tools does this work with?
+
+All of them. You get the copy in plain text and formatted. Drop it into Apollo, Lemlist, Outreach, HubSpot, or a manual Gmail sequence. The format doesn't matter.
+
+What if I'm not happy with the output?
+
+One revision cycle is included. If the output fundamentally doesn't match your briefing, we fix it. If the briefing was incomplete, that's on the briefing. Fill it out completely.
+
+Can I upgrade to the retainer after this?
+
+Yes. After the Overhaul, you have priority access to the Monthly Autopsy retainer. The retainer handles ongoing campaign review — the Overhaul is a one-time foundation rebuild.
+
+#### Rebuild it once. Run it properly.
+
+One engagement. Full audit, rewrite, and targeting framework. Delivered in 7 business days.
+
+\$897 One-time.\
+No contract.
+
+[Start the Overhaul](https://buy.stripe.com/aFa8wR4Vq33igzz3j8aR205)
+
+Pay → receive briefing form → delivery in 7 business days
+
+### Monthly Autopsy (https://zerohypelab.com/monthly-autopsy/)
+
+One campaign or outreach sequence, submitted monthly. We run it through the full autopsy — written report, failure diagnosis, 3 priority rewrites. Delivered in 48 hours. No calls.
+
+MAX 10 CLIENTS — QUALITY OVER SCALE
+
+\$300 /month\
+cancel anytime
+
+[Apply for a Spot](https://buy.stripe.com/9B600lafK6fu9771b0aR206)
+
+If spots are available → intake form → first review within 7 days
+
+#### What you get *every month*
+
+01
+
+##### The Campaign Autopsy
+
+One live campaign or outreach sequence, scored across 10 failure vectors: ICP clarity, message quality, channel fit, timing logic, post-click experience, and 5 more. Written report. Not a scorecard — a diagnosis.
+
+02
+
+##### 3 Priority Rewrites
+
+The 3 highest-impact fixes, rewritten and ready to deploy. Subject lines, openers, CTAs, landing page headlines — wherever the failure score is highest. Not suggestions. Finished copy.
+
+03
+
+##### The One-Line Diagnosis
+
+Every autopsy ends with one sentence. The real reason this campaign is underperforming. Not the symptoms. The cause. It's usually not what you think.
+
+04
+
+##### 48-Hour Turnaround
+
+Submit by end of business day. Autopsy delivered within 48 hours. No status updates, no check-ins. You send the campaign. We send the report.
+
+#### How the *month runs*
+
+WEEK 1
+
+##### Submit your campaign.
+
+Email us the sequence, landing page, or campaign asset you want reviewed. Include current metrics if you have them — reply rate, open rate, conversion. The more context, the sharper the diagnosis.
+
+48 HOURS
+
+##### Receive the autopsy.
+
+Full written report. Failure score, annotated breakdown, 3 rewritten assets, one-line diagnosis. PDF format. No Zoom call to walk you through it — the report is written clearly enough to stand alone.
+
+ONGOING
+
+##### Deploy and track.
+
+You run the fixes. Next month, submit the next campaign or the updated version of this one to see what moved. Patterns emerge after 3-4 months. That's when it becomes compounding value.
+
+ANYTIME
+
+##### Cancel. No penalty.
+
+Cancel before your next billing date. No notice period. No contract. If it's not working, stop. We'd rather have 10 clients who find it useful than 40 who tolerate it.
+
+#### Autopsy vs *Retainer*
+
+| — | One-Time Autopsy (\$500) | Monthly Autopsy (\$300/mo) |
+|----|----|----|
+| Campaigns reviewed | 1 | 1 per month, indefinitely |
+| Rewrites included | 0 (diagnosis only) | 3 per month |
+| Turnaround | 48-72 hours | 48 hours |
+| Pattern recognition over time | Single snapshot | Builds each month |
+| Priority access | No | Yes — slots reserved for retainer clients |
+| Best for | One campaign that's failing | Ongoing program improvement |
+
+#### This is for you *if*
+
+- You run 1-3 active outreach or campaign sequences at a time and want a second set of eyes on each one.
+- You've been through the Outreach Autopsy or Outreach Overhaul and want to keep the momentum.
+- Your marketing team produces campaigns but nobody outside the team has reviewed them in months.
+- You're in a DACH market where the cost of a mispositioned campaign is higher than anywhere else.
+- You want external diagnosis without hiring someone full-time.
+
+Not for you if
+
+- You want strategy calls or ongoing advice. This is async diagnosis and rewriting. Nothing else.
+- You want us to run your campaigns. We review them. You run them.
+- You don't have active campaigns. If you're not shipping, there's nothing to review.
+
+#### Questions worth *answering*
+
+What does "max 10 clients" mean?
+
+We keep the retainer capped at 10 clients at any given time. Quality drops when the list gets long. When a spot opens, it goes to the waitlist. When all spots are full, the waitlist is open but no timeline is guaranteed.
+
+Can I submit more than one campaign per month?
+
+No. One campaign per billing cycle. This keeps the quality high and the turnaround fast. Pick your highest-priority campaign for review each month.
+
+What format do I submit in?
+
+Plain text email with the campaign copy pasted in, or a link to a shared doc. Include current performance metrics if you have them. We'll email back the autopsy PDF within 48 hours.
+
+What if I don't have a campaign to review one month?
+
+You skip that month. No rollover, no refund. The retainer bills monthly whether or not you submit. If you're regularly not submitting, cancel and come back when you have active campaigns.
+
+Is there a discount for paying annually?
+
+No. Monthly billing only. We don't want clients who feel locked in — we want clients who stay because the value is there every month.
+
+#### One campaign reviewed. Every month. No calls.
+
+Max 10 clients. Cancel anytime. First review within 7 days of onboarding.
+
+\$300 /month
+
+[Apply for a Spot](https://buy.stripe.com/9B600lafK6fu9771b0aR206)
+
+Spots are limited. Waitlist opens when all 10 are filled.
+
+### Revenue Architecture (https://zerohypelab.com/revenue-architecture/)
+
+Investment
+
+\$4,500
+
+Delivery
+
+3 weeks
+
+Availability
+
+2 / quarter
+
+> Not a diagnosis. Not a single sequence rewrite. The complete revenue system — ICP to close — built for your market, your buyers, your team. Delivered in three weeks. No calls, ever.
+
+I.
+
+Eight deliverables.\
+*One complete system.*
+----------------------
+
+01
+
+##### ICP Definition + Buyer Scoring Framework
+
+Not a demographic profile. A ranked scoring system — which signals indicate a ready buyer, which indicate a waste of time. Criteria your SDRs can use on any list, any day, without asking a manager.
+
+Foundation
+
+02
+
+##### Market Segmentation Map
+
+Your target market broken into 3-5 segments by buying behavior, not company size. Each segment gets its own angle, its own message, its own entry point. One sequence for everyone is the most common failure mode we see.
+
+Strategy
+
+03
+
+##### Full Cold Email System
+
+7-email sequence per primary segment. Subject line variants. Follow-up logic with timing and condition triggers. Written for your specific buyers. If you are targeting DACH, written in the register that doesn't get you immediately deleted.
+
+Outreach
+
+04
+
+##### LinkedIn Outreach Sequence
+
+5-touch LinkedIn sequence coordinated with the email flow so both channels reinforce instead of repeat. Connection request through direct ask, timed to complement the email cadence. Includes profile optimization notes.
+
+Outreach
+
+05
+
+##### Cold Call Script + Objection Guide
+
+Opener, qualification questions, pitch, and objection handling for the 8 most common deflections in your market. Written for the way your buyers actually talk — not for the way B2B sales scripts are usually written.
+
+Sales
+
+06
+
+##### Sales Playbook
+
+How to run the full process from first touch to signed contract. Pipeline stages, qualification criteria, handoff protocols, deal review checklist. Written for your team size, not for a Fortune 500.
+
+Process
+
+07
+
+##### 90-Day Execution Calendar
+
+Week-by-week rollout plan. What to activate first, what to test, what to measure, when to adjust. A decision tree — what success looks like at each checkpoint and what to do when you are not hitting it.
+
+Execution
+
+08
+
+##### 3 Months of Monthly Autopsy
+
+After delivery, your first three months of ongoing campaign review are included. One campaign per month, 3 rewrites delivered within 48 hours. The system gets built in week 3. Months 1 through 3 make sure it runs correctly.
+
+Included — \$900 value
+
+II.
+
+What this costs\
+*to build otherwise.*
+---------------------
+
+Freelance copywriter — 7-email sequence + variants \$800–1,200
+
+Sales consultant — ICP definition + playbook \$1,500–2,500
+
+LinkedIn ghostwriter — outreach sequence \$400–700
+
+Sales trainer — objection handling guide \$600–1,000
+
+Go-to-market strategist — segmentation + 90-day plan \$1,000–2,000
+
+3 months of Monthly Autopsy (\$300 × 3) \$900
+
+If bought separately \$5,200–8,300
+
+Revenue Architecture \$4,500
+
+III.
+
+Three weeks.\
+*How it runs.*
+--------------
+
+Week Zero
+
+##### Application and briefing.
+
+We review your application within 48 hours. If the fit is right, you pay and receive the briefing form. One 45-minute form — the only time you spend during the entire engagement. Every question directly shapes a deliverable.
+
+Week One
+
+##### ICP, segmentation, foundation.
+
+Everything is built on top of this. If the foundation is wrong, the sequences are wrong. We get it right before writing a single line of copy. You receive the ICP and segmentation for one round of review before we proceed.
+
+Week Two
+
+##### The full outreach stack.
+
+Cold email system, LinkedIn sequence, cold call script, and objection guide. Built segment by segment, channel by channel. No status updates — you will hear from us when the work is done.
+
+Week Three
+
+##### Playbook, calendar, delivery.
+
+Sales playbook and 90-day execution calendar finalized. Full delivery package: PDFs, editable documents, all copy in plain text and formatted. One revision cycle included on anything that needs adjustment.
+
+Months 1–3
+
+##### Monthly Autopsy reviews.
+
+Three months included. Submit one live campaign per month. Written autopsy and 3 rewrites within 48 hours. This is where the system gets tuned against real-world results, not theoretical assumptions.
+
+IV.
+
+This is for you\
+*if.*
+----------------
+
+- →You have a sales team of 2 to 10 people running on sequences that nobody built intentionally — they just accumulated over time.
+- →You are entering a new market, especially DACH, and you know your existing playbook will not translate.
+- →You have tried fixing it piecemeal — new copywriter, new tool, new SDR — and the number does not move.
+- →You need something a new hire can pick up and run without tribal knowledge.
+- →You want it built once, correctly, by someone who will tell you what is wrong with your current approach before taking your money.
+
+Not for you if
+
+- You need calls. This is async throughout. No exceptions at any price.
+- You want someone to run the system after we build it. We build, you run.
+- You are pre-revenue or pre-product. Come back when you have something to sell.
+- You want guaranteed results. We build the best system we know how to build. Results depend on your execution.
+
+V.
+
+Questions worth\
+*answering.*
+----------------
+
+Why an application instead of a payment link?
+
+Two clients per quarter. A third client means the work takes longer and the quality drops. An application takes 5 minutes and immediately tells us whether the fit is right — which saves time on both sides.
+
+What does async mean at \$4,500?
+
+No Zoom calls. No check-ins. No status meetings. You fill out the briefing form. We build the system. We send you the ICP and segmentation for one round of input. We deliver the full package. That is the entire interaction. The quality comes from deep work, not from meetings about the work.
+
+We sell in German. Can you build in German?
+
+Yes. DACH-market sequences, scripts, and playbooks are a core part of what this engagement covers. German-language deliverables are standard, not an add-on. The briefing form will ask for language, market, and buyer profile.
+
+What if I only need the email sequences?
+
+That is the Outreach Overhaul at \$897. The Revenue Architecture is for companies that need the full stack — ICP to close — not just better copy on an existing sequence.
+
+Apply for\
+*this engagement.*
+------------------
+
+Send an email. Describe your company, your current outreach situation, and what market you are targeting. We respond within 48 hours with either an acceptance or a reason it is not the right fit.
+
+If the current quarter is full, accepted applications go to the next available slot. We do not take three clients to fill a calendar.
+
+[Apply via Email](mailto:hello@zerohypelab.com?subject=Revenue%20Architecture%20—%20Application)
+
+hello@zerohypelab.com  ·  Response within 48 hours
+
+Investment
+
+\$4,500 — paid on acceptance
+
+Delivery
+
+3 weeks from briefing
+
+Availability
+
+2 clients per quarter
+
+Format
+
+Async throughout — no calls
+
+Included
+
+3 months Monthly Autopsy
+
+### Guides hub (https://zerohypelab.com/guides/)
+
+01 Cold Email Templates 16 guides
+
+[](cold-email-templates-germany/)
+
+Cold Email Templates for Germany
+
+What actually gets replies in German B2B markets
+
+Read →
+
+[](cold-email-templates-austria/)
+
+Cold Email Templates for Austria
+
+Austrian buyers, Austrian rules. What's different and why
+
+Read →
+
+[](cold-email-templates-switzerland/)
+
+Cold Email Templates for Switzerland
+
+Multi-language market, premium positioning expectations
+
+Read →
+
+[](cold-email-templates-germany-saas/)
+
+Cold Email for German SaaS Prospects
+
+Decision-makers at German software companies. What they respond to
+
+Read →
+
+[](cold-email-templates-germany-manufacturing/)
+
+Cold Email for German Manufacturing
+
+Long sales cycles, engineering-first buyers, zero tolerance for fluff
+
+Read →
+
+[](cold-email-templates-germany-finance/)
+
+Cold Email for German Finance Sector
+
+Compliance-heavy buyers who delete anything that feels risky
+
+Read →
+
+[](cold-email-templates-germany-healthcare/)
+
+Cold Email for German Healthcare
+
+Credibility-first outreach for a trust-dependent vertical
+
+Read →
+
+[](cold-email-templates-austria-tech/)
+
+Cold Email for Austrian Tech Companies
+
+Vienna startup scene vs. Graz Mittelstand — not the same audience
+
+Read →
+
+[](cold-email-templates-switzerland-finance/)
+
+Cold Email for Swiss Finance
+
+Banking, asset management, private wealth. The discretion factor
+
+Read →
+
+[](cold-email-templates-dach-b2b/)
+
+Cold Email Templates for DACH B2B
+
+One sequence, three countries. Where to adapt and where not to
+
+Read →
+
+[](cold-email-templates-germany-logistics/)
+
+Cold Email for German Logistics
+
+Procurement-driven decisions and ROI-first messaging that works
+
+Read →
+
+[](cold-email-templates-germany-automotive/)
+
+Cold Email for German Automotive
+
+Tier 1 suppliers, OEMs, and the qualification culture you need to know
+
+Read →
+
+[](cold-email-templates-germany-retail/)
+
+Cold Email for German Retail Buyers
+
+Category managers, buying teams, and what gets through the filter
+
+Read →
+
+[](cold-email-templates-dach-enterprise/)
+
+Cold Email for DACH Enterprise
+
+Multi-stakeholder, long-cycle deals. The patience-based approach
+
+Read →
+
+[](cold-email-templates-germany-startup/)
+
+Cold Email for German Startups
+
+Faster decisions, smaller teams, still not Silicon Valley
+
+Read →
+
+[](cold-email-templates-dach-sme/)
+
+Cold Email for DACH SMEs
+
+Mittelstand relationships, owner-led decisions, trust before everything
+
+Read →
+
+02 Outreach Scripts by Role 16 guides
+
+[](outreach-scripts-cto/)
+
+Outreach Script: CTO (DACH)
+
+Technical credibility first. CTOs don't reply to vendor pitch energy
+
+Read →
+
+[](outreach-scripts-cmo/)
+
+Outreach Script: CMO (DACH)
+
+Marketing leaders in German companies have different priorities than US CMOs
+
+Read →
+
+[](outreach-scripts-ceo/)
+
+Outreach Script: CEO (DACH)
+
+Getting through to the top. What earns a CEO's attention
+
+Read →
+
+[](outreach-scripts-vp-sales/)
+
+Outreach Script: VP Sales (DACH)
+
+Sales leaders know every trick. Here's what still works
+
+Read →
+
+[](outreach-scripts-head-of-marketing/)
+
+Outreach Script: Head of Marketing
+
+Budget owners who've seen every pitch deck. Stand out differently
+
+Read →
+
+[](outreach-scripts-procurement/)
+
+Outreach Script: Procurement
+
+Process-driven buyers. How to speak their language without losing your soul
+
+Read →
+
+[](outreach-scripts-it-director/)
+
+Outreach Script: IT Director
+
+Security, integration, compliance. Lead with the things they care about
+
+Read →
+
+[](outreach-scripts-cto-austria/)
+
+Outreach Script: CTO Austria
+
+Austrian technical culture vs. German — the subtle differences that matter
+
+Read →
+
+[](outreach-scripts-cmo-switzerland/)
+
+Outreach Script: CMO Switzerland
+
+Swiss marketing leaders and the multi-market complexity they navigate
+
+Read →
+
+[](outreach-scripts-cfo/)
+
+Outreach Script: CFO (DACH)
+
+Finance decision-makers. ROI and risk reduction, nothing else
+
+Read →
+
+[](outreach-scripts-hr-director/)
+
+Outreach Script: HR Director
+
+People-function buyers who get pitched constantly. The approach that cuts through
+
+Read →
+
+[](outreach-scripts-operations-director/)
+
+Outreach Script: Operations Director
+
+Efficiency-obsessed, data-driven, zero tolerance for vague promises
+
+Read →
+
+[](outreach-scripts-product-manager/)
+
+Outreach Script: Product Manager
+
+PMs are bottlenecks, not buyers. How to get them on your side
+
+Read →
+
+[](outreach-scripts-vp-engineering/)
+
+Outreach Script: VP Engineering
+
+Engineering leaders who trust demos over decks
+
+Read →
+
+[](outreach-scripts-startup-ceo/)
+
+Outreach Script: Startup CEO (DACH)
+
+Fast-moving targets. What gets a startup founder's attention in 2025
+
+Read →
+
+[](outreach-scripts-enterprise-cxo-dach/)
+
+Outreach Script: Enterprise CXO (DACH)
+
+C-suite at large companies. The multi-thread approach that actually works
+
+Read →
+
+03 DACH Software Buying Guides 16 guides
+
+[](dach-b2b-software-buying-guide/)
+
+DACH B2B Software Buying Guide
+
+How German-speaking companies evaluate and buy software in 2025
+
+Read →
+
+[](dach-crm-software-guide/)
+
+CRM Software in DACH
+
+What DACH companies look for in CRM — and why it's not what you think
+
+Read →
+
+[](dach-marketing-automation-guide/)
+
+Marketing Automation in DACH
+
+GDPR, German email culture, and the compliance-first buying mindset
+
+Read →
+
+[](dach-sales-tools-guide/)
+
+Sales Tools in DACH
+
+Which sales tools are actually adopted by DACH teams and why
+
+Read →
+
+[](dach-analytics-platforms-guide/)
+
+Analytics Platforms in DACH
+
+Data sovereignty, on-premise preferences, and the GA4 migration fallout
+
+Read →
+
+[](dach-project-management-tools-guide/)
+
+Project Management Tools in DACH
+
+Collaboration software in consensus-driven organizations
+
+Read →
+
+[](dach-cybersecurity-tools-guide/)
+
+Cybersecurity Tools in DACH
+
+BSI compliance, data residency requirements, and the security buyer profile
+
+Read →
+
+[](dach-hr-software-guide/)
+
+HR Software in DACH
+
+Works council involvement, privacy law, and the HR tech adoption curve
+
+Read →
+
+[](dach-erp-systems-guide/)
+
+ERP Systems in DACH
+
+SAP stronghold, migration hesitancy, and how challengers break through
+
+Read →
+
+[](dach-cloud-solutions-guide/)
+
+Cloud Solutions in DACH
+
+Sovereignty concerns, hybrid cloud reality, and where DACH is actually moving
+
+Read →
+
+[](dach-data-management-tools-guide/)
+
+Data Management in DACH
+
+GDPR-native architecture and what compliance-first buyers actually need
+
+Read →
+
+[](dach-customer-success-tools-guide/)
+
+Customer Success Tools in DACH
+
+CS software adoption in relationship-heavy sales cultures
+
+Read →
+
+[](dach-procurement-software-guide/)
+
+Procurement Software in DACH
+
+Tender processes, multi-vendor evaluation, and the buying committee
+
+Read →
+
+[](dach-finance-software-guide/)
+
+Finance Software in DACH
+
+Datev ecosystem, tax compliance requirements, and CFO buying criteria
+
+Read →
+
+[](dach-collaboration-tools-guide/)
+
+Collaboration Tools in DACH
+
+Remote work culture shift, data residency, and tool consolidation trends
+
+Read →
+
+[](dach-bi-tools-guide/)
+
+BI Tools in DACH
+
+Business intelligence adoption in data-conservative organizations
+
+Read →
+
+04 Why Cold Email Fails 16 guides
+
+[](why-cold-email-fails-no-personalization/)
+
+No Personalization
+
+The difference between merge-field personalization and actual research
+
+Read →
+
+[](why-cold-email-fails-bad-subject-lines/)
+
+Bad Subject Lines
+
+Subject lines that kill open rates before the email starts
+
+Read →
+
+[](why-cold-email-fails-wrong-timing/)
+
+Wrong Timing
+
+Send time, buying cycle, and the timing mistakes that kill campaigns
+
+Read →
+
+[](why-cold-email-fails-no-follow-up/)
+
+No Follow-Up
+
+Most replies come from follow-ups. Most senders stop after email one
+
+Read →
+
+[](why-cold-email-fails-weak-cta/)
+
+Weak CTA
+
+Asking too much too soon. The micro-commitment approach instead
+
+Read →
+
+[](why-cold-email-fails-wrong-icp/)
+
+Wrong ICP
+
+Sending to the right message to the wrong people. How to fix your targeting
+
+Read →
+
+[](why-cold-email-fails-poor-deliverability/)
+
+Poor Deliverability
+
+Domain reputation, warm-up, SPF/DKIM/DMARC. The technical layer that kills campaigns
+
+Read →
+
+[](why-cold-email-fails-generic-copy/)
+
+Generic Copy
+
+Template-sounding emails in an era when everyone has access to the same templates
+
+Read →
+
+[](why-cold-email-fails-no-social-proof/)
+
+No Social Proof
+
+Cold means zero trust. Social proof is the fastest way to borrow credibility
+
+Read →
+
+[](why-cold-email-fails-too-long/)
+
+Too Long
+
+Nobody reads a cold email novel. The length that actually converts
+
+Read →
+
+[](why-cold-email-fails-no-research/)
+
+No Research
+
+Sending without knowing anything about the prospect. The signal this sends
+
+Read →
+
+[](why-cold-email-fails-wrong-channel/)
+
+Wrong Channel
+
+Email isn't always the right entry point. When to use LinkedIn, phone, or referral instead
+
+Read →
+
+[](why-cold-email-fails-no-value-prop/)
+
+No Value Prop
+
+What's in it for them? The answer has to be obvious in 5 seconds
+
+Read →
+
+[](why-cold-email-fails-spam-triggers/)
+
+Spam Triggers
+
+Words, patterns, and formatting choices that send you straight to spam
+
+Read →
+
+[](why-cold-email-fails-no-ab-testing/)
+
+No A/B Testing
+
+Sending the same email to everyone and wondering why results are flat
+
+Read →
+
+[](why-cold-email-fails-no-testing/)
+
+No Testing Framework
+
+Running campaigns without a system for learning. What a proper test loop looks like
+
+Read →
+
+05 Sales Call Scripts by German Industry 16 guides
+
+[](sales-call-scripts-saas-germany/)
+
+Sales Call Scripts: German SaaS
+
+Demo calls, discovery, and the objection patterns common in German software sales
+
+Read →
+
+[](sales-call-scripts-manufacturing-germany/)
+
+Sales Call Scripts: German Manufacturing
+
+Technical buyers, long evaluations, and calls that earn the next step
+
+Read →
+
+[](sales-call-scripts-finance-germany/)
+
+Sales Call Scripts: German Finance
+
+Regulated industry calls. Compliance language that builds trust
+
+Read →
+
+[](sales-call-scripts-healthcare-germany/)
+
+Sales Call Scripts: German Healthcare
+
+HCP calls, procurement processes, and the certification questions you'll face
+
+Read →
+
+[](sales-call-scripts-logistics-germany/)
+
+Sales Call Scripts: German Logistics
+
+Ops-focused buyers who want ROI in the first ten minutes
+
+Read →
+
+[](sales-call-scripts-automotive-germany/)
+
+Sales Call Scripts: German Automotive
+
+Supplier qualification calls and the standards you need to know before dialing
+
+Read →
+
+[](sales-call-scripts-retail-germany/)
+
+Sales Call Scripts: German Retail
+
+Buyer calls with category managers and the metrics they care about
+
+Read →
+
+[](sales-call-scripts-tech-germany/)
+
+Sales Call Scripts: German Tech
+
+Technical evaluators and the proof-of-concept culture in German IT
+
+Read →
+
+[](sales-call-scripts-energy-germany/)
+
+Sales Call Scripts: German Energy
+
+Energiewende context, regulated procurement, long relationship cycles
+
+Read →
+
+[](sales-call-scripts-real-estate-germany/)
+
+Sales Call Scripts: German Real Estate
+
+PropTech, property management, and the conservative buyer profile
+
+Read →
+
+[](sales-call-scripts-consulting-germany/)
+
+Sales Call Scripts: German Consulting
+
+Selling to consultants. The peer-positioning approach that works
+
+Read →
+
+[](sales-call-scripts-pharma-germany/)
+
+Sales Call Scripts: German Pharma
+
+Regulatory environment, multi-stakeholder calls, the approval chain
+
+Read →
+
+[](sales-call-scripts-insurance-germany/)
+
+Sales Call Scripts: German Insurance
+
+Risk-averse buyers in a risk-averse industry. How to position innovation carefully
+
+Read →
+
+[](sales-call-scripts-media-germany/)
+
+Sales Call Scripts: German Media
+
+Publishing and broadcast buyers navigating digital transformation
+
+Read →
+
+[](sales-call-scripts-construction-germany/)
+
+Sales Call Scripts: German Construction
+
+Traditionalist industry, relationship-first culture, slow but loyal buyers
+
+Read →
+
+[](sales-call-scripts-education-germany/)
+
+Sales Call Scripts: German Education
+
+EdTech in a skeptical market. Budget cycles, procurement rules, and patience
+
+Read →
+
+06 Sales Call Scripts: Austria & Switzerland 10 guides
+
+[](sales-call-scripts-tech-austria/)
+
+Sales Call Scripts: Austrian Tech
+
+Vienna startups and Provinz corporates are different calls. Formal titles still carry weight
+
+Read →
+
+[](sales-call-scripts-manufacturing-austria/)
+
+Sales Call Scripts: Austrian Manufacturing
+
+The Steiermark automotive supply chain, formal contract cycles, and the export-margin case
+
+Read →
+
+[](sales-call-scripts-energy-austria/)
+
+Sales Call Scripts: Austrian Energy
+
+Hydro baseline, EU policy mediation, and a project cycle measured in years
+
+Read →
+
+[](sales-call-scripts-logistics-austria/)
+
+Sales Call Scripts: Austrian Logistics
+
+Brenner corridor realities, family-owned 3PLs, and IT read as cost rather than investment
+
+Read →
+
+[](sales-call-scripts-retail-austria/)
+
+Sales Call Scripts: Austrian Retail
+
+Slower digital adoption than Germany, and decisions still made at the family dinner table
+
+Read →
+
+[](sales-call-scripts-finance-switzerland/)
+
+Sales Call Scripts: Swiss Finance
+
+FINMA-aware call structure, multilingual stakeholder routing, and the Q4 budget rhythm
+
+Read →
+
+[](sales-call-scripts-pharma-switzerland/)
+
+Sales Call Scripts: Swiss Pharma
+
+Basel-cluster procurement, GMP objections, and the Regulatory Affairs versus Procurement split
+
+Read →
+
+[](sales-call-scripts-insurance-switzerland/)
+
+Sales Call Scripts: Swiss Insurance
+
+FINMA-regulated calls, second-pillar awareness, and the reinsurance versus retail split
+
+Read →
+
+[](sales-call-scripts-manufacturing-switzerland/)
+
+Sales Call Scripts: Swiss Manufacturing
+
+Won on international references, not local ones. MEM-industry objections and trained buyers
+
+Read →
+
+[](sales-call-scripts-saas-switzerland/)
+
+Sales Call Scripts: Swiss SaaS
+
+Longer cycles than Germany, and the SLA and data residency language Swiss buyers push on
+
+Read →
 
 ---
-
 ## Ceded Territory
 
 ZeroHype does not compete on: marketing automation setup, CRM implementation, agency-style campaign execution, LinkedIn ghostwriting at scale, generic personal branding, or done-for-you at scale.

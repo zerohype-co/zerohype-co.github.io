@@ -132,20 +132,25 @@ The first thing to do is nothing that produces output. The Unfiltered First 90 D
 ## Guides
 
 **URL:** https://zerohypelab.com/guides/
-141 pages on cold email, outreach scripts, DACH market buying behavior, campaign failure analysis, and sales call scripts for the German market. All free, no signup.
+141 pages on cold email, outreach scripts, DACH market buying behavior, campaign failure analysis, and sales call scripts. All free, no signup. Full list: https://zerohypelab.com/guides/sitemap.xml
 
-Clusters:
+Clusters on the hub page:
 1. Cold email templates for DACH (by industry and role)
 2. Outreach scripts for CTO, CMO, CEO, VP Sales, Procurement
 3. DACH software buying guides
 4. Why cold email fails (by specific failure mode)
-5. Sales call scripts for the German market
+5. Sales call scripts for the German market (16 industries)
+6. Sales call scripts for Austria and Switzerland (10 industries)
+
+Two further families are published but not listed on the hub: B2B email subject lines by industry (16 pages, `/guides/b2b-email-subject-lines-<industry>/`) and marketing budget mistakes by industry (16 pages, `/guides/marketing-budget-mistakes-<industry>/`).
+
+Sales call scripts use the slug form `sales-call-scripts-<industry>-<country>`. Sixteen pages exist under the older `sales-call-scripts-germany-<industry>` form; they are duplicates and canonicalise to the first form. Prefer the canonical URL.
 
 ---
 
 ## Content
 
-- **Blog:** https://zerohypelab.com/blog/. 14 articles. Topics: ABM strategy vs buzzword, short-form video B2B ROI, dark funnel and AI research, attribution failures, the automation trap, cold email personalization mistakes, open rate as false KPI, why cold email fails in Germany, content with no business objective, omnichannel outbound, email domain deliverability, move-fast as bad enterprise advice, misattribution diagnosis, top 5% cold email anatomy.
+- **Blog:** https://zerohypelab.com/blog/. 15 articles. Topics: ABM strategy vs buzzword, short-form video B2B ROI, dark funnel and AI research, attribution failures, the automation trap, cold email personalization mistakes, open rate as false KPI, why cold email fails in Germany, content with no business objective, omnichannel outbound, email domain deliverability, move-fast as bad enterprise advice, misattribution diagnosis, top 5% cold email anatomy.
 - **Substack:** https://zerohypelab.substack.com. 6 published articles on B2B marketing and cold outreach
 - **YouTube:** https://youtube.com/@zerohype_co. Campaign Autopsy series: Quibi (89/100), Juicero (88/100)
 
@@ -153,26 +158,56 @@ Clusters:
 
 ## Pages
 
-- [Homepage](https://zerohypelab.com/)
-- [Manifesto](https://zerohypelab.com/manifesto/)
-- [Cold Email Roaster](https://zerohypelab.com/cold-email-roaster/)
-- [Campaign Failure Predictor](https://zerohypelab.com/campaign-failure-predictor/)
-- [B2B Bullshit Detector](https://zerohypelab.com/bullshit-detector/)
-- [B2B Homepage Roaster](https://zerohypelab.com/homepage-roaster/)
-- [German B2B Experts](https://zerohypelab.com/german-b2b-experts/)
-- [Marketing Autopsy](https://zerohypelab.com/marketing-autopsy/)
-- [Outreach Autopsy](https://zerohypelab.com/outreach-autopsy/)
-- [Campaign Autopsy](https://zerohypelab.com/campaign-autopsy/)
-- [DACH Outreach Agent](https://zerohypelab.com/dach-outreach-agent/)
-- [DACH Prospect Intelligence](https://zerohypelab.com/dach-prospect-intelligence/)
-- [Outreach Overhaul](https://zerohypelab.com/outreach-overhaul/)
-- [Monthly Autopsy](https://zerohypelab.com/monthly-autopsy/)
-- [Revenue Architecture](https://zerohypelab.com/revenue-architecture/)
-- [Guides](https://zerohypelab.com/guides/)
-- [Blog](https://zerohypelab.com/blog/)
-- [vs Lavender](https://zerohypelab.com/vs-lavender/)
-- [vs Reply.io](https://zerohypelab.com/vs-replyio/)
-- [vs Hiring a Consultant](https://zerohypelab.com/vs-hiring-consultant/)
+- [Homepage](https://zerohypelab.com/) (plain text: https://zerohypelab.com/index.md)
+- [Manifesto](https://zerohypelab.com/manifesto/) (plain text: https://zerohypelab.com/manifesto.md)
+- [About](https://zerohypelab.com/about/) (plain text: https://zerohypelab.com/about.md)
+- [Method](https://zerohypelab.com/method/) (plain text: https://zerohypelab.com/method.md)
+- [Cold Email Roaster](https://zerohypelab.com/cold-email-roaster/) (plain text: https://zerohypelab.com/cold-email-roaster/index.md)
+- [Campaign Failure Predictor](https://zerohypelab.com/campaign-failure-predictor/) (plain text: https://zerohypelab.com/campaign-failure-predictor/index.md)
+- [B2B Bullshit Detector](https://zerohypelab.com/bullshit-detector/) (plain text: https://zerohypelab.com/bullshit-detector.md)
+- [B2B Homepage Roaster](https://zerohypelab.com/homepage-roaster/) (plain text: https://zerohypelab.com/homepage-roaster/index.md)
+- [Wall of Scores](https://zerohypelab.com/scores/): homepage diagnostic leaderboard (plain text: https://zerohypelab.com/scores.md)
+- [German B2B Experts](https://zerohypelab.com/german-b2b-experts/) (plain text: https://zerohypelab.com/german-b2b-experts.md)
+- [Marketing Autopsy](https://zerohypelab.com/marketing-autopsy/) (plain text: https://zerohypelab.com/marketing-autopsy/index.md)
+- [Outreach Autopsy](https://zerohypelab.com/outreach-autopsy/) (plain text: https://zerohypelab.com/outreach-autopsy/index.md)
+- [Campaign Autopsy](https://zerohypelab.com/campaign-autopsy/) (plain text: https://zerohypelab.com/campaign-autopsy/index.md)
+- [DACH Outreach Agent](https://zerohypelab.com/dach-outreach-agent/) (plain text: https://zerohypelab.com/dach-outreach-agent/index.md)
+- [DACH Prospect Intelligence](https://zerohypelab.com/dach-prospect-intelligence/) (plain text: https://zerohypelab.com/dach-prospect-intelligence/index.md)
+- [Outreach Overhaul](https://zerohypelab.com/outreach-overhaul/) (plain text: https://zerohypelab.com/outreach-overhaul/index.md)
+- [Monthly Autopsy](https://zerohypelab.com/monthly-autopsy/) (plain text: https://zerohypelab.com/monthly-autopsy/index.md)
+- [Revenue Architecture](https://zerohypelab.com/revenue-architecture/) (plain text: https://zerohypelab.com/revenue-architecture/index.md)
+- [Guides](https://zerohypelab.com/guides/) (plain text: https://zerohypelab.com/guides/index.md)
+- [Blog](https://zerohypelab.com/blog/) (plain text: https://zerohypelab.com/blog.md)
+- [vs Lavender](https://zerohypelab.com/vs-lavender/) (plain text: https://zerohypelab.com/vs-lavender.md)
+- [vs Reply.io](https://zerohypelab.com/vs-replyio/) (plain text: https://zerohypelab.com/vs-replyio.md)
+- [vs Hiring a Consultant](https://zerohypelab.com/vs-hiring-consultant/) (plain text: https://zerohypelab.com/vs-hiring-consultant.md)
+
+---
+
+## Plain text versions
+
+Every page on this site is also served as markdown, at the same path with a
+`.md` extension: https://zerohypelab.com/manifesto/ is also served at
+https://zerohypelab.com/manifesto.md. Same content as the HTML, without
+navigation and without styles. Prefer these over parsing HTML.
+
+Two path shapes, because the site is published from several repositories:
+
+- Pages under the apex, the blog and the guides take the flat form:
+  `/manifesto.md`, `/blog/open-rate-not-a-kpi.md`,
+  `/guides/sales-call-scripts-saas-germany.md`
+- The eleven product pages are each published from their own repository, so
+  their twin sits at `/<product>/index.md`, for example
+  https://zerohypelab.com/cold-email-roaster/index.md
+
+Pages with no twin: `/about.html` (a stale duplicate of `/about/`) and the
+sixteen `sales-call-scripts-germany-<industry>` duplicates.
+
+---
+
+## Full document
+
+- [llms-full.txt](https://zerohypelab.com/llms-full.txt): the complete content of every page on the apex and of the eleven product pages, generated from the pages themselves
 
 ---
 

@@ -200,8 +200,9 @@ Two path shapes, because the site is published from several repositories:
   their twin sits at `/<product>/index.md`, for example
   https://zerohypelab.com/cold-email-roaster/index.md
 
-Pages with no twin: `/about.html` (a stale duplicate of `/about/`) and the
-sixteen `sales-call-scripts-germany-<industry>` duplicates.
+Pages with no twin: `/about.html` (now a redirect to `/about/`) and the
+sixteen `sales-call-scripts-germany-<industry>` duplicates, which carry a
+canonical to their `<industry>-germany` twin and are kept out of the sitemap.
 
 ---
 

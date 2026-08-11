@@ -143,7 +143,7 @@ Branded as the "START HERE" product on the homepage. Every other product is down
 
 Full written diagnosis of a cold outreach sequence. Submit 3-5 cold emails or LinkedIn messages. Get back: what specifically is wrong with each message (actual phrase-level callouts with reasons, not "it's too salesy"), the structural failure pattern across the sequence, and the one thing to fix first.
 
-This is not a rewrite. It is a diagnosis. You take it and fix it yourself, or use the Outreach Overhaul ($897) to have it rebuilt. Sequence rewrites that skip diagnosis reliably reproduce the same problems with different words.
+This is not a rewrite. It is a diagnosis. You take it and fix it yourself, or use the Outbound Engine ($897) to have it rebuilt. Sequence rewrites that skip diagnosis reliably reproduce the same problems with different words.
 
 ---
 
@@ -201,8 +201,8 @@ This is not a LinkedIn scrape. It is an intelligence package: the same thing a h
 
 ## Done-With-You Services
 
-### Outreach Overhaul ($897)
-**URL:** https://zerohypelab.com/outreach-overhaul/
+### Outbound Engine ($897)
+**URL:** https://zerohypelab.com/outbound-engine/
 **Stripe:** buy.stripe.com/aFa8wR4Vq33igzz3j8aR205
 **Tally intake:** tally.so/r/Y5r4r5
 **Delivery:** 7 business days, fully async
@@ -226,8 +226,8 @@ What gets reviewed: whatever stopped working last month. Cold email that was wor
 
 ---
 
-### Revenue Architecture ($4,500)
-**URL:** https://zerohypelab.com/revenue-architecture/
+### Revenue Foundation ($4,500)
+**URL:** https://zerohypelab.com/revenue-foundation/
 **Delivery:** 4 weeks, fully async. Application via email only: zerohype@proton.me
 **Note:** Stripe and Tally sent manually after email application is accepted. Not linked publicly.
 
@@ -245,10 +245,10 @@ Marketing Autopsy at $49. Written diagnosis of your full B2B marketing position 
 **What is the difference between the three cheapest diagnostics?**
 Marketing Autopsy ($49): full marketing position, what is broken and in what order to fix it. Outreach Autopsy ($99): specifically your cold email or LinkedIn sequence, phrase-level diagnosis. The Full Autopsy ($97): upgrade from the B2B Bullshit Detector free tool, phrase-by-phrase annotation plus rewrite of first 200 words.
 
-**When does Outreach Overhaul make sense over Outreach Autopsy?**
+**When does Outbound Engine make sense over Outreach Autopsy?**
 Autopsy: diagnosis only. Overhaul: diagnosis plus full sequence rewrite. Do not buy the Overhaul without the Autopsy. Rebuilding without diagnosis produces the same problem with different words.
 
-**Is Revenue Architecture worth $4,500?**
+**Is Revenue Foundation worth $4,500?**
 For a B2B business where the revenue problem is structural, yes. Four weeks, fully async, ICP definition, positioning, messaging architecture, channel selection, sequence design, measurement framework. Two clients per quarter. Application via email required.
 
 **Are there refunds?**
@@ -536,7 +536,7 @@ Forrester (2023): 74% of B2B buyers complete more than half their research befor
 | Campaign likely to fail   | Campaign Failure Predictor | Free  |
 | Full marketing broken     | Marketing Autopsy          | \$49  |
 | Outreach sequence failing | Outreach Autopsy           | \$99  |
-| Full overhaul needed      | Outreach Overhaul          | \$897 |
+| Full overhaul needed      | Outbound Engine          | \$897 |
 
 NO FLUFF· NO HYPE· JUST WHAT WORKS· NO CONSULTANTS· NO RETAINERS· NO GUESSES· NO FRAMEWORKS· NO FLUFF· NO HYPE· JUST WHAT WORKS· NO CONSULTANTS· NO RETAINERS· NO GUESSES· NO FRAMEWORKS·
 
@@ -628,19 +628,19 @@ Monthly Autopsy
 
 One diagnostic per month, ongoing. Reviewed and scored every 30 days.
 
-See details → [](https://zerohypelab.com/outreach-overhaul/)
+See details → [](https://zerohypelab.com/outbound-engine/)
 
 \$897 · By a human
 
-Outreach Overhaul
+Outbound Engine
 
 Done-with-you. Full outreach sequence rebuilt from targeting up.
 
-See details → [](https://zerohypelab.com/revenue-architecture/)
+See details → [](https://zerohypelab.com/revenue-foundation/)
 
 \$4,500 · By a human
 
-Revenue Architecture
+Revenue Foundation
 
 Marketing-to-revenue rebuilt. For B2B companies stuck below \$1M ARR.
 
@@ -679,7 +679,7 @@ B2B marketers, SDRs, founders, and sales leaders who want honest diagnostic feed
 
 ##### How does delivery work?
 
-Pay via Stripe, fill a brief Tally intake form, receive the written deliverable by email within 48-72 hours (diagnostics) or 7 business days (Outreach Overhaul). No calls. No check-ins. Just the work.
+Pay via Stripe, fill a brief Tally intake form, receive the written deliverable by email within 48-72 hours (diagnostics) or 7 business days (Outbound Engine). No calls. No check-ins. Just the work.
 
 ##### Is there a free option before paying?
 
@@ -1146,7 +1146,7 @@ Reply.io is infrastructure for outreach execution. If your sequences, targeting,
 | Multi-channel (email, LinkedIn, calls) | ✗ Audit only | ✓ Email + LinkedIn + calls |
 | Evaluates ICP quality | ✓ First question in every audit | ✗ Assumes ICP is correct |
 | Scores campaign failure risk before launch | ✓ Free predictor tool | ✗ Measures after the fact |
-| Rewrites broken sequences | ✓ Outreach Overhaul (\$897) | ✗ Runs sequences, doesn't write them |
+| Rewrites broken sequences | ✓ Outbound Engine (\$897) | ✗ Runs sequences, doesn't write them |
 | A/B testing | ✗ Not the focus | ✓ Built-in |
 | Analytics and reporting | ✗ One-time diagnostic | ✓ Full dashboard |
 | Price | \$49–\$897 one-time | \$60–\$300+/month |
@@ -1235,7 +1235,7 @@ BEFORE THE RETAINER
 
 ##### Can Zero Hype replace a full-time marketing hire?
 
-No. A full-time hire executes daily. Zero Hype diagnoses and advises. The Revenue Architecture (\$4,500) goes further — 12 weeks of strategic work — but it's still async advisory, not embedded execution. If you need someone in the team building campaigns daily, hire for that specifically.
+No. A full-time hire executes daily. Zero Hype diagnoses and advises. The Revenue Foundation (\$4,500) goes further — 12 weeks of strategic work — but it's still async advisory, not embedded execution. If you need someone in the team building campaigns daily, hire for that specifically.
 
 ##### I've already hired a consultant but results are slow. Does Zero Hype help?
 
@@ -2156,7 +2156,7 @@ After payment you will be redirected to a short intake form.\
 Your report arrives by email within 48 hours.\
 Questions: zerohype@proton.me
 
-### Outreach Overhaul (https://zerohypelab.com/outreach-overhaul/)
+### Outbound Engine (https://zerohypelab.com/outbound-engine/)
 
 We find the reason. We rewrite the sequence. You get a full audit, a rebuilt email flow, and a targeting framework — delivered in 7 business days. Async. No calls.
 
@@ -2359,7 +2359,7 @@ Cancel before your next billing date. No notice period. No contract. If it's not
 #### This is for you *if*
 
 - You run 1-3 active outreach or campaign sequences at a time and want a second set of eyes on each one.
-- You've been through the Outreach Autopsy or Outreach Overhaul and want to keep the momentum.
+- You've been through the Outreach Autopsy or Outbound Engine and want to keep the momentum.
 - Your marketing team produces campaigns but nobody outside the team has reviewed them in months.
 - You're in a DACH market where the cost of a mispositioned campaign is higher than anywhere else.
 - You want external diagnosis without hiring someone full-time.
@@ -2402,7 +2402,7 @@ Max 10 clients. Cancel anytime. First review within 7 days of onboarding.
 
 Spots are limited. Waitlist opens when all 10 are filled.
 
-### Revenue Architecture (https://zerohypelab.com/revenue-architecture/)
+### Revenue Foundation (https://zerohypelab.com/revenue-foundation/)
 
 Investment
 
@@ -2508,7 +2508,7 @@ Go-to-market strategist — segmentation + 90-day plan \$1,000–2,000
 
 If bought separately \$5,200–8,300
 
-Revenue Architecture \$4,500
+Revenue Foundation \$4,500
 
 III.
 
@@ -2585,7 +2585,7 @@ Yes. DACH-market sequences, scripts, and playbooks are a core part of what this 
 
 What if I only need the email sequences?
 
-That is the Outreach Overhaul at \$897. The Revenue Architecture is for companies that need the full stack — ICP to close — not just better copy on an existing sequence.
+That is the Outbound Engine at \$897. The Revenue Foundation is for companies that need the full stack — ICP to close — not just better copy on an existing sequence.
 
 Apply for\
 *this engagement.*

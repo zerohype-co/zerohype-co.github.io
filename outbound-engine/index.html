@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Outbound Engine | Zero Hype</title>
+  <meta name="description" content="The tactical outreach layer. Cold email systems, LinkedIn sequences, and call scripts. €2000.">
+  <link rel="preload" as="font" href="https://zerohypelab.com/fonts/BebasNeue-400-normal.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://zerohypelab.com/fonts/Inter-400-normal.woff2" type="font/woff2" crossorigin>
+
+  <style>
+    @font-face { font-family: 'Bebas Neue'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://zerohypelab.com/fonts/BebasNeue-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://zerohypelab.com/fonts/PlayfairDisplay-700-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('https://zerohypelab.com/fonts/PlayfairDisplay-400-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 700; font-display: swap; src: url('https://zerohypelab.com/fonts/PlayfairDisplay-700-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://zerohypelab.com/fonts/Inter-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://zerohypelab.com/fonts/Inter-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://zerohypelab.com/fonts/DMMono-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://zerohypelab.com/fonts/DMMono-500-normal.woff2') format('woff2'); }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow:   #E8FD27;
+      --bg:       #F5F2EC;
+      --bg-dark:  #111111;
+      --text:     #111111;
+      --muted:    #666666;
+      --border:   rgba(17,17,17,0.12);
+      --card:     #FFFFFF;
+    }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .yellow-zone { background: var(--yellow); }
+
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 48px; border-bottom: 1px solid rgba(17,17,17,0.15);
+    }
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.75rem; letter-spacing: 0.1em;
+      color: var(--text); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text); text-decoration: none; opacity: 0.55; transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+
+    .hero { padding: 72px 48px 68px; max-width: 1280px; margin: 0 auto; }
+    .hero-label {
+      font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: rgba(17,17,17,0.65); margin-bottom: 20px; display: block;
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif; font-size: clamp(64px, 12vw, 150px);
+      line-height: 0.88; letter-spacing: 0.02em; color: var(--text); margin-bottom: 24px;
+    }
+    .hero-title .word-invert {
+      font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;
+      background: var(--bg-dark); color: var(--yellow); display: inline; padding: 2px 14px 6px 6px;
+    }
+
+    .hero-meta {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; 
+      border: 1px solid rgba(17,17,17,0.15); max-width: 800px; margin-top: 48px;
+      background: rgba(255,255,255,0.1);
+    }
+    .meta-cell { padding: 20px 24px; border-right: 1px solid rgba(17,17,17,0.15); }
+    .meta-cell:last-child { border-right: none; }
+    .meta-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.65); margin-bottom: 6px; }
+    .meta-value { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--text); }
+
+    .ticker-wrap { overflow: hidden; background: var(--bg-dark); padding: 13px 0; }
+    .ticker { display: flex; white-space: nowrap; animation: ticker 24s linear infinite; }
+    .ticker-item { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.14em; color: var(--yellow); padding: 0 24px; }
+    .ticker-item .sep { color: rgba(232,253,39,0.3); margin-left: 24px; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .section { padding: 72px 48px; max-width: 900px; margin: 0 auto; }
+    .section-header {
+      display: flex; align-items: center; gap: 16px; border-bottom: 2px solid var(--yellow);
+      padding-bottom: 16px; margin-bottom: 36px;
+    }
+    .section-num {
+      font-family: 'Playfair Display', serif; font-style: italic; font-size: 12px;
+      background: var(--yellow); color: var(--text); padding: 3px 8px 4px; flex-shrink: 0; line-height: 1;
+    }
+    .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; letter-spacing: 0.08em; color: var(--text); text-transform: uppercase; }
+
+    .pull-quote { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-style: italic; font-weight: 400; line-height: 1.4; color: var(--text); margin-bottom: 64px; padding-left: 24px; border-left: 4px solid var(--yellow); }
+
+    .d-list { display: flex; flex-direction: column; gap: 40px; }
+    .d-item { display: flex; gap: 24px; align-items: flex-start; }
+    .d-index { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--muted); line-height: 1; margin-top: 4px; }
+    .d-body h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .d-body p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+    .d-tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--bg-dark); color: var(--yellow); padding: 2px 6px; margin-top: 12px; }
+
+    .pricing-table { border: 1px solid var(--border); background: var(--card); padding: 32px; margin-top: 24px; }
+    .p-row { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .p-row.total { border-bottom: none; border-top: 2px solid var(--yellow); padding-top: 24px; margin-top: 8px; font-weight: 700; }
+    .p-item { font-size: 0.95rem; color: var(--text); }
+    .p-val { font-family: 'DM Mono', monospace; font-size: 0.9rem; color: var(--muted); }
+    .p-row.offer { background: var(--yellow); margin: 0 -32px -32px -32px; padding: 32px; display: flex; align-items: baseline; justify-content: space-between; }
+    .p-offer-label { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.05em; }
+    .p-offer-val { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; }
+
+    .dark-block { background: var(--bg-dark); color: var(--bg); padding: 72px 48px; text-align: center; margin-top: 64px; }
+    .dark-block h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 6vw, 4.5rem); letter-spacing: 0.04em; color: var(--yellow); margin-bottom: 24px; line-height: 1; }
+    .dark-block p { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 40px; }
+    .btn-yellow { display: inline-block; background: var(--yellow); color: var(--text); font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 18px 40px; text-decoration: none; border: 1.5px solid var(--yellow); transition: all 0.2s; }
+    .btn-yellow:hover { background: transparent; color: var(--yellow); }
+
+    footer { padding: 36px 48px; border-top: 2px solid var(--yellow); max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-wordmark { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.1em; background: var(--yellow); color: var(--text); padding: 4px 12px 5px; }
+    .footer-links a { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); text-decoration: none; margin-left: 24px; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 52px 24px; }
+      .hero-meta { grid-template-columns: 1fr; border-bottom: none; }
+      .meta-cell { border-bottom: 1px solid rgba(17,17,17,0.15); border-right: none; }
+      .section { padding: 56px 24px; }
+      .d-item { flex-direction: column; gap: 12px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="yellow-zone">
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/method/">Method</a></li>
+      <li><a href="https://zerohypelab.com/scores/">Wall of Scores</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <span class="hero-label">Tactical Package</span>
+    <h1 class="hero-title">
+      STOP GUESSING.<br>
+      START <span class="word-invert">closing.</span>
+    </h1>
+    <p style="font-size: 1.125rem; color: rgba(17,17,17,0.7); max-width: 500px; line-height: 1.6;">
+      The exact scripts and sequences that get meetings. We build the tactical layer, you run the engine.
+    </p>
+
+    <div class="hero-meta">
+      <div class="meta-cell">
+        <p class="meta-label">Investment</p>
+        <p class="meta-value">€2,000</p>
+      </div>
+      <div class="meta-cell">
+        <p class="meta-label">Delivery</p>
+        <p class="meta-value">2 weeks</p>
+      </div>
+      <div class="meta-cell">
+        <p class="meta-label">Availability</p>
+        <p class="meta-value">3 / quarter</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">NO FLUFF<span class="sep">·</span></span>
+    <span class="ticker-item">NO HYPE<span class="sep">·</span></span>
+    <span class="ticker-item">JUST WHAT WORKS<span class="sep">·</span></span>
+    <span class="ticker-item">NO CALLS EVER<span class="sep">·</span></span>
+    <span class="ticker-item">WE BUILD YOU RUN<span class="sep">·</span></span>
+    <span class="ticker-item">NO FLUFF<span class="sep">·</span></span>
+    <span class="ticker-item">NO HYPE<span class="sep">·</span></span>
+    <span class="ticker-item">JUST WHAT WORKS<span class="sep">·</span></span>
+    <span class="ticker-item">NO CALLS EVER<span class="sep">·</span></span>
+    <span class="ticker-item">WE BUILD YOU RUN<span class="sep">·</span></span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="pull-quote">
+    If you already know who you are selling to, but your emails go to spam and your LinkedIn connections ignore you, you need the engine. We build it. No calls, ever.
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Four Deliverables</h2>
+  </div>
+
+  <div class="d-list">
+    <div class="d-item">
+      <div class="d-index">1</div>
+      <div class="d-body">
+        <h3>Full Cold Email System</h3>
+        <p>7-email sequence per primary segment. Subject line variants. Follow-up logic with timing and condition triggers. Written for your specific buyers.</p>
+        <span class="d-tag">Outreach</span>
+      </div>
+    </div>
+    <div class="d-item">
+      <div class="d-index">2</div>
+      <div class="d-body">
+        <h3>LinkedIn Outreach Sequence</h3>
+        <p>5-touch LinkedIn sequence coordinated with the email flow so both channels reinforce instead of repeat. Connection request through direct ask.</p>
+        <span class="d-tag">Outreach</span>
+      </div>
+    </div>
+    <div class="d-item">
+      <div class="d-index">3</div>
+      <div class="d-body">
+        <h3>Cold Call Script + Objection Guide</h3>
+        <p>Opener, qualification questions, pitch, and objection handling for the 8 most common deflections in your market. Written for the way buyers actually talk.</p>
+        <span class="d-tag">Sales</span>
+      </div>
+    </div>
+    <div class="d-item">
+      <div class="d-index">4</div>
+      <div class="d-body">
+        <h3>1 Month of Ongoing Autopsy</h3>
+        <p>After delivery, your first month of ongoing campaign review is included. Submit one live campaign, get a written autopsy and 3 rewrites within 48 hours.</p>
+        <span class="d-tag">Included</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">The Math</h2>
+  </div>
+  
+  <div class="pricing-table">
+    <div class="p-row">
+      <span class="p-item">Freelance copywriter - 7-email sequence + variants</span>
+      <span class="p-val">$800–1,200</span>
+    </div>
+    <div class="p-row">
+      <span class="p-item">LinkedIn ghostwriter - outreach sequence</span>
+      <span class="p-val">$400–700</span>
+    </div>
+    <div class="p-row">
+      <span class="p-item">Sales trainer - objection handling guide</span>
+      <span class="p-val">$600–1,000</span>
+    </div>
+    <div class="p-row">
+      <span class="p-item">1 month of Monthly Autopsy</span>
+      <span class="p-val">$300</span>
+    </div>
+    <div class="p-row total">
+      <span class="p-item">If bought separately</span>
+      <span class="p-val" style="text-decoration: line-through;">$2,100–3,200</span>
+    </div>
+    <div class="p-row offer">
+      <span class="p-offer-label">Outbound Engine</span>
+      <span class="p-offer-val">€2,000</span>
+    </div>
+  </div>
+</div>
+
+<div class="dark-block">
+  <h2>START THE INTAKE</h2>
+  <p>We do not take payment upfront. Fill out the intake form to show us your current outreach metrics, and if accepted, you will receive the secure payment link.</p>
+  <a href="https://tally.so/r/aQJ2Nb?service=engine" class="btn-yellow">START THE INTAKE FORM →</a>
+</div>
+
+<footer>
+  <div style="display: flex; flex-direction: column; align-items: flex-start;">
+    <span class="footer-wordmark">Zero Hype</span>
+    <span style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 12px;">No fluff. No hype. Just what works. <time datetime="2026-05-31">Updated May 2026</time></span>
+    <span style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 4px;">Published by <a href="/about/" style="color: var(--muted);">Zero Hype</a> — Contact: <a href="mailto:contact@zerohypelab.com" style="color: var(--muted);">contact@zerohypelab.com</a></span>
+  </div>
+  <div class="footer-links" style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+    <a href="https://zerohypelab.com/manifesto/">Manifesto</a>
+    <a href="https://zerohypelab.com/method/">Method</a>
+    <a href="https://zerohypelab.com/scores/">Wall of Scores</a>
+    <a href="https://zerohypelab.com/guides/">Guides</a>
+    <a href="https://zerohypelab.substack.com">Substack Newsletter</a>
+    <a href="https://x.com/zerohype_co">X — @zerohype_co</a>
+    <a href="https://www.youtube.com/@zerohype_co" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.producthunt.com/products/campaign-failure-predictor" target="_blank" rel="noopener">Product Hunt</a>
+    <a href="https://zerohypelab.com/monthly-autopsy/">Monthly Autopsy — $300/mo</a>
+    <a href="mailto:contact@zerohypelab.com">Contact: contact@zerohypelab.com</a>
+  </div>
+</footer>
+
+</body>
+</html>

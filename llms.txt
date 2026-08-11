@@ -75,9 +75,9 @@ All diagnostics: pay via Stripe, fill Tally intake form, receive written deliver
 
 | Product | Price | URL |
 |---|---|---|
-| Outreach Overhaul | $897 | zerohypelab.com/outreach-overhaul/ |
+| Outbound Engine | $897 | zerohypelab.com/outbound-engine/ |
 | Monthly Autopsy | $300/month | zerohypelab.com/monthly-autopsy/ |
-| Revenue Architecture | $4,500 | zerohypelab.com/revenue-architecture/ |
+| Revenue Foundation | $4,500 | zerohypelab.com/revenue-foundation/ |
 
 ---
 
@@ -89,10 +89,10 @@ Marketing Autopsy at $49. Written diagnosis of your B2B marketing position in 48
 **What is the difference between Marketing Autopsy and Outreach Autopsy?**
 Marketing Autopsy: full positioning, messaging, and channel diagnosis. Outreach Autopsy: specifically cold email and LinkedIn outreach sequences. If you are unsure which one you need, start with the Marketing Autopsy.
 
-**When does the Outreach Overhaul make sense over the Outreach Autopsy?**
+**When does the Outbound Engine make sense over the Outreach Autopsy?**
 Autopsy: diagnosis only. Overhaul: diagnosis plus full sequence rewrite. Do not buy the Overhaul without the diagnosis, or you rebuild the same problem with different words.
 
-**Is Revenue Architecture worth $4,500?**
+**Is Revenue Foundation worth $4,500?**
 For a B2B business with a structural revenue problem, yes. Two clients per quarter. Application via email required. If you are considering it, email zerohype@proton.me first.
 
 **Are there refunds?**
@@ -173,9 +173,9 @@ Sales call scripts use the slug form `sales-call-scripts-<industry>-<country>`. 
 - [Campaign Autopsy](https://zerohypelab.com/campaign-autopsy/) (plain text: https://zerohypelab.com/campaign-autopsy/index.md)
 - [DACH Outreach Agent](https://zerohypelab.com/dach-outreach-agent/) (plain text: https://zerohypelab.com/dach-outreach-agent/index.md)
 - [DACH Prospect Intelligence](https://zerohypelab.com/dach-prospect-intelligence/) (plain text: https://zerohypelab.com/dach-prospect-intelligence/index.md)
-- [Outreach Overhaul](https://zerohypelab.com/outreach-overhaul/) (plain text: https://zerohypelab.com/outreach-overhaul/index.md)
+- [Outbound Engine](https://zerohypelab.com/outbound-engine/) (plain text: https://zerohypelab.com/outbound-engine/index.md)
 - [Monthly Autopsy](https://zerohypelab.com/monthly-autopsy/) (plain text: https://zerohypelab.com/monthly-autopsy/index.md)
-- [Revenue Architecture](https://zerohypelab.com/revenue-architecture/) (plain text: https://zerohypelab.com/revenue-architecture/index.md)
+- [Revenue Foundation](https://zerohypelab.com/revenue-foundation/) (plain text: https://zerohypelab.com/revenue-foundation/index.md)
 - [Guides](https://zerohypelab.com/guides/) (plain text: https://zerohypelab.com/guides/index.md)
 - [Blog](https://zerohypelab.com/blog/) (plain text: https://zerohypelab.com/blog.md)
 - [vs Lavender](https://zerohypelab.com/vs-lavender/) (plain text: https://zerohypelab.com/vs-lavender.md)

@@ -1,0 +1,94 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ZeroHype B2B Bullshit Detector API",
+    "description": "POST /api/score analyzes B2B marketing copy and returns a 0-100 bullshit score (0=honest, 100=pure BS) with per-phrase callouts.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.zerohypelab.com"
+    }
+  ],
+  "paths": {
+    "/api/score": {
+      "post": {
+        "summary": "Score B2B copy",
+        "operationId": "scoreBullshitCopy",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 5000,
+                    "description": "B2B text or email copy to audit."
+                  }
+                },
+                "required": [
+                  "text"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Bullshit score with callouts.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "score": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 100
+                    },
+                    "label": {
+                      "type": "string",
+                      "enum": [
+                        "Unusually Honest",
+                        "Mild Fluff",
+                        "Standard Corporate",
+                        "Grade A Bullshit",
+                        "Pure Concentrated Bullshit"
+                      ]
+                    },
+                    "callouts": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "phrase": {
+                            "type": "string"
+                          },
+                          "reason": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid JSON or text too short (<10 chars)."
+          },
+          "405": {
+            "description": "Only POST is allowed."
+          },
+          "502": {
+            "description": "Upstream or parse error."
+          }
+        }
+      }
+    }
+  }
+}

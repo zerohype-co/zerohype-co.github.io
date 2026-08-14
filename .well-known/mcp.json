@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "ZeroHype B2B Bullshit Detector",
+  "description": "Scans B2B landing pages, value propositions, and cold emails for corporate jargon. Returns a 0-100 bullshit score (0=honest, 100=pure BS) with per-phrase callouts.",
+  "version": "1.0.0",
+  "homepage": "https://zerohypelab.com/",
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": true
+  },
+  "tools": [
+    {
+      "name": "score_bullshit",
+      "description": "Scans B2B marketing copy and returns a 0-100 bullshit score with per-phrase callouts.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "The B2B copy, hero section text, or email body to evaluate."
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    }
+  ],
+  "resources": [
+    {
+      "uri": "https://zerohypelab.com/llms.txt",
+      "name": "ZeroHype Machine-Readable Methodology",
+      "mimeType": "text/markdown",
+      "description": "Full machine-readable specification of ZeroHype scoring methodology."
+    }
+  ]
+}

@@ -40,5 +40,5 @@
     window.navigator.modelContext = window.navigator.modelContext || {};
     window.navigator.modelContext.mcpManifestUrl = MANIFEST_URL;
   }
-  console.log('[WebMCP] Registered ZeroHype bullshit detector.'];
+  console.log('[WebMCP] Registered ZeroHype bullshit detector.');
 })();

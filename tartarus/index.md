@@ -51,14 +51,13 @@ The free scan estimates. The full report delivers a written, structure-by-struct
 
 - **Price:** $49 one-time
 - Includes: annotated code structure map, dependency graph with problem nodes, documentation gap analysis with priorities, AI-agent readiness checklist, written recommendations.
-- **Stripe:** https://buy.stripe.com/placeholder_tartarus (integration coming soon)
+- **Stripe:** https://buy.stripe.com/eVq6oJgE88nC2IJg5UaR20b
 
 ## Custom integration
 
 - **Price:** from $2,500
 - Includes: tailored diagnostic for your specific stack, custom AI-readiness criteria, CI/CD integration, ongoing monitoring setup, dedicated report with your team.
 - **Contact:** mailto:zerohype@proton.me
-- **Stripe:** https://buy.stripe.com/placeholder_tartarus
 
 ---
 

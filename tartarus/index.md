@@ -58,6 +58,7 @@ The free scan estimates. The full report delivers a written, structure-by-struct
 - **Price:** from $2,500
 - Includes: tailored diagnostic for your specific stack, custom AI-readiness criteria, CI/CD integration, ongoing monitoring setup, dedicated report with your team.
 - **Contact:** mailto:zerohype@proton.me
+- **Stripe:** https://buy.stripe.com/28E5kFdrW8nCgzz6vkaR20c
 
 ---
 

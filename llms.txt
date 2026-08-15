@@ -54,6 +54,16 @@ Enter your homepage URL. Get a score on clarity, CTA strength, jargon density, a
 **URL:** https://zerohypelab.com/german-b2b-experts/
 Curated list of 10 real DACH B2B practitioners with deep market expertise and why each one is worth following.
 
+## Tools
+
+### Tartarus
+**URL:** https://zerohypelab.com/tartarus/
+Prompt: codebase diagnostic. Paste a GitHub repo URL, pick a tech stack, get a
+Context Readiness Score 0-100 across code structure, dependency clarity,
+documentation coverage, and AI-readiness. Heuristic scan, not a full audit.
+Built on top of GRAFT, the open-source MIT-licensed context graph engine.
+Free. No backend. The repo URL is not stored.
+
 ---
 
 ## Paid Diagnostics

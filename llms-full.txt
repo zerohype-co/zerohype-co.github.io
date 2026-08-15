@@ -119,6 +119,18 @@ CTA: DACH Outreach Agent ($49) for AI-assisted DACH-calibrated outreach.
 
 ---
 
+## Tools
+
+### Tartarus
+**URL:** https://zerohypelab.com/tartarus/
+Prompt: codebase diagnostic. Paste a GitHub repo URL, pick a tech stack, get a
+Context Readiness Score 0-100 across code structure, dependency clarity,
+documentation coverage, and AI-readiness. Heuristic scan, not a full audit.
+Built on top of GRAFT, the open-source MIT-licensed context graph engine.
+Free. No backend. The repo URL is not stored.
+
+---
+
 ## Paid Diagnostics
 
 All diagnostics: pay via Stripe, fill Tally intake form, receive written deliverable by email within 48-72 hours.

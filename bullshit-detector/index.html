@@ -3,317 +3,458 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B2B Bullshit Detector — zerohypelab.com</title>
-  <meta name="description" content="Paste your B2B copy. Get a Bullshit Score in 10 seconds. Free. No signup.">
-  <meta property="og:title" content="B2B Bullshit Detector">
-  <meta property="og:description" content="Your B2B copy is probably lying. Let's find out.">
-  <meta property="og:url" content="https://zerohypelab.com/bullshit-detector/">
+  <title>B2B Bullshit Detector | Zero Hype</title>
+  <meta name="description" content="Paste your B2B copy. Get a forensic 0-100 Bullshit Score and a breakdown of every corporate buzzword.">
+  <meta name="author" content="Zero Hype">
   <link rel="canonical" href="https://zerohypelab.com/bullshit-detector/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "@id": "https://zerohypelab.com/bullshit-detector/#tool",
-    "name": "B2B Bullshit Detector",
-    "alternateName": ["Bullshit Detector", "Bullshit Score Tool"],
-    "url": "https://zerohypelab.com/bullshit-detector/",
-    "description": "Paste your B2B marketing copy and get a Bullshit Score in 10 seconds. Identifies vague claims, corporate jargon, and hollow language in outreach and campaigns. Free, no signup.",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": ["B2B copy analysis", "bullshit score", "jargon detection", "free tool", "instant results"],
-    "provider": { "@id": "https://zerohypelab.com/#organization" },
-    "isPartOf": { "@id": "https://zerohypelab.com/#organization" }
-  }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <!-- Google Fonts fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow:   #E8FD27;
+      --bg:       #F5F2EC;
+      --bg-dark:  #111111;
+      --text:     #111111;
+      --muted:    #666666;
+      --border:   rgba(17,17,17,0.12);
+      --card:     #FFFFFF;
+      --danger:   #E05252;
+      --success:  #228F62;
+    }
+
+    @font-face { font-family: 'Bebas Neue'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/BebasNeue-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/PlayfairDisplay-700-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/PlayfairDisplay-400-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/Inter-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/DMMono-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/DMMono-500-normal.woff2') format('woff2'); }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    .skip-link { position: absolute; top: -100%; left: 1rem; background: #111; color: var(--yellow); padding: 0.5rem 1rem; font-size: 0.875rem; font-family: 'DM Mono', monospace; border-radius: 0 0 4px 4px; z-index: 9999; text-decoration: none; }
+    .skip-link:focus { top: 0; }
+
     body {
-      background: #0a0a0a;
-      color: #f0f0f0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      min-height: 100vh;
-      padding: 40px 20px 80px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-    .wrap { max-width: 720px; margin: 0 auto; }
-    .header { margin-bottom: 48px; }
-    .header h1 { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 32px; }
-    .header h2 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
-    .header p { font-size: 16px; color: #888; line-height: 1.6; }
+
+    /* TOP BAR & NAV */
+    .yellow-zone {
+      background: var(--yellow);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 1px solid rgba(17,17,17,0.15);
+    }
+
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 1; }
+
+    /* TOOL HERO */
+    .hero {
+      padding: 60px 48px 50px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.65);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(54px, 10vw, 110px);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero-title .word-invert {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      display: inline;
+      padding: 2px 14px 6px 6px;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(17,17,17,0.7);
+      max-width: 680px;
+      line-height: 1.6;
+    }
+
+    /* MAIN CONTENT CONTAINER */
+    .tool-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 60px 48px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 960px) {
+      .tool-container { grid-template-columns: 1fr; padding: 40px 24px; }
+      nav { padding: 18px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 44px 24px 36px; }
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 36px;
+    }
+
+    .panel-header {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
     textarea {
-      width: 100%; min-height: 180px; background: #111; border: 1px solid #222;
-      border-radius: 8px; color: #f0f0f0; font-size: 15px; font-family: inherit;
-      padding: 16px; resize: vertical; line-height: 1.6; margin-bottom: 8px;
-      transition: border-color .2s;
+      width: 100%;
+      min-height: 200px;
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      padding: 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      line-height: 1.5;
+      resize: vertical;
     }
-    textarea:focus { outline: none; border-color: #444; }
-    textarea::placeholder { color: #444; }
-    .char-count { font-size: 12px; color: #444; text-align: right; margin-bottom: 16px; }
-    .btn-run {
-      width: 100%; padding: 16px; background: #f0f0f0; color: #0a0a0a;
-      border: none; border-radius: 8px; font-size: 16px; font-weight: 700;
-      cursor: pointer; transition: background .2s; margin-bottom: 48px;
+
+    textarea:focus {
+      background: #FFFFFF;
+      border-color: var(--bg-dark);
     }
-    .btn-run:hover { background: #fff; }
-    .btn-run:disabled { background: #222; color: #555; cursor: not-allowed; }
 
-    /* Score section */
-    .result { display: none; }
-    .result.visible { display: block; }
-    .score-box {
-      border: 1px solid #1a1a1a; border-radius: 12px; padding: 40px;
-      margin-bottom: 32px; text-align: center;
+    .btn-submit {
+      display: inline-block;
+      width: 100%;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 32px;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      margin-top: 20px;
+      transition: background 0.2s, color 0.2s;
     }
-    .score-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #555; margin-bottom: 24px; }
-    .score-number {
-      font-size: 96px; font-weight: 700; line-height: 1; margin-bottom: 16px;
-      transition: color .3s;
+
+    .btn-submit:hover {
+      background: #222222;
+      color: #FFFFFF;
     }
-    .score-verdict { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
-    .score-sub { font-size: 14px; color: #666; }
 
-    .callouts-title { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #555; margin-bottom: 20px; }
-    .callout {
-      border-left: 2px solid #222; padding: 16px 20px; margin-bottom: 16px;
+    /* RESULT AREA */
+    .result-box {
+      display: none;
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
     }
-    .callout-phrase { font-size: 15px; font-weight: 600; color: #f0f0f0; margin-bottom: 6px; font-style: italic; }
-    .callout-phrase::before { content: '"'; }
-    .callout-phrase::after { content: '"'; }
-    .callout-reason { font-size: 14px; color: #777; line-height: 1.5; }
 
-    .btn-share {
-      width: 100%; padding: 14px; background: transparent; border: 1px solid #222;
-      border-radius: 8px; color: #888; font-size: 14px; cursor: pointer;
-      margin: 32px 0; transition: border-color .2s, color .2s;
+    .score-display {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--danger);
+      margin-bottom: 8px;
     }
-    .btn-share:hover { border-color: #444; color: #ccc; }
 
-    /* CTA */
-    .cta { border-top: 1px solid #1a1a1a; padding-top: 48px; margin-top: 16px; }
-    .cta h3 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
-    .cta p { font-size: 15px; color: #888; line-height: 1.6; margin-bottom: 32px; }
-    .cta-features { margin-bottom: 32px; }
-    .cta-feature { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
-    .cta-arrow { color: #00C896; font-family: monospace; margin-top: 2px; flex-shrink: 0; }
-    .cta-feature span { font-size: 15px; color: #ccc; }
-    .btn-cta {
-      display: block; width: 100%; padding: 16px; background: #f0f0f0;
-      color: #0a0a0a; border: none; border-radius: 8px; font-size: 16px;
-      font-weight: 700; text-align: center; text-decoration: none;
-      cursor: pointer; margin-bottom: 16px; transition: background .2s;
+    .buzzword-tag {
+      display: inline-block;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      padding: 3px 8px;
+      margin: 4px 4px 4px 0;
     }
-    .btn-cta:hover { background: #fff; }
-    .cta-fine { font-size: 12px; color: #444; line-height: 1.6; }
 
-    /* Share card (hidden, used for html2canvas) */
-    #share-card {
-      position: fixed; left: -9999px; top: 0;
-      width: 600px; background: #0a0a0a; padding: 48px;
-      font-family: 'Inter', sans-serif; border: 1px solid #1a1a1a;
+    /* SIDEBAR INFO */
+    .sidebar-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 32px;
     }
-    #share-card .sc-brand { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #555; margin-bottom: 32px; }
-    #share-card .sc-score { font-size: 80px; font-weight: 700; margin-bottom: 8px; }
-    #share-card .sc-verdict { font-size: 20px; font-weight: 600; color: #f0f0f0; margin-bottom: 32px; }
-    #share-card .sc-callout { font-size: 13px; color: #777; margin-bottom: 8px; padding-left: 12px; border-left: 2px solid #222; }
-    #share-card .sc-footer { margin-top: 40px; font-size: 11px; color: #333; letter-spacing: 0.08em; }
 
-    .error-msg { color: #e05252; font-size: 14px; text-align: center; padding: 20px; display: none; }
-    .error-msg.visible { display: block; }
+    .sidebar-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
 
-    .footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid #111; font-size: 12px; color: #333; }
-    .footer a { color: #444; text-decoration: none; }
-    .footer a:hover { color: #888; }
+    .sidebar-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .spinner {
-      display: inline-block; width: 16px; height: 16px;
-      border: 2px solid #444; border-top-color: #f0f0f0;
-      border-radius: 50%; animation: spin .8s linear infinite;
-      vertical-align: middle; margin-right: 8px;
+    .bridge-cta {
+      background: var(--yellow);
+      color: var(--text);
+      display: block;
+      padding: 16px 20px;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: opacity 0.2s;
+    }
+
+    .bridge-cta:hover {
+      opacity: 0.85;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 36px 48px;
+      border-top: 2px solid var(--yellow);
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 4px 12px 5px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      width: 100%;
     }
   </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="header">
-    <h1>B2B Bullshit Detector</h1>
-    <h2>Your B2B copy is probably lying.<br>Let's find out.</h2>
-    <p>Paste your homepage, case study, or LinkedIn post. Get a Bullshit Score in 10 seconds.</p>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<main id="main-content">
+<!-- NAV + HERO in Yellow Zone -->
+<div class="yellow-zone">
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/method/">Method</a></li>
+      <li><a href="https://zerohypelab.com/scores/">Wall of Scores</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero" id="main">
+    <span class="hero-label">Diagnostic Tool // 01</span>
+    <div class="hero-title">
+      B2B BULLSHIT<br>
+      <span class="word-invert">detector.</span>
+    </div>
+    <p class="hero-sub">Paste your B2B copy, landing page pitch, or value proposition. Get an instant score and a forensic breakdown of every parasitic buzzword killing your conversion rate.</p>
   </div>
+</div>
 
-  <textarea id="copy-input" placeholder="Paste your copy here..." maxlength="3000"></textarea>
-  <div class="char-count"><span id="char-count">0</span>/3000</div>
-  <button class="btn-run" id="btn-run">Run the Autopsy →</button>
-
-  <div class="error-msg" id="error-msg">Something went wrong. Try again in a moment.</div>
-
-  <div class="result" id="result">
-    <div class="score-box" id="score-box">
-      <div class="score-label">Bullshit Score</div>
-      <div class="score-number" id="score-number">0</div>
-      <div class="score-verdict" id="score-verdict"></div>
-      <div class="score-sub" id="score-sub"></div>
+<!-- TOOL INTERFACE -->
+<div class="tool-container">
+  <div class="panel">
+    <div class="panel-header">
+      <span>Paste Raw Copy</span>
+      <span>No Signup Required</span>
     </div>
+    <textarea id="copy-input" placeholder="e.g. We are the premier AI-powered, next-gen paradigm shifting platform that empowers synergy across omnichannel paradigms..."></textarea>
+    <button class="btn-submit" id="analyze-btn" onclick="runAnalysis()">Run Bullshit Diagnostic</button>
 
-    <div id="callouts-wrap">
-      <div class="callouts-title">Worst offenders</div>
-      <div id="callouts-list"></div>
-    </div>
-
-    <button class="btn-share" id="btn-share">Copy as image</button>
-
-    <div class="cta">
-      <h3>Want to fix what you just saw?</h3>
-      <p>The Full Autopsy — every phrase flagged, rewritten, with concrete examples.<br>You get exactly what to change to remove the bullshit from your copy.</p>
-      <div class="cta-features">
-        <div class="cta-feature"><span class="cta-arrow">→</span><span>Every sentence annotated — what's wrong, why, how to fix it</span></div>
-        <div class="cta-feature"><span class="cta-arrow">→</span><span>Full rewrite of your first 200 words</span></div>
-        <div class="cta-feature"><span class="cta-arrow">→</span><span>Your personal banned-word list</span></div>
-        <div class="cta-feature"><span class="cta-arrow">→</span><span>Instant delivery</span></div>
+    <div class="result-box" id="result-box">
+      <div class="panel-header">
+        <span>Diagnostic Result</span>
+        <span id="risk-level">HIGH RISK</span>
       </div>
-      <a class="btn-cta" href="https://buy.stripe.com/8x214p2Ni33i4QRg5UaR208" target="_blank" rel="noopener">Get the Full Autopsy — $97</a>
-      <p class="cta-fine">One client who finds you through your site covers this 100 times over. If you don't like the report, I'll refund you. Email zerohype@proton.me and I'll sort it the same day.</p>
+      <div class="score-display" id="score-val">82/100</div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:16px;" id="verdict-text">Your copy is severely bloated with vague corporate speak. Nobody understands what you actually do.</p>
+      
+      <div style="margin-top:16px;">
+        <div style="font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;color:var(--text);margin-bottom:8px;">Flagged Buzzwords:</div>
+        <div id="buzzword-list"></div>
+      </div>
     </div>
   </div>
 
-  <div class="footer">
-    <a href="https://zerohypelab.com">zerohypelab.com</a> — no hype, no fluff, no bullshit.
+  <div class="sidebar-card">
+    <h3>Marketing Autopsy</h3>
+    <p>Need a human diagnostic of your entire funnel instead of automated keyword matching? We review your full outreach sequence and messaging architecture in 48-72 hours.</p>
+    <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text);font-weight:700;">$49 flat, guaranteed refund if not actionable.</p>
+    <a href="/marketing-autopsy/" class="bridge-cta">Get Marketing Autopsy ($49) →</a>
   </div>
 </div>
+</main>
 
-<!-- Share card -->
-<div id="share-card">
-  <div class="sc-brand">B2B Bullshit Detector — zerohypelab.com</div>
-  <div class="sc-score" id="sc-score">0</div>
-  <div class="sc-verdict" id="sc-verdict"></div>
-  <div id="sc-callouts"></div>
-  <div class="sc-footer">zerohypelab.com/bullshit-detector</div>
-</div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-wordmark">Zero Hype</span>
+    <ul class="footer-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/method/">Method</a></li>
+      <li><a href="https://zerohypelab.com/scores/">Wall of Scores</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X, @zerohype_co</a></li>
+      <li><a href="https://www.youtube.com/@zerohype_co" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="https://www.producthunt.com/products/campaign-failure-predictor" target="_blank" rel="noopener">Product Hunt</a></li>
+      <li><a href="https://zerohypelab.com/monthly-autopsy/">Monthly Autopsy, $300/mo</a></li>
+      <li>Contact: <a href="mailto:zerohype@proton.me">zerohype@proton.me</a></li>
+    </ul>
+    <p class="footer-tagline">No fluff. No hype. Just what works. · <time datetime="2026-08-01">Updated August 2026</time></p>
+    <p class="footer-tagline">Published by <a href="/about/" style="color:var(--muted);">Zero Hype</a>, Contact: <a href="mailto:zerohype@proton.me">zerohype@proton.me</a></p>
+  </div>
+</footer>
 
 <script>
-  const API_URL = 'https://api.zerohypelab.com/api/score';
+const BUZZWORDS = [
+  'synergy', 'paradigm', 'next-gen', 'disrupt', 'game-changing', 'premier', 'seamless',
+  'empower', 'revolutionary', 'holistic', 'cutting-edge', 'innovative', 'omnichannel',
+  'streamlined', 'robust', 'world-class', 'turnkey', 'unmatched', 'best-in-class', 'ai-powered'
+];
 
-  const textarea = document.getElementById('copy-input');
-  const charCount = document.getElementById('char-count');
-  const btnRun = document.getElementById('btn-run');
-  const result = document.getElementById('result');
-  const errorMsg = document.getElementById('error-msg');
-  const scoreNumber = document.getElementById('score-number');
-  const scoreVerdict = document.getElementById('score-verdict');
-  const scoreSub = document.getElementById('score-sub');
-  const calloutsList = document.getElementById('callouts-list');
-  const btnShare = document.getElementById('btn-share');
+function runAnalysis() {
+  const text = document.getElementById('copy-input').value.trim().toLowerCase();
+  if (!text) return;
 
-  textarea.addEventListener('input', () => {
-    charCount.textContent = textarea.value.length;
-  });
-
-  function getColor(score) {
-    if (score <= 30) return '#00C896';
-    if (score <= 60) return '#FFB800';
-    return '#FF3333';
-  }
-
-  function getSub(score, count) {
-    if (score <= 20) return 'Remarkably clean. Whoever wrote this, keep them.';
-    if (score <= 40) return `${count} phrase${count !== 1 ? 's' : ''} worth cleaning up.`;
-    if (score <= 60) return `Your copy has ${count} phrases that raise eyebrows.`;
-    if (score <= 80) return `Your copy has ${count} phrases that would make any buyer roll their eyes.`;
-    return `${count} phrases. Each one making buyers trust you less.`;
-  }
-
-  function animateScore(target, color) {
-    let frame = 0;
-    const frames = 40;
-    scoreNumber.style.color = color;
-    const tick = () => {
-      frame++;
-      const progress = frame / frames;
-      const eased = 1 - Math.pow(1 - progress, 3);
-      scoreNumber.textContent = Math.round(eased * target);
-      if (frame < frames) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }
-
-  function renderResult(data) {
-    const color = getColor(data.score);
-    animateScore(data.score, color);
-    scoreVerdict.textContent = data.label;
-    scoreVerdict.style.color = color;
-    scoreSub.textContent = getSub(data.score, data.callouts.length);
-
-    calloutsList.innerHTML = '';
-    data.callouts.forEach(c => {
-      const div = document.createElement('div');
-      div.className = 'callout';
-      div.innerHTML = `<div class="callout-phrase">${c.phrase}</div><div class="callout-reason">${c.reason}</div>`;
-      calloutsList.appendChild(div);
-    });
-
-    // Populate share card
-    const sc = document.getElementById('sc-score');
-    sc.textContent = data.score;
-    sc.style.color = color;
-    document.getElementById('sc-verdict').textContent = data.label;
-    document.getElementById('sc-callouts').innerHTML = data.callouts.slice(0, 3)
-      .map(c => `<div class="sc-callout">"${c.phrase}" — ${c.reason}</div>`).join('');
-
-    result.classList.add('visible');
-    errorMsg.classList.remove('visible');
-  }
-
-  btnRun.addEventListener('click', async () => {
-    const text = textarea.value.trim();
-    if (!text || text.length < 10) return;
-
-    btnRun.disabled = true;
-    btnRun.innerHTML = '<span class="spinner"></span>Running...';
-    result.classList.remove('visible');
-    errorMsg.classList.remove('visible');
-
-    try {
-      const res = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text }),
-      });
-      if (!res.ok) throw new Error('API error');
-      const data = await res.json();
-      renderResult(data);
-    } catch (e) {
-      errorMsg.classList.add('visible');
-    } finally {
-      btnRun.disabled = false;
-      btnRun.innerHTML = 'Run the Autopsy →';
+  let matches = [];
+  BUZZWORDS.forEach(word => {
+    if (text.includes(word)) {
+      matches.push(word);
     }
   });
 
-  btnShare.addEventListener('click', async () => {
-    btnShare.textContent = 'Generating...';
-    try {
-      const canvas = await html2canvas(document.getElementById('share-card'), { backgroundColor: '#0a0a0a' });
-      canvas.toBlob(blob => {
-        try {
-          navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
-          btnShare.textContent = 'Copied to clipboard ✓';
-        } catch {
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url; a.download = 'bullshit-score.png'; a.click();
-          btnShare.textContent = 'Downloaded ✓';
-        }
-        setTimeout(() => { btnShare.textContent = 'Copy as image'; }, 3000);
-      });
-    } catch {
-      btnShare.textContent = 'Copy as image';
-    }
-  });
+  const score = Math.min(100, Math.max(10, matches.length * 20));
+  const resBox = document.getElementById('result-box');
+  const scoreVal = document.getElementById('score-val');
+  const buzzList = document.getElementById('buzzword-list');
+  const risk = document.getElementById('risk-level');
+  const verdict = document.getElementById('verdict-text');
+
+  resBox.style.display = 'block';
+  scoreVal.textContent = score + '/100';
+
+  if (score >= 60) {
+    scoreVal.style.color = 'var(--danger)';
+    risk.textContent = 'HIGH RISK';
+    verdict.textContent = 'Your copy is heavily contaminated with enterprise fluff. Fix the flagged phrases immediately.';
+  } else if (score >= 30) {
+    scoreVal.style.color = '#D97706';
+    risk.textContent = 'MODERATE RISK';
+    verdict.textContent = 'Some vague claims detected. Replace them with specific metrics and verifiable proof.';
+  } else {
+    scoreVal.style.color = 'var(--success)';
+    risk.textContent = 'CLEAN COPY';
+    verdict.textContent = 'Clear and direct copy with minimal buzzwords. Ready for testing.';
+  }
+
+  buzzList.innerHTML = matches.length > 0 
+    ? matches.map(m => '<span class="buzzword-tag">' + m + '</span>').join('')
+    : '<span style="font-size:13px;color:var(--muted);">None detected.</span>';
+}
 </script>
-
-<!-- GoatCounter -->
-<script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zero Hype — No fluff. No hype. Just what works.</title>
+  <title>Zero Hype, No fluff. No hype. Just what works.</title>
   <meta name="description" content="B2B marketing diagnostics. Find the specific failure point. No consultants. No retainers.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zero Hype">
-  <meta name="date" content="2026-06-02">
+  <meta name="date" content="2026-08-01">
   <link rel="canonical" href="https://zerohypelab.com/">
 
-  <meta property="og:title" content="Zero Hype — No fluff. No hype. Just what works.">
+  <meta property="og:title" content="Zero Hype, No fluff. No hype. Just what works.">
   <meta property="og:description" content="B2B marketing diagnostics. Find the specific failure point.">
   <meta property="og:url" content="https://zerohypelab.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://zerohypelab.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Zero Hype — B2B marketing diagnostics">
+  <meta property="og:image:alt" content="Zero Hype, B2B marketing diagnostics">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Zero Hype">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Zero Hype — No fluff. No hype. Just what works.">
+  <meta name="twitter:title" content="Zero Hype, No fluff. No hype. Just what works.">
   <meta name="twitter:description" content="B2B marketing diagnostics. Find the specific failure point. No consultants. No retainers.">
   <meta name="twitter:image" content="https://zerohypelab.com/og-image.png">
   <meta name="color-scheme" content="light">
@@ -31,25 +31,11 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="preload" as="font" href="/fonts/BebasNeue-400-normal.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="font" href="/fonts/Inter-400-normal.woff2" type="font/woff2" crossorigin>
+  <!-- Google Fonts fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zero Hype",
-    "url": "https://zerohypelab.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://zerohypelab.com/?s={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -71,6 +57,7 @@
     @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500-normal.woff2') format('woff2'); }
     @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/DMMono-400-normal.woff2') format('woff2'); }
     @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/DMMono-500-normal.woff2') format('woff2'); }
+
     html { font-size: 16px; -webkit-font-smoothing: antialiased; }
     .skip-link { position: absolute; top: -100%; left: 1rem; background: #111; color: var(--yellow); padding: 0.5rem 1rem; font-size: 0.875rem; font-family: 'DM Mono', monospace; border-radius: 0 0 4px 4px; z-index: 9999; text-decoration: none; }
     .skip-link:focus { top: 0; }
@@ -83,7 +70,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV + HERO share yellow background — full above-fold block ── */
+    /* NAV + HERO share yellow background */
     .yellow-zone {
       background: var(--yellow);
     }
@@ -123,7 +110,7 @@
 
     .nav-links a:hover { opacity: 1; }
 
-    /* ── HERO — still inside yellow-zone ── */
+    /* HERO */
     .hero {
       padding: 72px 48px 68px;
       max-width: 1280px;
@@ -148,7 +135,6 @@
       color: var(--text);
     }
 
-    /* "hype." inverted: dark box, yellow text — pops on yellow bg */
     .hero-title .word-invert {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -174,7 +160,6 @@
       line-height: 1.65;
     }
 
-    /* Dark button on yellow bg */
     .btn-dark {
       display: inline-block;
       background: var(--bg-dark);
@@ -195,7 +180,7 @@
       color: var(--yellow);
     }
 
-    /* ── TICKER — dark bg, yellow text ── */
+    /* TICKER */
     .ticker-wrap {
       overflow: hidden;
       background: var(--bg-dark);
@@ -226,7 +211,7 @@
       to   { transform: translateX(-50%); }
     }
 
-    /* ── SECTION ── */
+    /* SECTIONS */
     .section {
       padding: 72px 48px;
       max-width: 1280px;
@@ -239,12 +224,11 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      border-bottom: 2px solid var(--yellow);  /* yellow divider */
+      border-bottom: 2px solid var(--yellow);
       padding-bottom: 16px;
       margin-bottom: 36px;
     }
 
-    /* Section numbers: yellow background box */
     .section-num {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -263,7 +247,7 @@
       color: var(--text);
     }
 
-    /* ── FREE TOOLS ── */
+    /* GRID & CARDS */
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -320,7 +304,6 @@
       line-height: 1;
     }
 
-    /* ── DIAGNOSTICS ── */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
@@ -394,45 +377,7 @@
       text-decoration-thickness: 2px;
     }
 
-    /* ── MANUALS ── */
-    .manual-list { list-style: none; }
-
-    .manual-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      text-decoration: none;
-      color: var(--text);
-      transition: background 0.15s, padding 0.15s;
-    }
-
-    .manual-item:hover {
-      background: var(--yellow);
-      padding-left: 14px;
-      padding-right: 14px;
-      margin-left: -14px;
-      margin-right: -14px;
-    }
-
-    .manual-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-    }
-
-    .manual-price {
-      font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      color: var(--muted);
-      flex-shrink: 0;
-      margin-left: 16px;
-    }
-
-    .manual-item:hover .manual-price { color: var(--text); }
-
-    /* ── NEWSLETTER STRIP ── */
+    /* NEWSLETTER */
     .newsletter-strip {
       background: var(--bg-dark);
       color: var(--bg);
@@ -455,7 +400,6 @@
       line-height: 0.92;
     }
 
-    /* "no hype." in yellow box — same pattern as hero word-invert */
     .newsletter-headline em {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -495,7 +439,7 @@
       color: var(--yellow);
     }
 
-    /* ── FOOTER — yellow wordmark box ── */
+    /* FOOTER */
     footer {
       padding: 36px 48px;
       border-top: 2px solid var(--yellow);
@@ -544,248 +488,35 @@
       width: 100%;
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
       nav { padding: 18px 24px; }
       .nav-links { display: none; }
-
       .hero { padding: 52px 24px 48px; }
-
       .hero-bottom {
         flex-direction: column;
         align-items: flex-start;
         gap: 28px;
         margin-top: 32px;
       }
-
       .section { padding: 56px 24px; }
-
       .tools-grid { grid-template-columns: 1fr; }
       .product-grid { grid-template-columns: 1fr; }
-
       .newsletter-inner {
         padding: 56px 24px;
         flex-direction: column;
         align-items: flex-start;
         gap: 32px;
       }
-
       footer { padding: 28px 24px; }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://zerohypelab.com/#organization",
-        "name": "ZeroHype",
-        "alternateName": ["Zero Hype", "ZeroHype Lab", "zerohypelab.com"],
-        "url": "https://zerohypelab.com",
-        "foundingDate": "2024",
-        "disambiguatingDescription": "ZeroHype (zerohypelab.com) is a B2B marketing diagnostics brand and software tool suite for cold outreach, campaigns, and pipeline. It is NOT an athletics, fitness, sportswear, or apparel brand, and NOT a song, album, or musical recording. Not affiliated with zerohypeathletics.com or any similarly named athletics or fitness brand, with zero-hype.com (unrelated consulting firm), or with the dissolved UK company ZeroHype Ltd (company 14974669). The name reflects the brand approach: no marketing hype, just diagnostics.",
-        "description": "B2B marketing diagnostics. No consultants. No retainers. Identifies the specific failure point in outreach, campaigns, and pipeline.",
-        "about": "https://zerohypelab.com/about/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://zerohypelab.com/og-image.png",
-          "width": 1200,
-          "height": 630
-        },
-        "knowsAbout": ["B2B marketing", "cold email", "outreach strategy", "campaign diagnostics", "DACH market", "revenue operations", "marketing strategy", "outbound sales", "email deliverability"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "ZeroHype Tools and Diagnostics",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
-              "itemOffered": {
-                "@type": "SoftwareApplication",
-                "name": "B2B Bullshit Detector",
-                "alternateName": ["Bullshit Detector", "Bullshit Score"],
-                "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web",
-                "url": "https://zerohypelab.com/bullshit-detector/",
-                "description": "Paste B2B marketing copy, get a Bullshit Score 0-100 in 10 seconds. Free, no signup."
-              }
-            },
-            {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
-              "itemOffered": {
-                "@type": "SoftwareApplication",
-                "name": "Cold Email Roaster",
-                "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web",
-                "url": "https://zerohypelab.com/cold-email-roaster/",
-                "description": "Paste a cold email, get a Hype Score 0-100 across 6 analyzers. Free, no signup."
-              }
-            },
-            {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
-              "itemOffered": {
-                "@type": "SoftwareApplication",
-                "name": "Campaign Failure Predictor",
-                "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web",
-                "url": "https://zerohypelab.com/campaign-failure-predictor/",
-                "description": "10-question quiz scoring your campaign's failure risk before launch. Free, no signup."
-              }
-            },
-            {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD",
-              "itemOffered": {
-                "@type": "SoftwareApplication",
-                "name": "B2B Homepage Roaster",
-                "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web",
-                "url": "https://zerohypelab.com/homepage-roaster/",
-                "description": "Enter your homepage URL, get scored on clarity, CTA, jargon, and conversion readiness. Free."
-              }
-            },
-            {
-              "@type": "Offer",
-              "price": "49",
-              "priceCurrency": "USD",
-              "url": "https://zerohypelab.com/marketing-autopsy/",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Marketing Autopsy",
-                "serviceType": "B2B marketing diagnostic",
-                "url": "https://zerohypelab.com/marketing-autopsy/",
-                "description": "Written diagnosis of your B2B marketing position, delivered in 48-72 hours. Entry-level paid diagnostic."
-              }
-            },
-            {
-              "@type": "Offer",
-              "price": "99",
-              "priceCurrency": "USD",
-              "url": "https://zerohypelab.com/outreach-autopsy/",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Outreach Autopsy",
-                "serviceType": "B2B outreach diagnostic",
-                "url": "https://zerohypelab.com/outreach-autopsy/",
-                "description": "Written diagnosis of cold email and LinkedIn outreach sequences, delivered in 48-72 hours."
-              }
-            },
-            {
-              "@type": "Offer",
-              "price": "4500",
-              "priceCurrency": "USD",
-              "url": "https://zerohypelab.com/revenue-architecture/",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Revenue Architecture",
-                "serviceType": "B2B done-with-you revenue engagement",
-                "url": "https://zerohypelab.com/revenue-architecture/",
-                "description": "Done-with-you engagement for B2B businesses with a structural revenue problem. Application required."
-              }
-            }
-          ]
-        },
-        "sameAs": [
-          "https://x.com/zerohype_co",
-          "https://zerohypelab.substack.com",
-          "https://www.youtube.com/@zerohype_co",
-          "https://www.producthunt.com/products/campaign-failure-predictor",
-          "https://payhip.com/ZeroHypeShop"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://zerohypelab.com/",
-        "url": "https://zerohypelab.com/",
-        "name": "Zero Hype — B2B Marketing Diagnostics",
-        "description": "Find the specific failure point in your B2B marketing. No consultants. No retainers. Start free.",
-        "inLanguage": "en",
-        "isPartOf": { "@id": "https://zerohypelab.com/#website" },
-        "publisher": { "@id": "https://zerohypelab.com/#organization" },
-        "dateModified": "2026-06-08"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://zerohypelab.com/#faq",
-        "url": "https://zerohypelab.com/",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Who built Zero Hype?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "An anonymous practitioner with 20+ years in B2B marketing, outreach strategy, and revenue operations. Anonymous by design — the work, not the name, is the credential. Contact: zerohype@proton.me"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who is Zero Hype for?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "B2B marketers, SDRs, founders, and sales leaders who want honest diagnostic feedback on their outreach, campaigns, or strategy. Not for people who want encouragement. For people who want to know what's actually broken."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does delivery work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pay via Stripe, fill a brief Tally intake form, receive the written deliverable by email within 48-72 hours (diagnostics) or 7 business days (Outreach Overhaul). No calls. No check-ins. Just the work."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there a free option before paying?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Three free tools — Cold Email Roaster, Campaign Failure Predictor, and Homepage Roaster — require no signup and give you an immediate, specific score. They're the right starting point."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why are prices in USD?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The audience is global. USD is the standard for B2B marketing tools. All prices are listed clearly on each product page."
-            }
-          }
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://zerohypelab.com/#website",
-        "url": "https://zerohypelab.com",
-        "name": "Zero Hype",
-        "description": "B2B marketing diagnostics. No consultants. No retainers.",
-        "publisher": { "@id": "https://zerohypelab.com/#organization" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://zerohypelab.com/" }
-        ]
-      }
-    ]
-  }
-  </script>
-<link rel="model-context-protocol" type="application/json" href="/.well-known/mcp.json">
-<script src="/webmcp.js" defer></script>
 </head>
-<body><a href="https://zerohypelab.com/cdn-cgi/content?id=VtMZp5OMYJWongxDeJdFRUofcnuW5mOAjRI9j2iSGHo-1786451812.6156845-1.2.1.1-Tl26lugs6XxfhX0K.I_Yjrlhjmew_xdGnEXFmoGdbSe81svsLym6XaSfMWBw27lM" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+<body>
 <a href="#main" class="skip-link">Skip to main content</a>
 
 <main id="main-content">
-<!-- NAV + HERO — one continuous yellow zone -->
+<!-- NAV + HERO: continuous yellow zone -->
 <div class="yellow-zone">
-
   <nav>
     <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
     <ul class="nav-links">
@@ -807,65 +538,17 @@
       <span class="word-invert">hype.</span>
     </div>
     <div class="hero-bottom">
-      <p class="hero-sub" id="dyn-sub">You sent the emails. You ran the campaign. You hired the agency. Something isn't working and you can't tell if it's the message, the targeting, the sequence, or all three. Most B2B marketing failures have one specific break point. The tools and diagnostics here find it — without the consultant retainer, without the three-month engagement, without the mood board.</p>
+      <p class="hero-sub" id="dyn-sub">You sent the emails. You ran the campaign. You hired the agency. Something isn't working and you can't tell if it's the message, the targeting, the sequence, or all three. Most B2B marketing failures have one specific break point. The tools and diagnostics here find it, without the consultant retainer, without the three-month engagement, without the mood board.</p>
       <p style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;color:#111;opacity:0.5;margin-top:0.75rem;">by <a rel="author" href="/about/" style="color:inherit;text-decoration:none;">an anonymous B2B marketing practitioner</a> &middot; <time datetime="2026-08-01">Updated August 2026</time></p>
       <div style="display:flex; align-items:center;">
-        <a href="https://zerohypelab.substack.com" class="btn-dark" id="dyn-cta">Subscribe &mdash; it's free</a>
+        <a href="https://zerohypelab.substack.com" class="btn-dark" id="dyn-cta">Subscribe, it's free</a>
         <span style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;color:#111;opacity:0.5;margin-left:12px;">Join 6,000+ founders reading every week</span>
       </div>
     </div>
   </div>
-
 </div>
 
-<!-- STATS BLOCK — citability + E-E-A-T signals -->
-<div style="background:#fff;border-top:1px solid #e8e6e0;border-bottom:1px solid #e8e6e0;padding:2.5rem 2rem;">
-  <div style="max-width:720px;margin:0 auto;">
-    <p style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#888;margin-bottom:1.25rem;">Why this exists</p>
-    <p style="font-family:'Inter',sans-serif;font-size:0.78rem;color:#888;margin-bottom:0.6rem;letter-spacing:0.05em;">Published by Zero Hype · Updated August 2026 · Contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e544b5c4146575e4b6e5e5c415a414000434b">[email&#160;protected]</a> · <a href="/about/" style="color:#888;text-decoration:underline;">About Zero Hype</a></p>
-    <p style="font-family:'Inter',sans-serif;font-size:0.92rem;line-height:1.78;color:#333;margin-bottom:0.75rem;">200+ cold outreach sequences reviewed. The failure is almost never the product. It is the diagnosis.</p>
-    <p style="font-family:'Inter',sans-serif;font-size:0.92rem;line-height:1.78;color:#333;margin-bottom:0.75rem;">Mailshake benchmark (2024): median cold email reply rates fell from 6.8% to 5.8% in two years. Top-quartile teams held 15-25% reply rates. The difference is not budget or effort. It is one identifiable break point in message, targeting, or sequence.</p>
-    <p style="font-family:'Inter',sans-serif;font-size:0.92rem;line-height:1.78;color:#333;margin-bottom:1.25rem;">Forrester (2023): 74% of B2B buyers complete more than half their research before speaking to a vendor. Fewer than 20% of B2B marketing teams can trace pipeline to a specific activity. These tools find the break point before the budget is spent.</p>
-    <table style="width:100%;border-collapse:collapse;font-family:'Inter',sans-serif;font-size:0.84rem;margin-top:0.5rem;">
-      <thead>
-        <tr>
-          <th style="text-align:left;padding:0.4rem 0.6rem;border-bottom:2px solid #E8FD27;color:#888;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;">Problem</th>
-          <th style="text-align:left;padding:0.4rem 0.6rem;border-bottom:2px solid #E8FD27;color:#888;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;">Tool</th>
-          <th style="text-align:left;padding:0.4rem 0.6rem;border-bottom:2px solid #E8FD27;color:#888;font-weight:700;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;">Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid #eee;">
-          <td style="padding:0.4rem 0.6rem;color:#333;">Cold email not converting</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">B2B Bullshit Detector</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">Free</td>
-        </tr>
-        <tr style="border-bottom:1px solid #eee;">
-          <td style="padding:0.4rem 0.6rem;color:#333;">Campaign likely to fail</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">Campaign Failure Predictor</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">Free</td>
-        </tr>
-        <tr style="border-bottom:1px solid #eee;">
-          <td style="padding:0.4rem 0.6rem;color:#333;">Full marketing broken</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">Marketing Autopsy</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">$49</td>
-        </tr>
-        <tr style="border-bottom:1px solid #eee;">
-          <td style="padding:0.4rem 0.6rem;color:#333;">Outreach sequence failing</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">Outreach Autopsy</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">$99</td>
-        </tr>
-        <tr>
-          <td style="padding:0.4rem 0.6rem;color:#333;">Full overhaul needed</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">Outreach Overhaul</td>
-          <td style="padding:0.4rem 0.6rem;color:#333;">$897</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- TICKER — dark bg, yellow text -->
+<!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker">
     <span class="ticker-item">NO FLUFF<span class="sep">·</span></span>
@@ -892,31 +575,31 @@
     <h2 class="section-title">[Tools for Founders]</h2>
   </div>
   <div class="tools-grid">
-    <a class="tool-card" href="https://zerohypelab.com/bullshit-detector/">
+    <a class="tool-card" href="/bullshit-detector/">
       <span class="tool-tag">Free · Paste copy</span>
       <div class="tool-name">B2B Bullshit Detector</div>
       <p class="tool-desc">Paste any B2B claim. Get flagged on vague words and missing proof.</p>
       <span class="tool-arrow">→</span>
     </a>
-    <a class="tool-card" href="https://zerohypelab.com/cold-email-roaster/">
+    <a class="tool-card" href="/cold-email-roaster/">
       <span class="tool-tag">Free · Instant</span>
       <div class="tool-name">Cold Email Roaster</div>
       <p class="tool-desc">Paste your cold email. Get a Hype Score 0–100 and the line that's killing replies.</p>
       <span class="tool-arrow">→</span>
     </a>
-    <a class="tool-card" href="https://zerohypelab.com/campaign-failure-predictor/">
+    <a class="tool-card" href="/campaign-failure-predictor/">
       <span class="tool-tag">Free · 10 questions</span>
       <div class="tool-name">Campaign Failure Predictor</div>
       <p class="tool-desc">10 questions before you launch. Tells you what's already broken.</p>
       <span class="tool-arrow">→</span>
     </a>
-    <a class="tool-card" href="https://zerohypelab.com/homepage-roaster/">
+    <a class="tool-card" href="/homepage-roaster/">
       <span class="tool-tag">Free · Paste or URL</span>
       <div class="tool-name">B2B Homepage Roaster</div>
       <p class="tool-desc">Paste your homepage or drop the URL. Score plus the specific copy fix.</p>
       <span class="tool-arrow">→</span>
     </a>
-    <a class="tool-card" href="https://zerohypelab.com/german-b2b-experts/">
+    <a class="tool-card" href="/german-b2b-experts/">
       <span class="tool-tag">Free · Read</span>
       <div class="tool-name">10 People Who Understand the German B2B Market</div>
       <p class="tool-desc">Not consultants. Not market entry guides. Practitioners who have made decisions with consequences in the DACH market.</p>
@@ -932,139 +615,55 @@
     <h2 class="section-title">Diagnostic services</h2>
   </div>
   <div class="product-grid">
-    <a class="product-card" href="https://zerohypelab.com/marketing-autopsy/">
+    <a class="product-card" href="/marketing-autopsy/">
       <p class="product-price">$49 · By a human <span class="tag-start">START HERE</span></p>
       <div class="product-name">Marketing Autopsy</div>
       <p class="product-desc">Full diagnostic of your B2B marketing function. What's broken and in what order to fix it.</p>
       <span class="product-cta">Get the autopsy →</span>
     </a>
-    <a class="product-card" href="https://zerohypelab.com/outreach-autopsy/">
+    <a class="product-card" href="/outreach-autopsy/">
       <p class="product-price">$99 · By a human</p>
       <div class="product-name">Outreach Autopsy</div>
       <p class="product-desc">Your outreach sequence fails somewhere specific. We find it. You fix it.</p>
       <span class="product-cta">Get the autopsy →</span>
     </a>
-    <a class="product-card" href="https://zerohypelab.com/campaign-autopsy/">
+    <a class="product-card" href="/campaign-autopsy/">
       <p class="product-price">$500 · By a human</p>
       <div class="product-name">Campaign Autopsy</div>
       <p class="product-desc">The campaign ran. Results were wrong. Three-part report on what broke and how to fix it.</p>
       <span class="product-cta">Get the autopsy →</span>
     </a>
-    <a class="product-card" href="https://zerohypelab.com/dach-outreach-agent/">
+    <a class="product-card" href="/dach-outreach-agent/">
       <p class="product-price">$49 · By a human</p>
       <div class="product-name">DACH Outreach Agent</div>
       <p class="product-desc">Cold outreach written for Germany, Austria, Switzerland. Culture, phrasing, timing.</p>
       <span class="product-cta">Get it →</span>
     </a>
-    <a class="product-card" href="https://zerohypelab.com/dach-prospect-intelligence/">
+    <a class="product-card" href="/dach-prospect-intelligence/">
       <p class="product-price">$299 · By a human</p>
       <div class="product-name">DACH Prospect Intelligence</div>
       <p class="product-desc">One DACH target account. Decision-makers, buying signals, entry points.</p>
       <span class="product-cta">Get the report →</span>
     </a>
-    <a class="product-card" href="https://zerohypelab.com/monthly-autopsy/">
+    <a class="product-card" href="/monthly-autopsy/">
       <p class="product-price">$300/mo · By a human</p>
       <div class="product-name">Monthly Autopsy</div>
       <p class="product-desc">One diagnostic per month, ongoing. Reviewed and scored every 30 days.</p>
       <span class="product-cta">See details →</span>
     </a>
-    <a class="product-card" href="https://zerohypelab.com/outreach-overhaul/">
+    <a class="product-card" href="/outreach-overhaul/">
       <p class="product-price">$897 · By a human</p>
       <div class="product-name">Outreach Overhaul</div>
       <p class="product-desc">Done-with-you. Full outreach sequence rebuilt from targeting up.</p>
       <span class="product-cta">See details →</span>
     </a>
-    <a class="product-card" href="https://zerohypelab.com/revenue-architecture/">
+    <a class="product-card" href="/revenue-architecture/">
       <p class="product-price">$4,500 · By a human</p>
       <div class="product-name">Revenue Architecture</div>
       <p class="product-desc">Marketing-to-revenue rebuilt. For B2B companies stuck below $1M ARR.</p>
       <span class="product-cta">See details →</span>
     </a>
   </div>
-</div>
-
-<!-- 03 MANUALS -->
-<div class="section">
-  <div class="section-header">
-    <span class="section-num">03</span>
-    <h2 class="section-title">The manuals</h2>
-  </div>
-  <ul class="manual-list">
-    <li>
-      <a class="manual-item" href="https://payhip.com/b/nJc58" target="_blank" rel="noopener">
-        <span class="manual-name">The Unfiltered First 90 Days</span>
-        <span class="manual-price">$49</span>
-      </a>
-    </li>
-    <li>
-      <a class="manual-item" href="https://payhip.com/b/XqmR6" target="_blank" rel="noopener">
-        <span class="manual-name">The DACH Cold Email Pack</span>
-        <span class="manual-price">$24</span>
-      </a>
-    </li>
-    <li>
-      <a class="manual-item" href="https://payhip.com/b/9lMQx" target="_blank" rel="noopener">
-        <span class="manual-name">The DACH Sales Call Pack</span>
-        <span class="manual-price">$29</span>
-      </a>
-    </li>
-    <li>
-      <a class="manual-item" href="https://payhip.com/b/sOxy5" target="_blank" rel="noopener">
-        <span class="manual-name">Fix Your Outreach</span>
-        <span class="manual-price">$29</span>
-      </a>
-    </li>
-  </ul>
-</div>
-
-<!-- PRICING PHILOSOPHY -->
-<div style="background:#111111;padding:5rem 2rem;">
-  <div style="max-width:760px;margin:0 auto;">
-    <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">how pricing works</p>
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,6vw,3.5rem);letter-spacing:0.04em;color:#E8FD27;margin-bottom:20px;line-height:0.95;">most of what we<br>make is free.</h2>
-    <p style="font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:14px;">The tools, the guides, the autopsies of dead companies. You pay us for exactly one thing: a human tearing your actual copy apart and handing it back fixed. Flat price. No call. No "starting at." No annual lock-in. You see the number before you click.</p>
-    <p style="font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:28px;">And you probably don't need to pay us yet. Run the free Roaster first. If it scores you under 30, fix what it flags and send the email. Come back when you've plateaued and the replies still aren't coming.</p>
-    <a href="https://zerohypelab.com/method/" style="background:#E8FD27;color:#111111;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px 28px;display:inline-block;transition:opacity 0.15s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">see exactly how we score &rarr;</a>
-  </div>
-</div>
-
-<!-- FAQ -->
-<div style="background:#F5F2EC;padding:5rem 2rem;">
-  <div style="max-width:760px;margin:0 auto;">
-    <div style="font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:0.04em;color:#111111;margin-bottom:3rem;">FREQUENTLY ASKED</div>
-    <div style="display:flex;flex-direction:column;">
-      <div style="border-top:2px solid #E8FD27;padding:1.5rem 0;">
-        <h3 style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:#111;margin-bottom:0.5rem;">Who built Zero Hype?</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:0.88rem;color:#555;line-height:1.75;">An anonymous practitioner with 20+ years in B2B marketing, outreach strategy, and revenue operations. Anonymous by design — the work, not the name, is the credential. Contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cfb5aabda0a7b6bfaa8fbfbda0bba0a1e1a2aa">[email&#160;protected]</a></p>
-      </div>
-      <div style="border-top:2px solid #E8FD27;padding:1.5rem 0;">
-        <h3 style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:#111;margin-bottom:0.5rem;">Who is this for?</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:0.88rem;color:#555;line-height:1.75;">B2B marketers, SDRs, founders, and sales leaders who want honest diagnostic feedback on their outreach, campaigns, or strategy. Not for people who want encouragement. For people who want to know what's actually broken.</p>
-      </div>
-      <div style="border-top:2px solid #E8FD27;padding:1.5rem 0;">
-        <h3 style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:#111;margin-bottom:0.5rem;">How does delivery work?</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:0.88rem;color:#555;line-height:1.75;">Pay via Stripe, fill a brief Tally intake form, receive the written deliverable by email within 48-72 hours (diagnostics) or 7 business days (Outreach Overhaul). No calls. No check-ins. Just the work.</p>
-      </div>
-      <div style="border-top:2px solid #E8FD27;padding:1.5rem 0;">
-        <h3 style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:#111;margin-bottom:0.5rem;">Is there a free option before paying?</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:0.88rem;color:#555;line-height:1.75;">Three free tools — Cold Email Roaster, Campaign Failure Predictor, and Homepage Roaster — require no signup and give you an immediate, specific score. They're the right starting point.</p>
-      </div>
-      <div style="border-top:2px solid #E8FD27;border-bottom:2px solid #E8FD27;padding:1.5rem 0;">
-        <h3 style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:#111;margin-bottom:0.5rem;">Why prices in USD?</h3>
-        <p style="font-family:'Inter',sans-serif;font-size:0.88rem;color:#555;line-height:1.75;">The audience is global. USD is the standard for B2B marketing tools. All prices are listed clearly on each product page.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MANIFESTO CTA -->
-<div style="background:#111111;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;">
-  <div>
-    <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px;">what we believe</p>
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,5vw,3rem);letter-spacing:0.04em;color:#E8FD27;margin-bottom:10px;line-height:1;">strategy fails<br>before execution does.</h2>
-    <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;max-width:480px;">most b2b campaigns fail for the same reasons. read why — and what we think actually works.</p>
-  </div>
-  <a href="https://zerohypelab.com/manifesto/" style="background:#E8FD27;color:#111111;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:14px 28px;white-space:nowrap;flex-shrink:0;transition:opacity 0.15s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">read the manifesto →</a>
 </div>
 
 <!-- NEWSLETTER STRIP -->
@@ -1077,12 +676,12 @@
       </div>
       <p class="newsletter-body">Weekly. Short. Specific. What's actually working in B2B marketing right now. No case studies from 2019.</p>
     </div>
-    <a href="https://zerohypelab.substack.com" class="btn-yellow" target="_blank" rel="noopener">Subscribe — it's free</a>
+    <a href="https://zerohypelab.substack.com" class="btn-yellow" target="_blank" rel="noopener">Subscribe, it's free</a>
   </div>
 </div>
+</main>
 
 <!-- FOOTER -->
-</main>
 <footer>
   <div class="footer-inner">
     <span class="footer-wordmark">Zero Hype</span>
@@ -1091,55 +690,16 @@
       <li><a href="https://zerohypelab.com/method/">Method</a></li>
       <li><a href="https://zerohypelab.com/scores/">Wall of Scores</a></li>
       <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
-      <li><a href="https://zerohypelab.com/tartarus/">Tartarus</a></li>
       <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
-      <li><a href="https://x.com/zerohype_co">X — @zerohype_co</a></li>
+      <li><a href="https://x.com/zerohype_co">X, @zerohype_co</a></li>
       <li><a href="https://www.youtube.com/@zerohype_co" target="_blank" rel="noopener">YouTube</a></li>
       <li><a href="https://www.producthunt.com/products/campaign-failure-predictor" target="_blank" rel="noopener">Product Hunt</a></li>
-      <li><a href="https://zerohypelab.com/monthly-autopsy/">Monthly Autopsy — $300/mo</a></li>
-      <li>Contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3a9b6a1bcbbaaa3b693a3a1bca7bcbdfdbeb6">[email&#160;protected]</a></li>
+      <li><a href="https://zerohypelab.com/monthly-autopsy/">Monthly Autopsy, $300/mo</a></li>
+      <li>Contact: <a href="mailto:zerohype@proton.me">zerohype@proton.me</a></li>
     </ul>
-    <p class="footer-tagline">No fluff. No hype. Just what works. · <time datetime="2026-05-31">Updated May 2026</time></p>
-    <p class="footer-tagline">Published by <a href="/about/" style="color:var(--muted);">Zero Hype</a> — Contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7ddc2d5c8cfded7c2e7d7d5c8d3c8c989cac2">[email&#160;protected]</a></p>
+    <p class="footer-tagline">No fluff. No hype. Just what works. · <time datetime="2026-08-01">Updated August 2026</time></p>
+    <p class="footer-tagline">Published by <a href="/about/" style="color:var(--muted);">Zero Hype</a>, Contact: <a href="mailto:zerohype@proton.me">zerohype@proton.me</a></p>
   </div>
 </footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-<script>
-(function() {
-  const ref = document.referrer || '';
-  const returning = localStorage.getItem('zh-visited');
-  localStorage.setItem('zh-visited', '1');
-  const sub = document.getElementById('dyn-sub');
-  const cta = document.getElementById('dyn-cta');
-  const isComp = ref.includes('/vs-') || window.location.pathname.includes('/vs-');
-  const isLinkedIn = ref.includes('linkedin.com');
-  const isGoogle   = /google\.[a-z]{2,3}/.test(ref);
-
-  if (isComp) {
-    if (sub) sub.textContent = "You've compared the options. Now find the specific failure point in your own outreach — before buying anything else.";
-    if (cta) cta.textContent = 'Find my failure point →';
-  } else if (returning === '1') {
-    if (sub) sub.textContent = "You were here before. If the outreach still isn't working — it's time to find out exactly why. Start with the free roaster.";
-    if (cta) cta.textContent = 'Roast my cold email →';
-  } else if (isLinkedIn) {
-    if (sub) sub.textContent = "LinkedIn sent you here. You're probably in B2B and something in your outreach or campaigns isn't converting the way it should. Start with the free tool — it takes 2 minutes.";
-    if (cta) cta.textContent = 'Try the free roaster →';
-  } else if (isGoogle) {
-    if (sub) sub.textContent = "You searched for something specific about B2B outreach or campaign performance. The tools here diagnose the exact failure point — free to start, no signup required.";
-    if (cta) cta.textContent = 'Start free →';
-  }
-})();
-</script>
-
-
-<div class="h-card" style="display:none" aria-hidden="true">
-  <img class="u-photo" src="/apple-touch-icon.png" alt="ZeroHype" />
-  <span class="p-name">ZeroHype</span>
-  <a class="u-url" href="https://zerohypelab.com/">https://zerohypelab.com/</a>
-  <a class="u-email" href="mailto:zerohype@proton.me">zerohype@proton.me</a>
-  <span class="p-note">B2B marketing diagnostics. No fluff. No hype. Find the specific break point in your outreach or campaign. Free tools. Written audits from $49.</span>
-</div>
-
 </body>
 </html>

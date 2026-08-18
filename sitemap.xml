@@ -221,4 +221,10 @@
 
   <url><loc>https://zerohypelab.com/homepage-roaster/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <!-- Sales Call Scripts: Austria and Switzerland (10) -->
+  <url>
+    <loc>https://zerohypelab.com/de-bloating/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

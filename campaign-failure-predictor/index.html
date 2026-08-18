@@ -3,453 +3,671 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B2B Campaign Failure Predictor | ZeroHype</title>
-  <meta name="description" content="Calculate mathematical failure risk in your B2B marketing, outbound campaigns, and SaaS customer acquisition before spending budget.">
-  <link rel="canonical" href="https://zerohype.co/campaign-failure-predictor/">
-  <meta property="og:title" content="B2B Campaign Failure Predictor | ZeroHype">
-  <meta property="og:description" content="Predict marketing and outbound campaign failure odds before wasting budget on unvalidated funnels.">
-  
+  <title>Campaign Failure Predictor | Pre-Launch B2B Risk Diagnostic | Zero Hype</title>
+  <meta name="description" content="Score your marketing campaign failure risk before you launch. Find the single hidden bottleneck killing your conversion.">
+  <meta name="author" content="Zero Hype">
+  <link rel="canonical" href="https://zerohypelab.com/campaign-failure-predictor/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Google Fonts fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --bg: #0d1117;
-      --panel: #161b22;
-      --panel-hover: #1c2128;
-      --border: #30363d;
-      --border-accent: #e05252;
-      --text: #c9d1d9;
-      --text-muted: #8b949e;
-      --text-bright: #f0f6fc;
-      --accent: #e05252;
-      --accent-glow: rgba(224, 82, 82, 0.15);
-      --green: #3fb950;
-      --yellow: #d29922;
-      --blue: #58a6ff;
-      --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --yellow:   #E8FD27;
+      --bg:       #F5F2EC;
+      --bg-dark:  #111111;
+      --text:     #111111;
+      --muted:    #666666;
+      --border:   rgba(17,17,17,0.12);
+      --card:     #FFFFFF;
+      --danger:   #E05252;
+      --success:  #228F62;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    @font-face { font-family: 'Bebas Neue'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/BebasNeue-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/PlayfairDisplay-700-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/PlayfairDisplay-400-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/Inter-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/DMMono-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/DMMono-500-normal.woff2') format('woff2'); }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    .skip-link { position: absolute; top: -100%; left: 1rem; background: #111; color: var(--yellow); padding: 0.5rem 1rem; font-size: 0.875rem; font-family: 'DM Mono', monospace; border-radius: 0 0 4px 4px; z-index: 9999; text-decoration: none; }
+    .skip-link:focus { top: 0; }
 
     body {
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--text);
-      font-family: var(--font-mono);
-      font-size: 14px;
+      font-family: 'Inter', sans-serif;
       line-height: 1.6;
-      padding: 0;
+      overflow-x: hidden;
     }
 
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { color: var(--text-bright); text-decoration: underline; }
-
-    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-
-    header {
-      border-bottom: 1px solid var(--border);
-      background: rgba(13, 17, 23, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    .yellow-zone {
+      background: var(--yellow);
     }
 
-    .nav-inner {
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 1px solid rgba(17,17,17,0.15);
+    }
+
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.65;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active { opacity: 1; font-weight: 700; }
+
+    .nav-btn {
+      background: var(--bg-dark);
+      color: var(--yellow) !important;
+      padding: 6px 14px;
+      opacity: 1 !important;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      border-radius: 2px;
+    }
+
+    .hero {
+      padding: 60px 48px 50px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.65);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 8.5vw, 100px);
+      line-height: 0.92;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero-title .word-invert {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      display: inline;
+      padding: 2px 14px 6px 6px;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(17,17,17,0.75);
+      max-width: 760px;
+      line-height: 1.6;
+    }
+
+    .tool-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 60px 48px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 960px) {
+      .tool-container { grid-template-columns: 1fr; padding: 40px 24px; }
+      nav { padding: 18px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 44px 24px 36px; }
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 36px;
+    }
+
+    .panel-header {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 12px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      height: 60px;
     }
 
-    .brand {
-      font-weight: 700;
-      font-size: 15px;
-      color: var(--text-bright);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .brand span { color: var(--accent); }
-
-    nav { display: flex; gap: 18px; align-items: center; }
-    nav a { color: var(--text-muted); font-size: 13px; }
-    nav a:hover, nav a.active { color: var(--text-bright); }
-    .nav-debloat {
-      border: 1px solid var(--border-accent);
-      color: var(--accent) !important;
-      padding: 4px 10px;
-      border-radius: 4px;
-      background: var(--accent-glow);
-    }
-
-    .tool-header { padding: 50px 0 30px; text-align: center; }
-    .tool-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent);
-      background: var(--accent-glow);
-      border: 1px solid var(--border-accent);
-      padding: 4px 10px;
-      border-radius: 3px;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--text-bright);
-      margin-bottom: 12px;
-    }
-
-    .tool-sub {
-      color: var(--text-muted);
-      font-size: 15px;
-      max-width: 650px;
-      margin: 0 auto 30px;
-    }
-
-    .form-card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 24px;
-      margin-bottom: 30px;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    label {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-bright);
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    select, input {
+    textarea, input[type="text"] {
       width: 100%;
-      background: var(--bg);
+      background: #FAFAFA;
       border: 1px solid var(--border);
-      color: var(--text-bright);
-      font-family: var(--font-mono);
-      font-size: 13px;
-      padding: 10px 12px;
-      border-radius: 4px;
-    }
-
-    select:focus, input:focus {
+      padding: 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      color: var(--text);
       outline: none;
-      border-color: var(--blue);
+      line-height: 1.5;
     }
 
-    .btn-predict {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      padding: 12px 24px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-radius: 4px;
-      cursor: pointer;
+    textarea { min-height: 180px; resize: vertical; }
+
+    textarea:focus, input[type="text"]:focus {
+      background: #FFFFFF;
+      border-color: var(--bg-dark);
+    }
+
+    .btn-submit {
+      display: inline-block;
       width: 100%;
-      margin-top: 10px;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 32px;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      margin-top: 20px;
+      transition: background 0.2s, color 0.2s;
     }
 
-    .btn-predict:hover { background: #c93b3b; }
+    .btn-submit:hover {
+      background: #222222;
+      color: #FFFFFF;
+    }
 
-    /* Results */
-    #results-area { display: none; margin-bottom: 40px; }
+    .result-box {
+      display: none;
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
 
-    .score-card {
-      background: var(--panel);
+    .score-display {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--danger);
+      margin-bottom: 8px;
+    }
+
+    .buzzword-tag {
+      display: inline-block;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      padding: 3px 8px;
+      margin: 4px 4px 4px 0;
+    }
+
+    .sidebar-card {
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 24px;
+      padding: 32px;
       margin-bottom: 24px;
     }
 
-    .score-row {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    .sidebar-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+
+    .sidebar-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
       margin-bottom: 16px;
     }
 
-    .score-circle {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 3px solid var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--accent);
+    .bridge-cta {
+      background: var(--yellow);
+      color: var(--text);
+      display: block;
+      padding: 16px 20px;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: opacity 0.2s;
     }
 
-    .analysis-list { list-style: none; margin-top: 14px; }
-    .analysis-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
+    .bridge-cta:hover { opacity: 0.85; }
+
+    .bridge-cta-dark {
+      background: var(--bg-dark);
+      color: var(--yellow);
+      display: block;
+      padding: 16px 20px;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: background 0.2s;
     }
 
-    /* Conversion Bridge Component */
-    .conversion-bridge {
-      margin-top: 35px;
-      padding: 28px;
-      background: var(--panel);
-      border: 2px solid var(--accent);
-      border-radius: 6px;
-      box-shadow: 0 4px 20px rgba(224, 82, 82, 0.12);
+    .bridge-cta-dark:hover { background: #222; }
+
+    .conversion-bridge-banner {
+      margin-top: 24px;
+      padding: 24px;
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--danger);
     }
 
     .bridge-tag {
-      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
       font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent);
-      background: var(--accent-glow);
-      padding: 4px 10px;
-      border-radius: 3px;
-      border: 1px solid var(--accent);
-      display: inline-block;
+      color: var(--danger);
+      margin-bottom: 8px;
     }
 
-    .bridge-grid {
+    .bridge-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.1;
+    }
+
+    .bridge-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .bridge-dual-btn {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 20px 0;
+      gap: 12px;
     }
 
-    @media (max-width: 650px) {
-      .bridge-grid { grid-template-columns: 1fr; }
+    @media (max-width: 600px) {
+      .bridge-dual-btn { grid-template-columns: 1fr; }
     }
 
-    .bridge-opt {
-      background: var(--bg);
+    /* PRICING & LOSS-AVERSION GRID */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .packages-grid { grid-template-columns: 1fr; }
+    }
+
+    .package-card {
+      background: var(--card);
       border: 1px solid var(--border);
-      padding: 18px;
-      border-radius: 4px;
+      padding: 32px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .bridge-opt.featured { border-color: var(--accent); }
-
-    .bridge-btn {
-      display: block;
-      text-align: center;
-      padding: 10px;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-top: 14px;
+    .package-card.highlight {
+      border: 2px solid var(--bg-dark);
+      background: #FFFFFF;
+      position: relative;
     }
 
-    .bridge-btn-primary { background: var(--accent); color: #fff; }
-    .bridge-btn-secondary { background: #21262d; color: #f0f6fc; border: 1px solid var(--border); }
+    .package-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+    }
+
+    .package-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--text);
+      margin: 12px 0 6px;
+    }
+
+    .package-features {
+      list-style: none;
+      margin: 20px 0 28px;
+    }
+
+    .package-features li {
+      font-size: 13.5px;
+      color: var(--text);
+      margin-bottom: 10px;
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.45;
+    }
+
+    .package-features li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--danger);
+      font-weight: bold;
+    }
+
+    /* TABLE STYLES */
+    .dossier-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0 36px;
+      font-size: 14px;
+    }
+
+    .dossier-table th {
+      text-align: left;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 2px solid var(--yellow);
+      padding: 10px 14px;
+    }
+
+    .dossier-table td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .dossier-table tr:hover td {
+      background: rgba(232, 253, 39, 0.08);
+    }
+
+    /* CALLOUT BLACK SECTION */
+    .callout-zone {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      padding: 80px 48px;
+      border-top: 2px solid var(--yellow);
+    }
+
+    .callout-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .callout-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 7vw, 80px);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--yellow);
+      margin-bottom: 20px;
+    }
+
+    .callout-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      max-width: 720px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 30px 0;
-      color: var(--text-muted);
+      padding: 48px 48px;
+      border-top: 2px solid var(--yellow);
+      background: var(--bg);
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 4px 12px 5px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
       font-size: 12px;
-      text-align: center;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      width: 100%;
+      margin-top: 8px;
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <div class="container">
-      <div class="nav-inner">
-        <a href="/" class="brand"><span>[//]</span> ZERO_HYPE</a>
-        <nav>
-          <a href="/bullshit-detector/" class="active">Tools</a>
-          <a href="/de-bloating/" class="nav-debloat">De-Bloating</a>
-          <a href="/manifesto/">Manifesto</a>
-          <a href="/method/">Method</a>
-        </nav>
-      </div>
+<a href="#main" class="skip-link">Skip to main content</a>
+<main id="main-content">
+<div class="yellow-zone">
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/manifesto/" class="">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/" class="">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/" class="">Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/" class="active">Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/" class="nav-btn ">De-Bloating & Audit</a></li>
+      <li><a href="https://zerohypelab.com/about/" class="">About</a></li>
+    </ul>
+  </nav>
+  <div class="hero" id="main">
+    <span class="hero-label">Diagnostic Tool // 03</span>
+    <div class="hero-title">
+      CAMPAIGN FAILURE<br>
+      <span class="word-invert">predictor.</span>
     </div>
-  </header>
+    <p class="hero-sub">Before spending runway on paid acquisition or outbound campaigns, score your structural failure probability across 5 key viability levers.</p>
+  </div>
+</div>
 
-  <div class="container">
-    <section class="tool-header">
-      <div class="tool-badge">[ RISK CALCULATOR: CAMPAIGN AUTOPSY ]</div>
-      <h1>Campaign Failure Predictor</h1>
-      <p class="tool-sub">
-        Input your B2B campaign parameters to calculate mathematical failure probability and identify structural conversion leaks before committing ad spend.
-      </p>
-    </section>
-
-    <div class="form-card">
-      <div class="form-group">
-        <label>Primary Acquisition Channel</label>
-        <select id="channel">
-          <option value="cold_email">Cold Outbound Email (Unwarmed Domain)</option>
-          <option value="linkedin_inmail">LinkedIn InMail / Sponsored Messages</option>
-          <option value="meta_ads">Meta Ads (Broad B2B Lookalikes)</option>
-          <option value="google_search">Google Search Ads (High CPC Generic Keywords)</option>
-          <option value="organic_aeo">Organic Search & AI Engine Optimization</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Offer Type</label>
-        <select id="offer">
-          <option value="demo">"Book a 15-min Demo" (High Friction)</option>
-          <option value="free_trial">"Start 14-Day Free Trial" (No CC)</option>
-          <option value="lead_magnet">Generic PDF Ebook / Whitepaper</option>
-          <option value="guaranteed_roi">Direct Financial ROI / Audit Remediation</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Monthly Planned Budget ($)</label>
-        <input type="number" id="budget" value="2500" placeholder="2500">
-      </div>
-
-      <button class="btn-predict" onclick="predictFailure()">Calculate Failure Odds</button>
+<div class="tool-container">
+  <div class="panel">
+    <div class="panel-header">
+      <span>Campaign Viability Diagnostic</span>
+      <span>10 Questions</span>
     </div>
 
-    <!-- Results Area -->
-    <div id="results-area">
-      <div class="score-card">
-        <div class="score-row">
-          <div class="score-circle" id="score-val">74%</div>
-          <div>
-            <h3 style="color: var(--text-bright); font-size: 18px;" id="verdict-title">High Probability of Capital Burn</h3>
-            <p style="color: var(--text-muted); font-size: 13px;" id="verdict-sub">Campaign architecture shows severe misattribution and high CAC risk.</p>
-          </div>
-        </div>
+    <div style="margin-bottom:18px;">
+      <label style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text);display:block;margin-bottom:6px;">1. How specific is your ICP definition?</label>
+      <select id="q1" style="width:100%;padding:12px;font-family:'DM Mono',monospace;border:1px solid var(--border);background:#FAFAFA;">
+        <option value="30">Vague (e.g. Any B2B SaaS founder or CMO)</option>
+        <option value="15">Moderate (Specific industry, but any company size)</option>
+        <option value="0">Precise (Named titles with verified budget and trigger event)</option>
+      </select>
+    </div>
 
-        <ul class="analysis-list" id="findings-list">
-          <!-- Populated by JS -->
-        </ul>
+    <div style="margin-bottom:18px;">
+      <label style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text);display:block;margin-bottom:6px;">2. What is the friction level of your primary CTA?</label>
+      <select id="q2" style="width:100%;padding:12px;font-family:'DM Mono',monospace;border:1px solid var(--border);background:#FAFAFA;">
+        <option value="35">High friction (Book a 30-min discovery call or demo)</option>
+        <option value="15">Medium friction (Free trial with credit card required)</option>
+        <option value="0">Low friction (Instant free tool, no signup / async audit)</option>
+      </select>
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <label style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text);display:block;margin-bottom:6px;">3. Do you have verified quantitative proof for your claim?</label>
+      <select id="q3" style="width:100%;padding:12px;font-family:'DM Mono',monospace;border:1px solid var(--border);background:#FAFAFA;">
+        <option value="30">No (Generic claims like 10x faster or revolutionary)</option>
+        <option value="15">Anecdotal (Testimonials without verifiable metrics)</option>
+        <option value="0">Hard proof (Public benchmarks, tear-downs, or money-back guarantee)</option>
+      </select>
+    </div>
+
+    <button class="btn-submit" id="analyze-btn" onclick="runPrediction()">Calculate Failure Risk</button>
+
+    <div class="result-box" id="result-box">
+      <div class="panel-header">
+        <span>Risk Assessment</span>
+        <span id="risk-level">HIGH RISK</span>
       </div>
+      <div class="score-display" id="score-val">75%</div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:16px;" id="verdict-text">High probability of burning ad spend with near-zero conversion.</p>
 
-      <!-- Injected Conversion Bridge -->
-      <div class="conversion-bridge">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-          <div class="bridge-tag">[!] REMEDIATION PROTOCOL ACTIVE</div>
-          <div style="font-size: 12px; color: var(--text-muted);">Turnaround: 48 Hours Guaranteed</div>
-        </div>
-
-        <h3 style="font-size: 19px; color: var(--text-bright); margin-bottom: 8px; font-weight: 800;">
-          Eliminate Infrastructure & Acquisition Bleed in 48 Hours.
-        </h3>
-        <p style="font-size: 13px; color: var(--text); margin-bottom: 16px;">
-          Preventing campaign failure is half the battle. Inefficient micro-SaaS backends and LLM token bloat cost thousands every quarter in wasted margin. Choose your remedy:
-        </p>
-
-        <div class="bridge-grid">
-          <div class="bridge-opt">
-            <div>
-              <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Self-Serve Toolkit</div>
-              <div style="font-size: 15px; font-weight: 700; color: var(--text-bright); margin: 4px 0;">Micro-SaaS De-Bloating Playbook</div>
-              <div style="font-size: 20px; font-weight: 800; color: var(--text-bright); margin-bottom: 10px;">$297</div>
-              <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">
-                Self-serve caching blueprints, token guards, database query indexers, and acquisition funnel pruning templates.
-              </div>
-            </div>
-            <a href="/de-bloating/" class="bridge-btn bridge-btn-secondary">Get Toolkit ($297)</a>
-          </div>
-
-          <div class="bridge-opt featured">
-            <div>
-              <div style="font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase;">Done-For-You 48h Service</div>
-              <div style="font-size: 15px; font-weight: 700; color: var(--text-bright); margin: 4px 0;">48h Codebase Audit & Direct PR</div>
-              <div style="font-size: 20px; font-weight: 800; color: var(--accent); margin-bottom: 10px;">$1,497</div>
-              <div style="font-size: 12px; color: var(--text-muted); line-height: 1.5;">
-                Full line-by-line financial audit + ready-to-merge Pull Request in 48h. Guaranteed $3,000/yr savings.
-              </div>
-            </div>
-            <a href="/de-bloating/" class="bridge-btn bridge-btn-primary">Book 48h Audit ($1,497)</a>
-          </div>
+      <!-- DYNAMIC CONVERSION BRIDGE -->
+      <div class="conversion-bridge-banner">
+        <div class="bridge-tag">[!] REMEDIATION PROTOCOL (48-HOUR TURNAROUND)</div>
+        <div class="bridge-title">FIX THE BACKEND DRAIN WHILE FIXING YOUR CAMPAIGNS</div>
+        <div class="bridge-desc">Do not let marketing conversions bleed into serverless overcharges and un-cached LLM tokens. Prune your infrastructure and API stack.</div>
+        <div class="bridge-dual-btn">
+          <a href="/de-bloating/" class="bridge-cta">De-Bloating Toolkit ($297) →</a>
+          <a href="/de-bloating/" class="bridge-cta-dark">48h Codebase Audit ($1,497) →</a>
         </div>
       </div>
     </div>
   </div>
 
-  <footer>
-    <div class="container">
-      &copy; 2026 ZERO_HYPE. No fluff. Brutalist performance modeling.
+  <div>
+    <div class="sidebar-card">
+      <h3>Micro-SaaS De-Bloating</h3>
+      <p>Stop paying unnecessary cloud bills while acquiring new users. Optimize your database, caching, and token usage in 48h.</p>
+      <a href="/de-bloating/" class="bridge-cta">View De-Bloating Packages ($297 / $1,497) →</a>
     </div>
-  </footer>
 
-  <script>
-    function predictFailure() {
-      const channel = document.getElementById('channel').value;
-      const offer = document.getElementById('offer').value;
-      const budget = parseFloat(document.getElementById('budget').value) || 2000;
+    <div class="sidebar-card">
+      <h3>Campaign Autopsy</h3>
+      <p>Have an expert inspect your actual creatives, targeting matrix, and landing page architecture.</p>
+      <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text);font-weight:700;">$99 flat, delivered in 48 hours.</p>
+      <a href="/campaign-autopsy/" class="bridge-cta-dark">Get Campaign Autopsy ($99) →</a>
+    </div>
+  </div>
+</div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <span class="footer-wordmark">Zero Hype</span>
+    <ul class="footer-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/">Cold Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/">Campaign Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/">De-Bloating & Audit ($297 / $1,497)</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X @zerohype_co</a></li>
+      <li><a href="https://zerohypelab.com/about/">About</a></li>
+      <li>Contact: zerohype@proton.me</li>
+    </ul>
+    <p class="footer-tagline">No fluff. No hype. Just what works. · Updated August 2026</p>
+    <p class="footer-tagline">Zero Hype is an independent anonymous research and diagnostic lab. No cookies. No trackers. Contact: zerohype@proton.me</p>
+  </div>
+</footer>
+<script>
+function runPrediction() {
+  const v1 = parseInt(document.getElementById('q1').value);
+  const v2 = parseInt(document.getElementById('q2').value);
+  const v3 = parseInt(document.getElementById('q3').value);
+  const total = v1 + v2 + v3 + 10;
 
-      let risk = 50;
-      let reasons = [];
+  const resBox = document.getElementById('result-box');
+  const scoreVal = document.getElementById('score-val');
+  const risk = document.getElementById('risk-level');
+  const verdict = document.getElementById('verdict-text');
 
-      if (channel === 'cold_email') {
-        risk += 25;
-        reasons.push('Cold outreach without strict domain authentication and warm-up cycles faces 60%+ spam filter rates.');
-      } else if (channel === 'meta_ads') {
-        risk += 20;
-        reasons.push('Broad Meta lookalikes for niche B2B software typically result in low intent clicks and high churn.');
-      } else if (channel === 'google_search') {
-        risk += 15;
-        reasons.push('Generic search keywords burn budget fast on agency clicks and competitor monitoring.');
-      }
+  resBox.style.display = 'block';
+  scoreVal.textContent = Math.min(95, total) + '% RISK';
 
-      if (offer === 'demo') {
-        risk += 15;
-        reasons.push('"Book a 15-min call" has high calendar friction. Conversion rates average under 1.2% for cold traffic.');
-      } else if (offer === 'lead_magnet') {
-        risk += 10;
-        reasons.push('Generic ebooks attract students and researchers, not commercial decision-makers.');
-      } else if (offer === 'guaranteed_roi') {
-        risk -= 25;
-        reasons.push('Risk-reversal and financial ROI guarantees lower buyer hesitation drastically.');
-      }
-
-      risk = Math.max(12, Math.min(94, risk));
-
-      const list = document.getElementById('findings-list');
-      list.innerHTML = '';
-
-      document.getElementById('score-val').innerText = risk + '%';
-      
-      if (risk >= 60) {
-        document.getElementById('score-val').style.borderColor = 'var(--accent)';
-        document.getElementById('score-val').style.color = 'var(--accent)';
-        document.getElementById('verdict-title').innerText = 'High Capital Burn Risk';
-        document.getElementById('verdict-sub').innerText = `Estimated $${Math.round(budget * (risk/100))} of monthly spend will be lost without structural changes.`;
-      } else {
-        document.getElementById('score-val').style.borderColor = 'var(--green)';
-        document.getElementById('score-val').style.color = 'var(--green)';
-        document.getElementById('verdict-title').innerText = 'Moderate / Controlled Risk';
-        document.getElementById('verdict-sub').innerText = 'Architecture has sound foundational elements. Focus on backend efficiency and margin retention.';
-      }
-
-      reasons.forEach(r => {
-        const li = document.createElement('li');
-        li.innerHTML = `<strong style="color: var(--accent);">[Risk Factor]</strong> ${r}`;
-        list.appendChild(li);
-      });
-
-      document.getElementById('results-area').style.display = 'block';
-      document.getElementById('results-area').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
-</body>
-</html>
+  if (total >= 60) {
+    scoreVal.style.color = 'var(--danger)';
+    risk.textContent = 'CRITICAL RISK';
+    verdict.textContent = 'High probability of burning ad spend with near-zero conversion. Lower CTA friction and verify proof points before launch.';
+  } else if (total >= 35) {
+    scoreVal.style.color = '#D97706';
+    risk.textContent = 'MODERATE RISK';
+    verdict.textContent = 'Campaign has solid elements but high friction in conversion steps. Tighten ICP targeting.';
+  } else {
+    scoreVal.style.color = 'var(--success)';
+    risk.textContent = 'LOW RISK';
+    verdict.textContent = 'Viable campaign structure with low friction and verifiable value proposition.';
+  }
+}
+</script>
+</body></html>

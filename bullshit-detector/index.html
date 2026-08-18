@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B2B Bullshit Detector | Zero Hype</title>
+  <title>B2B Bullshit Detector | Forensic Copy Score | Zero Hype</title>
   <meta name="description" content="Paste your B2B copy. Get a forensic 0-100 Bullshit Score and a breakdown of every corporate buzzword.">
   <meta name="author" content="Zero Hype">
   <link rel="canonical" href="https://zerohypelab.com/bullshit-detector/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Google Fonts fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -48,7 +49,6 @@
       overflow-x: hidden;
     }
 
-    /* TOP BAR & NAV */
     .yellow-zone {
       background: var(--yellow);
     }
@@ -71,8 +71,9 @@
 
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 28px;
       list-style: none;
+      align-items: center;
     }
 
     .nav-links a {
@@ -82,13 +83,23 @@
       text-transform: uppercase;
       color: var(--text);
       text-decoration: none;
-      opacity: 0.55;
+      opacity: 0.65;
       transition: opacity 0.2s;
     }
 
-    .nav-links a:hover { opacity: 1; }
+    .nav-links a:hover, .nav-links a.active { opacity: 1; font-weight: 700; }
 
-    /* TOOL HERO */
+    .nav-btn {
+      background: var(--bg-dark);
+      color: var(--yellow) !important;
+      padding: 6px 14px;
+      opacity: 1 !important;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      border-radius: 2px;
+    }
+
     .hero {
       padding: 60px 48px 50px;
       max-width: 1280px;
@@ -107,8 +118,8 @@
 
     .hero-title {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(54px, 10vw, 110px);
-      line-height: 0.9;
+      font-size: clamp(52px, 8.5vw, 100px);
+      line-height: 0.92;
       letter-spacing: 0.02em;
       color: var(--text);
       margin-bottom: 20px;
@@ -126,12 +137,11 @@
 
     .hero-sub {
       font-size: 17px;
-      color: rgba(17,17,17,0.7);
-      max-width: 680px;
+      color: rgba(17,17,17,0.75);
+      max-width: 760px;
       line-height: 1.6;
     }
 
-    /* MAIN CONTENT CONTAINER */
     .tool-container {
       max-width: 1280px;
       margin: 0 auto;
@@ -167,9 +177,8 @@
       justify-content: space-between;
     }
 
-    textarea {
+    textarea, input[type="text"] {
       width: 100%;
-      min-height: 200px;
       background: #FAFAFA;
       border: 1px solid var(--border);
       padding: 16px;
@@ -178,10 +187,11 @@
       color: var(--text);
       outline: none;
       line-height: 1.5;
-      resize: vertical;
     }
 
-    textarea:focus {
+    textarea { min-height: 180px; resize: vertical; }
+
+    textarea:focus, input[type="text"]:focus {
       background: #FFFFFF;
       border-color: var(--bg-dark);
     }
@@ -209,7 +219,6 @@
       color: #FFFFFF;
     }
 
-    /* RESULT AREA */
     .result-box {
       display: none;
       margin-top: 30px;
@@ -235,11 +244,11 @@
       margin: 4px 4px 4px 0;
     }
 
-    /* SIDEBAR INFO */
     .sidebar-card {
       background: var(--card);
       border: 1px solid var(--border);
       padding: 32px;
+      margin-bottom: 24px;
     }
 
     .sidebar-card h3 {
@@ -253,7 +262,7 @@
       font-size: 14px;
       color: var(--muted);
       line-height: 1.65;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .bridge-cta {
@@ -271,14 +280,203 @@
       transition: opacity 0.2s;
     }
 
-    .bridge-cta:hover {
-      opacity: 0.85;
+    .bridge-cta:hover { opacity: 0.85; }
+
+    .bridge-cta-dark {
+      background: var(--bg-dark);
+      color: var(--yellow);
+      display: block;
+      padding: 16px 20px;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: background 0.2s;
     }
 
-    /* FOOTER */
-    footer {
-      padding: 36px 48px;
+    .bridge-cta-dark:hover { background: #222; }
+
+    .conversion-bridge-banner {
+      margin-top: 24px;
+      padding: 24px;
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--danger);
+    }
+
+    .bridge-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--danger);
+      margin-bottom: 8px;
+    }
+
+    .bridge-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.1;
+    }
+
+    .bridge-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .bridge-dual-btn {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .bridge-dual-btn { grid-template-columns: 1fr; }
+    }
+
+    /* PRICING & LOSS-AVERSION GRID */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .packages-grid { grid-template-columns: 1fr; }
+    }
+
+    .package-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .package-card.highlight {
+      border: 2px solid var(--bg-dark);
+      background: #FFFFFF;
+      position: relative;
+    }
+
+    .package-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+    }
+
+    .package-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--text);
+      margin: 12px 0 6px;
+    }
+
+    .package-features {
+      list-style: none;
+      margin: 20px 0 28px;
+    }
+
+    .package-features li {
+      font-size: 13.5px;
+      color: var(--text);
+      margin-bottom: 10px;
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.45;
+    }
+
+    .package-features li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--danger);
+      font-weight: bold;
+    }
+
+    /* TABLE STYLES */
+    .dossier-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0 36px;
+      font-size: 14px;
+    }
+
+    .dossier-table th {
+      text-align: left;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 2px solid var(--yellow);
+      padding: 10px 14px;
+    }
+
+    .dossier-table td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .dossier-table tr:hover td {
+      background: rgba(232, 253, 39, 0.08);
+    }
+
+    /* CALLOUT BLACK SECTION */
+    .callout-zone {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      padding: 80px 48px;
       border-top: 2px solid var(--yellow);
+    }
+
+    .callout-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .callout-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 7vw, 80px);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--yellow);
+      margin-bottom: 20px;
+    }
+
+    .callout-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      max-width: 720px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    footer {
+      padding: 48px 48px;
+      border-top: 2px solid var(--yellow);
+      background: var(--bg);
     }
 
     .footer-inner {
@@ -319,31 +517,27 @@
     .footer-tagline {
       font-family: 'DM Mono', monospace;
       font-size: 11px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       color: var(--muted);
       width: 100%;
+      margin-top: 8px;
     }
   </style>
 </head>
-<body>
 <a href="#main" class="skip-link">Skip to main content</a>
-
 <main id="main-content">
-<!-- NAV + HERO in Yellow Zone -->
 <div class="yellow-zone">
   <nav>
     <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
     <ul class="nav-links">
-      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
-      <li><a href="https://zerohypelab.com/method/">Method</a></li>
-      <li><a href="https://zerohypelab.com/scores/">Wall of Scores</a></li>
-      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
-      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
-      <li><a href="https://x.com/zerohype_co">X</a></li>
-      <li><a href="/about/">About</a></li>
+      <li><a href="https://zerohypelab.com/manifesto/" class="">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/" class="active">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/" class="">Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/" class="">Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/" class="nav-btn ">De-Bloating & Audit</a></li>
+      <li><a href="https://zerohypelab.com/about/" class="">About</a></li>
     </ul>
   </nav>
-
   <div class="hero" id="main">
     <span class="hero-label">Diagnostic Tool // 01</span>
     <div class="hero-title">
@@ -354,7 +548,6 @@
   </div>
 </div>
 
-<!-- TOOL INTERFACE -->
 <div class="tool-container">
   <div class="panel">
     <div class="panel-header">
@@ -376,39 +569,55 @@
         <div style="font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;color:var(--text);margin-bottom:8px;">Flagged Buzzwords:</div>
         <div id="buzzword-list"></div>
       </div>
+
+      <!-- DYNAMIC CONVERSION BRIDGE -->
+      <div class="conversion-bridge-banner">
+        <div class="bridge-tag">[!] REMEDIATION PROTOCOL (48-HOUR TURNAROUND)</div>
+        <div class="bridge-title">MARKETING COPY IS ONLY LEAK #1. WHAT IS YOUR BACKEND BURNING?</div>
+        <div class="bridge-desc">78% of Micro-SaaS apps bleed $300 to $2,400 every month on un-cached LLM tokens, over-provisioned instances, and unindexed database queries. Stop the silent drain today.</div>
+        <div class="bridge-dual-btn">
+          <a href="/de-bloating/" class="bridge-cta">De-Bloating Toolkit ($297) →</a>
+          <a href="/de-bloating/" class="bridge-cta-dark">48h Codebase Audit ($1,497) →</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="sidebar-card">
-    <h3>Marketing Autopsy</h3>
-    <p>Need a human diagnostic of your entire funnel instead of automated keyword matching? We review your full outreach sequence and messaging architecture in 48-72 hours.</p>
-    <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text);font-weight:700;">$49 flat, guaranteed refund if not actionable.</p>
-    <a href="/marketing-autopsy/" class="bridge-cta">Get Marketing Autopsy ($49) →</a>
+  <div>
+    <div class="sidebar-card">
+      <h3>Cloud & API De-Bloating</h3>
+      <p>Stop paying unnecessary cloud bills while acquiring new users. Optimize your database, caching, and token usage in 48h.</p>
+      <a href="/de-bloating/" class="bridge-cta">Explore De-Bloating Toolkit ($297 / $1,497) →</a>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Marketing Autopsy</h3>
+      <p>Need a human diagnostic of your entire funnel instead of automated keyword matching? We review your full outreach sequence and messaging architecture in 48-72 hours.</p>
+      <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text);font-weight:700;">$49 flat, guaranteed refund if not actionable.</p>
+      <a href="/marketing-autopsy/" class="bridge-cta-dark">Get Marketing Autopsy ($49) →</a>
+    </div>
   </div>
 </div>
 </main>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <span class="footer-wordmark">Zero Hype</span>
     <ul class="footer-links">
       <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
-      <li><a href="https://zerohypelab.com/method/">Method</a></li>
-      <li><a href="https://zerohypelab.com/scores/">Wall of Scores</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/">Cold Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/">Campaign Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/">De-Bloating & Audit ($297 / $1,497)</a></li>
       <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
       <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
-      <li><a href="https://x.com/zerohype_co">X, @zerohype_co</a></li>
-      <li><a href="https://www.youtube.com/@zerohype_co" target="_blank" rel="noopener">YouTube</a></li>
-      <li><a href="https://www.producthunt.com/products/campaign-failure-predictor" target="_blank" rel="noopener">Product Hunt</a></li>
-      <li><a href="https://zerohypelab.com/monthly-autopsy/">Monthly Autopsy, $300/mo</a></li>
-      <li>Contact: <a href="mailto:zerohype@proton.me">zerohype@proton.me</a></li>
+      <li><a href="https://x.com/zerohype_co">X @zerohype_co</a></li>
+      <li><a href="https://zerohypelab.com/about/">About</a></li>
+      <li>Contact: zerohype@proton.me</li>
     </ul>
-    <p class="footer-tagline">No fluff. No hype. Just what works. · <time datetime="2026-08-01">Updated August 2026</time></p>
-    <p class="footer-tagline">Published by <a href="/about/" style="color:var(--muted);">Zero Hype</a>, Contact: <a href="mailto:zerohype@proton.me">zerohype@proton.me</a></p>
+    <p class="footer-tagline">No fluff. No hype. Just what works. · Updated August 2026</p>
+    <p class="footer-tagline">Zero Hype is an independent anonymous research and diagnostic lab. No cookies. No trackers. Contact: zerohype@proton.me</p>
   </div>
 </footer>
-
 <script>
 const BUZZWORDS = [
   'synergy', 'paradigm', 'next-gen', 'disrupt', 'game-changing', 'premier', 'seamless',
@@ -422,9 +631,7 @@ function runAnalysis() {
 
   let matches = [];
   BUZZWORDS.forEach(word => {
-    if (text.includes(word)) {
-      matches.push(word);
-    }
+    if (text.includes(word)) matches.push(word);
   });
 
   const score = Math.min(100, Math.max(10, matches.length * 20));
@@ -456,5 +663,4 @@ function runAnalysis() {
     : '<span style="font-size:13px;color:var(--muted);">None detected.</span>';
 }
 </script>
-</body>
-</html>
+</body></html>

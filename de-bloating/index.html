@@ -3,938 +3,667 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketing & Feature De-Bloating Diagnostic | Zero Hype</title>
-  <meta name="description" content="Audit marketing bloat, feature creep, and corporate jargon. Get a surgical cut plan to restore clarity, velocity, and revenue.">
+  <title>Cloud & AI API De-Bloating Toolkit and 48-Hour Codebase Audit | Zero Hype</title>
+  <meta name="description" content="Stop funding cloud vendor bonuses with your net profit. Cut $300-$2,400/month in bloated LLM tokens, over-provisioned compute, and unindexed database queries.">
   <meta name="author" content="Zero Hype">
-  
-  <!-- Fonts -->
+  <link rel="canonical" href="https://zerohypelab.com/de-bloating/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Google Fonts fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --bg-cream: #F5F2EC;
-      --bg-card: #FFFFFF;
-      --bg-dark: #111111;
-      --bg-darker: #0A0A0A;
-      --yellow: #E8FD27;
-      --yellow-hover: #D8ED18;
-      --text-main: #111111;
-      --text-muted: #666666;
-      --text-light: #F5F2EC;
-      --text-light-muted: #999999;
-      --border-dark: #111111;
-      --border-subtle: #E0DBD2;
-      --danger-red: #E05252;
-      --danger-bg: #FDF0F0;
-      --success-green: #228F62;
-      --font-display: 'Bebas Neue', Impact, sans-serif;
-      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-mono: 'DM Mono', monospace;
-      --font-serif: 'Playfair Display', Georgia, serif;
+      --yellow:   #E8FD27;
+      --bg:       #F5F2EC;
+      --bg-dark:  #111111;
+      --text:     #111111;
+      --muted:    #666666;
+      --border:   rgba(17,17,17,0.12);
+      --card:     #FFFFFF;
+      --danger:   #E05252;
+      --success:  #228F62;
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    @font-face { font-family: 'Bebas Neue'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/BebasNeue-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/PlayfairDisplay-700-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/PlayfairDisplay-400-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/Inter-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/DMMono-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/DMMono-500-normal.woff2') format('woff2'); }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    .skip-link { position: absolute; top: -100%; left: 1rem; background: #111; color: var(--yellow); padding: 0.5rem 1rem; font-size: 0.875rem; font-family: 'DM Mono', monospace; border-radius: 0 0 4px 4px; z-index: 9999; text-decoration: none; }
+    .skip-link:focus { top: 0; }
 
     body {
-      background-color: var(--bg-cream);
-      color: var(--text-main);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    /* Top Utility Bar */
-    .top-bar {
-      background-color: var(--bg-dark);
-      color: var(--yellow);
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 6px 1.5rem;
+    .yellow-zone {
+      background: var(--yellow);
+    }
+
+    nav {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
+      padding: 18px 48px;
+      border-bottom: 1px solid rgba(17,17,17,0.15);
     }
 
-    /* Navigation */
-    header.site-header {
-      background-color: var(--bg-cream);
-      border-bottom: 2px solid var(--border-dark);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0.85rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand-logo {
-      display: inline-flex;
-      align-items: center;
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
       text-decoration: none;
     }
 
-    .brand-badge {
-      background-color: var(--yellow);
-      color: var(--bg-dark);
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.15em;
-      padding: 4px 10px;
-      border: 2px solid var(--border-dark);
-      box-shadow: 2px 2px 0 var(--border-dark);
-      text-transform: uppercase;
-    }
-
-    nav.nav-links {
+    .nav-links {
       display: flex;
-      gap: 1.25rem;
+      gap: 28px;
+      list-style: none;
       align-items: center;
     }
 
-    nav.nav-links a {
-      color: var(--text-main);
-      text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    .nav-links a {
+      font-size: 11px;
       font-weight: 500;
-      transition: color 0.15s;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.65;
+      transition: opacity 0.2s;
     }
 
-    nav.nav-links a:hover {
-      color: var(--danger-red);
+    .nav-links a:hover, .nav-links a.active { opacity: 1; font-weight: 700; }
+
+    .nav-btn {
+      background: var(--bg-dark);
+      color: var(--yellow) !important;
+      padding: 6px 14px;
+      opacity: 1 !important;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      border-radius: 2px;
     }
 
-    nav.nav-links a.active {
+    .hero {
+      padding: 60px 48px 50px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.65);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 8.5vw, 100px);
+      line-height: 0.92;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero-title .word-invert {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
       background: var(--bg-dark);
       color: var(--yellow);
-      padding: 4px 8px;
+      display: inline;
+      padding: 2px 14px 6px 6px;
     }
 
-    /* Hero Section */
-    .hero {
-      max-width: 1200px;
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(17,17,17,0.75);
+      max-width: 760px;
+      line-height: 1.6;
+    }
+
+    .tool-container {
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 4rem 1.5rem 2.5rem;
-      border-bottom: 2px solid var(--border-dark);
-    }
-
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-main);
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .eyebrow-tag {
-      background: var(--yellow);
-      padding: 2px 8px;
-      border: 1px solid var(--border-dark);
-      font-weight: 700;
-    }
-
-    h1.hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(3.2rem, 8vw, 6.5rem);
-      line-height: 0.95;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-lead {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 780px;
-      line-height: 1.5;
-      margin-bottom: 2rem;
-    }
-
-    .hero-lead strong {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    /* Layout Grid */
-    .main-layout {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
+      padding: 60px 48px;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 2.5rem;
-      align-items: start;
+      gap: 40px;
     }
 
     @media (max-width: 960px) {
-      .main-layout {
-        grid-template-columns: 1fr;
-      }
+      .tool-container { grid-template-columns: 1fr; padding: 40px 24px; }
+      nav { padding: 18px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 44px 24px 36px; }
     }
 
-    /* Tool Interactive Panel */
-    .tool-box {
-      background: var(--bg-card);
-      border: 2px solid var(--border-dark);
-      box-shadow: 6px 6px 0 var(--border-dark);
-      padding: 2rem;
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 36px;
     }
 
-    .box-header {
-      border-bottom: 2px solid var(--border-dark);
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
+    .panel-header {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 12px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
     }
 
-    .box-title {
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .status-badge {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      padding: 2px 8px;
-      background: #EEEEEE;
-      border: 1px solid #999;
-      text-transform: uppercase;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    label.field-label {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .field-hint {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-
-    select, input[type="text"], textarea {
+    textarea, input[type="text"] {
       width: 100%;
       background: #FAFAFA;
-      border: 2px solid var(--border-dark);
-      padding: 0.85rem 1rem;
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      color: var(--text-main);
-      border-radius: 0;
+      border: 1px solid var(--border);
+      padding: 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      color: var(--text);
       outline: none;
-      transition: border-color 0.15s, background 0.15s;
+      line-height: 1.5;
     }
 
-    select:focus, input[type="text"]:focus, textarea:focus {
+    textarea { min-height: 180px; resize: vertical; }
+
+    textarea:focus, input[type="text"]:focus {
       background: #FFFFFF;
-      border-color: var(--text-main);
-      box-shadow: 3px 3px 0 var(--yellow);
+      border-color: var(--bg-dark);
     }
 
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-      line-height: 1.4;
+    .btn-submit {
+      display: inline-block;
+      width: 100%;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 32px;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      margin-top: 20px;
+      transition: background 0.2s, color 0.2s;
     }
 
-    .checkbox-grid {
+    .btn-submit:hover {
+      background: #222222;
+      color: #FFFFFF;
+    }
+
+    .result-box {
+      display: none;
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .score-display {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--danger);
+      margin-bottom: 8px;
+    }
+
+    .buzzword-tag {
+      display: inline-block;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      padding: 3px 8px;
+      margin: 4px 4px 4px 0;
+    }
+
+    .sidebar-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    .sidebar-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+
+    .sidebar-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .bridge-cta {
+      background: var(--yellow);
+      color: var(--text);
+      display: block;
+      padding: 16px 20px;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: opacity 0.2s;
+    }
+
+    .bridge-cta:hover { opacity: 0.85; }
+
+    .bridge-cta-dark {
+      background: var(--bg-dark);
+      color: var(--yellow);
+      display: block;
+      padding: 16px 20px;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .bridge-cta-dark:hover { background: #222; }
+
+    .conversion-bridge-banner {
+      margin-top: 24px;
+      padding: 24px;
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--danger);
+    }
+
+    .bridge-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--danger);
+      margin-bottom: 8px;
+    }
+
+    .bridge-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.1;
+    }
+
+    .bridge-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .bridge-dual-btn {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
+      gap: 12px;
     }
 
     @media (max-width: 600px) {
-      .checkbox-grid {
-        grid-template-columns: 1fr;
-      }
+      .bridge-dual-btn { grid-template-columns: 1fr; }
     }
 
-    .checkbox-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      background: #F8F8F8;
-      border: 1px solid var(--border-subtle);
-      padding: 0.65rem 0.85rem;
-      font-size: 0.85rem;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .checkbox-item:hover {
-      background: #FFFFFF;
-      border-color: var(--border-dark);
-    }
-
-    .checkbox-item input[type="checkbox"] {
-      margin-top: 3px;
-      accent-color: var(--border-dark);
-      width: 16px;
-      height: 16px;
-    }
-
-    /* Buttons */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      width: 100%;
-      background-color: var(--yellow);
-      color: var(--bg-dark);
-      font-family: var(--font-mono);
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 1.1rem 1.5rem;
-      border: 2px solid var(--border-dark);
-      box-shadow: 4px 4px 0 var(--border-dark);
-      cursor: pointer;
-      transition: all 0.15s ease;
-      margin-top: 1rem;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--yellow-hover);
-      transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0 var(--border-dark);
-    }
-
-    .btn-primary:active {
-      transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0 var(--border-dark);
-    }
-
-    /* Results Section */
-    .results-panel {
-      display: none;
-      margin-top: 2rem;
-      border-top: 2px dashed var(--border-dark);
-      padding-top: 2rem;
-    }
-
-    .score-card {
-      background: var(--bg-dark);
-      color: var(--text-light);
-      padding: 1.75rem;
-      border: 2px solid var(--border-dark);
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-
-    .score-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid #333;
-      padding-bottom: 0.75rem;
-    }
-
-    .score-label {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--yellow);
-    }
-
-    .score-num {
-      font-family: var(--font-display);
-      font-size: 3.8rem;
-      line-height: 1;
-      color: var(--yellow);
-    }
-
-    .verdict-tag {
-      display: inline-block;
-      padding: 4px 10px;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      background: var(--danger-red);
-      color: #FFF;
-      margin-bottom: 1rem;
-    }
-
-    .action-cuts {
-      background: var(--bg-card);
-      border: 2px solid var(--border-dark);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .cut-item {
-      padding: 0.85rem 0;
-      border-bottom: 1px solid var(--border-subtle);
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-    }
-
-    .cut-item:last-child {
-      border-bottom: none;
-    }
-
-    .cut-badge {
-      background: var(--danger-red);
-      color: #FFF;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 2px 6px;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .cut-text {
-      font-size: 0.92rem;
-      line-height: 1.4;
-    }
-
-    /* Sidebar Content */
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .info-card {
-      background: var(--bg-card);
-      border: 2px solid var(--border-dark);
-      box-shadow: 4px 4px 0 var(--border-dark);
-      padding: 1.5rem;
-    }
-
-    .info-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-    }
-
-    .info-card p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-      line-height: 1.5;
-    }
-
-    .stat-strip {
-      background: var(--yellow);
-      border: 2px solid var(--border-dark);
-      padding: 1rem;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-    }
-
-    .stat-strip strong {
-      display: block;
-      font-size: 1.3rem;
-      font-family: var(--font-display);
-      letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
-    }
-
-    /* Dark CTA Block */
-    .dark-cta {
-      background: var(--bg-dark);
-      color: var(--text-light);
-      border: 2px solid var(--border-dark);
-      box-shadow: 6px 6px 0 var(--yellow);
-      padding: 2rem;
-    }
-
-    .dark-cta h3 {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--yellow);
-      margin-bottom: 0.5rem;
-    }
-
-    .dark-cta p {
-      color: #BBB;
-      font-size: 0.92rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-
-    .btn-cta {
-      display: inline-block;
-      text-align: center;
-      width: 100%;
-      background: var(--yellow);
-      color: var(--bg-dark);
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 1rem;
-      text-decoration: none;
-      border: 2px solid var(--yellow);
-      transition: all 0.15s;
-    }
-
-    .btn-cta:hover {
-      background: transparent;
-      color: var(--yellow);
-    }
-
-    /* Footer */
-    footer.site-footer {
-      background: var(--bg-cream);
-      border-top: 2px solid var(--yellow);
-      padding: 3.5rem 1.5rem 2.5rem;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
+    /* PRICING & LOSS-AVERSION GRID */
+    .packages-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
     }
 
     @media (max-width: 768px) {
-      .footer-container {
-        grid-template-columns: 1fr;
-      }
+      .packages-grid { grid-template-columns: 1fr; }
     }
 
-    .footer-brand p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 360px;
-      margin-top: 1rem;
-    }
-
-    .footer-col h4 {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 1rem;
-      color: var(--text-main);
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col li {
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-col a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.88rem;
-      transition: color 0.15s;
-    }
-
-    .footer-col a:hover {
-      color: var(--text-main);
-      text-decoration: underline;
-    }
-
-    .footer-bottom {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-subtle);
+    .package-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 32px;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-muted);
     }
 
-    @media (max-width: 600px) {
-      .footer-bottom {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-      }
+    .package-card.highlight {
+      border: 2px solid var(--bg-dark);
+      background: #FFFFFF;
+      position: relative;
+    }
+
+    .package-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+    }
+
+    .package-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--text);
+      margin: 12px 0 6px;
+    }
+
+    .package-features {
+      list-style: none;
+      margin: 20px 0 28px;
+    }
+
+    .package-features li {
+      font-size: 13.5px;
+      color: var(--text);
+      margin-bottom: 10px;
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.45;
+    }
+
+    .package-features li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--danger);
+      font-weight: bold;
+    }
+
+    /* TABLE STYLES */
+    .dossier-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0 36px;
+      font-size: 14px;
+    }
+
+    .dossier-table th {
+      text-align: left;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 2px solid var(--yellow);
+      padding: 10px 14px;
+    }
+
+    .dossier-table td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .dossier-table tr:hover td {
+      background: rgba(232, 253, 39, 0.08);
+    }
+
+    /* CALLOUT BLACK SECTION */
+    .callout-zone {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      padding: 80px 48px;
+      border-top: 2px solid var(--yellow);
+    }
+
+    .callout-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .callout-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 7vw, 80px);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--yellow);
+      margin-bottom: 20px;
+    }
+
+    .callout-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      max-width: 720px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    footer {
+      padding: 48px 48px;
+      border-top: 2px solid var(--yellow);
+      background: var(--bg);
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 4px 12px 5px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      width: 100%;
+      margin-top: 8px;
     }
   </style>
 </head>
-<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<main id="main-content">
+<div class="yellow-zone">
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/manifesto/" class="">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/" class="">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/" class="">Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/" class="">Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/" class="nav-btn active">De-Bloating & Audit</a></li>
+      <li><a href="https://zerohypelab.com/about/" class="">About</a></li>
+    </ul>
+  </nav>
+  <div class="hero" id="main">
+    <span class="hero-label">Loss-Aversion Remediation Protocol // 04</span>
+    <div class="hero-title">
+      CLOUD & AI API<br>
+      <span class="word-invert">de-bloating.</span>
+    </div>
+    <p class="hero-sub">78% of Micro-SaaS apps bleed $300 to $2,400 every month on un-cached LLM tokens, oversized serverless tiers, and unindexed queries. Stop the silent cash drain today.</p>
+  </div>
+</div>
 
-  <!-- Top Utility Bar -->
-  <div class="top-bar">
-    <div>// ZERO HYPE DIAGNOSTIC LABS</div>
-    <div>DIRECT B2B DIAGNOSTICS &bull; ZERO THEATER</div>
+<div class="tool-container">
+  <div>
+    <div class="panel">
+      <div class="panel-header">
+        <span>[01] THE LOSS-AVERSION DOSSIER</span>
+        <span>WHERE YOUR CASH LEAKS</span>
+      </div>
+      <p style="font-size:15px;color:var(--text);margin-bottom:16px;">Most technical founders focus on customer acquisition while silently giving away 20% to 45% of gross margins to cloud providers and model APIs:</p>
+      
+      <table class="dossier-table">
+        <thead>
+          <tr>
+            <th>SILENT LEAK</th>
+            <th>ROOT CAUSE</th>
+            <th>ESTIMATED MONTHLY WASTE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Un-cached LLM Calls</strong></td>
+            <td>Resending repetitive system prompts on every user action</td>
+            <td style="color:var(--danger);font-weight:700;">$400 - $1,600 / mo</td>
+          </tr>
+          <tr>
+            <td><strong>Unindexed DB Scans</strong></td>
+            <td>Sequential full table scans on Supabase / PostgreSQL</td>
+            <td style="color:var(--danger);font-weight:700;">$200 - $800 / mo</td>
+          </tr>
+          <tr>
+            <td><strong>Serverless Over-Provision</strong></td>
+            <td>Paying 10x compute markup for idle edge instances</td>
+            <td style="color:var(--danger);font-weight:700;">$150 - $600 / mo</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="packages-grid">
+        <!-- Toolkit $297 -->
+        <div class="package-card">
+          <div>
+            <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;">Self-Serve Toolkit</span>
+            <div class="package-price">$297</div>
+            <p style="font-size:13px;color:var(--muted);">Production-ready blueprints, middleware code templates, and caching playbooks.</p>
+            <ul class="package-features">
+              <li>Semantic caching blueprint for Redis & Cloudflare KV</li>
+              <li>Token Guard middleware (Prompt context trimmer)</li>
+              <li>PostgreSQL / SQLite Index Optimizer scripts</li>
+              <li>Serverless to edge pruning checklist</li>
+            </ul>
+          </div>
+          <a href="https://zerohypelab.com/de-bloating/#order" class="bridge-cta">Get De-Bloating Toolkit ($297) →</a>
+        </div>
+
+        <!-- 48h Audit $1,497 -->
+        <div class="package-card highlight">
+          <div class="package-badge">100% Money-Back Guarantee</div>
+          <div>
+            <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;">Done-For-You (48 Hours)</span>
+            <div class="package-price">$1,497</div>
+            <p style="font-size:13px;color:var(--muted);">We audit your repository, isolate every cash leak, and open a direct Pull Request in 48 hours.</p>
+            <ul class="package-features">
+              <li>Line-by-line financial codebase audit</li>
+              <li>Detailed Financial Loss Report ($ wasted/month)</li>
+              <li>Direct Pull Request ready to merge in your repo</li>
+              <li><strong>Guarantee: Minimum $3,000/yr savings identified or 100% refund</strong></li>
+            </ul>
+          </div>
+          <a href="mailto:zerohype@proton.me?subject=Codebase%20Audit%20Application" class="bridge-cta-dark">Apply for 48h Codebase Audit ($1,497) →</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Site Header -->
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="/" class="brand-logo">
-        <span class="brand-badge">ZEROHYPE</span>
-      </a>
-      <nav class="nav-links">
-        <a href="/manifesto/">Manifesto</a>
-        <a href="/bullshit-detector/">Bullshit Detector</a>
-        <a href="/de-bloating/" class="active">De-Bloating</a>
-        <a href="/scores/">Scores</a>
-        <a href="/guides/">Guides</a>
-        <a href="https://zerohypelab.substack.com" target="_blank" rel="noopener">Substack</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="eyebrow">
-      <span class="eyebrow-tag">// TOOL 04</span>
-      <span>DIAGNOSTIC ENGINE</span>
-    </div>
-    <h1 class="hero-title">Marketing & Feature<br>De-Bloating Diagnostic</h1>
-    <p class="hero-lead">
-      Bloat kills B2B positioning faster than competitor execution. Run your positioning, feature list, or campaign copy through the engine to uncover parasitic complexity and receive an actionable cut plan.
-    </p>
-  </section>
-
-  <!-- Main Layout -->
-  <main class="main-layout">
-    
-    <!-- Interactive Diagnostic Form -->
-    <div class="tool-box">
-      <div class="box-header">
-        <span class="box-title">// INPUT POSITIONING & COPY</span>
-        <span class="status-badge" id="charCount">0 CHARACTERS</span>
-      </div>
-
-      <form id="debloatForm" onsubmit="event.preventDefault(); runDebloatAudit();">
-        <div class="form-group">
-          <label class="field-label" for="categorySelect">1. Target Architecture Type</label>
-          <select id="categorySelect">
-            <option value="landing">B2B SaaS Landing Page & Hero Copy</option>
-            <option value="outreach">Cold Email Sequence & Outbound Pitch</option>
-            <option value="product">Product Feature Catalog & Pricing Tier</option>
-            <option value="campaign">Go-To-Market Campaign & Ad Positioning</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label class="field-label" for="rawText">2. Paste Your Copy, Headline, or Feature List</label>
-          <p class="field-hint">Paste your headline, sub-headline, elevator pitch, or list of planned campaign touchpoints.</p>
-          <textarea id="rawText" placeholder="e.g. We provide an AI-powered, all-in-one seamless platform that empowers enterprise revenue teams to unlock scalable omnichannel synergy and accelerate full-funnel velocity..."></textarea>
-        </div>
-
-        <div class="form-group">
-          <label class="field-label">3. Check Known Operational Red Flags</label>
-          <div class="checkbox-grid">
-            <label class="checkbox-item">
-              <input type="checkbox" id="flag1" value="multi_audience">
-              <span>Speaks to 3+ buyer roles at once</span>
-            </label>
-            <label class="checkbox-item">
-              <input type="checkbox" id="flag2" value="ai_badge">
-              <span>Uses "AI-powered" as main value prop</span>
-            </label>
-            <label class="checkbox-item">
-              <input type="checkbox" id="flag3" value="feature_count">
-              <span>Lists >7 features on hero surface</span>
-            </label>
-            <label class="checkbox-item">
-              <input type="checkbox" id="flag4" value="no_pricing">
-              <span>No concrete price or time-to-value metric</span>
-            </label>
-            <label class="checkbox-item">
-              <input type="checkbox" id="flag5" value="long_sequence">
-              <span>Outreach sequence exceeds 5 steps</span>
-            </label>
-            <label class="checkbox-item">
-              <input type="checkbox" id="flag6" value="buzzwords">
-              <span>Contains >3 enterprise buzzwords</span>
-            </label>
-          </div>
-        </div>
-
-        <button type="submit" class="btn-primary">
-          <span>Run De-Bloat Diagnostic</span>
-          <span>&rarr;</span>
-        </button>
-      </form>
-
-      <!-- Results Display Panel -->
-      <div class="results-panel" id="resultsPanel">
-        <div class="score-card">
-          <div class="score-header">
-            <span class="score-label">// PARASITIC BLOAT INDEX</span>
-            <div class="score-num" id="bloatScore">78<span style="font-size: 2rem; color: #888;">/100</span></div>
-          </div>
-          <div class="verdict-tag" id="verdictLabel">CRITICAL BLOAT HAZARD</div>
-          <p id="verdictSummary" style="font-size: 0.95rem; color: #DDD; line-height: 1.45;">
-            Your copy contains severe rhetorical baggage. The core offer is suffocated by generic enterprise filler and vague multi-persona claims.
-          </p>
-        </div>
-
-        <div class="action-cuts">
-          <h4 style="font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
-            // MANDATORY CUT PLAN (WHAT TO STRIP TODAY)
-          </h4>
-          <div id="cutItemsList">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <div style="background: #F5F2EC; border: 2px solid var(--border-dark); padding: 1.25rem;">
-          <div style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
-            // THE DE-BLOATED REWRITE SPEC
-          </div>
-          <p id="rewriteSuggestion" style="font-family: var(--font-mono); font-size: 0.88rem; color: #111; line-height: 1.5; background: #FFF; border: 1px solid var(--border-subtle); padding: 1rem;">
-            <!-- Suggested rewrite -->
-          </p>
-        </div>
-      </div>
+  <div>
+    <div class="sidebar-card">
+      <h3>Other Diagnostic Tools</h3>
+      <p>Prune the fluff from your copy and test campaign viability before spending runway on marketing:</p>
+      <ul style="list-style:none;margin-bottom:20px;">
+        <li style="margin-bottom:10px;"><a href="/bullshit-detector/" style="color:var(--text);font-weight:600;text-decoration:none;">• B2B Bullshit Detector (Free) →</a></li>
+        <li style="margin-bottom:10px;"><a href="/cold-email-roaster/" style="color:var(--text);font-weight:600;text-decoration:none;">• Cold Email Roaster (Free) →</a></li>
+        <li style="margin-bottom:10px;"><a href="/campaign-failure-predictor/" style="color:var(--text);font-weight:600;text-decoration:none;">• Campaign Failure Predictor (Free) →</a></li>
+      </ul>
     </div>
 
-    <!-- Sidebar / Context -->
-    <aside class="sidebar">
-      
-      <div class="stat-strip">
-        <strong>THE BLOAT PENALTY</strong>
-        74% of B2B buyers abandon vendor pages when the core value proposition is obscured by more than two sentences of positioning jargon.
-      </div>
-
-      <div class="info-card">
-        <h3>// THE THREE LAWS OF DE-BLOATING</h3>
-        <p><strong>1. Single Metric Ownership:</strong> If your copy promises to improve three disconnected metrics, you improve none of them.</p>
-        <p><strong>2. The Word-Per-Minute Rule:</strong> The best outreach ever written was two sentences. Nobody ever closed an enterprise deal with a 250-word cold essay.</p>
-        <p><strong>3. Feature Culling:</strong> Every secondary feature listed on your hero section reduces conversion by dividing reader attention.</p>
-      </div>
-
-      <div class="dark-cta">
-        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--yellow); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem;">// HIGH-CONVICTION OFFER</div>
-        <h3>MARKETING AUTOPSY</h3>
-        <p>
-          Need a human diagnostic of your entire positioning, outbound funnel, and page architecture? We tear down your go-to-market engine and deliver a forensic report within 48 hours.
-        </p>
-        <div style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--yellow); font-weight: 700; margin-bottom: 1rem;">
-          $49 &bull; FULL REFUND GUARANTEE
-        </div>
-        <a href="https://buy.stripe.com/8x214p2Ni33i4QRg5UaR208" class="btn-cta" target="_blank" rel="noopener">Get Forensic Autopsy &rarr;</a>
-      </div>
-
-      <div class="info-card" style="background: transparent;">
-        <h4 style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">// RELATED DIAGNOSTIC TOOLS</h4>
-        <ul style="list-style: none; font-family: var(--font-mono); font-size: 0.82rem; line-height: 2;">
-          <li>&bull; <a href="/bullshit-detector/" style="color: var(--text-main); text-decoration: underline;">B2B Bullshit Detector</a></li>
-          <li>&bull; <a href="/scores/" style="color: var(--text-main); text-decoration: underline;">The Wall of Scores</a></li>
-          <li>&bull; <a href="/guides/" style="color: var(--text-main); text-decoration: underline;">DACH Outbound Playbooks</a></li>
-        </ul>
-      </div>
-
-    </aside>
-
-  </main>
-
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <span class="brand-badge">ZEROHYPE</span>
-        <p>
-          Diagnostic marketing intelligence for B2B founders, operators, and cynical growth practitioners. No corporate fluff. No agency retainers.
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h4>// DIAGNOSTICS</h4>
-        <ul>
-          <li><a href="/bullshit-detector/">Bullshit Detector</a></li>
-          <li><a href="/de-bloating/">De-Bloating Engine</a></li>
-          <li><a href="/scores/">Wall of Scores</a></li>
-          <li><a href="/guides/">Cold Outreach Guides</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>// DIRECT ACCESS</h4>
-        <ul>
-          <li><a href="/manifesto/">The Manifesto</a></li>
-          <li><a href="/about/">About Zero Hype</a></li>
-          <li><a href="https://zerohypelab.substack.com" target="_blank" rel="noopener">Substack Dispatch</a></li>
-          <li><a href="mailto:zerohype@proton.me">zerohype@proton.me</a></li>
-        </ul>
-      </div>
+    <div class="sidebar-card" style="background:#FAFAFA;">
+      <h3>Zero Meeting Policy</h3>
+      <p>We do not do discovery calls, demo meetings, or slide presentations. Send the repo read-only link, we return the Pull Request in 48 hours.</p>
+      <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text);font-weight:700;">Direct contact: zerohype@proton.me</p>
     </div>
+  </div>
+</div>
 
-    <div class="footer-bottom">
-      <div>&copy; 2026 ZERO HYPE. ALL RIGHTS RESERVED.</div>
-      <div>NO EM-DASHES &bull; NO JARGON &bull; NO FLUFF</div>
-    </div>
-  </footer>
-
-  <!-- Diagnostic Script -->
-  <script>
-    const rawTextArea = document.getElementById('rawText');
-    const charCount = document.getElementById('charCount');
-
-    rawTextArea.addEventListener('input', () => {
-      const len = rawTextArea.value.length;
-      charCount.textContent = `${len} CHARACTERS`;
-    });
-
-    const BUZZWORDS = [
-      'synergy', 'seamless', 'seamlessly', 'leverage', 'empower', 'empowers',
-      'unlock', 'accelerate', 'all-in-one', 'end-to-end', 'cutting-edge',
-      'revolutionary', 'paradigm', 'holistic', 'disrupt', 'robust',
-      'game-changing', 'next-gen', 'next generation', 'omnichannel',
-      'scalable', 'hyper-growth', 'supercharge', 'frictionless'
-    ];
-
-    function runDebloatAudit() {
-      const text = rawTextArea.value.trim();
-      const resultsPanel = document.getElementById('resultsPanel');
-      const bloatScoreElem = document.getElementById('bloatScore');
-      const verdictLabelElem = document.getElementById('verdictLabel');
-      const verdictSummaryElem = document.getElementById('verdictSummary');
-      const cutItemsList = document.getElementById('cutItemsList');
-      const rewriteSuggestion = document.getElementById('rewriteSuggestion');
-
-      if (!text) {
-        alert('Please paste or write copy into the diagnostic box first.');
-        return;
-      }
-
-      let penalty = 15;
-      const foundBuzzwords = [];
-      const lower = text.toLowerCase();
-
-      BUZZWORDS.forEach(word => {
-        if (lower.includes(word)) {
-          penalty += 12;
-          foundBuzzwords.push(word);
-        }
-      });
-
-      const checkboxes = document.querySelectorAll('.checkbox-grid input[type="checkbox"]:checked');
-      penalty += checkboxes.length * 10;
-
-      const words = text.split(/\s+/).length;
-      if (words > 40) penalty += 15;
-      if (words > 80) penalty += 20;
-
-      const finalScore = Math.min(Math.max(penalty, 18), 98);
-
-      bloatScoreElem.innerHTML = `${finalScore}<span style="font-size: 2rem; color: #888;">/100</span>`;
-
-      if (finalScore >= 70) {
-        verdictLabelElem.textContent = 'CRITICAL BLOAT HAZARD';
-        verdictLabelElem.style.background = 'var(--danger-red)';
-        verdictSummaryElem.textContent = 'Severe positioning bloat detected. The value proposition is buried under generic corporate terminology and unfocused claims.';
-      } else if (finalScore >= 45) {
-        verdictLabelElem.textContent = 'MODERATE FRICTION BLOAT';
-        verdictLabelElem.style.background = '#C8920A';
-        verdictSummaryElem.textContent = 'Noticeable drag detected. While a clear point exists, unnecessary syllables and vague adjectives dilute reader urgency.';
-      } else {
-        verdictLabelElem.textContent = 'LEAN & SURGICAL';
-        verdictLabelElem.style.background = 'var(--success-green)';
-        verdictSummaryElem.textContent = 'Relatively clean copy. Minimal fluff detected. The proposition is direct and preserves buyer attention.';
-      }
-
-      let cutsHtml = '';
-      if (foundBuzzwords.length > 0) {
-        cutsHtml += `
-          <div class="cut-item">
-            <span class="cut-badge">ELIMINATE</span>
-            <div class="cut-text"><strong>Parasitic Buzzwords:</strong> Remove [${foundBuzzwords.map(w => `"${w}"`).join(', ')}]. Replace with the concrete outcome you produce.</div>
-          </div>
-        `;
-      }
-
-      if (words > 35) {
-        cutsHtml += `
-          <div class="cut-item">
-            <span class="cut-badge">TRIM 50%</span>
-            <div class="cut-text"><strong>Word Count Fatigue:</strong> The input has ${words} words. Cut length down to under 25 words to force clarity.</div>
-          </div>
-        `;
-      }
-
-      if (checkboxes.length > 0) {
-        cutsHtml += `
-          <div class="cut-item">
-            <span class="cut-badge">ARCHITECTURAL FIX</span>
-            <div class="cut-text"><strong>Structural Hazards:</strong> You flagged ${checkboxes.length} structural red flags. Pick one ICP role and one verifiable metric.</div>
-          </div>
-        `;
-      }
-
-      if (!cutsHtml) {
-        cutsHtml = `
-          <div class="cut-item">
-            <span class="cut-badge" style="background: var(--success-green);">OPTIMAL</span>
-            <div class="cut-text">No immediate structural cuts required. Keep testing reply latency against live B2B prospects.</div>
-          </div>
-        `;
-      }
-
-      cutItemsList.innerHTML = cutsHtml;
-
-      // Generate de-bloated sample
-      let cleanSample = text;
-      foundBuzzwords.forEach(w => {
-        const regex = new RegExp('\\b' + w + '\\b', 'gi');
-        cleanSample = cleanSample.replace(regex, '[CUT]');
-      });
-      rewriteSuggestion.textContent = `DE-BLOATED DRAFT: "${cleanSample.replace(/\[CUT\]\s*/g, '').slice(0, 160)}..." -> State the direct problem in 1 sentence, the solution in 1 sentence, and the proof in 1 sentence.`;
-
-      resultsPanel.style.display = 'block';
-      resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  </script>
-</body>
-</html>
+<div class="callout-zone">
+  <div class="callout-inner">
+    <div class="callout-title">STOPPING CASH LEAKS IN 48 HOURS.</div>
+    <p class="callout-desc">You pay us for exactly one outcome: cutting wasteful cloud and API overhead while preserving 100% of application performance. No meetings. No retainers. Just verified savings.</p>
+    <a href="mailto:zerohype@proton.me?subject=Codebase%20Audit%20Application" class="bridge-cta" style="display:inline-block;padding:18px 36px;font-size:13px;">Apply For 48h Audit ($1,497) →</a>
+  </div>
+</div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <span class="footer-wordmark">Zero Hype</span>
+    <ul class="footer-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/">Cold Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/">Campaign Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/">De-Bloating & Audit ($297 / $1,497)</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X @zerohype_co</a></li>
+      <li><a href="https://zerohypelab.com/about/">About</a></li>
+      <li>Contact: zerohype@proton.me</li>
+    </ul>
+    <p class="footer-tagline">No fluff. No hype. Just what works. · Updated August 2026</p>
+    <p class="footer-tagline">Zero Hype is an independent anonymous research and diagnostic lab. No cookies. No trackers. Contact: zerohype@proton.me</p>
+  </div>
+</footer></body></html>

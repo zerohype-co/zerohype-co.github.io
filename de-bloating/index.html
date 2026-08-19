@@ -522,7 +522,639 @@
       width: 100%;
       margin-top: 8px;
     }
-  </style>
+  
+
+    :root {
+      --bg-dark: #0D0D0D;
+      --bg-card: #141414;
+      --bg-card-elevated: #1B1B1B;
+      --accent-yellow: #E8FD27;
+      --accent-yellow-dim: rgba(232, 253, 39, 0.12);
+      --accent-yellow-border: rgba(232, 253, 39, 0.28);
+      --text-light: #F5F2EC;
+      --text-muted: rgba(245, 242, 236, 0.62);
+      --text-dim: rgba(245, 242, 236, 0.38);
+      --border-subtle: rgba(245, 242, 236, 0.10);
+      --border-strong: rgba(245, 242, 236, 0.20);
+      --diff-del-bg: rgba(255, 68, 68, 0.12);
+      --diff-del-text: #FF6B6B;
+      --diff-del-border: rgba(255, 68, 68, 0.25);
+      --diff-add-bg: rgba(232, 253, 39, 0.10);
+      --diff-add-text: #E8FD27;
+      --diff-add-border: rgba(232, 253, 39, 0.30);
+      --font-heading: 'Bebas Neue', sans-serif;
+      --font-serif: 'Playfair Display', serif;
+      --font-mono: 'DM Mono', monospace;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    /* TYPOGRAPHY UTILITIES */
+    .section-tag {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-yellow);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .section-tag::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--accent-yellow);
+      box-shadow: 0 0 10px var(--accent-yellow);
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 0.96;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+
+    .word-invert {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent-yellow);
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 0 4px;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    /* BASELINE TELEMETRY BAR */
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-yellow);
+    }
+
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+    }
+
+    .profile-target {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .profile-target-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .profile-target-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .profile-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .stack-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background: rgba(245, 242, 236, 0.05);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 10px;
+      color: var(--text-muted);
+    }
+
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .telemetry-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .telemetry-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .telemetry-val {
+      font-family: var(--font-mono);
+      font-size: 1.45rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .telemetry-val.highlight-burn {
+      color: #FF6B6B;
+    }
+
+    .telemetry-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* LEAK ACCORDION / CARDS */
+    .leaks-container {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .leak-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      transition: border-color 0.2s ease;
+    }
+
+    .leak-card:hover {
+      border-color: var(--border-strong);
+    }
+
+    .leak-card-header {
+      padding: 24px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .leak-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .leak-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FF6B6B;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .leak-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FF6B6B;
+    }
+
+    .leak-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-light);
+    }
+
+    .leak-delta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-dark);
+      padding: 8px 16px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .delta-before {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: #FF6B6B;
+      text-decoration: line-through;
+    }
+
+    .delta-arrow {
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    .delta-after {
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--accent-yellow);
+    }
+
+    .leak-body {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .leak-body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .leak-explanation {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .leak-paragraph {
+      font-size: 0.92rem;
+      line-height: 1.62;
+      color: var(--text-muted);
+    }
+
+    .leak-paragraph strong {
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    .leak-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 6px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .meta-box {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-subtle);
+      padding: 10px 14px;
+    }
+
+    .meta-box-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 2px;
+    }
+
+    .meta-box-value {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--accent-yellow);
+      font-weight: 500;
+    }
+
+    /* CODE DIFF BOX */
+    .diff-container {
+      background: #090909;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      overflow: hidden;
+    }
+
+    .diff-header {
+      background: #111111;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .diff-file {
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+    }
+
+    .diff-badge {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-yellow);
+    }
+
+    .diff-content {
+      padding: 12px 0;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    .diff-line {
+      display: flex;
+      padding: 2px 14px;
+      white-space: pre;
+    }
+
+    .diff-line.del {
+      background: var(--diff-del-bg);
+      color: var(--diff-del-text);
+    }
+
+    .diff-line.add {
+      background: var(--diff-add-bg);
+      color: var(--diff-add-text);
+    }
+
+    .diff-line.context {
+      color: rgba(245, 242, 236, 0.45);
+    }
+
+    .diff-gutter {
+      width: 22px;
+      user-select: none;
+      flex-shrink: 0;
+      color: var(--text-dim);
+    }
+
+    .diff-line.del .diff-gutter {
+      color: var(--diff-del-text);
+    }
+
+    .diff-line.add .diff-gutter {
+      color: var(--diff-add-text);
+    }
+
+    .diff-code {
+      flex: 1;
+      overflow-x: visible;
+    }
+
+    /* FINANCIAL RECKONING TABLE */
+    .financial-section {
+      margin-bottom: 48px;
+    }
+
+    .table-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      overflow-x: auto;
+    }
+
+    .financial-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    .financial-table th {
+      background: #0E0E0E;
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border-strong);
+      font-weight: 500;
+    }
+
+    .financial-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-light);
+    }
+
+    .financial-table tr:hover td {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .financial-table .row-del {
+      color: #FF6B6B;
+    }
+
+    .financial-table .row-add {
+      color: var(--accent-yellow);
+      font-weight: 500;
+    }
+
+    .financial-table tfoot td {
+      background: #0E0E0E;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border-top: 2px solid var(--accent-yellow-border);
+      border-bottom: none;
+      padding: 18px 20px;
+    }
+
+    .financial-table tfoot .total-saved {
+      color: var(--accent-yellow);
+      font-size: 1.1rem;
+    }
+
+    /* ROI STATS ROW */
+    .roi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .roi-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .roi-box-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .roi-box-val {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      line-height: 1;
+      color: var(--accent-yellow);
+      margin: 4px 0;
+    }
+
+    .roi-box-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* CTA CARD */
+    .cta-card {
+      background: linear-gradient(180deg, #181818 0%, #0E0E0E 100%);
+      border: 1px solid var(--accent-yellow-border);
+      box-shadow: 0 0 35px rgba(232, 253, 39, 0.05);
+      padding: 36px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      position: relative;
+    }
+
+    .cta-content {
+      max-width: 620px;
+    }
+
+    .cta-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      line-height: 1;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+
+    .cta-sub {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .cta-guarantee {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-yellow);
+      background: var(--accent-yellow-dim);
+      padding: 4px 12px;
+      border: 1px solid var(--accent-yellow-border);
+    }
+
+    .cta-action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .btn-audit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--accent-yellow);
+      color: #000000;
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      letter-spacing: 0.06em;
+      padding: 16px 32px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--accent-yellow);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-audit:hover {
+      background: #F5FF66;
+      box-shadow: 0 0 24px rgba(232, 253, 39, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .cta-terms {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 24px 14px;
+      }
+
+      .cta-card {
+        padding: 24px;
+      }
+
+      .btn-audit {
+        width: 100%;
+      }
+
+      .cta-action {
+        width: 100%;
+      }
+    }
+  
+</style>
 </head>
 <a href="#main" class="skip-link">Skip to main content</a>
 <main id="main-content">
@@ -648,7 +1280,326 @@
   </div>
 </div>
 </main>
-<footer>
+<section class="autopsy-section" id="autopsy" aria-labelledby="autopsy-heading">
+      
+      <!-- HEADER -->
+      <div class="section-tag">[02] PUBLIC AUTOPSY: REAL-WORLD TEARDOWN</div>
+      <h2 class="section-title" id="autopsy-heading">
+        ANATOMY OF A <span class="word-invert">Silent Bleed</span>.
+      </h2>
+      <p class="section-lead">
+        Real telemetry from an audited B2B AI Micro-SaaS. 2,500 active users, 180,000 monthly queries.
+        The founders assumed infrastructure bills were a fixed cost of scale. In reality, $1,260 per month was vanishing into un-indexed vector scans, redundant prompt re-transmissions, and un-batched edge executions.
+      </p>
+
+      <!-- CLIENT TELEMETRY PROFILE -->
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-target">
+            <span class="profile-target-label">Target Architecture Profile</span>
+            <span class="profile-target-title">AI Knowledge Extraction &amp; Document Workspace</span>
+          </div>
+          <div class="profile-stack">
+            <span class="stack-pill">Next.js 14 App Router</span>
+            <span class="stack-pill">OpenAI GPT-4o + Embeddings</span>
+            <span class="stack-pill">Supabase pgvector</span>
+            <span class="stack-pill">Vercel Serverless</span>
+          </div>
+        </div>
+
+        <div class="telemetry-grid">
+          <div class="telemetry-stat">
+            <span class="telemetry-label">Active Users</span>
+            <span class="telemetry-val">2,500 MAU</span>
+            <span class="telemetry-sub">Enterprise &amp; Pro tiers</span>
+          </div>
+          <div class="telemetry-stat">
+            <span class="telemetry-label">Monthly Queries</span>
+            <span class="telemetry-val">180,000</span>
+            <span class="telemetry-sub">RAG + chat sessions</span>
+          </div>
+          <div class="telemetry-stat">
+            <span class="telemetry-label">Pre-Audit Burn</span>
+            <span class="telemetry-val highlight-burn">$1,640 / mo</span>
+            <span class="telemetry-sub">$19,680 / yr projected run-rate</span>
+          </div>
+          <div class="telemetry-stat">
+            <span class="telemetry-label">Post-Audit Burn</span>
+            <span class="telemetry-val" style="color: var(--accent-yellow);">$380 / mo</span>
+            <span class="telemetry-sub">$4,560 / yr audited run-rate</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEAK DEEP DIVES -->
+      <div class="leaks-container">
+
+        <!-- LEAK 01 -->
+        <article class="leak-card">
+          <header class="leak-card-header">
+            <div class="leak-title-block">
+              <span class="leak-badge">Critical Waste Vector 01</span>
+              <h3 class="leak-name">Token Re-Hydration &amp; Repeated System Prompts</h3>
+            </div>
+            <div class="leak-delta">
+              <span class="delta-before">$1,120/mo</span>
+              <span class="delta-arrow">-&gt;</span>
+              <span class="delta-after">$290/mo</span>
+            </div>
+          </header>
+
+          <div class="leak-body">
+            <div class="leak-explanation">
+              <p class="leak-paragraph">
+                <strong>The Vulnerability:</strong> A massive 1,800-token system prompt packed with static JSON schemas, extraction guidelines, and product documentation was prepended synchronously on every single turn of conversation. For a 6-turn session, 10,800 identical tokens were re-billed to OpenAI without any cache participation.
+              </p>
+              <p class="leak-paragraph">
+                <strong>The Engineering Fix:</strong> We restructured prompt layouts to take advantage of exact prefix caching, isolated transient runtime context to the final tail block, and deployed a Cloudflare KV cache for idempotent document extraction hashes.
+              </p>
+              <div class="leak-meta-grid">
+                <div class="meta-box">
+                  <div class="meta-box-label">Prompt Token Cut</div>
+                  <div class="meta-box-value">78.4% Volume Drop</div>
+                </div>
+                <div class="meta-box">
+                  <div class="meta-box-label">Monthly Direct Savings</div>
+                  <div class="meta-box-value">+$830.00 / mo</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="diff-container">
+              <div class="diff-header">
+                <span class="diff-file">api/chat/route.ts</span>
+                <span class="diff-badge">Prefix Cache Optimization</span>
+              </div>
+              <div class="diff-content">
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">// Naive: Reposting full 1,800 token system schema per turn</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">const messages = [</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">  { role: 'system', content: STATIC_GUIDELINES + DYNAMIC_DOC },</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">  ...conversationHistory</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">];</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">// Optimized: Strict prefix alignment &amp; KV response memoization</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">const cachedRes = await kv.get(queryHash);</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">if (cachedRes) return Response.json(cachedRes);</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">const messages = [</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">  { role: 'system', content: PREFIX_ALIGNED_SYSTEM_PROMPT },</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">  ...trimHistory(conversationHistory, 3),</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">  { role: 'user', content: formatUserPayload(query, context) }</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">];</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- LEAK 02 -->
+        <article class="leak-card">
+          <header class="leak-card-header">
+            <div class="leak-title-block">
+              <span class="leak-badge">Critical Waste Vector 02</span>
+              <h3 class="leak-name">Sequential Vector Scans &amp; Missing HNSW Index</h3>
+            </div>
+            <div class="leak-delta">
+              <span class="delta-before">$340/mo</span>
+              <span class="delta-arrow">-&gt;</span>
+              <span class="delta-after">$25/mo</span>
+            </div>
+          </header>
+
+          <div class="leak-body">
+            <div class="leak-explanation">
+              <p class="leak-paragraph">
+                <strong>The Vulnerability:</strong> The database held 250,000 document vector embeddings (1536-dim). The retrieval query performed an un-indexed exact cosine scan (<code style="font-family: var(--font-mono); color: var(--accent-yellow);">&lt;=&gt;</code>) on every search. Postgres was forced to compute 250,000 dot products per query on un-indexed disk, maxing CPU and forcing an urgent upgrade to Supabase Pro Large.
+              </p>
+              <p class="leak-paragraph">
+                <strong>The Engineering Fix:</strong> We executed an in-place HNSW index build with tuned construction parameters, dropping vector search latencies from 840ms down to 9ms and cutting instance RAM footprint by 88%.
+              </p>
+              <div class="leak-meta-grid">
+                <div class="meta-box">
+                  <div class="meta-box-label">Query Latency</div>
+                  <div class="meta-box-value">840ms -&gt; 9ms</div>
+                </div>
+                <div class="meta-box">
+                  <div class="meta-box-label">Instance Downgrade</div>
+                  <div class="meta-box-value">Pro Large -&gt; Std Base</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="diff-container">
+              <div class="diff-header">
+                <span class="diff-file">supabase/migrations/2024_vector_index.sql</span>
+                <span class="diff-badge">Postgres pgvector Patch</span>
+              </div>
+              <div class="diff-content">
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">-- Flawed: Sequential table scan across 250k rows</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">SELECT id, content FROM document_chunks</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">ORDER BY embedding &lt;=&gt; query_embedding</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">LIMIT 5; -- 840ms latency, 100% CPU lockup</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">-- Patch: High-performance HNSW vector index</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_chunks_hnsw</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">ON document_chunks USING hnsw (embedding vector_cosine_ops)</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">WITH (m = 16, ef_construction = 64);</span></div>
+                <div class="diff-line context"><span class="diff-gutter"> </span><span class="diff-code">-- Slashed query execution to 9ms; freed 6GB buffer cache</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- LEAK 03 -->
+        <article class="leak-card">
+          <header class="leak-card-header">
+            <div class="leak-title-block">
+              <span class="leak-badge">Critical Waste Vector 03</span>
+              <h3 class="leak-name">Un-Batched Serverless Webhooks &amp; Connection Thrashing</h3>
+            </div>
+            <div class="leak-delta">
+              <span class="delta-before">$180/mo</span>
+              <span class="delta-arrow">-&gt;</span>
+              <span class="delta-after">$65/mo</span>
+            </div>
+          </header>
+
+          <div class="leak-body">
+            <div class="leak-explanation">
+              <p class="leak-paragraph">
+                <strong>The Vulnerability:</strong> Ingestion webhooks and client telemetry pings fired single-event serverless function invocations. At 180k queries and 500k monthly telemetry updates, Vercel function overage charges surged while database connection pools stalled on cold TCP handshakes.
+              </p>
+              <p class="leak-paragraph">
+                <strong>The Engineering Fix:</strong> Introduced a lightweight Cloudflare Worker queue at the edge to buffer up to 100 events or 5 seconds, flushing bulk arrays directly into Postgres via connection-pooled prepared statements.
+              </p>
+              <div class="leak-meta-grid">
+                <div class="meta-box">
+                  <div class="meta-box-label">Invocations Cut</div>
+                  <div class="meta-box-value">94% Volume Reduction</div>
+                </div>
+                <div class="meta-box">
+                  <div class="meta-box-label">Serverless Burn</div>
+                  <div class="meta-box-value">$180/mo -&gt; $65/mo</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="diff-container">
+              <div class="diff-header">
+                <span class="diff-file">workers/telemetry-buffer.ts</span>
+                <span class="diff-badge">Edge Batch Ingestion</span>
+              </div>
+              <div class="diff-content">
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">// 1 isolated invocation + new DB connection per event</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">export async function POST(req: Request) {</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">  const event = await req.json();</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">  await db.telemetry.insert(event);</span></div>
+                <div class="diff-line del"><span class="diff-gutter">-</span><span class="diff-code">}</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">// Micro-batched edge queue: 100 events per DB transaction</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">export async function queue(batch: MessageBatch, env: Env) {</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">  const events = batch.messages.map(m =&gt; m.body);</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">  await env.POOL.query(sql.bulkInsertTelemetry(events));</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">  batch.ackAll();</span></div>
+                <div class="diff-line add"><span class="diff-gutter">+</span><span class="diff-code">}</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- FINANCIAL SUMMARY MATRIX -->
+      <div class="financial-section">
+        <div class="section-tag">AUDITED FINANCIAL LEDGER</div>
+        <div class="table-container">
+          <table class="financial-table">
+            <thead>
+              <tr>
+                <th>Infrastructure Component</th>
+                <th>Pre-Audit Burn</th>
+                <th>Post-Audit Burn</th>
+                <th>Monthly Cashflow Freed</th>
+                <th>Optimization Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OpenAI API (GPT-4o + Embeddings)</td>
+                <td class="row-del">$1,120.00 / mo</td>
+                <td class="row-add">$290.00 / mo</td>
+                <td class="row-add">+$830.00 / mo</td>
+                <td>Prefix caching, prompt isolation, KV response memo</td>
+              </tr>
+              <tr>
+                <td>Supabase (Compute &amp; pgvector)</td>
+                <td class="row-del">$340.00 / mo</td>
+                <td class="row-add">$25.00 / mo</td>
+                <td class="row-add">+$315.00 / mo</td>
+                <td>HNSW vector indexing, RAM footprint reduction</td>
+              </tr>
+              <tr>
+                <td>Vercel (Serverless Functions &amp; Ingestion)</td>
+                <td class="row-del">$180.00 / mo</td>
+                <td class="row-add">$65.00 / mo</td>
+                <td class="row-add">+$115.00 / mo</td>
+                <td>Edge micro-batching buffer, connection pooling</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>TOTAL INFRASTRUCTURE RUN-RATE</td>
+                <td class="row-del">$1,640.00 / mo</td>
+                <td class="row-add">$380.00 / mo</td>
+                <td class="total-saved">+$1,260.00 / mo ($15,120 / yr)</td>
+                <td>Net reduction: 76.8%</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="roi-grid">
+          <div class="roi-box">
+            <span class="roi-box-label">Annual Capital Recaptured</span>
+            <span class="roi-box-val">$15,120</span>
+            <span class="roi-box-desc">Pure bottom-line margin added directly back to runway.</span>
+          </div>
+          <div class="roi-box">
+            <span class="roi-box-label">Audit Fee Investment</span>
+            <span class="roi-box-val">$1,497</span>
+            <span class="roi-box-desc">One-time engagement fee for complete code and infrastructure review.</span>
+          </div>
+          <div class="roi-box">
+            <span class="roi-box-label">Full Audit Payback</span>
+            <span class="roi-box-val">35.6 DAYS</span>
+            <span class="roi-box-desc">The optimization paid for itself in just over 5 weeks.</span>
+          </div>
+          <div class="roi-box">
+            <span class="roi-box-label">Year 1 Net ROI</span>
+            <span class="roi-box-val">910%</span>
+            <span class="roi-box-desc">Return on audit capital within the first 12 operating months.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUDIT CTA CARD -->
+      <div class="cta-card">
+        <div class="cta-content">
+          <h3 class="cta-heading">STOP SUBSIDIZING <span class="word-invert">Architectural Bloat</span>.</h3>
+          <p class="cta-sub">
+            Your infrastructure bill should scale with customer value, not sloppy token prompts and missing database indices. We conduct a forensic audit of your entire repository and cloud footprint in 7 days.
+          </p>
+          <div class="cta-guarantee">
+            GUARANTEE: We find at least $3,000/yr in recoverable waste or your $1,497 audit fee is 100% refunded.
+          </div>
+        </div>
+
+        <div class="cta-action">
+          <a href="#audit-checkout" class="btn-audit">
+            LOCK IN AUDIT SLOT [$1,497] -&gt;
+          </a>
+          <span class="cta-terms">Limited to 3 audits per calendar week. Non-disclosure agreement guaranteed.</span>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
   <div class="footer-inner">
     <span class="footer-wordmark">Zero Hype</span>
     <ul class="footer-links">

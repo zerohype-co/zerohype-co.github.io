@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /guides/*.md
+Allow: /
 
-# AI crawlers — welcome
+# AI crawlers - welcome
 User-agent: GPTBot
 Allow: /
 

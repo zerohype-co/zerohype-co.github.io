@@ -8,3 +8,10 @@ verify_deploy.log
 # Agent config — local only, never deployed (GitHub Pages serves everything committed)
 AGENTS.md
 .opencode/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

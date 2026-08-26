@@ -1,5 +1,6 @@
 # https://zerohypelab.com
 
+- [Zero Hype | B2B Marketing & Cloud Diagnostics](https://zerohypelab.com/)
 - [about.html](https://zerohypelab.com/about.html)
 - [About — Zero Hype](https://zerohypelab.com/about/)
 - [Blog — Zero Hype](https://zerohypelab.com/blog/)
@@ -25,7 +26,6 @@
 - [10 People Who Understand the German B2B Market — Zero Hype](https://zerohypelab.com/german-b2b-experts/)
 - [DACH B2B Cold Outreach Playbook & Scripts (Germany, Austria, Switzerland) | Zero Hype](https://zerohypelab.com/guides/outreach-scripts-dach/)
 - [German B2B Sales Call Scripts & Cold Calling Playbook | Zero Hype](https://zerohypelab.com/guides/sales-call-scripts-germany/)
-- [index.html](https://zerohypelab.com/index.html)
 - [Manifesto — No Fluff. No Hype. Just What Works. · Zero Hype](https://zerohypelab.com/manifesto/)
 - [How We Score. The Whole Method · Zero Hype](https://zerohypelab.com/method/)
 - [og-image-source.html](https://zerohypelab.com/og-image-source.html)

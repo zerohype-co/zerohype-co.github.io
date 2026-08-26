@@ -1,6 +1,5 @@
 # https://zerohypelab.com
 
-- [Zero Hype | B2B Marketing & Cloud Diagnostics](https://zerohypelab.com/)
 - [about.html](https://zerohypelab.com/about.html)
 - [About — Zero Hype](https://zerohypelab.com/about/)
 - [Blog — Zero Hype](https://zerohypelab.com/blog/)

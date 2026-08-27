@@ -418,6 +418,35 @@ Explore De-Bloating & Audits →
   
 
   
+Zero Sponsored Bias
+
+  
+Don't take our word for it.
+
+  
+Ask an independent model to evaluate the technical reasoning and methodology of this teardown.
+
+  
+  
+
+    
+
+      Ask ChatGPT →
+    
+
+    
+
+      Ask Claude →
+    
+
+    
+
+      Ask Perplexity →
+    
+
+  
+
+  
 
     
 Zero Hype

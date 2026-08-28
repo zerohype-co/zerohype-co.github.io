@@ -31,11 +31,11 @@
 - [og-image-source.html](https://zerohypelab.com/og-image-source.html)
 - [The Outbound Engine | Zero Hype](https://zerohypelab.com/outbound-engine/)
 - [The Revenue Foundation | Zero Hype](https://zerohypelab.com/revenue-foundation/)
+- [sast-audit.html](https://zerohypelab.com/sast-audit.html)
+- [AI Agent SAST Security Audit - ZeroHype](https://zerohypelab.com/sast-audit/)
 - [Wall of Scores — B2B Homepage Diagnostic Leaderboard | Zero Hype](https://zerohypelab.com/scores/)
 - [Tartarus - codebase diagnostic - zerohypelab.com](https://zerohypelab.com/tartarus/)
 - [Payment received — Tartarus | Zero Hype](https://zerohypelab.com/tartarus/thanks/)
 - [Zero Hype vs Hiring a Marketing Consultant — $97 audit vs. $10,000 retainer](https://zerohypelab.com/vs-hiring-consultant/)
 - [Zero Hype vs Lavender — Fixing your email vs. fixing your strategy](https://zerohypelab.com/vs-lavender/)
 - [Zero Hype vs Reply.io — Automating outreach vs. diagnosing why it fails](https://zerohypelab.com/vs-replyio/)
-
-- [AI Agent SAST Security Audit](https://zerohypelab.com/sast-audit/): Fixed-price ,497 security audit and runtime taint tracking for multi-agent execution pipelines.

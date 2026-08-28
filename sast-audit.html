@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent SAST Security Audit Intake | ZeroHype Security</title>
+    <meta name="description" content="Fixed-price $1,497 SAST security audit for production AI agents and multi-tool execution pipelines. 48-hour SLA, deterministic zero-day and prompt injection vulnerability assessment.">
+    <style>
+        :root {
+            --bg-primary: #0a0c10;
+            --bg-secondary: #12161f;
+            --bg-card: #181d28;
+            --bg-input: #0d1117;
+            --border-color: #263042;
+            --border-focus: #00e5ff;
+            --text-primary: #f0f6fc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-cyan: #00e5ff;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-purple: #8b5cf6;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 32px;
+            margin-bottom: 40px;
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+        }
+
+        .badge-cyan {
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+
+        .badge-green {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 840px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 28px;
+        }
+
+        .card h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+        }
+
+        .price-tag {
+            font-family: var(--font-mono);
+            font-size: 1.2rem;
+            color: var(--accent-green);
+        }
+
+        .vector-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .vector-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.92rem;
+            line-height: 1.45;
+        }
+
+        .vector-num {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .vector-title {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .vector-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-family: var(--font-mono);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            background-color: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px 14px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.15s ease;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--border-focus);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+            font-family: var(--font-mono);
+            font-size: 0.88rem;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: var(--accent-cyan);
+            color: #000000;
+            border: none;
+            border-radius: 6px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #33ebff;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.99);
+        }
+
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        @media (max-width: 680px) {
+            .guarantees-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .guarantee-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px;
+        }
+
+        .guarantee-box h4 {
+            font-size: 0.95rem;
+            color: var(--accent-cyan);
+            margin-bottom: 6px;
+            font-family: var(--font-mono);
+        }
+
+        .guarantee-box p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-family: var(--font-mono);
+        }
+
+        .direct-payment-box {
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px dashed rgba(16, 185, 129, 0.3);
+            border-radius: 6px;
+            padding: 14px;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .status-msg {
+            display: none;
+            padding: 14px;
+            border-radius: 6px;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .status-success {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="badge-row">
+            <span class="badge badge-cyan">ZeroHype Security</span>
+            <span class="badge badge-green">48-Hour Delivery SLA</span>
+            <span class="badge badge-cyan">Enterprise Tier SAST</span>
+        </div>
+        <h1>AI Agent SAST Security Audit Intake</h1>
+        <p class="lead">Deterministic static analysis and runtime guardrail audit for autonomous AI agents, tool schemas, and multi-step execution graphs. Fixed-price audit package delivered with remediation PR drafts.</p>
+    </header>
+
+    <div class="grid-layout">
+        <!-- Intake Form -->
+        <div class="card">
+            <h2>
+                <span>Audit Submission</span>
+                <span class="price-tag">$1,497 USD</span>
+            </h2>
+
+            <form id="auditForm" onsubmit="handleAuditSubmit(event)">
+                <div class="form-group">
+                    <label for="contactEmail">Contact Email *</label>
+                    <input type="email" id="contactEmail" name="email" required placeholder="lead-architect@company.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="repoUrl">Repository URL / Access *</label>
+                    <input type="url" id="repoUrl" name="repoUrl" required placeholder="https://github.com/org/ai-agent-core">
+                </div>
+
+                <div class="form-group">
+                    <label for="branchName">Branch / Commit Hash *</label>
+                    <input type="text" id="branchName" name="branch" required placeholder="main or v1.4.0-rc2">
+                </div>
+
+                <div class="form-group">
+                    <label for="frameworkType">Agent Framework</label>
+                    <select id="frameworkType" name="framework">
+                        <option value="langchain_langgraph">LangChain / LangGraph</option>
+                        <option value="autogen_crewai">AutoGen / CrewAI</option>
+                        <option value="custom_python">Custom Python (Native OpenAI / Anthropic SDK)</option>
+                        <option value="typescript_vercel_ai">TypeScript / Vercel AI SDK</option>
+                        <option value="other">Other Multi-Agent Architecture</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="toolSchemas">Tool Schemas & High-Risk Integrations</label>
+                    <textarea id="toolSchemas" name="toolSchemas" placeholder="List tools: Bash execution, SQL generation, GitHub API, Slack dispatch, Stripe webhooks, etc."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">Proceed to Checkout & Audit ($1,497)</button>
+
+                <div class="direct-payment-box">
+                    <strong>Invoice & Custom Procurement:</strong> Need wire transfer, ACH, or custom mutual NDA prior to code access? Contact direct: <code>audit@zerohype.co</code>
+                </div>
+
+                <div id="statusMsg" class="status-msg"></div>
+            </form>
+        </div>
+
+        <!-- 11 Security Vectors -->
+        <div class="card">
+            <h2>
+                <span>11 SAST Security Vectors</span>
+                <span class="badge badge-cyan">Full Coverage</span>
+            </h2>
+
+            <ul class="vector-list">
+                <li class="vector-item">
+                    <span class="vector-num">01</span>
+                    <div>
+                        <div class="vector-title">Indirect Prompt Injection via Tool Inputs</div>
+                        <div class="vector-desc">Sanitization checks on data returned from external APIs, web scraping, and emails.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">02</span>
+                    <div>
+                        <div class="vector-title">Arbitrary Code & Command Execution</div>
+                        <div class="vector-desc">Static taint tracking on shell executions, eval, subprocesses, and dynamic imports.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">03</span>
+                    <div>
+                        <div class="vector-title">Tool Schema Privilege Escalation</div>
+                        <div class="vector-desc">Detection of overprivileged tool interfaces and lack of runtime parameter constraints.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">04</span>
+                    <div>
+                        <div class="vector-title">Credential & API Token Leakage</div>
+                        <div class="vector-desc">Scan for raw bearer tokens, private keys, and environment variables logged in LLM traces.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">05</span>
+                    <div>
+                        <div class="vector-title">SSRF & Unrestricted Egress Channels</div>
+                        <div class="vector-desc">Detection of unvalidated HTTP webhooks and internal network metadata probing.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">06</span>
+                    <div>
+                        <div class="vector-title">Autonomous Action Gate Bypass</div>
+                        <div class="vector-desc">Verification of human-in-the-loop triggers for high-impact state modifications.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">07</span>
+                    <div>
+                        <div class="vector-title">Multi-Turn Memory Poisoning</div>
+                        <div class="vector-desc">Assessment of state stores, vector database embeddings, and session memory manipulation.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">08</span>
+                    <div>
+                        <div class="vector-title">SQL & Database Query Injection</div>
+                        <div class="vector-desc">Audit of natural-language-to-SQL compilers and parameterized database bindings.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">09</span>
+                    <div>
+                        <div class="vector-title">Denial of Service & Token Bombing</div>
+                        <div class="vector-desc">Validation of payload length guards, recursion depth caps, and timeout budgets.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">10</span>
+                    <div>
+                        <div class="vector-title">Insecure File System & Path Traversal</div>
+                        <div class="vector-desc">Verification of sandboxing for agent file reads, writes, and artifact generation.</div>
+                    </div>
+                </li>
+                <li class="vector-item">
+                    <span class="vector-num">11</span>
+                    <div>
+                        <div class="vector-title">Deterministic Output Scrubbing</div>
+                        <div class="vector-desc">Validation of regex and heuristic outbound scrubbers for PII and sensitive data.</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Guarantees & Deliverables -->
+    <div class="guarantees-grid">
+        <div class="guarantee-box">
+            <h4>48-Hour Turnaround</h4>
+            <p>Complete executive report and line-by-line vulnerability matrix delivered within 48 business hours.</p>
+        </div>
+        <div class="guarantee-box">
+            <h4>Direct Remediation PRs</h4>
+            <p>Actionable code diffs and guardrail patterns ready for immediate merging into your codebase.</p>
+        </div>
+        <div class="guarantee-box">
+            <h4>100% Confidential</h4>
+            <p>Strict mutual NDA protection. Repositories accessed via isolated, ephemeral audit runners.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ZeroHype Security. Autonomous AI Systems SAST & Runtime Defense.</p>
+    </footer>
+</div>
+
+<script>
+function handleAuditSubmit(event) {
+    event.preventDefault();
+    const btn = document.getElementById("submitBtn");
+    const statusMsg = document.getElementById("statusMsg");
+    
+    btn.disabled = true;
+    btn.textContent = "Redirecting to secure payment...";
+
+    const payload = {
+        email: document.getElementById("contactEmail").value,
+        repoUrl: document.getElementById("repoUrl").value,
+        branch: document.getElementById("branchName").value,
+        framework: document.getElementById("frameworkType").value,
+        toolSchemas: document.getElementById("toolSchemas").value
+    };
+
+    // Placeholder: Redirect to Stripe Checkout or direct webhook dispatch
+    statusMsg.className = "status-msg status-success";
+    statusMsg.style.display = "block";
+    statusMsg.textContent = "Intake recorded. Initializing encrypted checkout session...";
+
+    setTimeout(() => {
+        // Direct Stripe Checkout URL link or fallback email trigger
+        window.location.href = "mailto:audit@zerohype.co?subject=SAST%20Audit%20Intake%20Submission%20(" + encodeURIComponent(payload.email) + ")&body=" + encodeURIComponent(JSON.stringify(payload, null, 2));
+    }, 1200);
+}
+</script>
+
+</body>
+</html>

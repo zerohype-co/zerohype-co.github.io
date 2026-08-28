@@ -37,3 +37,5 @@
 - [Zero Hype vs Hiring a Marketing Consultant — $97 audit vs. $10,000 retainer](https://zerohypelab.com/vs-hiring-consultant/)
 - [Zero Hype vs Lavender — Fixing your email vs. fixing your strategy](https://zerohypelab.com/vs-lavender/)
 - [Zero Hype vs Reply.io — Automating outreach vs. diagnosing why it fails](https://zerohypelab.com/vs-replyio/)
+
+- [AI Agent SAST Security Audit](https://zerohypelab.com/sast-audit/): Fixed-price ,497 security audit and runtime taint tracking for multi-agent execution pipelines.

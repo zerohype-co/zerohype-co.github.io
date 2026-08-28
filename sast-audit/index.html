@@ -1,517 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Agent SAST Security Audit Intake | ZeroHype Security</title>
-    <meta name="description" content="Fixed-price $1,497 SAST security audit for production AI agents and multi-tool execution pipelines. 48-hour SLA, deterministic zero-day and prompt injection vulnerability assessment.">
-    <style>
-        :root {
-            --bg-primary: #0a0c10;
-            --bg-secondary: #12161f;
-            --bg-card: #181d28;
-            --bg-input: #0d1117;
-            --border-color: #263042;
-            --border-focus: #00e5ff;
-            --text-primary: #f0f6fc;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --accent-cyan: #00e5ff;
-            --accent-green: #10b981;
-            --accent-red: #ef4444;
-            --accent-purple: #8b5cf6;
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agent SAST Security Audit - ZeroHype</title>
+  <meta name="description" content="Fixed-price ,497 SAST security audit for production AI agents and multi-tool execution pipelines. 48-hour SLA, 11 security vectors, deterministic vulnerability assessment.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Zero Hype">
+  <link rel="canonical" href="https://zerohypelab.com/sast-audit/">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta property="og:title" content="AI Agent SAST Security Audit - Zero Hype">
+  <meta property="og:description" content="Fixed-price ,497 SAST security audit for production AI agents. 48-hour turnaround, 11 security vectors, direct remediation PRs.">
+  <meta property="og:url" content="https://zerohypelab.com/sast-audit/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://zerohypelab.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Agent SAST Security Audit - Zero Hype">
+  <meta name="twitter:description" content="Fixed-price ,497 SAST security audit for production AI agents. 48-hour SLA, 11 security vectors.">
+  <meta name="twitter:image" content="https://zerohypelab.com/og-image.png">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#E8FD27">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.svg" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            font-family: var(--font-sans);
-            line-height: 1.6;
-            padding: 0;
-            margin: 0;
-            -webkit-font-smoothing: antialiased;
-        }
+  <link rel="preload" as="font" href="/fonts/BebasNeue-400-normal.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Inter-400-normal.woff2" type="font/woff2" crossorigin>
 
-        .container {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 40px 24px;
-        }
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 32px;
-            margin-bottom: 40px;
-        }
+    :root {
+      --yellow:   #E8FD27;
+      --bg:       #F5F2EC;
+      --bg-dark:  #111111;
+      --text:     #111111;
+      --muted:    #666666;
+      --border:   rgba(17,17,17,0.12);
+      --card:     #FFFFFF;
+    }
 
-        .badge-row {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 16px;
-        }
+    @font-face { font-family: 'Bebas Neue'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/BebasNeue-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/PlayfairDisplay-700-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/PlayfairDisplay-400-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/Inter-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/Inter-600-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/DMMono-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/DMMono-500-normal.woff2') format('woff2'); }
 
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 4px 10px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-radius: 4px;
-            font-family: var(--font-mono);
-        }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        .badge-cyan {
-            background: rgba(0, 229, 255, 0.1);
-            color: var(--accent-cyan);
-            border: 1px solid rgba(0, 229, 255, 0.3);
-        }
+    .yellow-zone {
+      background: var(--yellow);
+    }
 
-        .badge-green {
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--accent-green);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 1px solid rgba(17,17,17,0.15);
+    }
 
-        h1 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      text-decoration: none;
+    }
 
-        .lead {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            max-width: 800px;
-        }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
 
-        .grid-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            margin-bottom: 48px;
-        }
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
 
-        @media (max-width: 840px) {
-            .grid-layout {
-                grid-template-columns: 1fr;
-            }
-        }
+    .nav-links a:hover { opacity: 1; }
 
-        .card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 28px;
-        }
+    .hero {
+      padding: 72px 48px 68px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
 
-        .card h2 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #ffffff;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
-        }
+    .hero-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.65);
+      margin-bottom: 20px;
+      display: block;
+    }
 
-        .price-tag {
-            font-family: var(--font-mono);
-            font-size: 1.2rem;
-            color: var(--accent-green);
-        }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(64px, 12vw, 150px);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
 
-        .vector-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+    .hero-title .word-invert {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      display: inline;
+      padding: 2px 14px 6px 6px;
+    }
 
-        .vector-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 0.92rem;
-            line-height: 1.45;
-        }
+    .hero-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 48px;
+      margin-top: 44px;
+      flex-wrap: wrap;
+    }
 
-        .vector-num {
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            background: rgba(0, 229, 255, 0.08);
-            border: 1px solid rgba(0, 229, 255, 0.2);
-            padding: 2px 6px;
-            border-radius: 3px;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(17,17,17,0.7);
+      max-width: 580px;
+      line-height: 1.6;
+    }
 
-        .vector-title {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
+    .btn-dark {
+      display: inline-block;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      border: 1px solid var(--bg-dark);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
 
-        .vector-desc {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
+    .btn-dark:hover {
+      background: var(--card);
+      color: var(--bg-dark);
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .ticker-wrap {
+      overflow: hidden;
+      background: var(--bg-dark);
+      padding: 13px 0;
+    }
 
-        label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-            font-family: var(--font-mono);
-        }
+    .ticker {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 24s linear infinite;
+    }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="url"],
-        textarea,
-        select {
-            width: 100%;
-            background-color: var(--bg-input);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 12px 14px;
-            color: var(--text-primary);
-            font-family: inherit;
-            font-size: 0.95rem;
-            outline: none;
-            transition: border-color 0.15s ease;
-        }
+    .ticker-item {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.14em;
+      color: var(--yellow);
+      padding: 0 24px;
+    }
 
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: var(--border-focus);
-        }
+    .ticker-item .sep {
+      color: rgba(232,253,39,0.3);
+      margin-left: 24px;
+    }
 
-        textarea {
-            resize: vertical;
-            min-height: 90px;
-            font-family: var(--font-mono);
-            font-size: 0.88rem;
-        }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
 
-        .btn-submit {
-            display: block;
-            width: 100%;
-            background-color: var(--accent-cyan);
-            color: #000000;
-            border: none;
-            border-radius: 6px;
-            padding: 14px 20px;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            transition: background 0.2s ease, transform 0.1s ease;
-        }
+    .main-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 64px 48px;
+    }
 
-        .btn-submit:hover {
-            background-color: #33ebff;
-        }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 48px;
+    }
 
-        .btn-submit:active {
-            transform: scale(0.99);
-        }
+    @media (max-width: 900px) {
+      .grid-2col { grid-template-columns: 1fr; }
+      nav { padding: 18px 24px; }
+      .hero { padding: 48px 24px; }
+      .main-wrap { padding: 36px 24px; }
+    }
 
-        .guarantees-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 32px;
-        }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 36px;
+      border-radius: 4px;
+    }
 
-        @media (max-width: 680px) {
-            .guarantees-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    .card h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 12px;
+    }
 
-        .guarantee-box {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 16px;
-        }
+    .badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      background: var(--yellow);
+      color: var(--bg-dark);
+      font-weight: 600;
+    }
 
-        .guarantee-box h4 {
-            font-size: 0.95rem;
-            color: var(--accent-cyan);
-            margin-bottom: 6px;
-            font-family: var(--font-mono);
-        }
+    .price-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 24px;
+      margin-bottom: 24px;
+      border-radius: 4px;
+    }
 
-        .guarantee-box p {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
+    .price-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--text);
+    }
 
-        footer {
-            margin-top: 60px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 24px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-family: var(--font-mono);
-        }
+    .price-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
 
-        .direct-payment-box {
-            background: rgba(16, 185, 129, 0.05);
-            border: 1px dashed rgba(16, 185, 129, 0.3);
-            border-radius: 6px;
-            padding: 14px;
-            margin-top: 16px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-        .status-msg {
-            display: none;
-            padding: 14px;
-            border-radius: 6px;
-            margin-top: 16px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
+    .form-group label {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: var(--text);
+      font-weight: 500;
+    }
 
-        .status-success {
-            background: rgba(16, 185, 129, 0.15);
-            color: #34d399;
-            border: 1px solid rgba(16, 185, 129, 0.4);
-        }
-    </style>
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 14px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--bg-dark);
+      background: #FFFFFF;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 18px 24px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      border-radius: 2px;
+    }
+
+    .btn-submit:hover {
+      background: #222222;
+    }
+
+    .direct-contact-note {
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      padding: 14px;
+      background: var(--bg);
+      border-left: 3px solid var(--bg-dark);
+    }
+
+    .direct-contact-note a {
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .vector-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .vector-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .vector-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .vector-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--bg-dark);
+      background: var(--yellow);
+      padding: 2px 6px;
+      font-weight: 600;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .vector-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .vector-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .guarantees-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .guarantees-grid { grid-template-columns: 1fr; }
+    }
+
+    .guarantee-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: 4px;
+    }
+
+    .guarantee-box h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .guarantee-box p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      padding: 64px 48px;
+      margin-top: 72px;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.1em;
+      color: var(--yellow);
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      list-style: none;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-links a {
+      color: #AAAAAA;
+      font-size: 12px;
+      font-family: 'DM Mono', monospace;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: #666666;
+      margin-top: 8px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="badge-row">
-            <span class="badge badge-cyan">ZeroHype Security</span>
-            <span class="badge badge-green">48-Hour Delivery SLA</span>
-            <span class="badge badge-cyan">Enterprise Tier SAST</span>
-        </div>
-        <h1>AI Agent SAST Security Audit Intake</h1>
-        <p class="lead">Deterministic static analysis and runtime guardrail audit for autonomous AI agents, tool schemas, and multi-step execution graphs. Fixed-price audit package delivered with remediation PR drafts.</p>
-    </header>
+<div class="yellow-zone">
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/">Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/tartarus/">Tartarus</a></li>
+      <li><a href="https://zerohypelab.com/sast-audit/">SAST Audit</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/">De-Bloating</a></li>
+      <li><a href="https://zerohypelab.com/about/">About</a></li>
+    </ul>
+  </nav>
 
-    <div class="grid-layout">
-        <!-- Intake Form -->
-        <div class="card">
-            <h2>
-                <span>Audit Submission</span>
-                <span class="price-tag">$1,497 USD</span>
-            </h2>
-
-            <form id="auditForm" onsubmit="handleAuditSubmit(event)">
-                <div class="form-group">
-                    <label for="contactEmail">Contact Email *</label>
-                    <input type="email" id="contactEmail" name="email" required placeholder="lead-architect@company.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="repoUrl">Repository URL / Access *</label>
-                    <input type="url" id="repoUrl" name="repoUrl" required placeholder="https://github.com/org/ai-agent-core">
-                </div>
-
-                <div class="form-group">
-                    <label for="branchName">Branch / Commit Hash *</label>
-                    <input type="text" id="branchName" name="branch" required placeholder="main or v1.4.0-rc2">
-                </div>
-
-                <div class="form-group">
-                    <label for="frameworkType">Agent Framework</label>
-                    <select id="frameworkType" name="framework">
-                        <option value="langchain_langgraph">LangChain / LangGraph</option>
-                        <option value="autogen_crewai">AutoGen / CrewAI</option>
-                        <option value="custom_python">Custom Python (Native OpenAI / Anthropic SDK)</option>
-                        <option value="typescript_vercel_ai">TypeScript / Vercel AI SDK</option>
-                        <option value="other">Other Multi-Agent Architecture</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="toolSchemas">Tool Schemas & High-Risk Integrations</label>
-                    <textarea id="toolSchemas" name="toolSchemas" placeholder="List tools: Bash execution, SQL generation, GitHub API, Slack dispatch, Stripe webhooks, etc."></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit" id="submitBtn">Proceed to Checkout & Audit ($1,497)</button>
-
-                <div class="direct-payment-box">
-                    <strong>Invoice & Custom Procurement:</strong> Need wire transfer, ACH, or custom mutual NDA prior to code access? Contact direct: <code>audit@zerohype.co</code>
-                </div>
-
-                <div id="statusMsg" class="status-msg"></div>
-            </form>
-        </div>
-
-        <!-- 11 Security Vectors -->
-        <div class="card">
-            <h2>
-                <span>11 SAST Security Vectors</span>
-                <span class="badge badge-cyan">Full Coverage</span>
-            </h2>
-
-            <ul class="vector-list">
-                <li class="vector-item">
-                    <span class="vector-num">01</span>
-                    <div>
-                        <div class="vector-title">Indirect Prompt Injection via Tool Inputs</div>
-                        <div class="vector-desc">Sanitization checks on data returned from external APIs, web scraping, and emails.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">02</span>
-                    <div>
-                        <div class="vector-title">Arbitrary Code & Command Execution</div>
-                        <div class="vector-desc">Static taint tracking on shell executions, eval, subprocesses, and dynamic imports.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">03</span>
-                    <div>
-                        <div class="vector-title">Tool Schema Privilege Escalation</div>
-                        <div class="vector-desc">Detection of overprivileged tool interfaces and lack of runtime parameter constraints.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">04</span>
-                    <div>
-                        <div class="vector-title">Credential & API Token Leakage</div>
-                        <div class="vector-desc">Scan for raw bearer tokens, private keys, and environment variables logged in LLM traces.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">05</span>
-                    <div>
-                        <div class="vector-title">SSRF & Unrestricted Egress Channels</div>
-                        <div class="vector-desc">Detection of unvalidated HTTP webhooks and internal network metadata probing.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">06</span>
-                    <div>
-                        <div class="vector-title">Autonomous Action Gate Bypass</div>
-                        <div class="vector-desc">Verification of human-in-the-loop triggers for high-impact state modifications.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">07</span>
-                    <div>
-                        <div class="vector-title">Multi-Turn Memory Poisoning</div>
-                        <div class="vector-desc">Assessment of state stores, vector database embeddings, and session memory manipulation.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">08</span>
-                    <div>
-                        <div class="vector-title">SQL & Database Query Injection</div>
-                        <div class="vector-desc">Audit of natural-language-to-SQL compilers and parameterized database bindings.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">09</span>
-                    <div>
-                        <div class="vector-title">Denial of Service & Token Bombing</div>
-                        <div class="vector-desc">Validation of payload length guards, recursion depth caps, and timeout budgets.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">10</span>
-                    <div>
-                        <div class="vector-title">Insecure File System & Path Traversal</div>
-                        <div class="vector-desc">Verification of sandboxing for agent file reads, writes, and artifact generation.</div>
-                    </div>
-                </li>
-                <li class="vector-item">
-                    <span class="vector-num">11</span>
-                    <div>
-                        <div class="vector-title">Deterministic Output Scrubbing</div>
-                        <div class="vector-desc">Validation of regex and heuristic outbound scrubbers for PII and sensitive data.</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+  <div class="hero">
+    <span class="hero-label">Autonomous AI Systems SAST & Runtime Defense</span>
+    <h1 class="hero-title">
+      AI AGENT<br>
+      <span class="word-invert">SAST AUDIT.</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-sub">
+        Deterministic static analysis and runtime taint tracking for autonomous AI agents, tool-calling pipelines, and multi-agent systems. Fixed price. 48-hour turnaround.
+      </p>
+      <a href="#intake" class="btn-dark">Start Audit (,497) →</a>
     </div>
-
-    <!-- Guarantees & Deliverables -->
-    <div class="guarantees-grid">
-        <div class="guarantee-box">
-            <h4>48-Hour Turnaround</h4>
-            <p>Complete executive report and line-by-line vulnerability matrix delivered within 48 business hours.</p>
-        </div>
-        <div class="guarantee-box">
-            <h4>Direct Remediation PRs</h4>
-            <p>Actionable code diffs and guardrail patterns ready for immediate merging into your codebase.</p>
-        </div>
-        <div class="guarantee-box">
-            <h4>100% Confidential</h4>
-            <p>Strict mutual NDA protection. Repositories accessed via isolated, ephemeral audit runners.</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; ZeroHype Security. Autonomous AI Systems SAST & Runtime Defense.</p>
-    </footer>
+  </div>
 </div>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">PROMPT INJECTION DEFENSE <span class="sep">/</span></span>
+    <span class="ticker-item">TOOL SCHEMA PRIVILEGE ESCALATION <span class="sep">/</span></span>
+    <span class="ticker-item">TAINT TRACKING <span class="sep">/</span></span>
+    <span class="ticker-item">48-HOUR SLA <span class="sep">/</span></span>
+    <span class="ticker-item">DIRECT PR REMEDIATIONS <span class="sep">/</span></span>
+    <span class="ticker-item">ZERO FALSE POSITIVES <span class="sep">/</span></span>
+    <span class="ticker-item">PROMPT INJECTION DEFENSE <span class="sep">/</span></span>
+    <span class="ticker-item">TOOL SCHEMA PRIVILEGE ESCALATION <span class="sep">/</span></span>
+    <span class="ticker-item">TAINT TRACKING <span class="sep">/</span></span>
+    <span class="ticker-item">48-HOUR SLA <span class="sep">/</span></span>
+    <span class="ticker-item">DIRECT PR REMEDIATIONS <span class="sep">/</span></span>
+    <span class="ticker-item">ZERO FALSE POSITIVES <span class="sep">/</span></span>
+  </div>
+</div>
+
+<div class="main-wrap" id="intake">
+  <div class="grid-2col">
+    <div class="card">
+      <h2>
+        <span>Audit Intake & Order</span>
+        <span class="badge">Fixed ,497</span>
+      </h2>
+
+      <div class="price-box">
+        <div class="price-num">,497</div>
+        <div class="price-sub">One-time payment. 48-hour SLA delivery. Direct PRs included.</div>
+      </div>
+
+      <form id="auditForm" onsubmit="handleAuditSubmit(event)">
+        <div class="form-group">
+          <label for="contactEmail">Work Email</label>
+          <input type="email" id="contactEmail" name="email" required placeholder="eng@yourcompany.com">
+        </div>
+
+        <div class="form-group">
+          <label for="repoUrl">GitHub / GitLab Repo URL</label>
+          <input type="text" id="repoUrl" name="repoUrl" required placeholder="https://github.com/org/agent-backend">
+        </div>
+
+        <div class="form-group">
+          <label for="branchName">Target Branch / Scope</label>
+          <input type="text" id="branchName" name="branch" value="main" placeholder="main">
+        </div>
+
+        <div class="form-group">
+          <label for="frameworkType">Primary Agent Framework</label>
+          <select id="frameworkType" name="framework">
+            <option value="langchain_langgraph">LangChain / LangGraph</option>
+            <option value="autogen_crewai">AutoGen / CrewAI</option>
+            <option value="custom_python">Custom Python (Native OpenAI / Anthropic SDK)</option>
+            <option value="typescript_vercel_ai">TypeScript / Vercel AI SDK</option>
+            <option value="other">Other Multi-Agent Architecture</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="toolSchemas">High-Risk Tools & Integrations</label>
+          <textarea id="toolSchemas" name="toolSchemas" placeholder="List high-impact tools: Bash execution, SQL generation, GitHub API, Slack dispatch, Stripe webhooks, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Proceed to Checkout & Audit (,497)</button>
+
+        <div class="direct-contact-note">
+          <strong>Enterprise Invoice & Custom Procurement:</strong> Need wire transfer, ACH, or custom mutual NDA prior to code access? Contact direct: <a href="mailto:audit@zerohype.co">audit@zerohype.co</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>
+        <span>11 Security Vectors Covered</span>
+        <span class="badge">Full Matrix</span>
+      </h2>
+
+      <ul class="vector-list">
+        <li class="vector-item">
+          <span class="vector-num">01</span>
+          <div>
+            <div class="vector-title">Indirect Prompt Injection via Tool Inputs</div>
+            <div class="vector-desc">Sanitization checks on data returned from external APIs, web scraping, and third-party webhooks.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">02</span>
+          <div>
+            <div class="vector-title">Arbitrary Code & Command Execution</div>
+            <div class="vector-desc">Static taint tracking on shell executions, eval, subprocesses, and dynamic imports.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">03</span>
+          <div>
+            <div class="vector-title">Tool Schema Privilege Escalation</div>
+            <div class="vector-desc">Detection of overprivileged tool interfaces and lack of runtime parameter constraints.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">04</span>
+          <div>
+            <div class="vector-title">Credential & API Token Leakage</div>
+            <div class="vector-desc">Scan for raw bearer tokens, private keys, and environment variables logged in LLM traces.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">05</span>
+          <div>
+            <div class="vector-title">SSRF & Unrestricted Egress Channels</div>
+            <div class="vector-desc">Detection of unvalidated HTTP webhooks and internal network metadata probing.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">06</span>
+          <div>
+            <div class="vector-title">Autonomous Action Gate Bypass</div>
+            <div class="vector-desc">Verification of human-in-the-loop triggers for high-impact state modifications.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">07</span>
+          <div>
+            <div class="vector-title">Multi-Turn Memory Poisoning</div>
+            <div class="vector-desc">Assessment of state stores, vector database embeddings, and session memory manipulation.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">08</span>
+          <div>
+            <div class="vector-title">SQL & Database Query Injection</div>
+            <div class="vector-desc">Audit of natural-language-to-SQL compilers and parameterized database bindings.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">09</span>
+          <div>
+            <div class="vector-title">Denial of Service & Token Bombing</div>
+            <div class="vector-desc">Validation of payload length guards, recursion depth caps, and timeout budgets.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">10</span>
+          <div>
+            <div class="vector-title">Insecure File System & Path Traversal</div>
+            <div class="vector-desc">Verification of sandboxing for agent file reads, writes, and artifact generation.</div>
+          </div>
+        </li>
+        <li class="vector-item">
+          <span class="vector-num">11</span>
+          <div>
+            <div class="vector-title">Deterministic Output Scrubbing</div>
+            <div class="vector-desc">Validation of regex and heuristic outbound scrubbers for PII and sensitive data.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="guarantees-grid">
+    <div class="guarantee-box">
+      <h4>48-Hour Turnaround</h4>
+      <p>Complete executive report and line-by-line vulnerability matrix delivered within 48 business hours.</p>
+    </div>
+    <div class="guarantee-box">
+      <h4>Direct Remediation PRs</h4>
+      <p>Actionable code diffs and guardrail patterns ready for immediate merging into your codebase.</p>
+    </div>
+    <div class="guarantee-box">
+      <h4>100% Confidential</h4>
+      <p>Strict mutual NDA protection. Repositories accessed via isolated, ephemeral audit runners.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-wordmark">Zero Hype</span>
+    <ul class="footer-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/">Cold Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/">Campaign Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/tartarus/">Tartarus</a></li>
+      <li><a href="https://zerohypelab.com/sast-audit/">SAST Audit (,497)</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/">De-Bloating & Audit</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X @zerohype_co</a></li>
+      <li><a href="https://zerohypelab.com/about/">About</a></li>
+      <li>Contact: <a href="mailto:audit@zerohype.co">audit@zerohype.co</a></li>
+    </ul>
+    <p class="footer-tagline">No fluff. No hype. Just what works. · Updated August 2026</p>
+    <p class="footer-tagline">Zero Hype is an independent anonymous research and diagnostic lab. No cookies. No trackers. Contact: audit@zerohype.co</p>
+  </div>
+</footer>
 
 <script>
 function handleAuditSubmit(event) {
-    event.preventDefault();
-    const btn = document.getElementById("submitBtn");
-    const statusMsg = document.getElementById("statusMsg");
-    
-    btn.disabled = true;
-    btn.textContent = "Redirecting to secure payment...";
+  event.preventDefault();
+  const btn = document.getElementById("submitBtn");
+  btn.disabled = true;
+  btn.textContent = "Redirecting to checkout...";
 
-    const payload = {
-        email: document.getElementById("contactEmail").value,
-        repoUrl: document.getElementById("repoUrl").value,
-        branch: document.getElementById("branchName").value,
-        framework: document.getElementById("frameworkType").value,
-        toolSchemas: document.getElementById("toolSchemas").value
-    };
+  const payload = {
+    email: document.getElementById("contactEmail").value,
+    repoUrl: document.getElementById("repoUrl").value,
+    branch: document.getElementById("branchName").value,
+    framework: document.getElementById("frameworkType").value,
+    toolSchemas: document.getElementById("toolSchemas").value
+  };
 
-    // Placeholder: Redirect to Stripe Checkout or direct webhook dispatch
-    statusMsg.className = "status-msg status-success";
-    statusMsg.style.display = "block";
-    statusMsg.textContent = "Intake recorded. Initializing encrypted checkout session...";
-
-    setTimeout(() => {
-        // Direct Stripe Checkout URL link or fallback email trigger
-        window.location.href = "mailto:audit@zerohype.co?subject=SAST%20Audit%20Intake%20Submission%20(" + encodeURIComponent(payload.email) + ")&body=" + encodeURIComponent(JSON.stringify(payload, null, 2));
-    }, 1200);
+  setTimeout(() => {
+    window.location.href = "mailto:audit@zerohype.co?subject=" + encodeURIComponent("SAST Audit Intake Submission (" + payload.email + ")") + "&body=" + encodeURIComponent(JSON.stringify(payload, null, 2));
+  }, 1000);
 }
 </script>
 

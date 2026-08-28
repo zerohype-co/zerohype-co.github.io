@@ -13013,3 +13013,28 @@ Guides
 
     
 © 2026 Zero Hype · zerohype@proton.me
+
+# Service: AI Agent SAST Security Audit
+- Price: $1,497 flat fee
+- Turnaround / SLA: 48 hours
+- Contact: audit@zerohype.co
+- Scope: Deep static analysis security testing (SAST) and architectural review for autonomous AI agents, LLM pipelines, prompt chains, MCP integrations, tool calling harnesses, and multi-agent workflows.
+
+## 11 Security Vectors Audited:
+1. Prompt Injection & Jailbreak Resilience (Direct, indirect, multi-turn, hidden markdown, and ASCII/unicode evasion)
+2. Tool Execution & Arbitrary Command/Code Execution (Sandboxing, shell escapement, unsanitized subprocess calls)
+3. Insecure Output Handling & Indirect SSRF (Model-controlled network calls, URL fetching, local network probes)
+4. Privilege Escalation & Authorization Bypass (Multi-tenant context leaks, unauthenticated tool execution, role bypass)
+5. Sensitive Data & Secret Leakage (API key exposure in context windows, PII retention, trace/log scraping)
+6. Context Window & Memory Poisoning (State corruption, malicious persistence in vector DBs, session hijacking)
+7. Denial of Wallet / Token Exhaustion (Infinite reasoning loops, recursive tool invocation, unbounded context inflation)
+8. Insecure Dependency & Supply Chain Risks (Malicious MCP servers, unverified packages, poisoned vector indexes)
+9. Guardrail & Constitutional Bypass (Safety layer circumvention, system prompt extraction, steering attacks)
+10. Unvalidated MCP/Tool Schema & Argument Injection (Deserialization exploits, parameter tampering, schema pollution)
+11. Auditability, Logging & Nonce Failure (Lack of verifiable audit trails, missing action confirmation mechanisms)
+
+## Deliverables:
+- Comprehensive Vulnerability & Risk Report with CVSS scores
+- Proof-of-Concept (PoC) exploit payloads tailored to your agent architecture
+- Concrete code fixes, sanitization patches, and defensive guardrail configurations
+- Direct post-audit debrief and remediation verification session

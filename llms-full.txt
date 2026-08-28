@@ -10944,6 +10944,583 @@ Monthly Autopsy — $300/mo
     
 Contact: contact@zerohypelab.com
 
+## https://zerohypelab.com/sast-audit.html
+
+
+
+## https://zerohypelab.com/sast-audit/
+
+AI Agent SAST Security Audit - ZeroHype
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+Zero Hype
+
+    
+
+      
+
+Manifesto
+
+      
+
+Bullshit Detector
+
+      
+
+Email Roaster
+
+      
+
+Tartarus
+
+      
+
+SAST Audit
+
+      
+
+De-Bloating
+
+      
+
+About
+
+    
+
+  
+
+  
+
+    
+Autonomous AI Systems SAST & Runtime Defense
+
+    
+
+      AI AGENT
+
+      
+SAST AUDIT.
+
+    
+
+    
+
+      
+
+        Deterministic static analysis and runtime taint tracking for autonomous AI agents, tool-calling pipelines, and multi-agent systems. Fixed price. 48-hour turnaround.
+      
+
+      
+Start Audit (,497) →
+
+    
+
+  
+
+  
+
+    
+PROMPT INJECTION DEFENSE 
+/
+
+    
+TOOL SCHEMA PRIVILEGE ESCALATION 
+/
+
+    
+TAINT TRACKING 
+/
+
+    
+48-HOUR SLA 
+/
+
+    
+DIRECT PR REMEDIATIONS 
+/
+
+    
+ZERO FALSE POSITIVES 
+/
+
+    
+PROMPT INJECTION DEFENSE 
+/
+
+    
+TOOL SCHEMA PRIVILEGE ESCALATION 
+/
+
+    
+TAINT TRACKING 
+/
+
+    
+48-HOUR SLA 
+/
+
+    
+DIRECT PR REMEDIATIONS 
+/
+
+    
+ZERO FALSE POSITIVES 
+/
+
+  
+
+  
+
+    
+
+      
+
+        
+Audit Intake & Order
+
+        
+Fixed ,497
+
+      
+
+      
+
+        
+,497
+
+        
+One-time payment. 48-hour SLA delivery. Direct PRs included.
+
+      
+
+      
+
+        
+
+          
+Work Email
+
+          
+
+        
+
+        
+
+          
+GitHub / GitLab Repo URL
+
+          
+
+        
+
+        
+
+          
+Target Branch / Scope
+
+          
+
+        
+
+        
+
+          
+Primary Agent Framework
+
+          
+
+            
+LangChain / LangGraph
+
+            
+AutoGen / CrewAI
+
+            
+Custom Python (Native OpenAI / Anthropic SDK)
+
+            
+TypeScript / Vercel AI SDK
+
+            
+Other Multi-Agent Architecture
+
+          
+
+        
+
+        
+
+          
+High-Risk Tools & Integrations
+
+          
+
+        
+
+        
+Proceed to Checkout & Audit (,497)
+
+        
+
+          
+Enterprise Invoice & Custom Procurement:
+ Need wire transfer, ACH, or custom mutual NDA prior to code access? Contact direct: 
+audit@zerohype.co
+
+        
+
+      
+
+    
+
+    
+
+      
+
+        
+11 Security Vectors Covered
+
+        
+Full Matrix
+
+      
+
+      
+
+        
+
+          
+01
+
+          
+
+            
+Indirect Prompt Injection via Tool Inputs
+
+            
+Sanitization checks on data returned from external APIs, web scraping, and third-party webhooks.
+
+          
+
+        
+
+        
+
+          
+02
+
+          
+
+            
+Arbitrary Code & Command Execution
+
+            
+Static taint tracking on shell executions, eval, subprocesses, and dynamic imports.
+
+          
+
+        
+
+        
+
+          
+03
+
+          
+
+            
+Tool Schema Privilege Escalation
+
+            
+Detection of overprivileged tool interfaces and lack of runtime parameter constraints.
+
+          
+
+        
+
+        
+
+          
+04
+
+          
+
+            
+Credential & API Token Leakage
+
+            
+Scan for raw bearer tokens, private keys, and environment variables logged in LLM traces.
+
+          
+
+        
+
+        
+
+          
+05
+
+          
+
+            
+SSRF & Unrestricted Egress Channels
+
+            
+Detection of unvalidated HTTP webhooks and internal network metadata probing.
+
+          
+
+        
+
+        
+
+          
+06
+
+          
+
+            
+Autonomous Action Gate Bypass
+
+            
+Verification of human-in-the-loop triggers for high-impact state modifications.
+
+          
+
+        
+
+        
+
+          
+07
+
+          
+
+            
+Multi-Turn Memory Poisoning
+
+            
+Assessment of state stores, vector database embeddings, and session memory manipulation.
+
+          
+
+        
+
+        
+
+          
+08
+
+          
+
+            
+SQL & Database Query Injection
+
+            
+Audit of natural-language-to-SQL compilers and parameterized database bindings.
+
+          
+
+        
+
+        
+
+          
+09
+
+          
+
+            
+Denial of Service & Token Bombing
+
+            
+Validation of payload length guards, recursion depth caps, and timeout budgets.
+
+          
+
+        
+
+        
+
+          
+10
+
+          
+
+            
+Insecure File System & Path Traversal
+
+            
+Verification of sandboxing for agent file reads, writes, and artifact generation.
+
+          
+
+        
+
+        
+
+          
+11
+
+          
+
+            
+Deterministic Output Scrubbing
+
+            
+Validation of regex and heuristic outbound scrubbers for PII and sensitive data.
+
+          
+
+        
+
+      
+
+    
+
+  
+
+  
+
+    
+
+      
+48-Hour Turnaround
+
+      
+Complete executive report and line-by-line vulnerability matrix delivered within 48 business hours.
+
+    
+
+    
+
+      
+Direct Remediation PRs
+
+      
+Actionable code diffs and guardrail patterns ready for immediate merging into your codebase.
+
+    
+
+    
+
+      
+100% Confidential
+
+      
+Strict mutual NDA protection. Repositories accessed via isolated, ephemeral audit runners.
+
+    
+
+  
+
+  
+
+    
+Zero Hype
+
+    
+
+      
+
+Manifesto
+
+      
+
+Bullshit Detector
+
+      
+
+Cold Email Roaster
+
+      
+
+Campaign Failure Predictor
+
+      
+
+Tartarus
+
+      
+
+SAST Audit (,497)
+
+      
+
+De-Bloating & Audit
+
+      
+
+Guides
+
+      
+
+Substack Newsletter
+
+      
+
+X @zerohype_co
+
+      
+
+About
+
+      
+Contact: 
+audit@zerohype.co
+
+    
+
+    
+No fluff. No hype. Just what works. · Updated August 2026
+
+    
+Zero Hype is an independent anonymous research and diagnostic lab. No cookies. No trackers. Contact: audit@zerohype.co
+
 ## https://zerohypelab.com/scores/
 
 Wall of Scores — B2B Homepage Diagnostic Leaderboard | Zero Hype
@@ -13013,28 +13590,3 @@ Guides
 
     
 © 2026 Zero Hype · zerohype@proton.me
-
-# Service: AI Agent SAST Security Audit
-- Price: $1,497 flat fee
-- Turnaround / SLA: 48 hours
-- Contact: audit@zerohype.co
-- Scope: Deep static analysis security testing (SAST) and architectural review for autonomous AI agents, LLM pipelines, prompt chains, MCP integrations, tool calling harnesses, and multi-agent workflows.
-
-## 11 Security Vectors Audited:
-1. Prompt Injection & Jailbreak Resilience (Direct, indirect, multi-turn, hidden markdown, and ASCII/unicode evasion)
-2. Tool Execution & Arbitrary Command/Code Execution (Sandboxing, shell escapement, unsanitized subprocess calls)
-3. Insecure Output Handling & Indirect SSRF (Model-controlled network calls, URL fetching, local network probes)
-4. Privilege Escalation & Authorization Bypass (Multi-tenant context leaks, unauthenticated tool execution, role bypass)
-5. Sensitive Data & Secret Leakage (API key exposure in context windows, PII retention, trace/log scraping)
-6. Context Window & Memory Poisoning (State corruption, malicious persistence in vector DBs, session hijacking)
-7. Denial of Wallet / Token Exhaustion (Infinite reasoning loops, recursive tool invocation, unbounded context inflation)
-8. Insecure Dependency & Supply Chain Risks (Malicious MCP servers, unverified packages, poisoned vector indexes)
-9. Guardrail & Constitutional Bypass (Safety layer circumvention, system prompt extraction, steering attacks)
-10. Unvalidated MCP/Tool Schema & Argument Injection (Deserialization exploits, parameter tampering, schema pollution)
-11. Auditability, Logging & Nonce Failure (Lack of verifiable audit trails, missing action confirmation mechanisms)
-
-## Deliverables:
-- Comprehensive Vulnerability & Risk Report with CVSS scores
-- Proof-of-Concept (PoC) exploit payloads tailored to your agent architecture
-- Concrete code fixes, sanitization patches, and defensive guardrail configurations
-- Direct post-audit debrief and remediation verification session

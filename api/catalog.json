@@ -1,0 +1,32 @@
+[
+  {
+    "id": "anti-slop-manifesto",
+    "title": "ZeroHype Anti-Slop Engineering Manifesto",
+    "description": "Deterministic guide on eliminating synthetic AI slop, bloated wrappers, and redundant code.",
+    "price_cents": 0,
+    "currency": "USD",
+    "checkout_type": "free",
+    "rails": ["free"],
+    "download_url": "https://zerohypelab.com/assets/anti-slop-manifesto.pdf"
+  },
+  {
+    "id": "clean-architecture-blueprint",
+    "title": "ZeroHype Autonomous System Architecture Blueprint",
+    "description": "Production-tested blueprint for local-first, agent-driven microservices with zero external SaaS dependencies.",
+    "price_cents": 1900,
+    "currency": "USD",
+    "checkout_type": "x402",
+    "rails": ["x402", "zeroclick"],
+    "download_url": "https://api.zerohypelab.com/api/agent/deliveries/clean-architecture-blueprint"
+  },
+  {
+    "id": "codebase-hygiene-audit-pack",
+    "title": "ZeroHype Deep Codebase Hygiene & Audit Matrix",
+    "description": "Full verification matrix and bash harness suite for deterministic continuous codebase audits.",
+    "price_cents": 4900,
+    "currency": "USD",
+    "checkout_type": "x402",
+    "rails": ["x402", "zeroclick"],
+    "download_url": "https://api.zerohypelab.com/api/agent/deliveries/codebase-hygiene-audit-pack"
+  }
+]

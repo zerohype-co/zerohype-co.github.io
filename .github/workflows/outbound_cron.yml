@@ -101,9 +101,16 @@ jobs:
               leads: sentBatch
             });
             state.remaining_queue = nextRemaining;
+            // Derive the counter from the queue itself so the two can never
+            // drift apart again. Previously remaining_count was written once at
+            // creation and never touched, so it kept reporting 20 long after the
+            // queue had drained to 0.
+            state.remaining_count = nextRemaining.length;
+            state.updated_at = new Date().toISOString();
 
             fs.writeFileSync(QUEUE_PATH, JSON.stringify(state, null, 2));
             console.log(`Successfully processed and sent ${sentCount}/${batch.length} leads.`);
+            console.log(`remaining_count = ${state.remaining_count}`);
           }
 
           run().catch(err => {

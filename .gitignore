@@ -17,3 +17,8 @@ AGENTS.md
 !.env.example
 .outreach_build
 wrangler.jsonc
+
+# Stale local duplicates of the site llms files (also point at the wrong domain:
+# zerohype.co instead of zerohypelab.com). Root-level llms.txt / llms-full.txt
+# are the canonical, deployed ones. Never publish both.
+public/

@@ -6469,10 +6469,10 @@ Manual Outreach Autopsy
 Get a human diagnostic of your entire 4-step sequence, ICP targeting, and offer angle in 48 hours.
 
       
-$49 flat fee, guaranteed actionable.
+$99 flat fee, guaranteed actionable.
 
       
-Get Outreach Autopsy ($49) →
+Get Outreach Autopsy ($99) →
 
     
 
@@ -11055,7 +11055,7 @@ SAST AUDIT.
       
 
       
-Start Audit (,497) →
+Start Audit ($1,497) →
 
     
 
@@ -11123,14 +11123,14 @@ ZERO FALSE POSITIVES
 Audit Intake & Order
 
         
-Fixed ,497
+Fixed $1,497
 
       
 
       
 
         
-,497
+$1,497
 
         
 One-time payment. 48-hour SLA delivery. Direct PRs included.
@@ -11202,7 +11202,7 @@ High-Risk Tools & Integrations
         
 
         
-Proceed to Checkout & Audit (,497)
+Proceed to Checkout & Audit ($1,497)
 
         
 
@@ -11487,7 +11487,7 @@ Tartarus
 
       
 
-SAST Audit (,497)
+SAST Audit ($1,497)
 
       
 

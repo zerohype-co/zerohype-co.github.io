@@ -26,8 +26,10 @@ jobs:
       # `path: .` urca tot ce e in checkout, deci README.md si .gitignore ajungeau
       # servite 200 pe domeniu. .gitignore enumera numele uneltelor locale — recon
       # gratuit. Le scoatem din artefact, nu din repo: in repo raman necesare.
+      # scripts/ se exclude la fel: continutul de build trebuie sa fie versionat
+      # ca sa fie reproductibil, dar nu are ce cauta public pe domeniu.
       - name: Scoate fisierele care nu sunt active web din artefact
-        run: rm -f README.md .gitignore
+        run: rm -f README.md .gitignore && rm -rf scripts
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

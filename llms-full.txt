@@ -514,7 +514,7 @@ Zero Hype is an independent anonymous research and diagnostic lab. No cookies. N
 
 ## https://zerohypelab.com/about/
 
-About — Zero Hype
+About  -  Zero Hype
 
   
 
@@ -637,18 +637,18 @@ What this is
 HONEST DIAGNOSTICS. NOTHING ELSE.
 
   
-In my direct experience working with B2B sales and marketing teams across DACH, North America, and the UK, the failure is almost never the product. I personally reviewed over 200 cold outreach sequences and found the same diagnosable break points — showing up in the data weeks before it shows up in revenue. Published by Zero Hype. Contact: zerohype@proton.me
+In my direct experience working with B2B sales and marketing teams across DACH, North America, and the UK, the failure is almost never the product. I personally reviewed over 200 cold outreach sequences and found the same diagnosable break points  -  showing up in the data weeks before it shows up in revenue. Published by Zero Hype. Contact: zerohype@proton.me
 
   
 Zero Hype publishes diagnostic tools and written analysis for B2B marketers, SDRs, and founders who want to know 
 specifically what's broken
- — not a framework, not a course, not a community.
+  -  not a framework, not a course, not a community.
 
   
 The free tools (Cold Email Roaster, Campaign Failure Predictor, Homepage Roaster) give you an immediate score with no signup. The paid services go deeper: full written diagnosis, sequence rewrites, campaign autopsies, DACH market intelligence.
 
   
-Based on direct experience with B2B outreach across software, SaaS, and professional services markets — primarily German-speaking (DACH) and English-speaking enterprise buyers.
+Based on direct experience with B2B outreach across software, SaaS, and professional services markets  -  primarily German-speaking (DACH) and English-speaking enterprise buyers.
 
   
 
@@ -657,7 +657,7 @@ Based on direct experience with B2B outreach across software, SaaS, and professi
 What Zero Hype believes:
 
     
-Most B2B marketing problems have a specific failure point. Not "your messaging is weak" — that's a symptom. The failure point is usually one of: wrong ICP, vague goal, mismatched channel, weak post-click, or a measurement system that tracks the wrong things.
+Most B2B marketing problems have a specific failure point. Not "your messaging is weak"  -  that's a symptom. The failure point is usually one of: wrong ICP, vague goal, mismatched channel, weak post-click, or a measurement system that tracks the wrong things.
 
     
 AI will automate your mediocrity faster. Broken strategy at scale, with better formatting. The answer is not a better prompt. It's a clearer diagnosis.
@@ -703,7 +703,7 @@ Guides
 Newsletter
 
     
-X — @zerohype_co
+X  -  @zerohype_co
 
     
 YouTube
@@ -719,7 +719,7 @@ Updated August 2026
 
 ## https://zerohypelab.com/blog/
 
-Blog — Zero Hype
+Blog  -  Zero Hype
 
   
 
@@ -814,7 +814,7 @@ Read →
 Attribution
 
       
-56% of B2B Marketers Can't Prove Content ROI — And Keep Going
+56% of B2B Marketers Can't Prove Content ROI  -  And Keep Going
 
       
 It's not a measurement problem. It's an accountability problem with comfortable cover.
@@ -906,7 +906,7 @@ Read →
 Cold Email
 
       
-Cold Email Isn't Dead — It's Dying Badly
+Cold Email Isn't Dead  -  It's Dying Badly
 
       
 Average reply rate dropped from 6.8% to 5.8% in two years. Top quartile still hits 15-25%.
@@ -1021,7 +1021,7 @@ Read →
 Cold Email
 
       
-Open Rate Is Not a KPI — It's Trivia
+Open Rate Is Not a KPI  -  It's Trivia
 
       
 Apple MPP broke open rate data in 2021. Everyone kept tracking it anyway.
@@ -1140,7 +1140,7 @@ Read →
 No Hype. No Filler.
 
       
-Get new posts directly. B2B marketing diagnostics, cold email, and outreach — what actually works. No pitch deck fluff.
+Get new posts directly. B2B marketing diagnostics, cold email, and outreach  -  what actually works. No pitch deck fluff.
 
     
 
@@ -1293,17 +1293,17 @@ There are three models, and confusing them is where most teams go wrong:
       
 
 1:1 ABM
- — fully custom strategy per account. Bespoke content, dedicated resources, named account executive. Works for deals above $100K ACV. Requires months of runway.
+  -  fully custom strategy per account. Bespoke content, dedicated resources, named account executive. Works for deals above $100K ACV. Requires months of runway.
 
       
 
 1:few ABM
- — grouped by segment, vertical, or trigger. Custom enough to feel personal. Scalable enough to run 50-150 accounts. The sweet spot for most mid-market teams.
+  -  grouped by segment, vertical, or trigger. Custom enough to feel personal. Scalable enough to run 50-150 accounts. The sweet spot for most mid-market teams.
 
       
 
 1:many ABM
- — personalization at scale using firmographic and behavioral signals. Closer to programmatic demand gen than true ABM. Useful, but stop calling it ABM.
+  -  personalization at scale using firmographic and behavioral signals. Closer to programmatic demand gen than true ABM. Useful, but stop calling it ABM.
 
     
 
@@ -1514,13 +1514,13 @@ The buzzword version is easy. The real version is not. Most companies choose the
 Your Outreach Isn't Reaching the Right People
 
       
-We review your outreach sequence, targeting, and messaging. You get a written diagnostic with specific fixes — not a generic framework.
+We review your outreach sequence, targeting, and messaging. You get a written diagnostic with specific fixes  -  not a generic framework.
 
       
 Get the Outreach Autopsy
 
       
-$99 — delivered in 48 hours
+$99  -  delivered in 48 hours
 
     
 
@@ -1550,7 +1550,7 @@ Unsubscribe any time. We don't share your data.
     
 
 zerohypelab.com
- — No fluff. No hype. Just what works.
+  -  No fluff. No hype. Just what works.
 
 ## https://zerohypelab.com/blog/ai-search-aeo-13-words/
 
@@ -1764,7 +1764,7 @@ Subscribe
     
 
 zerohypelab.com
-  —  No fluff. No hype. Just what works.
+   -   No fluff. No hype. Just what works.
 
 ## https://zerohypelab.com/blog/b2b-buyers-ai-research-dark-funnel/
 
@@ -1854,7 +1854,7 @@ of B2B buyers use AI tools to research before any human contact
 134
 
       
-days average B2B purchase cycle — most of it invisible to sellers
+days average B2B purchase cycle  -  most of it invisible to sellers
 
     
 
@@ -1917,7 +1917,7 @@ Testing your AI search visibility right now
 Open any AI assistant. Ask the question your ICP would ask when they first realize they have the problem you solve.
 
       
-Not "who is [your company]?" — that's a direct search. Ask the problem-framing question: "What are the best solutions for [problem your ICP has]?" or "What should I look for in a [category] vendor?"
+Not "who is [your company]?"  -  that's a direct search. Ask the problem-framing question: "What are the best solutions for [problem your ICP has]?" or "What should I look for in a [category] vendor?"
 
       
 Does your company appear? What does it say? What competitors appear alongside you or instead of you?
@@ -1965,7 +1965,7 @@ If a significant share of your cold email recipients have already researched you
 The first email that starts "I want to introduce you to [company], which helps [vague outcome]..." is talking to a fictional prospect who has never heard of the problem, the category, or you. That person increasingly doesn't exist.
 
     
-What works better: write as though they have context. Reference the category-level problem directly. Assume they know what the standard solutions are and why they fall short. Get to your specific angle fast. This reads as more sophisticated and wastes less of a prospect's time — which is the scarcest resource in any B2B outreach.
+What works better: write as though they have context. Reference the category-level problem directly. Assume they know what the standard solutions are and why they fall short. Get to your specific angle fast. This reads as more sophisticated and wastes less of a prospect's time  -  which is the scarcest resource in any B2B outreach.
 
     
 The shift is from "let me tell you about your problem" to "here's a specific thing about your problem that most vendors get wrong." The first is condescending to a buyer who has already done their research. The second respects their intelligence and gives them a reason to respond.
@@ -2005,7 +2005,7 @@ The dark funnel does not require a new technology stack to respond to. It requir
 First: build for third-party credibility, not just owned content. Review sites, earned media, and community presence are no longer optional brand extras. They are the primary surface where AI systems form opinions about your company.
 
     
-Second: accept that attribution will be permanently incomplete. Some portion of every deal will be influenced by touchpoints you cannot trace. The response is not to ignore unattributable channels. It's to add qualitative attribution methods — discovery call questions, customer surveys, win/loss analysis — that give you directional signal where the data is silent.
+Second: accept that attribution will be permanently incomplete. Some portion of every deal will be influenced by touchpoints you cannot trace. The response is not to ignore unattributable channels. It's to add qualitative attribution methods  -  discovery call questions, customer surveys, win/loss analysis  -  that give you directional signal where the data is silent.
 
     
 The dark funnel is not a problem to solve. It's a reality to operate within. The companies that recognize that and adjust their strategy accordingly will have a structural advantage over the ones still trying to attribute every deal to the last trackable click.
@@ -2022,7 +2022,7 @@ We review your outreach sequence and messaging with fresh eyes. You get specific
 Get the Outreach Autopsy
 
       
-$99 — delivered in 48 hours
+$99  -  delivered in 48 hours
 
     
 
@@ -2052,7 +2052,7 @@ Unsubscribe any time. We don't share your data.
     
 
 zerohypelab.com
- — No fluff. No hype. Just what works.
+  -  No fluff. No hype. Just what works.
 
 ## https://zerohypelab.com/blog/b2b-content-no-business-objective/
 
@@ -2143,7 +2143,7 @@ B2B teams with no content-to-outcome link
 3
 
           
-Types of content — each with one job
+Types of content  -  each with one job
 
         
 
@@ -2391,7 +2391,7 @@ Subscribe
     
 
 zerohypelab.com
-  —  No fluff. No hype. Just what works.
+   -   No fluff. No hype. Just what works.
 
 ## https://zerohypelab.com/blog/cold-email-not-dead-dying-badly/
 
@@ -2668,7 +2668,7 @@ Subscribe
     
 
 zerohypelab.com
-  —  No fluff. No hype. Just what works.
+   -   No fluff. No hype. Just what works.
 
 ## https://zerohypelab.com/blog/cold-email-personalization-mistakes/
 
@@ -2792,7 +2792,7 @@ Level 1: Demographic. This is table stakes, not personalization.
 Demographic personalization means using publicly visible attributes of the prospect: their name, their company, their job title, their industry, their city. "Hi Sarah, I work with VPs of Sales at SaaS companies in the Midwest" is demographic personalization. It is better than nothing. It is also what every other sender is doing. If everyone uses the same signals, the signals stop working. At this point, demographic personalization is minimum hygiene, not a differentiator.
 
       
-The volume tools, the waterfall enrichment stacks, the automated outreach platforms — they all operate at Level 1. They are very good at it. That is also why Level 1 no longer moves the needle for anyone selling something that requires a real conversation to close.
+The volume tools, the waterfall enrichment stacks, the automated outreach platforms  -  they all operate at Level 1. They are very good at it. That is also why Level 1 no longer moves the needle for anyone selling something that requires a real conversation to close.
 
       
 Level 2: Situational. Better, but still incomplete.
@@ -2801,7 +2801,7 @@ Level 2: Situational. Better, but still incomplete.
 Situational personalization references what the prospect's company is doing: a recent funding round, a leadership change, a new product launch, a job posting that suggests a specific pain. "I noticed you recently hired three enterprise sales reps" is situational. It shows you paid attention. It signals that the email is not a mass blast.
 
       
-This level is where most good outreach operates. It requires data sources beyond a static contact list — news feeds, job postings, LinkedIn activity, earnings calls for public companies. It is more effort, and it produces materially better results than Level 1. The gap between Level 1 and Level 2 is real and measurable.
+This level is where most good outreach operates. It requires data sources beyond a static contact list  -  news feeds, job postings, LinkedIn activity, earnings calls for public companies. It is more effort, and it produces materially better results than Level 1. The gap between Level 1 and Level 2 is real and measurable.
 
       
 The problem: situational personalization is a setup, not a complete pitch. It tells the prospect you noticed something about their situation. It does not tell them why that situation is relevant to what you are selling. The bridge between the observation and the offer is where most Level 2 emails fail.
@@ -2845,7 +2845,7 @@ Current effectiveness
           
 
             
-1 — Demographic
+1  -  Demographic
 
             
 Name, company, title, industry
@@ -2861,7 +2861,7 @@ Table stakes. Necessary but insufficient.
           
 
             
-2 — Situational
+2  -  Situational
 
             
 Funding, hires, launches, news
@@ -2877,7 +2877,7 @@ Effective when the bridge to the offer is clear
           
 
             
-3 — Specific problem
+3  -  Specific problem
 
             
 Deep research + hypothesis about their pain
@@ -3055,7 +3055,7 @@ Newsletter
 
 ## https://zerohypelab.com/blog/content-roi-b2b-structural-problem/
 
-56% of B2B Marketers Can't Prove Content ROI — And Keep Going | Zero Hype
+56% of B2B Marketers Can't Prove Content ROI  -  And Keep Going | Zero Hype
 
   
 
@@ -3144,7 +3144,7 @@ May 2026
     
 
     
-56% of B2B Marketers Can't Prove Content ROI — And Keep Going
+56% of B2B Marketers Can't Prove Content ROI  -  And Keep Going
 
     
 
@@ -3194,7 +3194,7 @@ Brand work has a legitimate place in a B2B strategy. But when it becomes the def
 The Problem Isn't Your Analytics Tool
 
       
-You have everything you need to measure — and you're choosing not to
+You have everything you need to measure  -  and you're choosing not to
 
       
 Most B2B marketing teams have GA4, LinkedIn analytics, a CRM, and some form of email reporting. That is enough to answer the basic question: is our content touching the people who eventually buy from us?
@@ -3331,7 +3331,7 @@ Get a Marketing Autopsy
 No Hype. No Filler.
 
         
-Get new posts directly. B2B marketing diagnostics, cold email, and outreach — what actually works. No pitch deck fluff.
+Get new posts directly. B2B marketing diagnostics, cold email, and outreach  -  what actually works. No pitch deck fluff.
 
       
 
@@ -3951,7 +3951,7 @@ Get a Marketing Autopsy
 No Hype. No Filler.
 
         
-Get new posts directly. B2B marketing diagnostics, cold email, and outreach — what actually works. No pitch deck fluff.
+Get new posts directly. B2B marketing diagnostics, cold email, and outreach  -  what actually works. No pitch deck fluff.
 
       
 
@@ -4094,7 +4094,7 @@ The most dangerous kind of mistake is one you don't know you're making. Misattri
 Symptoms of Misattribution (That You're Reading as Insight)
 
       
-"Channel X doesn't convert" — how you verify whether that's true
+"Channel X doesn't convert"  -  how you verify whether that's true
 
       
 Look at your "Direct" and "Organic Search" traffic. If people are seeing your LinkedIn posts and then searching for your company name, LinkedIn is working. It is just not getting the credit. The conversion happened in your analytics. The influence happened on a platform that doesn't pass UTM parameters through a search query.
@@ -4144,7 +4144,7 @@ of B2B buyers research anonymously before the first human contact. Your attribut
       
 
       
-79% of B2B buyers research anonymously — what that means in practice
+79% of B2B buyers research anonymously  -  what that means in practice
 
       
 By the time a prospect fills out a demo form, they have already decided you are worth talking to. That decision was made through content, reviews, peer recommendations, and AI-generated summaries that you never saw. Your attribution model starts at the form. It misses the first 70% of the journey. Every channel that contributed to that decision is invisible in your data.
@@ -4184,7 +4184,7 @@ Create a "Consolidated Source" report. For each closed deal, record: (1) CRM-att
 What You Do With the Information If Your Attribution Is Wrong
 
       
-Don't throw everything out — recalibrate channel weighting
+Don't throw everything out  -  recalibrate channel weighting
 
       
 The response to discovering attribution errors is not to abandon measurement. It is to acknowledge that some channels are "Demand Generation" and some are "Demand Capture." Demand generation channels create the intent that demand capture channels convert. They require different success metrics and different time horizons. LinkedIn might not show a direct ROI in 90 days. If it is mentioned by 30% of your best customers as a first touchpoint, it is generating demand that your other channels then capture. Fund accordingly.
@@ -4248,7 +4248,7 @@ Subscribe
     
 
 zerohypelab.com
-  —  No fluff. No hype. Just what works.
+   -   No fluff. No hype. Just what works.
 
 ## https://zerohypelab.com/blog/move-fast-bad-advice-enterprise-b2b/
 
@@ -4348,7 +4348,7 @@ stakeholders involved in a typical enterprise buying decision
 1
 
       
-champion most reps focus on — while the other six make the decision
+champion most reps focus on  -  while the other six make the decision
 
     
 
@@ -4492,7 +4492,7 @@ The KPI that actually matters: stage advancement rate
 For each stage in your enterprise pipeline, track: what percentage of deals that enter this stage advance to the next stage within the expected timeframe?
 
       
-A deal stuck at "technical evaluation" for 60 days when most deals advance in 30 is a signal that something is broken — probably a missing stakeholder, an unanswered objection, or a competitor who got more access than you did.
+A deal stuck at "technical evaluation" for 60 days when most deals advance in 30 is a signal that something is broken  -  probably a missing stakeholder, an unanswered objection, or a competitor who got more access than you did.
 
       
 Speed at close is a lagging indicator. Stage advancement rate is a leading one. Fix it upstream and the close comes naturally.
@@ -4526,7 +4526,7 @@ We review your outreach and sales sequence to identify where deals stall and wha
 Get the Outreach Autopsy
 
       
-$99 — delivered in 48 hours
+$99  -  delivered in 48 hours
 
     
 
@@ -4556,7 +4556,7 @@ Unsubscribe any time. We don't share your data.
     
 
 zerohypelab.com
- — No fluff. No hype. Just what works.
+  -  No fluff. No hype. Just what works.
 
 ## https://zerohypelab.com/blog/omnichannel-outbound-cold-email-not-enough/
 
@@ -4820,7 +4820,7 @@ Newsletter
 
 ## https://zerohypelab.com/blog/open-rate-not-a-kpi/
 
-Open Rate Is Not a KPI — It's Trivia | Zero Hype
+Open Rate Is Not a KPI  -  It's Trivia | Zero Hype
 
   
 
@@ -4896,7 +4896,7 @@ Your open rate is 45%. Congratulations. How many meetings did you book this mont
 96%
 
       
-of Apple Mail users have MPP enabled — open data is synthetic
+of Apple Mail users have MPP enabled  -  open data is synthetic
 
     
 
@@ -4906,7 +4906,7 @@ of Apple Mail users have MPP enabled — open data is synthetic
 2%
 
       
-average reply rate for cold email — the only signal that matters
+average reply rate for cold email  -  the only signal that matters
 
     
 
@@ -5178,7 +5178,7 @@ Get a full audit of your outreach measurement system: what's vanity, what's brok
 Get the Outreach Autopsy
 
       
-$99 — delivered in 48 hours
+$99  -  delivered in 48 hours
 
     
 
@@ -5380,10 +5380,10 @@ The 90-second B2B video test
 Before posting: can you answer these three questions in your video?
 
       
-What is the specific problem you are addressing? (Not "marketing challenges" — something named and concrete.)
+What is the specific problem you are addressing? (Not "marketing challenges"  -  something named and concrete.)
 
       
-What is your specific point of view on that problem? (Not "it depends" — a stance.)
+What is your specific point of view on that problem? (Not "it depends"  -  a stance.)
 
       
 What should the viewer do or think differently after watching?
@@ -5460,7 +5460,7 @@ We audit your marketing strategy, channels, and content to find where budget is 
 Get the Marketing Autopsy
 
       
-$99 — delivered in 48 hours
+$99  -  delivered in 48 hours
 
     
 
@@ -5490,7 +5490,7 @@ Unsubscribe any time. We don't share your data.
     
 
 zerohypelab.com
- — No fluff. No hype. Just what works.
+  -  No fluff. No hype. Just what works.
 
 ## https://zerohypelab.com/blog/top-5-percent-cold-email-anatomy/
 
@@ -8053,7 +8053,7 @@ Zero Hype is an independent anonymous research and diagnostic lab. No cookies. N
 
 ## https://zerohypelab.com/german-b2b-experts/
 
-10 People Who Understand the German B2B Market — Zero Hype
+10 People Who Understand the German B2B Market  -  Zero Hype
 
   
 
@@ -8136,7 +8136,7 @@ Jan Benedikt Mundorf
       
 
       
-AE at Deel — formerly Pleo, Albacross
+AE at Deel  -  formerly Pleo, Albacross
 
       
 linkedin.com/in/jan-b-mundorf/
@@ -8161,7 +8161,7 @@ Verena Pausder
       
 
       
-Chairwoman, German Startup Association — edtech founder, exited
+Chairwoman, German Startup Association  -  edtech founder, exited
 
       
 linkedin.com/in/verenapausder/
@@ -8211,7 +8211,7 @@ Dr. Gero Decker
       
 
       
-Co-founder Signavio (sold to SAP, 1B+) — Executive Sponsor SAP Labs Germany
+Co-founder Signavio (sold to SAP, 1B+)  -  Executive Sponsor SAP Labs Germany
 
       
 linkedin.com/in/gerodecker
@@ -8311,7 +8311,7 @@ Jonathan Kurfess
       
 
       
-Founder, Appinio — Forbes 30u30
+Founder, Appinio  -  Forbes 30u30
 
       
 linkedin.com/in/jonathankurfess
@@ -8361,7 +8361,7 @@ Richard Buettner
       
 
       
-Fractional CMO — DACH market entry specialist
+Fractional CMO  -  DACH market entry specialist
 
       
 linkedin.com/in/richardbuettner
@@ -8429,11 +8429,11 @@ Newsletter
 
       
 
-X — @zerohype_co
+X  -  @zerohype_co
 
       
 
-Monthly Autopsy — $300/mo
+Monthly Autopsy  -  $300/mo
 
     
 
@@ -9637,7 +9637,7 @@ Sitemap
 
 ## https://zerohypelab.com/manifesto/
 
-Manifesto — No Fluff. No Hype. Just What Works. · Zero Hype
+Manifesto  -  No Fluff. No Hype. Just What Works. · Zero Hype
 
   
 
@@ -9734,7 +9734,7 @@ Just what
 works.
 
       
-most b2b marketing fails at the strategy layer, not the execution layer. here's what we believe — and why diagnosis always comes before execution.
+most b2b marketing fails at the strategy layer, not the execution layer. here's what we believe  -  and why diagnosis always comes before execution.
 
     
 
@@ -9841,7 +9841,7 @@ a free tool.
 paste your cold email. run your campaign through the predictor. see what's actually broken before you pay anything.
 
       
-cold email roaster — free →
+cold email roaster  -  free →
 
     
 
@@ -9870,7 +9870,7 @@ Substack Newsletter
 
         
 
-X — @zerohype_co
+X  -  @zerohype_co
 
         
 
@@ -9892,7 +9892,7 @@ Updated August 2026
       
 Published by 
 Zero Hype
- — Contact: zerohype@proton.me
+  -  Contact: zerohype@proton.me
 
 ## https://zerohypelab.com/method/
 
@@ -10872,7 +10872,7 @@ Updated May 2026
     
 Published by 
 Zero Hype
- — Contact: 
+  -  Contact: 
 contact@zerohypelab.com
 
   
@@ -10895,7 +10895,7 @@ Guides
 Substack Newsletter
 
     
-X — @zerohype_co
+X  -  @zerohype_co
 
     
 YouTube
@@ -10904,7 +10904,7 @@ YouTube
 Product Hunt
 
     
-Monthly Autopsy — $300/mo
+Monthly Autopsy  -  $300/mo
 
     
 Contact: contact@zerohypelab.com
@@ -11234,7 +11234,7 @@ Updated May 2026
     
 Published by 
 Zero Hype
- — Contact: 
+  -  Contact: 
 contact@zerohypelab.com
 
   
@@ -11257,7 +11257,7 @@ Guides
 Substack Newsletter
 
     
-X — @zerohype_co
+X  -  @zerohype_co
 
     
 YouTube
@@ -11266,7 +11266,7 @@ YouTube
 Product Hunt
 
     
-Monthly Autopsy — $300/mo
+Monthly Autopsy  -  $300/mo
 
     
 Contact: contact@zerohypelab.com
@@ -11850,7 +11850,7 @@ Zero Hype is an independent anonymous research and diagnostic lab. No cookies. N
 
 ## https://zerohypelab.com/scores/
 
-Wall of Scores — B2B Homepage Diagnostic Leaderboard | Zero Hype
+Wall of Scores  -  B2B Homepage Diagnostic Leaderboard | Zero Hype
 
   
 
@@ -11962,13 +11962,13 @@ Value Prop /20
 
   
 
-—
+ - 
 Total /100
 
   
 
     
-Leaderboard — all scores, ranked high to low
+Leaderboard  -  all scores, ranked high to low
 
     
 
@@ -12266,7 +12266,7 @@ Scorecards
         
 
         
-notion.com — 62/100
+notion.com  -  62/100
 
       
 
@@ -12275,7 +12275,7 @@ notion.com — 62/100
         
 
         
-apollo.io — 56/100
+apollo.io  -  56/100
 
       
 
@@ -12284,7 +12284,7 @@ apollo.io — 56/100
         
 
         
-deploycrate.com — 49/100
+deploycrate.com  -  49/100
 
       
 
@@ -12293,7 +12293,7 @@ deploycrate.com — 49/100
         
 
         
-taliivue.com — 49/100
+taliivue.com  -  49/100
 
       
 
@@ -12302,7 +12302,7 @@ taliivue.com — 49/100
         
 
         
-frhog.com — 45/100
+frhog.com  -  45/100
 
       
 
@@ -12311,7 +12311,7 @@ frhog.com — 45/100
         
 
         
-nodea.ai — 37/100
+nodea.ai  -  37/100
 
       
 
@@ -12320,7 +12320,7 @@ nodea.ai — 37/100
         
 
         
-capakit.com — 37/100
+capakit.com  -  37/100
 
       
 
@@ -12338,7 +12338,7 @@ your homepage lands?
 Same rubric. Free. No login. You'll know your score in 60 seconds.
 
     
-Run your homepage — free
+Run your homepage  -  free
 
   
 
@@ -12363,7 +12363,7 @@ Substack Newsletter
 
       
 
-X — @zerohype_co
+X  -  @zerohype_co
 
       
 
@@ -12371,7 +12371,7 @@ YouTube
 
       
 
-Monthly Autopsy — $300/mo
+Monthly Autopsy  -  $300/mo
 
       
 Contact: zerohype@proton.me
@@ -12384,7 +12384,7 @@ No fluff. No hype. Just what works. · Updated Jun 2026
     
 Published by 
 Zero Hype
- — Contact: zerohype@proton.me
+  -  Contact: zerohype@proton.me
 
 ## https://zerohypelab.com/tartarus/
 
@@ -12648,7 +12648,7 @@ Substack Newsletter
 
       
 
-X — @zerohype_co
+X  -  @zerohype_co
 
       
 
@@ -12660,7 +12660,7 @@ Product Hunt
 
       
 
-Monthly Autopsy — $300/mo
+Monthly Autopsy  -  $300/mo
 
       
 Contact: 
@@ -12675,7 +12675,7 @@ Updated May 2026
     
 Published by 
 Zero Hype
- — Contact: 
+  -  Contact: 
 [email protected]
 
   
@@ -12696,7 +12696,7 @@ B2B marketing diagnostics. No fluff. No hype. Find the specific break point in y
 
 ## https://zerohypelab.com/tartarus/thanks/
 
-Payment received — Tartarus | Zero Hype
+Payment received  -  Tartarus | Zero Hype
 
 Skip to content
 
@@ -12742,14 +12742,14 @@ What happens next
       
 
 Full Diagnostic Report ($49)
- — your written report is prepared from the codebase you scanned and is sent to the email you submitted within 
+  -  your written report is prepared from the codebase you scanned and is sent to the email you submitted within 
 48–72 hours
 .
 
       
 
 Custom Integration (from $2,500)
- — we contact you at your email to schedule the build of your context graph and agent wiring.
+  -  we contact you at your email to schedule the build of your context graph and agent wiring.
 
     
 
@@ -12769,7 +12769,7 @@ zerohype@proton.me
 
 ## https://zerohypelab.com/vs-hiring-consultant/
 
-Zero Hype vs Hiring a Marketing Consultant — $97 audit vs. $10,000 retainer
+Zero Hype vs Hiring a Marketing Consultant  -  $97 audit vs. $10,000 retainer
 
   
 
@@ -12844,7 +12844,7 @@ A B2B marketing consultant costs $5k-15k/month. The first thing they do is diagn
 Direct answer
 
       
-If you know what's broken but need someone to fix it for you, hire a consultant. If you're not sure what's broken — or you suspect you know but want an outside read before committing to $60k/year of retainer — start with Zero Hype. The audit pays for itself if it saves you from hiring the wrong person to fix the wrong problem.
+If you know what's broken but need someone to fix it for you, hire a consultant. If you're not sure what's broken  -  or you suspect you know but want an outside read before committing to $60k/year of retainer  -  start with Zero Hype. The audit pays for itself if it saves you from hiring the wrong person to fix the wrong problem.
 
     
 
@@ -13029,7 +13029,7 @@ Every consultant starts the same way: discovery calls, stakeholder interviews, r
 Most of what they find in those first 8 weeks is what the Zero Hype audits surface in 48-72 hours. Wrong ICP assumptions. Messaging that talks about features instead of problems. A pipeline that looks active but is full of bad-fit prospects. Channel strategy that made sense in 2021 but doesn't now.
 
     
-The difference is what happens next. A consultant stays and executes. Zero Hype gives you the diagnosis and you implement — or you hire someone specifically for execution once you know what to execute.
+The difference is what happens next. A consultant stays and executes. Zero Hype gives you the diagnosis and you implement  -  or you hire someone specifically for execution once you know what to execute.
 
     
 
@@ -13072,7 +13072,7 @@ Questions
 Can Zero Hype replace a full-time marketing hire?
 
         
-No. A full-time hire executes daily. Zero Hype diagnoses and advises. The Revenue Architecture ($4,500) goes further — 12 weeks of strategic work — but it's still async advisory, not embedded execution. If you need someone in the team building campaigns daily, hire for that specifically.
+No. A full-time hire executes daily. Zero Hype diagnoses and advises. The Revenue Architecture ($4,500) goes further  -  12 weeks of strategic work  -  but it's still async advisory, not embedded execution. If you need someone in the team building campaigns daily, hire for that specifically.
 
       
 
@@ -13092,7 +13092,7 @@ Possibly. The Marketing Autopsy ($49) can give you an independent read on whethe
 Zero Hype is one person, right? Is that a problem?
 
         
-The audits and diagnostics are based on direct B2B marketing experience across DACH and English-speaking markets. There's no team of junior analysts generalizing from a framework. The disadvantage is capacity — Zero Hype can't run your campaigns. The advantage is you get the honest read, not the polished deck.
+The audits and diagnostics are based on direct B2B marketing experience across DACH and English-speaking markets. There's no team of junior analysts generalizing from a framework. The disadvantage is capacity  -  Zero Hype can't run your campaigns. The advantage is you get the honest read, not the polished deck.
 
       
 
@@ -13102,7 +13102,7 @@ The audits and diagnostics are based on direct B2B marketing experience across D
 What's the Monthly Autopsy compared to a consultant retainer?
 
         
-The Monthly Autopsy ($300/month) reviews one campaign per month, rewrites the three weakest elements, and turns around in 48 hours. It's not a full retainer — no calls, no project management, no execution. It's the ongoing diagnostic layer for teams that execute themselves but want an outside eye on whether the strategy is drifting.
+The Monthly Autopsy ($300/month) reviews one campaign per month, rewrites the three weakest elements, and turns around in 48 hours. It's not a full retainer  -  no calls, no project management, no execution. It's the ongoing diagnostic layer for teams that execute themselves but want an outside eye on whether the strategy is drifting.
 
       
 
@@ -13146,7 +13146,7 @@ Guides
 
 ## https://zerohypelab.com/vs-lavender/
 
-Zero Hype vs Lavender — Fixing your email vs. fixing your strategy
+Zero Hype vs Lavender  -  Fixing your email vs. fixing your strategy
 
   
 
@@ -13221,7 +13221,7 @@ Lavender fixes how your email reads. Zero Hype diagnoses why your outreach is fa
 Direct answer
 
       
-If your cold emails have low open rates or generic replies, Lavender can help you write better sentences. If your pipeline is dry despite good writing, the problem is upstream — wrong ICP, bad positioning, wrong channel. That's what Zero Hype audits. Use both if needed. Use neither if your real issue is that you don't have a clear offer.
+If your cold emails have low open rates or generic replies, Lavender can help you write better sentences. If your pipeline is dry despite good writing, the problem is upstream  -  wrong ICP, bad positioning, wrong channel. That's what Zero Hype audits. Use both if needed. Use neither if your real issue is that you don't have a clear offer.
 
     
 
@@ -13421,7 +13421,7 @@ But here's what we see consistently: B2B teams invest in better email writing wh
     
 
 Zero Hype works upstream.
- The Campaign Failure Predictor, the Outreach Autopsy, the Full Autopsy — they all start with the question Lavender never asks: should you even be doing this?
+ The Campaign Failure Predictor, the Outreach Autopsy, the Full Autopsy  -  they all start with the question Lavender never asks: should you even be doing this?
 
   
 
@@ -13459,7 +13459,7 @@ Questions
 Should I use both Lavender and Zero Hype?
 
         
-If your strategy is solid but your writing is weak, start with Lavender. If your strategy is broken, fix it first — otherwise you're optimizing something that's already pointing the wrong direction. Zero Hype first, then Lavender.
+If your strategy is solid but your writing is weak, start with Lavender. If your strategy is broken, fix it first  -  otherwise you're optimizing something that's already pointing the wrong direction. Zero Hype first, then Lavender.
 
       
 
@@ -13489,7 +13489,7 @@ Reply rate is a strategy problem, not a writing problem. Good subject line, bad 
 Is there a free way to test Zero Hype first?
 
         
-Yes. The Campaign Failure Predictor is free — 10 questions, 60 seconds, tells you your failure risk score and the specific weak points in your outreach setup. No login, no email required.
+Yes. The Campaign Failure Predictor is free  -  10 questions, 60 seconds, tells you your failure risk score and the specific weak points in your outreach setup. No login, no email required.
 
       
 
@@ -13533,7 +13533,7 @@ Guides
 
 ## https://zerohypelab.com/vs-replyio/
 
-Zero Hype vs Reply.io — Automating outreach vs. diagnosing why it fails
+Zero Hype vs Reply.io  -  Automating outreach vs. diagnosing why it fails
 
   
 
@@ -13608,7 +13608,7 @@ Reply.io automates sequences at scale. Zero Hype diagnoses why your sequences ar
 Direct answer
 
       
-Reply.io is infrastructure for outreach execution. If your sequences, targeting, and messaging are solid, it makes you faster. If they're broken, Reply.io scales the failure. Zero Hype audits what Reply.io assumes is already correct — your ICP, your positioning, your offer, your channel fit. Fix the strategy first. Then automate it.
+Reply.io is infrastructure for outreach execution. If your sequences, targeting, and messaging are solid, it makes you faster. If they're broken, Reply.io scales the failure. Zero Hype audits what Reply.io assumes is already correct  -  your ICP, your positioning, your offer, your channel fit. Fix the strategy first. Then automate it.
 
     
 
@@ -13876,7 +13876,7 @@ Depends where the problem is. A one-time audit that fixes your positioning pays 
 How long does a Zero Hype audit take?
 
         
-The Campaign Failure Predictor takes 60 seconds. The Outreach Autopsy ($99) delivers in 48-72 hours — you send your emails and targeting context, we return a scored breakdown with specific rewrites for the weakest parts.
+The Campaign Failure Predictor takes 60 seconds. The Outreach Autopsy ($99) delivers in 48-72 hours  -  you send your emails and targeting context, we return a scored breakdown with specific rewrites for the weakest parts.
 
       
 
@@ -13917,3 +13917,41 @@ Guides
 
     
 © 2026 Zero Hype · zerohype@proton.me
+
+
+## FAQ - Zero Hype
+
+# FAQ | Zero Hype
+
+> Canonical: https://zerohypelab.com/faq/ | Last updated: 2026-10-14
+
+## 1. Why do you never send cold email from the primary domain?
+Because one spam spike can burn the domain your clients and suppliers rely on every day. Primary domains carry SPF and DKIM and DMARC trust accumulated over years. Cold outreach lives on secondary domains with separate inboxes, so if a domain takes a hit, your main business keeps running.
+
+## 2. Why is the limit strictly 20-30 emails per day per inbox?
+Because mailbox providers flag volume spikes from new or low-trust senders. 20-30 per day per inbox keeps you under automated filters at Google and Microsoft, keeps reply handling human, and keeps bounce and complaint rates low. Scale by adding inboxes, not by pushing one inbox harder.
+
+## 3. Why is a 3-4 week warm-up mandatory?
+Because a fresh inbox with zero history that starts sending cold mail looks like a spam cannon. Warm-up builds open and reply history, plus rescue-from-spam signals, over 3-4 weeks with a gradual volume ramp. Skip it and you start in spam on day one.
+
+## 4. What is anti-helpdesk filtering?
+We block generic addresses like support@, help@, info@, tickets@ plus billing@ and service@ before sending. Those inboxes are triage queues, not buyers. They never reply with budget, they mark mail as spam, and they poison deliverability.
+
+## 5. Why do you only target companies under 5 people?
+Rule 56. Micro-SaaS teams of 1-5 have a founder who reads mail and can say yes the same day. At 50 or 500 people, your cold email lands with a gatekeeper, a ticket system, or legal review. We write to people who can buy, not to org charts.
+
+## 6. How do you stay compliant with GDPR and CASL?
+B2B outreach under GDPR runs on legitimate interest: relevant offer, verified business contact, clear sender identity, and instant opt-out. Under CASL the bar is stricter, so we favor implied consent signals and always honor opt-outs the same day. Every mail carries a one-click opt-out.
+
+## 7. What is reputation isolation via secondary domains?
+Separate sending domains that resemble your brand but never risk it. The main brand stays clean. Outreach runs on close variants with their own SPF and DKIM layers, plus DMARC and Google Postmaster tracking. If one variant drops, we pause it or drop it.
+
+## 8. How does inbox rotation work and what volume is optimal?
+Rotation spreads sends across multiple warmed inboxes and secondary domains so no single inbox carries the load. Optimal start: 2-3 domains, 2 inboxes each, 20-30 mails per inbox per day. That is 80-180 per day total with a safety margin.
+
+## 9. How do you monitor deliverability and keep spam rate under 0.1 percent?
+We watch Google Postmaster Tools spam rate daily, plus bounce rate, open stability, and inbox placement tests. Hard ceiling: spam complaint rate under 0.1 percent and bounce under 3 percent. Hit the ceiling and sending pauses that day.
+
+## 10. When do you move from manual outbound to automation?
+Only after manual proves the message. Send 100-200 hand-checked mails, collect real replies, and find the line that triggers interest. Then automate the proven template with tight lists plus daily rotation limits. Manual finds signal. Automation scales signal.
+

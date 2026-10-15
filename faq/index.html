@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Outreach FAQ for Micro-SaaS · Zero Hype</title>
+<meta name="description" content="10 direct answers on cold outreach for micro-SaaS: secondary domains, 20-30 mails per day, 3-4 week warm-up, anti-helpdesk filters, Rule 56 targeting, GDPR and CASL, rotation, deliverability under 0.1 pct.">
+<link rel="canonical" href="https://zerohypelab.com/faq/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://zerohypelab.com/faq/">
+<meta property="og:title" content="Cold Outreach FAQ for Micro-SaaS · Zero Hype">
+<meta property="og:description" content="10 direct answers on domains, limits, warm-up, filters, targeting, compliance, rotation, and deliverability.">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Zero Hype">
+<meta property="og:image" content="https://zerohypelab.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@zerohype_co">
+<meta name="author" content="Zero Hype">
+
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow:   #E8FD27;
+      --bg:       #F5F2EC;
+      --bg-dark:  #111111;
+      --text:     #111111;
+      --muted:    #666666;
+      --border:   rgba(17,17,17,0.12);
+      --card:     #FFFFFF;
+      --danger:   #E05252;
+      --success:  #228F62;
+    }
+
+    @font-face { font-family: 'Bebas Neue'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/BebasNeue-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/PlayfairDisplay-700-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/PlayfairDisplay-400-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/Inter-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/Inter-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/DMMono-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'DM Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/DMMono-500-normal.woff2') format('woff2'); }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    .skip-link { position: absolute; top: -100%; left: 1rem; background: #111; color: var(--yellow); padding: 0.5rem 1rem; font-size: 0.875rem; font-family: 'DM Mono', monospace; border-radius: 0 0 4px 4px; z-index: 9999; text-decoration: none; }
+    .skip-link:focus { top: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .yellow-zone {
+      background: var(--yellow);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 1px solid rgba(17,17,17,0.15);
+    }
+
+    .nav-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      opacity: 0.65;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active { opacity: 1; font-weight: 700; }
+
+    .nav-btn {
+      background: var(--bg-dark);
+      color: var(--yellow) !important;
+      padding: 6px 14px;
+      opacity: 1 !important;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      border-radius: 2px;
+    }
+
+    .hero {
+      padding: 60px 48px 50px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .hero-top-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.65);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(64px, 12vw, 140px);
+      line-height: 0.88;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .hero-title .word-invert {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      background: var(--bg-dark);
+      color: var(--yellow);
+      display: inline;
+      padding: 2px 18px 8px 8px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(17,17,17,0.8);
+      max-width: 720px;
+      line-height: 1.55;
+      margin-bottom: 28px;
+    }
+
+    .hero-meta-bottom {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: rgba(17,17,17,0.6);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .main-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 60px 48px;
+    }
+
+    @media (max-width: 960px) {
+      .main-wrap { padding: 40px 24px; }
+      nav { padding: 18px 24px; }
+      .nav-links { display: none; }
+      .hero { padding: 44px 24px 36px; }
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 48px 0 24px;
+    }
+
+    .section-tag {
+      background: var(--yellow);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      color: var(--text);
+    }
+
+    .dossier-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 40px;
+      font-size: 14px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+
+    .dossier-table th {
+      text-align: left;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 2px solid var(--yellow);
+      padding: 14px;
+      background: #FAFAFA;
+    }
+
+    .dossier-table td {
+      padding: 16px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .dossier-table tr:hover td {
+      background: rgba(232, 253, 39, 0.08);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(17,17,17,0.06);
+    }
+
+    .card-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .card p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .card-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+    }
+
+    .card-link:hover { color: var(--danger); }
+
+    .callout-zone {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      padding: 80px 48px;
+      border-top: 2px solid var(--yellow);
+    }
+
+    .callout-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .callout-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 7vw, 80px);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--yellow);
+      margin-bottom: 20px;
+    }
+
+    .callout-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      max-width: 720px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .btn-yellow {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 28px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-yellow:hover { opacity: 0.85; }
+
+    footer {
+      padding: 48px 48px;
+      border-top: 2px solid var(--yellow);
+      background: var(--bg);
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 4px 12px 5px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      width: 100%;
+      margin-top: 8px;
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Cold Outreach FAQ for Micro-SaaS",
+  "url": "https://zerohypelab.com/faq/",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Zero Hype",
+    "url": "https://zerohypelab.com/"
+  },
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do you never send cold email from the primary domain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because one spam spike can burn the domain your clients and suppliers rely on every day. Primary domains carry SPF and DKIM and DMARC trust accumulated over years. Cold outreach lives on secondary domains with separate inboxes, so if a domain takes a hit, your main business keeps running."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the limit strictly 20-30 emails per day per inbox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because mailbox providers flag volume spikes from new or low-trust senders. 20-30 per day per inbox keeps you under automated filters at Google and Microsoft, keeps reply handling human, and keeps bounce and complaint rates low. Scale by adding inboxes, not by pushing one inbox harder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a 3-4 week warm-up mandatory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a fresh inbox with zero history that starts sending cold mail looks like a spam cannon. Warm-up builds open and reply history, plus rescue-from-spam signals, over 3-4 weeks with a gradual volume ramp. Skip it and you start in spam on day one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is anti-helpdesk filtering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We block generic addresses like support@, help@, info@, tickets@ plus billing@ and service@ before sending. Those inboxes are triage queues, not buyers. They never reply with budget, they mark mail as spam, and they poison deliverability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do you only target companies under 5 people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rule 56. Micro-SaaS teams of 1-5 have a founder who reads mail and can say yes the same day. At 50 or 500 people, your cold email lands with a gatekeeper, a ticket system, or legal review. We write to people who can buy, not to org charts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you stay compliant with GDPR and CASL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "B2B outreach under GDPR runs on legitimate interest: relevant offer, verified business contact, clear sender identity, and instant opt-out. Under CASL the bar is stricter, so we favor implied consent signals and always honor opt-outs the same day. Every mail carries a one-click opt-out."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is reputation isolation via secondary domains?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Separate sending domains that resemble your brand but never risk it. The main brand stays clean. Outreach runs on close variants with their own SPF and DKIM layers, plus DMARC and Google Postmaster tracking. If one variant drops, we pause it or drop it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does inbox rotation work and what volume is optimal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rotation spreads sends across multiple warmed inboxes and secondary domains so no single inbox carries the load. Optimal start: 2-3 domains, 2 inboxes each, 20-30 mails per inbox per day. That is 80-180 per day total with a safety margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you monitor deliverability and keep spam rate under 0.1 percent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We watch Google Postmaster Tools spam rate daily, plus bounce rate, open stability, and inbox placement tests. Hard ceiling: spam complaint rate under 0.1 percent and bounce under 3 percent. Hit the ceiling and sending pauses that day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do you move from manual outbound to automation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only after manual proves the message. Send 100-200 hand-checked mails, collect real replies, and find the line that triggers interest. Then automate the proven template with tight lists plus daily rotation limits. Manual finds signal. Automation scales signal."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<main id="main-content">
+
+<!-- YELLOW ZONE -->
+<div class="yellow-zone">
+  <nav>
+    <a href="https://zerohypelab.com" class="nav-wordmark">Zero Hype</a>
+    <ul class="nav-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/">Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/">Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/" class="nav-btn">De-Bloating & Audit</a></li>
+      <li><a href="https://zerohypelab.com/faq/">FAQ</a></li>
+      <li><a href="https://zerohypelab.com/about/">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero" id="main">
+    <div class="hero-top-meta">
+      <span>COLD OUTREACH / MICRO-SAAS</span>
+      <span>10 ANSWERS / 2026</span>
+    </div>
+    <div class="hero-title">
+      cold outreach<br>
+      <span class="word-invert">faq.</span>
+    </div>
+    <p class="hero-sub">How we run cold outreach for teams of 1 to 5. Domains, limits, warm-up, filters, targeting, compliance, rotation, deliverability, and when automation earns its place.</p>
+    <div class="hero-meta-bottom">
+      <span>Published by Zero Hype</span>
+      <span>Updated October 2026</span>
+      <span>Contact: zerohype@proton.me</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN WRAP -->
+<div class="main-wrap" id="faq">
+  <div class="section-header">
+    <span class="section-tag">FAQ</span>
+    <span class="section-title">The questions we actually get</span>
+  </div>
+
+  <div class="cards-grid" style="grid-template-columns: 1fr;">
+<div class="card">
+        <div>
+          <div class="card-meta"><span>01 / domains</span></div>
+          <h3>Why do you never send cold email from the primary domain?</h3>
+          <p style="margin-top:12px;">Because one spam spike can burn the domain your clients and suppliers rely on every day. Primary domains carry SPF and DKIM and DMARC trust accumulated over years. Cold outreach lives on secondary domains with separate inboxes, so if a domain takes a hit, your main business keeps running.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>02 / limits</span></div>
+          <h3>Why is the limit strictly 20-30 emails per day per inbox?</h3>
+          <p style="margin-top:12px;">Because mailbox providers flag volume spikes from new or low-trust senders. 20-30 per day per inbox keeps you under automated filters at Google and Microsoft, keeps reply handling human, and keeps bounce and complaint rates low. Scale by adding inboxes, not by pushing one inbox harder.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>03 / warm-up</span></div>
+          <h3>Why is a 3-4 week warm-up mandatory?</h3>
+          <p style="margin-top:12px;">Because a fresh inbox with zero history that starts sending cold mail looks like a spam cannon. Warm-up builds open and reply history, plus rescue-from-spam signals, over 3-4 weeks with a gradual volume ramp. Skip it and you start in spam on day one.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>04 / filters</span></div>
+          <h3>What is anti-helpdesk filtering?</h3>
+          <p style="margin-top:12px;">We block generic addresses like support@, help@, info@, tickets@ plus billing@ and service@ before sending. Those inboxes are triage queues, not buyers. They never reply with budget, they mark mail as spam, and they poison deliverability.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>05 / targeting</span></div>
+          <h3>Why do you only target companies under 5 people?</h3>
+          <p style="margin-top:12px;">Rule 56. Micro-SaaS teams of 1-5 have a founder who reads mail and can say yes the same day. At 50 or 500 people, your cold email lands with a gatekeeper, a ticket system, or legal review. We write to people who can buy, not to org charts.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>06 / law</span></div>
+          <h3>How do you stay compliant with GDPR and CASL?</h3>
+          <p style="margin-top:12px;">B2B outreach under GDPR runs on legitimate interest: relevant offer, verified business contact, clear sender identity, and instant opt-out. Under CASL the bar is stricter, so we favor implied consent signals and always honor opt-outs the same day. Every mail carries a one-click opt-out.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>07 / rotation</span></div>
+          <h3>What is reputation isolation via secondary domains?</h3>
+          <p style="margin-top:12px;">Separate sending domains that resemble your brand but never risk it. The main brand stays clean. Outreach runs on close variants with their own SPF and DKIM layers, plus DMARC and Google Postmaster tracking. If one variant drops, we pause it or drop it.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>08 / writing</span></div>
+          <h3>How does inbox rotation work and what volume is optimal?</h3>
+          <p style="margin-top:12px;">Rotation spreads sends across multiple warmed inboxes and secondary domains so no single inbox carries the load. Optimal start: 2-3 domains, 2 inboxes each, 20-30 mails per inbox per day. That is 80-180 per day total with a safety margin.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>09 / when</span></div>
+          <h3>How do you monitor deliverability and keep spam rate under 0.1 percent?</h3>
+          <p style="margin-top:12px;">We watch Google Postmaster Tools spam rate daily, plus bounce rate, open stability, and inbox placement tests. Hard ceiling: spam complaint rate under 0.1 percent and bounce under 3 percent. Hit the ceiling and sending pauses that day.</p>
+        </div>
+      </div>
+
+<div class="card">
+        <div>
+          <div class="card-meta"><span>10 / start</span></div>
+          <h3>When do you move from manual outbound to automation?</h3>
+          <p style="margin-top:12px;">Only after manual proves the message. Send 100-200 hand-checked mails, collect real replies, and find the line that triggers interest. Then automate the proven template with tight lists plus daily rotation limits. Manual finds signal. Automation scales signal.</p>
+        </div>
+      </div>
+  </div>
+
+  <a class="btn-yellow" href="https://zerohypelab.com/cold-email-roaster/">Run Your Email Through The Roaster</a>
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-wordmark">Zero Hype</span>
+    <ul class="footer-links">
+      <li><a href="https://zerohypelab.com/manifesto/">Manifesto</a></li>
+      <li><a href="https://zerohypelab.com/bullshit-detector/">Bullshit Detector</a></li>
+      <li><a href="https://zerohypelab.com/cold-email-roaster/">Cold Email Roaster</a></li>
+      <li><a href="https://zerohypelab.com/campaign-failure-predictor/">Campaign Failure Predictor</a></li>
+      <li><a href="https://zerohypelab.com/de-bloating/">De-Bloating & Audit ($297 / $1,497)</a></li>
+      <li><a href="https://zerohypelab.com/guides/">Guides</a></li>
+      <li><a href="https://zerohypelab.substack.com">Substack Newsletter</a></li>
+      <li><a href="https://x.com/zerohype_co">X @zerohype_co</a></li>
+      <li><a href="https://zerohypelab.com/faq/">FAQ</a></li>
+      <li><a href="https://zerohypelab.com/about/">About</a></li>
+      <li>Contact: zerohype@proton.me</li>
+    </ul>
+    <p class="footer-tagline">No fluff. No hype. Just what works. · Updated August 2026</p>
+    <p class="footer-tagline">Zero Hype is an independent anonymous research and diagnostic lab. No cookies. No trackers. Contact: zerohype@proton.me</p>
+  </div>
+</footer>
+<script data-goatcounter="https://zerohype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

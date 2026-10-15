@@ -32,6 +32,7 @@
 - [og-image-source.html](https://zerohypelab.com/og-image-source.html)
 - [The Outbound Engine | Zero Hype](https://zerohypelab.com/outbound-engine/)
 - [The Revenue Foundation | Zero Hype](https://zerohypelab.com/revenue-foundation/)
+- [Full Positioning & Copy Autopsy (Sample Report) · Zero Hype](https://zerohypelab.com/sample/)
 - [sast-audit.html](https://zerohypelab.com/sast-audit.html)
 - [AI Agent SAST Security Audit - ZeroHype](https://zerohypelab.com/sast-audit/)
 - [Wall of Scores  -  B2B Homepage Diagnostic Leaderboard | Zero Hype](https://zerohypelab.com/scores/)
@@ -40,4 +41,3 @@
 - [Zero Hype vs Hiring a Marketing Consultant  -  $97 audit vs. $10,000 retainer](https://zerohypelab.com/vs-hiring-consultant/)
 - [Zero Hype vs Lavender  -  Fixing your email vs. fixing your strategy](https://zerohypelab.com/vs-lavender/)
 - [Zero Hype vs Reply.io  -  Automating outreach vs. diagnosing why it fails](https://zerohypelab.com/vs-replyio/)
-- [Full Positioning Autopsy Sample Report · Zero Hype](https://zerohypelab.com/sample/): Complete confidential teardown sample of an over-hyped AI SaaS homepage (Score 94/100 Peak B2B BS down to 14/100 Refreshingly Direct). Includes downloadable vector PDF, phrase-by-phrase diagnostic, rewrite, and banned-word list.

@@ -469,6 +469,14 @@
       margin-top: 8px;
     }
   </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false,
+      }
+    }
+  </script>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -506,6 +514,205 @@
     </div>
   </div>
 </div>
+
+<!-- START: ZeroHype Core Pipeline Section -->
+<section class="w-full bg-zinc-950 text-zinc-100 py-20 px-4 sm:px-6 lg:px-8 border-y border-zinc-800 font-sans antialiased">
+  <div class="max-w-6xl mx-auto space-y-20">
+
+    <!-- Value Proposition & Header -->
+    <div class="text-center space-y-4 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-400 text-xs font-mono tracking-wide uppercase">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Production DevOps for Micro-SaaS
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+        $250 Setup. $150/month.<br />
+        <span class="text-zinc-400">Your pipeline builds, validates, and reports while you sleep.</span>
+      </h2>
+      <p class="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed">
+        Stop debugging GitHub Actions at 2:00 AM. Stop shipping broken migrations to live customers. We engineer, monitor, and maintain your testing, scraping, and deployment infrastructure. You focus on revenue.
+      </p>
+    </div>
+
+    <!-- Video Demonstration Container (1280x800 Aspect Ratio) -->
+    <div class="relative mx-auto max-w-4xl rounded-xl border border-zinc-800 bg-zinc-900/60 p-2 sm:p-3 shadow-2xl shadow-emerald-950/20 backdrop-blur-sm">
+      <div class="flex items-center justify-between px-3 py-2 border-b border-zinc-800/80 mb-2">
+        <div class="flex items-center space-x-2">
+          <span class="w-3 h-3 rounded-full bg-zinc-700"></span>
+          <span class="w-3 h-3 rounded-full bg-zinc-700"></span>
+          <span class="w-3 h-3 rounded-full bg-zinc-700"></span>
+        </div>
+        <span class="text-xs font-mono text-zinc-400 tracking-wider">zerohype_product_demo_v1.mp4 (48s demo)</span>
+        <span class="text-xs font-mono text-emerald-400">1080p // 60fps</span>
+      </div>
+
+      <div class="relative w-full overflow-hidden rounded-lg bg-black border border-zinc-800/60" style="aspect-ratio: 1280 / 800;">
+        <video 
+          controls 
+          preload="metadata" 
+          poster="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1280&q=80"
+          class="w-full h-full object-cover">
+          <source src="/zerohype_product_demo_v1.mp4" type="video/mp4" />
+          <source src="/assets/zerohype_product_demo_v1.mp4" type="video/mp4" />
+          Your browser does not support native HTML5 video playback.
+        </video>
+      </div>
+
+      <div class="mt-2 px-3 py-1 flex items-center justify-between text-xs font-mono text-zinc-400">
+        <span>Target: Automated CI/CD, Scrapers, Playwright E2E</span>
+        <span class="text-zinc-400">Deterministic checks. Zero flaky runs.</span>
+      </div>
+    </div>
+
+    <!-- 3-Way Architectural Comparison Table -->
+    <div class="space-y-6">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold tracking-tight text-white">Compare Your Architecture Options</h3>
+        <p class="text-zinc-400 text-sm mt-1">Real math for bootstrapped and seed-funded software companies.</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse text-left text-sm text-zinc-300">
+          <thead>
+            <tr class="border-b border-zinc-800 text-xs font-mono uppercase tracking-wider text-zinc-400 bg-zinc-900/40">
+              <th scope="col" class="py-4 px-4 sm:px-6">Vector</th>
+              <th scope="col" class="py-4 px-4 sm:px-6">In-House Senior Dev</th>
+              <th scope="col" class="py-4 px-4 sm:px-6">Generic Agency</th>
+              <th scope="col" class="py-4 px-4 sm:px-6 bg-emerald-950/20 border-x border-emerald-500/30 text-emerald-400 font-bold">ZeroHype Pipeline</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/60 font-mono text-xs sm:text-sm">
+            <tr>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-white font-sans">Setup Fee</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">$0 (Sunk recruiting cost)</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">$2,500 - $5,000</td>
+              <td class="py-4 px-4 sm:px-6 bg-emerald-950/20 border-x border-emerald-500/30 text-white font-bold">$250 flat</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-white font-sans">Monthly Burn</td>
+              <td class="py-4 px-4 sm:px-6 text-red-400">$8,000/mo + equity + benefits</td>
+              <td class="py-4 px-4 sm:px-6 text-yellow-400">$3,500/mo retainer</td>
+              <td class="py-4 px-4 sm:px-6 bg-emerald-950/20 border-x border-emerald-500/30 text-emerald-400 font-bold">$150/mo flat</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-white font-sans">Time to First Green Run</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">3 - 6 weeks</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">4 - 6 weeks onboarding</td>
+              <td class="py-4 px-4 sm:px-6 bg-emerald-950/20 border-x border-emerald-500/30 text-emerald-400 font-bold">48 hours guaranteed</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-white font-sans">Pipeline Specialization</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">Generalist distracted by features</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">Junior billable hours</td>
+              <td class="py-4 px-4 sm:px-6 bg-emerald-950/20 border-x border-emerald-500/30 text-white font-bold">Principal DevOps architecture</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-white font-sans">Lock-in & Code Ownership</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">Tribal knowledge in one head</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">Proprietary internal templates</td>
+              <td class="py-4 px-4 sm:px-6 bg-emerald-950/20 border-x border-emerald-500/30 text-white font-bold">100% native in your GitHub/GitLab</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-4 sm:px-6 font-semibold text-white font-sans">Triage & Broken Runs</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">Takes dev away from roadmap</td>
+              <td class="py-4 px-4 sm:px-6 text-zinc-400">Ticket filed (48h response)</td>
+              <td class="py-4 px-4 sm:px-6 bg-emerald-950/20 border-x border-emerald-500/30 text-white font-bold">Proactive fix within SLA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 5 Core Founder Technical Objections (Accordion FAQ) -->
+    <div class="space-y-6 max-w-3xl mx-auto">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold tracking-tight text-white">Technical Verification & Guardrails</h3>
+        <p class="text-zinc-400 text-sm mt-1">Zero ambiguity. Here is exactly how we handle your stack and security.</p>
+      </div>
+
+      <div class="space-y-3">
+        <!-- Objection 1 -->
+        <details class="group border border-zinc-800 rounded-lg bg-zinc-900/40 p-4 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between text-white font-medium">
+            <span class="text-sm sm:text-base">How do you handle repository security and production secrets?</span>
+            <span class="ml-4 shrink-0 font-mono text-zinc-500 group-open:rotate-45 group-open:text-emerald-400 transition-transform text-lg">+</span>
+          </summary>
+          <div class="mt-3 text-sm text-zinc-400 leading-relaxed font-sans border-t border-zinc-800/80 pt-3">
+            We require zero access to your production customer database or production master keys. Configuration relies on scoped, fine-grained GitHub PATs or OIDC identity federation. Secrets stay in your own secret manager (AWS Secrets Manager, GCP Secret Manager, or GitHub Encrypted Secrets). We only touch test fixtures and isolated staging credentials.
+          </div>
+        </details>
+
+        <!-- Objection 2 -->
+        <details class="group border border-zinc-800 rounded-lg bg-zinc-900/40 p-4 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between text-white font-medium">
+            <span class="text-sm sm:text-base">What CI/CD and automation stacks are supported?</span>
+            <span class="ml-4 shrink-0 font-mono text-zinc-500 group-open:rotate-45 group-open:text-emerald-400 transition-transform text-lg">+</span>
+          </summary>
+          <div class="mt-3 text-sm text-zinc-400 leading-relaxed font-sans border-t border-zinc-800/80 pt-3">
+            GitHub Actions, GitLab CI, and AWS CodePipeline. For testing and workflows, we engineer Playwright E2E suites, Docker layer caching, automated database schema migration checks (Prisma, Drizzle, Supabase, Neon), and scheduled containerized scrapers. If it runs in a Linux container, we support it.
+          </div>
+        </details>
+
+        <!-- Objection 3 -->
+        <details class="group border border-zinc-800 rounded-lg bg-zinc-900/40 p-4 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between text-white font-medium">
+            <span class="text-sm sm:text-base">What is the exact 48-hour SLA and delivery timeline?</span>
+            <span class="ml-4 shrink-0 font-mono text-zinc-500 group-open:rotate-45 group-open:text-emerald-400 transition-transform text-lg">+</span>
+          </summary>
+          <div class="mt-3 text-sm text-zinc-400 leading-relaxed font-sans border-t border-zinc-800/80 pt-3">
+            Clock starts the minute scoped repository access is confirmed. Hour 0-12: Full dependency and pipeline audit. Hour 12-36: Staging workflow deployment and test run execution. Hour 36-48: Final run validation, failure alerts routing to your Slack/Discord, and handover PR. If you do not have a working green pipeline within 48 hours, we refund your $250 immediately.
+          </div>
+        </details>
+
+        <!-- Objection 4 -->
+        <details class="group border border-zinc-800 rounded-lg bg-zinc-900/40 p-4 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between text-white font-medium">
+            <span class="text-sm sm:text-base">What is the cancellation policy on the $150/month retainer?</span>
+            <span class="ml-4 shrink-0 font-mono text-zinc-500 group-open:rotate-45 group-open:text-emerald-400 transition-transform text-lg">+</span>
+          </summary>
+          <div class="mt-3 text-sm text-zinc-400 leading-relaxed font-sans border-t border-zinc-800/80 pt-3">
+            Zero lock-in. Cancel anytime with a single click inside your Stripe customer portal. All workflow code, scripts, and documentation reside inside your git repository. They remain your property forever. We never hold your infrastructure hostage.
+          </div>
+        </details>
+
+        <!-- Objection 5 -->
+        <details class="group border border-zinc-800 rounded-lg bg-zinc-900/40 p-4 transition-all [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex cursor-pointer items-center justify-between text-white font-medium">
+            <span class="text-sm sm:text-base">Can you handle custom scraping pipelines and LLM evaluation tests?</span>
+            <span class="ml-4 shrink-0 font-mono text-zinc-500 group-open:rotate-45 group-open:text-emerald-400 transition-transform text-lg">+</span>
+          </summary>
+          <div class="mt-3 text-sm text-zinc-400 leading-relaxed font-sans border-t border-zinc-800/80 pt-3">
+            Yes. We build headless scraping workers with automatic proxy rotation, rate-limit backoffs, and schema validation. For AI micro-SaaS, we implement pre-deployment LLM eval checks (testing regression against synthetic golden datasets) directly into your CI pipeline so breaking model outputs never hit production.
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- High-Conversion Stripe CTA Block -->
+    <div class="max-w-xl mx-auto text-center space-y-4 pt-6">
+      <a 
+        href="mailto:contact@zerohypelab.com?subject=ZeroHype%20Pipeline%20Setup%20Slot%20($250)" 
+        class="inline-flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-4 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-base transition-colors shadow-lg shadow-emerald-500/20 active:translate-y-0.5">
+        <span>Claim Your 48-Hour Pipeline Slot ($250)</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-xs font-mono text-zinc-400">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          Strictly capped at 10 active pipelines this month
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+          Direct Inbound Priority SLA
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- END: ZeroHype Core Pipeline Section -->
 
 <!-- MAIN WRAP -->
 <div class="main-wrap">

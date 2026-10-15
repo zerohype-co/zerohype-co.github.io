@@ -20,6 +20,12 @@ This copy is a crime scene of late-cycle venture capital panic. It was assembled
 
 ---
 
+### AUDIO OVERVIEW // DEEP DIVE DISCUSSION (20:04 RUNTIME)
+Listen to the unfiltered 20-minute audio conversation generated directly from this technical autopsy report:
+- Direct Stream & Download: https://zerohypelab.com/sample/zerohype_autopsy_podcast.m4a
+
+---
+
 ## 2. PHASE 1: PHRASE-BY-PHRASE AUTOPSY
 
 *Every sentence. Every phrase. Nothing skipped.*
@@ -120,15 +126,21 @@ Appoint a copy executioner internally. Take your red pen and run every single we
 ### Path 2: Put ZeroHype on Retainer
 If you know your internal team will cave to corporate drift, outsource the enforcement to an external critic who does not care about internal company politics.
 
-**The Monthly Autopsy ( / month):**
+**1. The Full Autopsy ($97 one-time):**
+- One mission-critical asset (homepage, sales deck, or pitch page) torn down line-by-line with forensic score, surgical rewrites, and deliverability fixes in 48 hours.
+- Direct Stripe Checkout: https://buy.stripe.com/8x214p2Ni33i4QRg5UaR208
+
+**2. The Monthly Autopsy ($300 / month):**
 - One mission-critical asset torn down and rewritten every thirty days. We audit your home page, a core landing page, a product launch announcement, or your cold outbound sequence.
 - 48-hour asynchronous turnaround.
-- Delivered as an unvarnished, line-by-line teardown and production-ready rewrite.
+- Continuous positioning guardrails so your copy never slips back into fluff.
 - Strictly capped at 10 active clients to protect focus.
+- Direct Stripe Subscription: https://buy.stripe.com/9B600lafK6fu9771b0aR206
 
-**The Outreach Overhaul ( one-time):**
+**3. The Outreach Overhaul ($897 one-time):**
 - We take your current 5 to 7 email outbound sales sequence and strip out every single trace of LinkedIn pleasantries, corporate flattery, and generic value propositions.
 - Rewritten from scratch with ruthless, technical hooks that target cynical enterprise buyers.
 - Includes customized objection-handling scripts for common enterprise pushbacks.
+- Direct Stripe Checkout: https://buy.stripe.com/aFa8wR4Vq33igzz3j8aR205
 
-Send the URL or draft copy to zerohype@proton.me or visit zerohypelab.com. No introductory discovery calls. No pitch decks. No marketing fluff. Just the raw text, the score, and the rewrite.
+10-Second Card Checkout: Click any direct Stripe checkout link above. Inquiries and custom audits: zerohype@proton.me or visit https://zerohypelab.com/sample/. No introductory discovery calls. No pitch decks. No marketing fluff. Just the raw text, the score, and the rewrite.

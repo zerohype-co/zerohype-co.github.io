@@ -42,7 +42,38 @@
   },
   "datePublished": "2026-10-15",
   "dateModified": "2026-10-15",
-  "mainEntityOfPage": "https://zerohypelab.com/sample/"
+  "mainEntityOfPage": "https://zerohypelab.com/sample/",
+  "audio": {
+    "@type": "AudioObject",
+    "name": "Autopsy of an AI Startup Pitch (Audio Overview)",
+    "contentUrl": "https://zerohypelab.com/sample/zerohype_autopsy_podcast.m4a",
+    "encodingFormat": "audio/mp4",
+    "duration": "PT20M5S",
+    "description": "20-minute unfiltered audio breakdown and forensic autopsy of generic AI startup pitch decks and positioning."
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "The Full Autopsy",
+      "price": "97",
+      "priceCurrency": "USD",
+      "url": "https://buy.stripe.com/8x214p2Ni33i4QRg5UaR208"
+    },
+    {
+      "@type": "Offer",
+      "name": "The Monthly Autopsy",
+      "price": "300",
+      "priceCurrency": "USD",
+      "url": "https://buy.stripe.com/9B600lafK6fu9771b0aR206"
+    },
+    {
+      "@type": "Offer",
+      "name": "The Outreach Overhaul",
+      "price": "897",
+      "priceCurrency": "USD",
+      "url": "https://buy.stripe.com/aFa8wR4Vq33igzz3j8aR205"
+    }
+  ]
 }
 </script>
 
@@ -443,6 +474,98 @@
       margin-bottom: 0.75rem;
     }
     .offer-desc { font-size: 0.85rem; color: #AAAAAA; line-height: 1.5; }
+    .offer-btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background: var(--yellow);
+      color: #111111;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.825rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 12px 14px;
+      margin-top: 1.25rem;
+      text-decoration: none;
+      box-sizing: border-box;
+      transition: background 0.15s ease, color 0.15s ease;
+      border: 1px solid var(--yellow);
+    }
+    .offer-btn:hover {
+      background: #FFFFFF;
+      border-color: #FFFFFF;
+      color: #111111;
+    }
+    .offer-btn-secondary {
+      background: transparent;
+      color: #FFFFFF;
+      border: 1px solid #444444;
+    }
+    .offer-btn-secondary:hover {
+      background: #FFFFFF;
+      color: #111111;
+      border-color: #FFFFFF;
+    }
+    .audio-card {
+      background: #111111;
+      border: 1px solid #2A2A2A;
+      border-left: 4px solid var(--yellow);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .audio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .audio-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .audio-badge {
+      background: var(--yellow);
+      color: #111111;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      letter-spacing: 0.05em;
+    }
+    .audio-desc {
+      font-size: 0.875rem;
+      color: #AAAAAA;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+    .audio-player-wrap audio {
+      width: 100%;
+      height: 40px;
+      border-radius: 4px;
+      outline: none;
+    }
+    .audio-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.75rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+    }
+    .audio-dl-link {
+      color: var(--yellow);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .audio-dl-link:hover {
+      text-decoration: underline;
+    }
     .closing-footer {
       border-top: 1px solid #333333;
       padding-top: 1.5rem;
@@ -519,6 +642,9 @@
         <a href="/sample/index.md" class="btn-secondary">
           Agent / Markdown Mirror (.md)
         </a>
+        <a href="#pricing" class="btn-primary" style="background: var(--yellow); color: #111111; border-color: var(--yellow); font-weight: 700;">
+          Order Autopsy ( / ) &darr;
+        </a>
       </div>
     </div>
 
@@ -539,6 +665,28 @@
     <div class="verdict-text">
       <p><strong>Executive Diagnosis:</strong> This copy is a crime scene of late-cycle venture capital panic. It was assembled by prompt-engineering a generic language model to write like a 2021 SaaS landing page. It contains zero verifiable engineering facts, zero operational nouns, and zero evidence that software actually exists behind the domain name.</p>
       <p>A technical buyer bounces immediately. A cynical enterprise procurement officer assumes this is two founders wrapping an API key.</p>
+    </div>
+
+    <!-- Audio Overview Podcast Player -->
+    <div class="audio-card">
+      <div class="audio-header">
+        <div class="audio-title">
+          <span>AUDIO OVERVIEW // DEEP DIVE DISCUSSION</span>
+        </div>
+        <span class="audio-badge">20:04 RUNTIME</span>
+      </div>
+      <p class="audio-desc">
+        Listen to the technical teardown unpacked in an unfiltered 20-minute audio conversation generated directly from this autopsy report. Covers why enterprise buyers bounce from AI startup copy, how Latinate buzzwords destroy positioning, and the exact mechanics of technical objection handling.
+      </p>
+      <div class="audio-player-wrap">
+        <audio controls preload="metadata" style="width: 100%;">
+          <source src="/sample/zerohype_autopsy_podcast.m4a" type="audio/mp4">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-actions">
+        <a href="/sample/zerohype_autopsy_podcast.m4a" download class="audio-dl-link">Download Audio File (.m4a, 9.6 MB) &darr;</a>
+      </div>
     </div>
 
     <!-- Diagnostic Rubric Breakdown -->
@@ -886,20 +1034,29 @@
       <div class="closing-sub">
         Writing direct positioning is easy for an afternoon. Maintaining it across an organization is nearly impossible. The moment you hire your next marketer, the disease returns. They look at clean, factual sentences and get nervous. They miss the comfortable blanket of corporate jargon.
       </div>
-      <div class="offers-grid">
+      <div class="offers-grid" id="pricing">
         <div class="offer-col">
+          <div class="offer-price"> one-time</div>
+          <div class="offer-name">The Full Autopsy</div>
+          <div class="offer-desc">One mission-critical asset (homepage, sales deck, or pitch page) torn down line-by-line with forensic score, surgical rewrites, and deliverability fixes in 48 hours.</div>
+          <a href="https://buy.stripe.com/8x214p2Ni33i4QRg5UaR208" target="_blank" rel="noopener" class="offer-btn">Order Autopsy () &rarr;</a>
+        </div>
+        <div class="offer-col" style="border: 2px solid var(--yellow);">
           <div class="offer-price"> / mo</div>
           <div class="offer-name">The Monthly Autopsy</div>
-          <div class="offer-desc">One mission-critical asset (homepage, landing page, cold sequence) torn down and rewritten every 30 days. 48h async turnaround. Max 10 clients.</div>
+          <div class="offer-desc">One mission-critical asset rewritten every 30 days. Continuous positioning guardrails so your copy never decays into buzzwords. 48h async turnaround. Max 10 clients.</div>
+          <a href="https://buy.stripe.com/9B600lafK6fu9771b0aR206" target="_blank" rel="noopener" class="offer-btn" style="background: var(--yellow); color: #111111;">Subscribe (/mo) &rarr;</a>
         </div>
         <div class="offer-col">
           <div class="offer-price"> one-time</div>
           <div class="offer-name">The Outreach Overhaul</div>
-          <div class="offer-desc">Full 5 to 7 email outbound sales sequence rebuilt from scratch. Zero fluff, brutal technical hooks, customized objection scripts.</div>
+          <div class="offer-desc">Full 5 to 7 email outbound sales sequence rebuilt from scratch. Zero fluff, brutal technical hooks, customized objection scripts for technical buyers.</div>
+          <a href="https://buy.stripe.com/aFa8wR4Vq33igzz3j8aR205" target="_blank" rel="noopener" class="offer-btn offer-btn-secondary">Get Overhaul () &rarr;</a>
         </div>
       </div>
       <div class="closing-footer">
-        <div>Direct Submission: <a href="mailto:zerohype@proton.me" class="closing-link">zerohype@proton.me</a></div>
+        <div>10-Second Card Checkout: Click any tier above to open Stripe.</div>
+        <div>Inquiries & Custom Audits: <a href="mailto:zerohype@proton.me" class="closing-link">zerohype@proton.me</a></div>
         <div>Download Official PDF: <a href="/sample/ZeroHype_FullAutopsy_SampleReport.pdf" class="closing-link" download>ZeroHype_FullAutopsy_SampleReport.pdf</a></div>
       </div>
     </div>

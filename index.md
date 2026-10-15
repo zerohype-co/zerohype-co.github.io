@@ -195,3 +195,5 @@ Weekly. Short. Specific. What's actually working in B2B marketing right now. No 
 ---
 
 Source: https://zerohypelab.com/
+
+- [Full Positioning Autopsy Sample Report](https://zerohypelab.com/sample/): Forensic teardown and rewrite sample with downloadable PDF.

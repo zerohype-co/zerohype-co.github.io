@@ -3,11 +3,14 @@ Allow: /
 
 User-agent: GPTBot
 Allow: /faq/
+Allow: /sample/
 
 User-agent: ClaudeBot
 Allow: /faq/
+Allow: /sample/
 
 User-agent: PerplexityBot
 Allow: /faq/
+Allow: /sample/
 
 Sitemap: https://zerohypelab.com/sitemap.xml

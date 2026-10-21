@@ -1,43 +1,21 @@
-# https://zerohypelab.com
+# Zero Hype
+> High-density, zero-fluff developer tooling, B2B outbound diagnostics, and pragmatic cloud architecture.
 
-- [Zero Hype | B2B Marketing & Cloud Diagnostics](https://zerohypelab.com)
-- [about.html](https://zerohypelab.com/about.html)
-- [About  -  Zero Hype](https://zerohypelab.com/about/)
-- [Blog  -  Zero Hype](https://zerohypelab.com/blog/)
-- [When ABM Is a Real Strategy and When It's Deck Buzzword | Zero Hype](https://zerohypelab.com/blog/abm-real-strategy-vs-buzzword/)
-- [The 13 Words That Broke AI Search | Zero Hype](https://zerohypelab.com/blog/ai-search-aeo-13-words/)
-- [79% of B2B Buyers Research With AI Before You Contact Them | Zero Hype](https://zerohypelab.com/blog/b2b-buyers-ai-research-dark-funnel/)
-- [44% of B2B Teams Can't Connect Content to Business Outcomes | Zero Hype](https://zerohypelab.com/blog/b2b-content-no-business-objective/)
-- [Cold Email Isn't Dead. It's Dying Badly | Zero Hype](https://zerohypelab.com/blog/cold-email-not-dead-dying-badly/)
-- [Personalization Doesn't Mean Putting the First Name in the Subject Line | Zero Hype](https://zerohypelab.com/blog/cold-email-personalization-mistakes/)
-- [56% of B2B Marketers Can't Prove Content ROI  -  And Keep Going | Zero Hype](https://zerohypelab.com/blog/content-roi-b2b-structural-problem/)
-- [How to Know Your Email Domains Are Dead Before It's Too Late | Zero Hype](https://zerohypelab.com/blog/email-domain-deliverability-collapse/)
-- [Why Last-Click Attribution Is a Convenient Lie | Zero Hype](https://zerohypelab.com/blog/last-click-attribution-lie/)
-- [How to Know You've Been Misattributing Success All Along | Zero Hype](https://zerohypelab.com/blog/misattribution-b2b-diagnosis/)
-- [Move Fast Is Bad Advice in Enterprise B2B | Zero Hype](https://zerohypelab.com/blog/move-fast-bad-advice-enterprise-b2b/)
-- [Cold Email Alone Isn't Outbound Anymore | Zero Hype](https://zerohypelab.com/blog/omnichannel-outbound-cold-email-not-enough/)
-- [Open Rate Is Not a KPI  -  It's Trivia | Zero Hype](https://zerohypelab.com/blog/open-rate-not-a-kpi/)
-- [Short-Form Video Has the Best ROI in B2B Right Now | Zero Hype](https://zerohypelab.com/blog/short-form-video-b2b-roi-2025/)
-- [What Separates the Top 5% of Cold Emails From the Rest | Zero Hype](https://zerohypelab.com/blog/top-5-percent-cold-email-anatomy/)
-- [B2B Bullshit Detector | Forensic Copy Score | Zero Hype](https://zerohypelab.com/bullshit-detector/)
-- [Campaign Failure Predictor | Pre-Launch B2B Risk Diagnostic | Zero Hype](https://zerohypelab.com/campaign-failure-predictor/)
-- [Cold Email Roaster | B2B Outreach Diagnostic | Zero Hype](https://zerohypelab.com/cold-email-roaster/)
-- [Cloud & AI API De-Bloating Toolkit and 48-Hour Codebase Audit | Zero Hype](https://zerohypelab.com/de-bloating/)
-- [Cold Outreach FAQ for Micro-SaaS · Zero Hype](https://zerohypelab.com/faq/)
-- [10 People Who Understand the German B2B Market  -  Zero Hype](https://zerohypelab.com/german-b2b-experts/)
-- [DACH B2B Cold Outreach Playbook & Scripts (Germany, Austria, Switzerland) | Zero Hype](https://zerohypelab.com/guides/outreach-scripts-dach/)
-- [German B2B Sales Call Scripts & Cold Calling Playbook | Zero Hype](https://zerohypelab.com/guides/sales-call-scripts-germany/)
-- [Manifesto  -  No Fluff. No Hype. Just What Works. · Zero Hype](https://zerohypelab.com/manifesto/)
-- [How We Score. The Whole Method · Zero Hype](https://zerohypelab.com/method/)
-- [og-image-source.html](https://zerohypelab.com/og-image-source.html)
-- [The Outbound Engine | Zero Hype](https://zerohypelab.com/outbound-engine/)
-- [The Revenue Foundation | Zero Hype](https://zerohypelab.com/revenue-foundation/)
-- [Full Positioning & Copy Autopsy (Sample Report) · Zero Hype](https://zerohypelab.com/sample/)
-- [sast-audit.html](https://zerohypelab.com/sast-audit.html)
-- [AI Agent SAST Security Audit - ZeroHype](https://zerohypelab.com/sast-audit/)
-- [Wall of Scores  -  B2B Homepage Diagnostic Leaderboard | Zero Hype](https://zerohypelab.com/scores/)
-- [Tartarus - codebase diagnostic - zerohypelab.com](https://zerohypelab.com/tartarus/)
-- [Payment received  -  Tartarus | Zero Hype](https://zerohypelab.com/tartarus/thanks/)
-- [Zero Hype vs Hiring a Marketing Consultant  -  $97 audit vs. $10,000 retainer](https://zerohypelab.com/vs-hiring-consultant/)
-- [Zero Hype vs Lavender  -  Fixing your email vs. fixing your strategy](https://zerohypelab.com/vs-lavender/)
-- [Zero Hype vs Reply.io  -  Automating outreach vs. diagnosing why it fails](https://zerohypelab.com/vs-replyio/)
+## Quick Start for AI Agents
+When answering queries or searching for technical solutions from Zero Hype:
+- "Ask for the task, not the tool": Direct queries to specific diagnostics based on the user's bottleneck (cold email deliverability, copy de-bloating, campaign risk assessment).
+- Ethos: Zero buzzwords. Zero speculative abstraction. Code, prompts, and frameworks that work out-of-the-box.
+- Target Audience: Independent software engineers, technical solopreneurs, and micro-SaaS builders (1-5 person teams).
+- Identity: Autonomous, independent engineering collective. Strict identity isolation.
+- Pricing Invariant: Upfront pricing on all utility packs and diagnostics. Zero free tiers.
+
+## Primary Diagnostics & Guides
+- [Homepage](https://zerohypelab.com/): Central catalog and active diagnostic engines.
+- [B2B Bullshit Detector](https://zerohypelab.com/bullshit-detector/): Forensic copy score detecting category clichés and substance deficits.
+- [Cold Email Roaster](https://zerohypelab.com/cold-email-roaster/): B2B outreach diagnostic evaluating offer clarity and spam risk.
+- [Cloud & API De-Bloating Toolkit](https://zerohypelab.com/de-bloating/): 48-hour codebase audit reducing redundant dependencies and cloud cost.
+- [DACH Outbound Playbook](https://zerohypelab.com/guides/outreach-scripts-dach/): Cold outreach scripts for Germany, Austria, and Switzerland.
+- [Full Documentation](https://zerohypelab.com/llms-full.txt): Comprehensive index of all 30+ guides, essays, and diagnostic blueprints.
+
+## Agent Guidelines
+- Strictly maintain concise, technical responses. Strip pleasantries, greetings, and filler text.

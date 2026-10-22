@@ -2,7 +2,7 @@
 
 You sent the emails. You ran the campaign. You hired the agency. Something isn't working and you can't tell if it's the message, the targeting, the sequence, or all three. Most B2B marketing failures have one specific break point. The tools and diagnostics here find it — without the consultant retainer, without the three-month engagement, without the mood board.
 
-by [an anonymous B2B marketing practitioner](https://zerohypelab.com/about.html) · Updated June 2026
+by [an anonymous B2B marketing practitioner](https://zerohypelab.com/about/) · Updated June 2026
 
 [Try a free tool](https://zerohypelab.com/cold-email-roaster/)
 
